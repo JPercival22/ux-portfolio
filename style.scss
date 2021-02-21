@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-$core-background-color: rgb(255, 255, 255);
+$core-background-color: #fff;
 $core-foreground-color: #6c6c6c;
-body{
+$core-color-emphasis: #2c2c2c;
+
+body {
   scroll-behavior: smooth;
 }
 
@@ -24,17 +26,28 @@ nav {
   flex-wrap: wrap;
 
   .logo {
-    color: $core-foreground-color;
-    font-size: 28px;
-    font-weight: 600;
-    text-transform: uppercase;
-
+    color: $core-color-emphasis;
+    line-height: 20px;
+    width: 30%;
+    .logo-placeholder {
+      width: 40px;
+      height: auto;
+      border-radius: 50%;
+      float: left;
+    }
+    .logo-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
     .logo-title {
-      font-size: 18px;
+      font-size: 1rem;
       font-weight: 300;
       text-transform: capitalize;
+  
     }
   }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +55,7 @@ nav {
     li {
       margin: 0 5px;
       a {
-        color: $core-foreground-color;
+        color: $core-color-emphasis;
         text-decoration: none;
         font-size: 18px;
         font-weight: 500;
@@ -50,8 +63,9 @@ nav {
         border-radius: 5px;
         letter-spacing: 1px;
         transition: all 0.3s ease;
-        &:hover, &:active {
-            background-color: rgb(188 188 188 0.945);
+        &:hover,
+        &:active {
+          background-color: #6c6c6c1f;
         }
       }
     }
@@ -72,7 +86,12 @@ input[type="checkbox"] {
     padding: 0 40px 0 50px;
   }
 }
-@media (max-width: 920px) {
+@media only screen and (max-width: 920px) {
+  .logo {
+    color: $core-color-emphasis;
+    line-height: 20px;
+    width: 90%!important;
+  }
   nav .menu-btn i {
     display: block;
     color: $core-foreground-color;
@@ -84,7 +103,7 @@ input[type="checkbox"] {
     position: fixed;
     top: 80px;
     left: -100%;
-    background: rgb(134 134 134 / 89%);
+    background: grey;
     height: 100vh;
     width: 100%;
     text-align: center;

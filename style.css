@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+body {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +30,28 @@ nav {
 }
 
 nav .logo {
-  color: #6c6c6c;
-  font-size: 28px;
+  color: #2c2c2c;
+  line-height: 20px;
+  width: 30%;
+}
+
+nav .logo .logo-placeholder {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  float: left;
+}
+
+nav .logo .logo-name {
+  font-size: 1.2rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 nav .logo .logo-title {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 300;
+  text-transform: capitalize;
 }
 
 nav ul {
@@ -50,7 +68,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #6c6c6c;
+  color: #2c2c2c;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -62,8 +80,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a:active {
-  color: #fff;
-  background: #868686a6;
+  background-color: #6c6c6c1f;
 }
 
 nav .menu-btn i {
@@ -83,7 +100,12 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 920px) {
+@media only screen and (max-width: 920px) {
+  .logo {
+    color: #2c2c2c;
+    line-height: 20px;
+    width: 90% !important;
+  }
   nav .menu-btn i {
     display: block;
     color: #6c6c6c;
@@ -95,7 +117,7 @@ input[type="checkbox"] {
     position: fixed;
     top: 80px;
     left: -100%;
-    background: #868686a6;
+    background: grey;
     height: 100vh;
     width: 100%;
     text-align: center;
