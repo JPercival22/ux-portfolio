@@ -7,19 +7,26 @@ body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 80px;
   width: 100%;
   background: #fff;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 200px 0 200px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 nav .logo {
@@ -49,8 +56,11 @@ nav .logo .logo-title {
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 }
 
@@ -70,8 +80,7 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:active {
+nav ul li a:hover, nav ul li a:active {
   background-color: #6c6c6c1f;
 }
 
@@ -87,6 +96,8 @@ input[type="checkbox"] {
 }
 
 .hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 90%;
   max-width: 1440px;
@@ -95,33 +106,42 @@ input[type="checkbox"] {
   padding-right: 40px;
   padding-left: 40px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: end;
-  align-self: flex-end;
+      align-self: flex-end;
 }
 
 .hero-container .hero-text-content {
   width: 50%;
   height: 100vh;
   -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  align-items: start;
-  justify-content: center;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hero-container .hero-text-content h1 {
   margin-bottom: 20px;
   font-family: Poppins, sans-serif;
   color: #2c2c2c;
-  font-size: 72px;
-  line-height: 86px;
+  font-size: 30px;
+  line-height: 20px;
   font-weight: 700;
   text-align: left;
 }
@@ -129,7 +149,7 @@ input[type="checkbox"] {
 .hero-container .hero-text-content .hero-subtitle {
   max-width: 620px;
   font-family: Poppins, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 36px;
   font-weight: 400;
   text-align: left;
@@ -142,8 +162,8 @@ input[type="checkbox"] {
 
 .hero-container .hero-image {
   -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
+      -ms-flex-order: 2;
+          order: 2;
   width: 45vw;
   height: 70vh;
   margin: 5px;
@@ -171,8 +191,8 @@ input[type="checkbox"] {
   text-transform: uppercase;
   cursor: pointer;
   -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
-  align-self: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .hero-container .hero-button:hover {
