@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+    <meta name="description" content="UX Portfolio for Joseph Percival" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Joseph Percival" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Permanent+Marker&amp;family=Raleway:wght@400;500&amp;family=Spartan&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer=""
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script defer="" src="scripts/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="/index.html">
+        <img
+          class="logo-placeholder"
+          src="img\me-min.jpg"
+          alt="image of the author"
+          title="Joseph Percival"
+        />
+        <div class="logo-name">Joseph Percival</div>
+        <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+      </a>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+
+    <section class="contact-page-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact Info</h2>
+          <ul class="info">
+            <li>
+              <span>
+                <img src="/img/mail.svg" alt="email information" />
+              </span>
+             
+                <a href="mailto:josephmpercival@gmail.com"> <span>joseph.m.percival@gmail.com</span></a>
+            </li>
+            <li>
+              <span>
+                <img src="/img/phone.png" alt="telephone information" />
+              </span>
+
+              <a href="tel:07709718757"> <span>07709718757</span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- contact form  -->
+        <div class="contact-form">
+          <h2>Lets' create something amazing together</h2>
+          <p>
+            I am available for UX Research/ UX Design or Front End positions and
+            projects. Simply
+
+            <span class="text">drop me a message</span>
+            or fill out the form below and I'll get back to you shortly.
+          </p>
+          <div class="contact-form-container">
+            <div class="input-area w50">
+              <input
+                type="text"
+                name=""
+                placeholder="Enter your first name here . . ."
+                required
+              />
+              <span>First Name</span>
+            </div>
+
+            <div class="input-area w50">
+              <input
+                type="text"
+                name=""
+                placeholder="Enter your last name here . . ."
+                required
+              />
+              <span>Last Name</span>
+            </div>
+
+            <div class="input-area w50">
+              <input
+                type="text"
+                name=""
+                placeholder="your-name@your-email.com"
+                required
+              />
+              <span>Email Address</span>
+            </div>
+
+            <div class="input-area w50">
+              <input type="text" name="" placeholder="(+44) . . ." required />
+              <span>Contact Number</span>
+            </div>
+
+            <div class="input-area w100">
+              <textarea
+                class="text-field"
+                name="description"
+                cols="40"
+                rows="3"
+                placeholder="Please leave a quick description on what you would like me to do here."
+              ></textarea>
+            </div>
+
+            <div class="input-area">
+              <input type="submit" value="send" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

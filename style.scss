@@ -4,6 +4,10 @@ $core-background-color: #fff;
 $core-foreground-color: #6c6c6c;
 $core-color-emphasis: #2c2c2c;
 
+$brand-color-tech: #3391ff;
+$brand-color-user: #3db17f;
+$brand-color-business: #f6a535;
+
 body {
   scroll-behavior: smooth;
 }
@@ -13,6 +17,18 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -126,38 +142,208 @@ input[type="checkbox"] {
 
   .hero-image {
     order: 2;
-    width: 45vw;
-    height: 70vh;
+    width: 50%;
+    height: 100vh;
     margin: 5px;
     padding: 5px;
-    background-image: url(/img/business-model.png);
+    background-image: url(/img/business-model.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
   }
-  .hero-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 18px;
-    border: 3px solid $core-color-emphasis;
-    border-radius: 8px;
-    background-color: $core-background-color;
-    font-family: Poppins, sans-serif;
-    color: $core-color-emphasis;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    align-self: start;
-    &:hover {
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border: 3px solid $core-color-emphasis;
+  border-radius: 8px;
+  background-color: $core-background-color;
+  font-family: Poppins, sans-serif;
+  color: $core-color-emphasis;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: start;
+  &:hover {
+    background-color: #f6a535;
+    color: $core-background-color;
+  }
+}
+// contact page styles
+.contact-page-section {
+  background: #3391ff;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #3db17f;
+  }
+  .contact-container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    .contact-info {
+      position: absolute;
+      top: 40px;
+      width: 350px;
+      height: calc(100% - 300px);
       background-color: #f6a535;
-      color: $core-background-color;
+      z-index: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      h2 {
+        color: $core-background-color;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .info {
+        position: relative;
+        margin: 20px 0;
+        li {
+          position: relative;
+          list-style: none;
+          margin: 20px 0;
+          cursor: pointer;
+          display: flex;
+          align-items: flex-start;
+          span :nth-child(1) {
+            width: 30px;
+            min-width: 30px;
+            img {
+              max-width: 100%;
+              opacity: 0.76;
+            }
+          }
+          a {
+            color: #fff;
+            margin-left: 10px;
+            font-weight: 300;
+            opacity: 0.76;
+          }
+        }
+      }
+    }
+  }
+  .contact-form {
+    position: absolute;
+    padding: 70px 50px;
+    background: $core-background-color;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 110%;
+    box-sizing: 0 50px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid $core-foreground-color;
+    border-radius: 8px;
+    h2 {
+      color: $core-foreground-color;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .text {
+      color: #f5ca1e;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .contact-form-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      padding-top: 30px;
+      .input-area {
+        position: relative;
+        margin: 0 0 20px 0;
+
+        input {
+          width: 100%;
+          padding: 5px 0;
+          font-size: 18px;
+          font-weight: 300;
+          color: $core-foreground-color;
+          border: none;
+          border-bottom: 1px solid $core-foreground-color;
+          outline: none;
+          &::placeholder {
+            color: rgb(173, 173, 173);
+            font-size: 16px;
+          }
+        }
+        input[type="submit"] {
+          display: inline-block;
+          padding: 8px 18px;
+          border: 3px solid $core-color-emphasis;
+          background-color: $core-background-color;
+          font-family: Poppins, sans-serif;
+          color: $core-color-emphasis;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-radius: 8px;
+          cursor: pointer;
+          &:hover {
+            background-color: #f6a535;
+            color: $core-background-color;
+          }
+         
+        }
+      }
     }
   }
 }
+.w50 {
+  width: 47%;
+}
+.w100 {
+  width: 100%;
+}
+
+section .contact-container .contact-info .info li:hover span:nth-child(1) img,
+section .contact-container .contact-info .info li:hover span:nth-child(2) {
+  opacity: 1;
+}
+
+section .contact-container .contact-form .input-area input,
+section .contact-container .contact-form .input-area textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: $core-foreground-color;
+  border-bottom: 1px solid $core-foreground-color;
+  outline: none;
+  resize: none;
+  padding: 5px;
+}
+.text-field {
+  border-radius: 8px;
+  margin-bottom: -10px;
+  &::placeholder {
+    color: rgb(173, 173, 173);
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1000px) {
   nav {
     padding: 0 40px 0 50px;
