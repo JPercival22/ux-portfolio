@@ -34,6 +34,7 @@ nav {
       height: auto;
       border-radius: 50%;
       float: left;
+      margin-right: 10px;
     }
     .logo-name {
       font-size: 1.2rem;
@@ -86,7 +87,7 @@ input[type="checkbox"] {
     padding: 0 40px 0 50px;
   }
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 940px) {
   .logo {
     color: $core-color-emphasis;
     line-height: 20px;

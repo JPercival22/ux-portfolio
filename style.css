@@ -40,6 +40,7 @@ nav .logo .logo-placeholder {
   height: auto;
   border-radius: 50%;
   float: left;
+  margin-right: 10px;
 }
 
 nav .logo .logo-name {
@@ -100,7 +101,7 @@ input[type="checkbox"] {
   }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 940px) {
   .logo {
     color: #2c2c2c;
     line-height: 20px;
