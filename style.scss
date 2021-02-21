@@ -22,7 +22,7 @@ nav {
   background: $core-background-color;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px 0 100px;
+  padding: 0 200px 0 200px;
   flex-wrap: wrap;
 
   .logo {
@@ -45,7 +45,6 @@ nav {
       font-size: 1rem;
       font-weight: 300;
       text-transform: capitalize;
-  
     }
   }
 
@@ -82,6 +81,83 @@ input[type="checkbox"] {
   display: none;
 }
 
+.hero-container {
+  display: flex;
+  height: 90%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+
+  .hero-text-content {
+    width: 50%;
+    height: 100vh;
+    order: 1;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 20px;
+      font-family: Poppins, sans-serif;
+      color: $core-color-emphasis;
+      font-size: 72px;
+      line-height: 86px;
+      font-weight: 700;
+      text-align: left;
+    }
+    .hero-subtitle {
+      max-width: 620px;
+      font-family: Poppins, sans-serif;
+      font-size: 22px;
+      line-height: 36px;
+      font-weight: 400;
+      text-align: left;
+      p:last-of-type {
+        margin-top: 0;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .hero-image {
+    order: 2;
+    width: 45vw;
+    height: 70vh;
+    margin: 5px;
+    padding: 5px;
+    background-image: url(/img/Your-Product.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+  }
+  .hero-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    border: 3px solid $core-color-emphasis;
+    border-radius: 8px;
+    background-color: $core-background-color;
+    font-family: Poppins, sans-serif;
+    color: $core-color-emphasis;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: start;
+    &:hover {
+      background-color: #f6a535;
+      color: $core-background-color;
+    }
+  }
+}
 @media (max-width: 1000px) {
   nav {
     padding: 0 40px 0 50px;
@@ -91,7 +167,7 @@ input[type="checkbox"] {
   .logo {
     color: $core-color-emphasis;
     line-height: 20px;
-    width: 90%!important;
+    width: 90% !important;
   }
   nav .menu-btn i {
     display: block;
@@ -133,19 +209,4 @@ input[type="checkbox"] {
     background: none;
     color: cyan;
   }
-}
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: -1;
-  width: 100%;
-  padding: 0 30px;
-  color: $core-foreground-color;
-}
-.content div {
-  font-size: 40px;
-  font-weight: 700;
 }
