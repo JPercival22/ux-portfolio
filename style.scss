@@ -38,8 +38,7 @@ nav {
   background: $core-background-color;
   align-items: center;
   justify-content: space-between;
-  padding: 0 200px 0 200px;
-  flex-wrap: wrap;
+  padding: 0 20px;
 
   .logo {
     color: $core-color-emphasis;
@@ -146,7 +145,7 @@ input[type="checkbox"] {
     height: 100vh;
     margin: 5px;
     padding: 5px;
-    background-image: url(/img/business-model.svg);
+    background-image: url(/img/business-model.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;

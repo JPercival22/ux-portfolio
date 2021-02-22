@@ -42,9 +42,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 200px 0 200px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 nav .logo {
@@ -186,7 +184,7 @@ input[type="checkbox"] {
   height: 100vh;
   margin: 5px;
   padding: 5px;
-  background-image: url(/img/business-model.svg);
+  background-image: url(/img/business-model.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
