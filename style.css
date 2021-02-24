@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;700&display=swap");
+/* colors  */
 body {
   scroll-behavior: smooth;
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -43,12 +47,16 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 nav .logo {
-  color: #2c2c2c;
+  color: #000;
   line-height: 20px;
-  width: 30%;
+  width: 90%;
 }
 
 nav .logo .logo-placeholder {
@@ -60,15 +68,18 @@ nav .logo .logo-placeholder {
 }
 
 nav .logo .logo-name {
+  font-family: "Raleway";
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 nav .logo .logo-title {
-  font-size: 1rem;
+  font-family: "Raleway";
+  font-size: 0.9rem;
   font-weight: 300;
   text-transform: capitalize;
+  color: #565a59;
 }
 
 nav ul {
@@ -85,7 +96,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #2c2c2c;
+  color: #808b92;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -97,14 +108,14 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a:active {
-  background-color: #6c6c6c1f;
+  color: cyan;
 }
 
 nav .menu-btn i {
-  color: #6c6c6c;
   font-size: 22px;
   cursor: pointer;
-  display: none;
+  display: block;
+  color: #000;
 }
 
 input[type="checkbox"] {
@@ -131,6 +142,53 @@ input[type="checkbox"] {
       align-self: flex-end;
 }
 
+#click:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+
+nav ul {
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  background: #808b92;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#click:checked ~ ul {
+  left: 0;
+  z-index: 9999;
+}
+
+nav ul li {
+  width: 100%;
+  margin: 40px 0;
+}
+
+nav ul li a {
+  width: 100%;
+  margin-left: -100%;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#click:checked ~ ul li a {
+  margin-left: 0px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: none;
+  color: cyan;
+}
+
 .hero-container .hero-text-content {
   width: 50%;
   height: 100vh;
@@ -155,9 +213,9 @@ input[type="checkbox"] {
 .hero-container .hero-text-content h1 {
   margin-bottom: 20px;
   font-family: Poppins, sans-serif;
-  color: #2c2c2c;
+  color: #000;
   font-size: 30px;
-  line-height: 20px;
+  line-height: 35px;
   font-weight: 700;
   text-align: left;
 }
@@ -194,11 +252,11 @@ input[type="checkbox"] {
   display: inline-block;
   margin-top: 10px;
   padding: 12px 18px;
-  border: 3px solid #2c2c2c;
+  border: 3px solid #565a59;
   border-radius: 8px;
   background-color: #fff;
   font-family: Poppins, sans-serif;
-  color: #2c2c2c;
+  color: #000;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -211,13 +269,14 @@ input[type="checkbox"] {
       align-self: start;
 }
 
-.button:hover {
-  background-color: #f6a535;
+.selected-btn {
+  background-color: #565a59;
   color: #fff;
 }
 
-.contact-page-section {
-  background: #3391ff;
+.button:hover {
+  background-color: #f6a535;
+  color: #fff;
 }
 
 .contact-page-section:before {
@@ -227,7 +286,6 @@ input[type="checkbox"] {
   left: 0;
   width: 50%;
   height: 100%;
-  background: #3db17f;
 }
 
 .contact-page-section .contact-container {
@@ -258,8 +316,8 @@ input[type="checkbox"] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 20px 20px #000;
+          box-shadow: 0 20px 20px #000;
   border-radius: 8px;
 }
 
@@ -271,7 +329,6 @@ input[type="checkbox"] {
 
 .contact-page-section .contact-container .contact-info .info {
   position: relative;
-  margin: 20px 0;
 }
 
 .contact-page-section .contact-container .contact-info .info li {
@@ -287,12 +344,25 @@ input[type="checkbox"] {
           align-items: flex-start;
 }
 
-.contact-page-section .contact-container .contact-info .info li span :nth-child(1) {
+.contact-page-section
+> .contact-container
+> .contact-info
+> .info
+> li
+> span
+> :nth-child(1) {
   width: 30px;
   min-width: 30px;
 }
 
-.contact-page-section .contact-container .contact-info .info li span :nth-child(1) img {
+.contact-page-section
+> .contact-container
+> .contact-info
+> .info
+> li
+> span
+> :nth-child(1)
+> img {
   max-width: 100%;
   opacity: 0.76;
 }
@@ -310,28 +380,23 @@ input[type="checkbox"] {
   background: #fff;
   margin-left: 150px;
   padding-left: 250px;
-  width: calc(100% - 150px);
-  height: 110%;
-  -webkit-box-sizing: 0 50px 50px rgba(0, 0, 0, 0.5);
-          box-sizing: 0 50px 50px rgba(0, 0, 0, 0.5);
-  border: 1px solid #6c6c6c;
+  width: calc(100% - 250px);
+  height: 90%;
+  -webkit-box-sizing: 0 50px 50px #000;
+          box-sizing: 0 50px 50px #000;
+  border: 1px solid #565a59;
   border-radius: 8px;
 }
 
 .contact-page-section .contact-form h2 {
-  color: #6c6c6c;
+  color: #1e90ff;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .contact-page-section .contact-form .text {
-  color: #f5ca1e;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.contact-page-section .contact-form .text:hover {
-  text-decoration: underline;
+  color: #000;
+  cursor: none;
 }
 
 .contact-page-section .contact-form .contact-form-container {
@@ -357,39 +422,59 @@ input[type="checkbox"] {
   padding: 5px 0;
   font-size: 18px;
   font-weight: 300;
-  color: #6c6c6c;
+  color: #00bdfd;
   border: none;
   border-bottom: 1px solid #6c6c6c;
   outline: none;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input::-webkit-input-placeholder {
-  color: #adadad;
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input::-webkit-input-placeholder {
+  color: #808b92;
   font-size: 16px;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input:-ms-input-placeholder {
-  color: #adadad;
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input:-ms-input-placeholder {
+  color: #808b92;
   font-size: 16px;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input::-ms-input-placeholder {
-  color: #adadad;
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input::-ms-input-placeholder {
+  color: #808b92;
   font-size: 16px;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input::placeholder {
-  color: #adadad;
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input::placeholder {
+  color: #808b92;
   font-size: 16px;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input[type="submit"] {
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input[type="submit"] {
   display: inline-block;
   padding: 8px 18px;
-  border: 3px solid #2c2c2c;
-  background-color: #fff;
+  border: 3px solid #000;
+  background-color: #78cd78;
   font-family: Poppins, sans-serif;
-  color: #2c2c2c;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -399,9 +484,12 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.contact-page-section .contact-form .contact-form-container .input-area input[type="submit"]:hover {
-  background-color: #f6a535;
-  color: #fff;
+.contact-page-section
+> .contact-form
+> .contact-form-container
+> .input-area
+> input[type="submit"]:hover {
+  background-color: #0fbf02;
 }
 
 .w50 {
@@ -420,14 +508,12 @@ section .contact-container .contact-info .info li:hover span:nth-child(2) {
 section .contact-container .contact-form .input-area input,
 section .contact-container .contact-form .input-area textarea {
   width: 100%;
-  padding: 5px 0;
   font-size: 18px;
   font-weight: 300;
-  color: #6c6c6c;
-  border-bottom: 1px solid #6c6c6c;
+  color: #808b92;
+  border-bottom: 1px solid #000;
   outline: none;
   resize: none;
-  padding: 5px;
 }
 
 .text-field {
@@ -436,78 +522,37 @@ section .contact-container .contact-form .input-area textarea {
 }
 
 .text-field::-webkit-input-placeholder {
-  color: #adadad;
+  color: #565a59;
   font-size: 16px;
 }
 
 .text-field:-ms-input-placeholder {
-  color: #adadad;
+  color: #565a59;
   font-size: 16px;
 }
 
 .text-field::-ms-input-placeholder {
-  color: #adadad;
+  color: #565a59;
   font-size: 16px;
 }
 
 .text-field::placeholder {
-  color: #adadad;
+  color: #565a59;
   font-size: 16px;
 }
 
-@media (max-width: 1000px) {
-  nav {
-    padding: 0 40px 0 50px;
-  }
+.phone-icon {
+  position: relative;
+  top: -10px;
 }
 
-@media only screen and (max-width: 940px) {
-  .logo {
-    color: #2c2c2c;
-    line-height: 20px;
-    width: 90% !important;
-  }
-  nav .menu-btn i {
-    display: block;
-    color: #6c6c6c;
-  }
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: grey;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul {
-    left: 0;
-  }
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    color: cyan;
-  }
+.modal {
+  display: none;
+}
+
+.open-modal {
+  background: none;
+  border: none;
+  font-size: inherit;
 }
 /*# sourceMappingURL=style.css.map */
