@@ -118,7 +118,7 @@ nav .menu-btn i {
   color: #000;
 }
 
-input[type="checkbox"] {
+nav input[type="checkbox"] {
   display: none;
 }
 

@@ -75,40 +75,40 @@ nav {
       color: $core-color-border;
     }
   }
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  li {
-    margin: 0 5px;
-    a {
-      color: $core-foreground-color;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 8px 15px;
-      border-radius: 5px;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      &:hover,
-      &:active {
-        color: cyan;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      margin: 0 5px;
+      a {
+        color: $core-foreground-color;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        &:hover,
+        &:active {
+          color: cyan;
+        }
       }
     }
   }
-}
-nav .menu-btn i {
-  font-size: 22px;
-  cursor: pointer;
-  display: block;
-  color: $core-color-emphasis;
+  .menu-btn i {
+    font-size: 22px;
+    cursor: pointer;
+    display: block;
+    color: $core-color-emphasis;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
 }
 
-input[type="checkbox"] {
-  display: none;
-}
 
 .hero-container {
   display: flex;
