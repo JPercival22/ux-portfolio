@@ -14,33 +14,35 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
     <script defer="" src="scripts/script.js"></script>
   </head>
   <body>
+      <form method= "POST" action="https://formspree.io/f/mleoyewl">
     <nav>
-        <a class="logo" href="/index.html">
-          <img
-            class="logo-placeholder"
-            src="img/me-min.jpg"
-            alt="image of the author"
-            title="Joseph Percival"
-          />
-          <div class="logo-name">Joseph Percival</div>
-          <div class="logo-title">UX RESEARCHER/DESIGNER</div>
-        </a>
-        <input type="checkbox" id="click" />
-        <label for="click" class="menu-btn">
-          <i class="fa fa-bars">
-          </i>
-        </label>
-        <ul>
-          <li><a class="active" href="/index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="/contact-form.html">Contact Me</a></li>
-        </ul>
-      </nav>
+      <a class="logo" href="/index.html">
+        <img
+          class="logo-placeholder"
+          src="img/me-min.jpg"
+          alt="image of the author"
+          title="Joseph Percival"
+        />
+        <div class="logo-name">Joseph Percival</div>
+        <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+      </a>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fa fa-bars"> </i>
+      </label>
+      <ul>
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="/contact-form.html">Contact Me</a></li>
+      </ul>
+    </nav>
 
     <section class="contact-page-section">
       <div class="contact-container">
@@ -52,12 +54,18 @@
               <span>
                 <img src="/img/mail(1).png" alt="email information" />
               </span>
-             
-                <a href="mailto:josephmpercival@gmail.com"> <span>joseph.m.percival@gmail.com</span></a>
+
+              <a href="mailto:josephmpercival@gmail.com">
+                <span>joseph.m.percival@gmail.com</span></a
+              >
             </li>
             <li>
               <span>
-                <img class="phone-icon" src="/img/phone.png" alt="telephone information" />
+                <img
+                  class="phone-icon"
+                  src="/img/phone.png"
+                  alt="telephone information"
+                />
               </span>
 
               <a href="tel:07709718757"> <span>07709718757</span></a>
@@ -71,14 +79,16 @@
             I am available for UX Research/ UX Design or Front End positions and
             projects. Simply
 
-            <button class="open-modal"><span class="text">drop me a message</span></button>
+            <button class="open-modal">
+              <span class="text">drop me a message</span>
+            </button>
             or fill out the form below and I'll get back to you shortly.
           </p>
           <div class="contact-form-container">
             <div class="input-area w50">
               <input
                 type="text"
-                name=""
+                name="name"
                 placeholder="Enter your first name here . . ."
                 required
               />
@@ -88,7 +98,7 @@
             <div class="input-area w50">
               <input
                 type="text"
-                name=""
+                name="sirname"
                 placeholder="Enter your last name here . . ."
                 required
               />
@@ -98,7 +108,7 @@
             <div class="input-area w50">
               <input
                 type="text"
-                name=""
+                name="email"
                 placeholder="your-name@your-email.com"
                 required
               />
@@ -106,7 +116,11 @@
             </div>
 
             <div class="input-area w50">
-              <input type="text" name="" placeholder="(+44) . . ." required />
+              <input 
+              type="text" 
+              name="telephone" 
+              placeholder="(+44) . . ." 
+              required />
               <span>Contact Number</span>
             </div>
 
@@ -128,34 +142,46 @@
       </div>
       <article class="contact-modal">
         <div class="modal">
-
-            <header>
-                <h1>My Contact Details</h1>
-                <div class="close-modal">
-                    <i class="fa fa-times-circle fa-2x"></i>
-                </div>
-            </header>
-            
-                <p>Click to send me an e-mail or to give me a call.</p>
-                <ul>
-                  <li>
-                    <span>
-                      <img class="mail-icon" src="/img/mail(1).png" alt="email information" />
-                    </span>
-                   
-                      <a href="mailto:josephmpercival@gmail.com"> <span>joseph.m.percival@gmail.com</span></a>
-                  </li>
-                  <li>
-                    <span>
-                      <img  class="phone-icon" src="/img/phone.png" alt="telephone information"/>
-                    </span>
-      
-                    <a href="tel:07709718757"> <span>07709718757</span></a>
-                  </li>
-                </ul>
+          <header>
+            <h1>My Contact Details</h1>
+            <div class="close-modal">
+              <i class="fa fa-times-circle fa-2x"></i>
             </div>
-    </article>
-    </section>
+          </header>
 
+          <p>Click to send me an e-mail or to give me a call.</p>
+          <ul>
+            <li>
+              <span>
+                <img
+                  class="mail-icon"
+                  src="/img/mail(1).png"
+                  alt="email information"
+                />
+              </span>
+
+              <a href="mailto:josephmpercival@gmail.com">
+                <span>joseph.m.percival@gmail.com</span></a
+              >
+            </li>
+            <li>
+              <span>
+                <img
+                  class="phone-icon"
+                  src="/img/phone.png"
+                  alt="telephone information"
+                />
+              </span>
+
+              <a href="tel:07709718757"> <span>07709718757</span></a>
+            </li>
+          </ul>
+        </div>
+      </article>
+        <div id="status"></div>
+    </section>
+  
+    <div class="negative-margin"></div>
+    </form>
   </body>
 </html>
