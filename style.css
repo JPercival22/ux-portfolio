@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  background-image: url(/img/background.jpg);
+  background-image: url(/img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -309,25 +309,12 @@ input[type="checkbox"] {
           align-items: flex-start;
 }
 
-.contact-page-section
-> .contact-container
-> .contact-info
-> .info
-> li
-> span
-> :nth-child(1) {
+.contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) {
   width: 30px;
   min-width: 30px;
 }
 
-.contact-page-section
-> .contact-container
-> .contact-info
-> .info
-> li
-> span
-> :nth-child(1)
-> img {
+.contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) > img {
   max-width: 100%;
   opacity: 0.76;
 }
@@ -393,47 +380,27 @@ input[type="checkbox"] {
   outline: none;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input::-webkit-input-placeholder {
-  color: #adadad;
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input::-webkit-input-placeholder {
+  color: #6d6d6d;
   font-size: 16px;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input:-ms-input-placeholder {
-  color: #adadad;
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input:-ms-input-placeholder {
+  color: #6d6d6d;
   font-size: 16px;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input::-ms-input-placeholder {
-  color: #adadad;
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input::-ms-input-placeholder {
+  color: #6d6d6d;
   font-size: 16px;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input::placeholder {
-  color: #adadad;
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input::placeholder {
+  color: #6d6d6d;
   font-size: 16px;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input[type="submit"] {
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input[type="submit"] {
   display: inline-block;
   padding: 8px 18px;
   border: 3px solid #6c6c6c;
@@ -449,11 +416,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.contact-page-section
-> .contact-form
-> .contact-form-container
-> .input-area
-> input[type="submit"]:hover {
+.contact-page-section > .contact-form > .contact-form-container > .input-area > input[type="submit"]:hover {
   background-color: EBC650;
   color: #fff;
 }
@@ -492,22 +455,22 @@ section .contact-container .contact-form .input-area input placeholder {
 }
 
 .text-field::-webkit-input-placeholder {
-  color: #adadad;
+  color: #6d6d6d;
   font-size: 16px;
 }
 
 .text-field:-ms-input-placeholder {
-  color: #adadad;
+  color: #6d6d6d;
   font-size: 16px;
 }
 
 .text-field::-ms-input-placeholder {
-  color: #adadad;
+  color: #6d6d6d;
   font-size: 16px;
 }
 
 .text-field::placeholder {
-  color: #adadad;
+  color: #6d6d6d;
   font-size: 16px;
 }
 
@@ -537,6 +500,7 @@ section .contact-container .contact-form .input-area input placeholder {
   font-size: inherit;
   font-weight: 700;
   padding: 10px 20px;
+  background-color: white;
 }
 
 .contact-page-section
@@ -545,68 +509,24 @@ section .contact-container .contact-form .input-area input placeholder {
 > .contact-form-container
 > .input-area
 > input[type="submit"]:hover {
-  background: #f5ce27;
+  background: #1e90ff;
   border-color: #1e90ff;
-  color: #1e90ff;
+  color: #fff;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
-#status {
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.success {
+.thankyou-container {
   background-color: #63cb9e;
-  color: #fff;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
-}
-
-.error {
-  background-color: #f66863;
-  color: #fff;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
-}
-
-@-webkit-keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: all;
-  }
-}
-
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: all;
-  }
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }
 
 @media (min-width: 941px) and (max-width: 1100px) {
+  .hero-container .hero-text-content h1 {
+    font-size: 1.5rem;
+  }
   .contact-page-section .contact-container .contact-info {
     position: absolute;
     top: 40px;
@@ -626,22 +546,13 @@ section .contact-container .contact-form .input-area input placeholder {
     line-height: 20px;
     width: 90% !important;
     letter-spacing: 2px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: inherit;
-    -webkit-box-direction: inherit;
-        -ms-flex-direction: inherit;
-            flex-direction: inherit;
+    margin-left: 10px;
   }
   nav .logo .logo-name {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
+  }
+  nav .logo .logo-title {
+    font-size: 0.7rem;
   }
   nav {
     padding: 0 10px;
@@ -650,6 +561,7 @@ section .contact-container .contact-form .input-area input placeholder {
   nav .menu-btn i {
     display: block;
     color: #6c6c6c;
+    margin-right: 10px;
   }
   #click:checked ~ .menu-btn i:before {
     content: "\f00d";
@@ -683,6 +595,7 @@ section .contact-container .contact-form .input-area input placeholder {
   }
   #click:checked ~ ul li a {
     margin-left: 0px;
+    font-size: 1.3rem;
   }
   nav ul li a.active,
   nav ul li a:hover {
@@ -787,12 +700,12 @@ section .contact-container .contact-form .input-area input placeholder {
     display: none;
   }
   .contact-page-section .contact-container .contact-form h2 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 10px;
   }
   .contact-page-section .contact-container .contact-form p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 10px;
     color: #6c6c6c;
@@ -835,10 +748,7 @@ section .contact-container .contact-form .input-area input placeholder {
     height: 545px;
     margin: 0;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container {
+  .contact-page-section > .contact-container > .contact-form > .contact-form-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -848,11 +758,7 @@ section .contact-container .contact-form .input-area input placeholder {
             flex-direction: column;
     padding-top: 0;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .w50 {
+  .contact-page-section > .contact-container > .contact-form > .contact-form-container > .w50 {
     width: 100%;
   }
   .contact-page-section
@@ -879,11 +785,7 @@ section .contact-container .contact-form .input-area input placeholder {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .submit-button {
+  .contact-page-section > .contact-container > .contact-form > .contact-form-container > .submit-button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1061,42 +963,36 @@ section .contact-container .contact-form .input-area input placeholder {
   .modal.is-active {
     left: 3%;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .submit-button {
+  .contact-page-section > .contact-container > .contact-form > .contact-form-container > .submit-button {
     position: relative;
     top: 15px;
   }
 }
 
-@media only screen and (max-width: 420px) {
+.selected-btn,
+.button {
+  padding: 7px 12px;
+}
+
+@media only screen and (max-width: 425px) {
   .hero-container .hero-text-content h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .hero-subtitle p {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
   .contact-page-section .contact-container .contact-form {
-    height: 800px;
-  }
-  .contact-page-section > .contact-container > .contact-form {
     position: absolute;
-    top: -36px;
-    height: 750px;
+    height: 720px;
+    top: -75px !important;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .submit-button {
+  .contact-page-section > .contact-container > .contact-form > .contact-form-container > .submit-button {
     position: relative;
     top: 15px;
   }
 }
 
-@media only screen and (max-width: 341px) {
+@media only screen and (max-width: 375px) {
   nav .logo .logo-name {
     font-size: 1.1rem;
   }
@@ -1106,9 +1002,25 @@ section .contact-container .contact-form .input-area input placeholder {
   .contact-page-section > .contact-container > .contact-form {
     position: absolute;
     top: -50px;
+    height: 740px;
   }
   .contact-page-section .contact-container .contact-form h2 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact-page-section > .contact-container > .contact-form {
+    height: 750px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .contact-page-section > .contact-container > .contact-form {
+    margin-top: 70px;
+  }
+  .negative-margin {
+    height: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */
