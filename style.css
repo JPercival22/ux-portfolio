@@ -1,6 +1,25 @@
+@font-face {
+  font-family: "Averta-Regular";
+  src: url("/fonts/Averta-Regular.woff") format("woff");
+  src: url("/fonts/Averta-Regular.otf") format("otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: url("/fonts/Raleway-SemiBold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("/fonts/Raleway-ThinItalic.woff") format("woff");
+  font-style: normal;
+}
+
 body {
   scroll-behavior: smooth;
-  background-image: url(/img/background.png);
+  background-image: url(img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -174,19 +193,23 @@ input[type="checkbox"] {
           flex-direction: column;
 }
 
-.hero-container .hero-text-content h1 {
-  margin-bottom: 20px;
-  font-family: Poppins, sans-serif;
-  color: #2c2c2c;
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 700;
-  text-align: left;
+.hero-container .hero-text-content .hero-title {
+  font-family: Raleway-Thin;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2e03d5;
+  font-size: 28px;
+  line-height: 1rem;
+  font-stretch: ultra-condensed;
+  -webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(358deg, 0deg);
+          transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(358deg, 0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .hero-container .hero-text-content .hero-subtitle {
   max-width: 620px;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins;
   font-size: 20px;
   line-height: 36px;
   font-weight: 400;
@@ -206,7 +229,7 @@ input[type="checkbox"] {
   height: 100vh;
   margin: 5px;
   padding: 5px;
-  background-image: url(/img/business-model.png);
+  background-image: url(img/business-model.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
@@ -267,10 +290,10 @@ input[type="checkbox"] {
   top: 40px;
   width: 350px;
   height: calc(100% - 300px);
-  background-color: #f6a535;
+  background-color: #ef7f3f;
   z-index: 1;
   padding: 40px;
-  color: #fff;
+  color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,8 +310,13 @@ input[type="checkbox"] {
 }
 
 .contact-page-section .contact-container .contact-info h2 {
-  color: #fff;
+  color: #000000;
   font-size: 24px;
+  font-weight: 700;
+}
+
+.contact-page-section .contact-container .contact-info p {
+  color: #000000;
   font-weight: 500;
 }
 
@@ -320,10 +348,9 @@ input[type="checkbox"] {
 }
 
 .contact-page-section .contact-container .contact-info .info li a {
-  color: #fff;
+  color: #000000;
   margin-left: 10px;
-  font-weight: 300;
-  opacity: 0.76;
+  font-weight: 500;
 }
 
 .contact-page-section .contact-form {
@@ -372,12 +399,21 @@ input[type="checkbox"] {
 .contact-page-section .contact-form .contact-form-container .input-area input {
   width: 100%;
   padding: 5px 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: #00b6fc;
   border: none;
   border-bottom: 1px solid #6c6c6c;
   outline: none;
+}
+
+.contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
+  border: 2px solid #f5ce27;
+  border-radius: 8px;
+  font-size: inherit;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: white;
 }
 
 .contact-page-section > .contact-form > .contact-form-container > .input-area > input::-webkit-input-placeholder {
@@ -489,12 +525,7 @@ section .contact-container .contact-form .input-area input placeholder {
   font-size: inherit;
 }
 
-.contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> input[type="submit"] {
+.contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
   border: 2px solid #f5ce27;
   border-radius: 8px;
   font-size: inherit;
@@ -521,6 +552,27 @@ section .contact-container .contact-form .input-area input placeholder {
   padding: 20px;
   border: 1px solid #000000;
   border-radius: 8px;
+}
+
+.contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
+  height: auto;
+  padding: 5px 15px;
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #63cb9e;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  top: -15px;
+}
+
+.contact-page-section .contact-form .contact-form-container .input-area input.submit-button:hover {
+  background-color: #fff;
+  border-color: #63cb9e;
+  color: dodgerblue;
 }
 
 @media (min-width: 941px) and (max-width: 1100px) {
@@ -664,14 +716,8 @@ section .contact-container .contact-form .input-area input placeholder {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: 100%;
-    height: 37vh;
-    margin: 5px;
-    padding: 5px;
-    background-image: url(/img/business-model.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    width: 75vw;
+    height: 50vh;
   }
   /*contact page styles */
   .negative-margin {
@@ -950,6 +996,10 @@ section .contact-container .contact-form .input-area input placeholder {
   .hero-container .hero-text-content h1 {
     font-size: 1.3rem;
   }
+  .hero-container .hero-image {
+    width: 100vw;
+    height: 50vh;
+  }
   .contact-page-section .contact-container .contact-form {
     height: 720px;
     top: -35px;
@@ -976,19 +1026,51 @@ section .contact-container .contact-form .input-area input placeholder {
 
 @media only screen and (max-width: 425px) {
   .hero-container .hero-text-content h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .hero-subtitle p {
-    font-size: 0.98rem;
+    font-size: 0.9rem;
   }
   .contact-page-section .contact-container .contact-form {
-    position: absolute;
-    height: 720px;
-    top: -75px !important;
-  }
-  .contact-page-section > .contact-container > .contact-form > .contact-form-container > .submit-button {
+    height: 770px;
     position: relative;
     top: 15px;
+  }
+  .contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
+    position: relative;
+    top: 0px;
+  }
+  .contact-page-section .contact-form .contact-form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+  }
+  .modal.is-active {
+    background-color: goldenrod;
+    color: white;
+    border-color: orange;
+  }
+  .modal.is-active ul li a span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+  }
+  .modal.is-active ul li span .mail-icon {
+    position: relative;
+    top: 5px;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  .w50 {
+    width: 100%;
+  }
+  .negative-margin {
+    margin-top: 80px;
   }
 }
 
@@ -1018,9 +1100,6 @@ section .contact-container .contact-form .input-area input placeholder {
 @media only screen and (max-width: 360px) {
   .contact-page-section > .contact-container > .contact-form {
     margin-top: 70px;
-  }
-  .negative-margin {
-    height: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */
