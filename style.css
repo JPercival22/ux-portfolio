@@ -152,120 +152,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-.hero-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90%;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.hero-container .hero-text-content {
-  width: 50%;
-  height: 100vh;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.hero-container .hero-text-content .hero-title {
-  font-family: Raleway-Thin;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: #2e03d5;
-  font-size: 28px;
-  line-height: 1rem;
-  font-stretch: ultra-condensed;
-  -webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(358deg, 0deg);
-          transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(358deg, 0deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.hero-container .hero-text-content .hero-subtitle {
-  max-width: 620px;
-  font-family: Poppins;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 400;
-  text-align: left;
-}
-
-.hero-container .hero-text-content .hero-subtitle p:last-of-type {
-  margin-top: 0;
-  padding-bottom: 30px;
-}
-
-.hero-container .hero-image {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  width: 50%;
-  height: 100vh;
-  margin: 5px;
-  padding: 5px;
-  background-image: url(img/business-model.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70%;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 18px;
-  border: 3px solid #2c2c2c;
-  border-radius: 8px;
-  background-color: #fff;
-  font-family: Poppins, sans-serif;
-  color: #2c2c2c;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-}
-
-.selected-btn {
-  background-color: #2c2c2c;
-  color: #fff;
-}
-
-.button:hover {
-  background-color: #f6a535;
-  color: #fff;
-}
-
 .contact-page-section:before {
   content: "";
   position: absolute;
@@ -547,13 +433,6 @@ section .contact-container .contact-form .input-area input placeholder {
   transition: 0.5s ease-in-out;
 }
 
-.thankyou-container {
-  background-color: #63cb9e;
-  padding: 20px;
-  border: 1px solid #000000;
-  border-radius: 8px;
-}
-
 .contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
   height: auto;
   padding: 5px 15px;
@@ -576,9 +455,6 @@ section .contact-container .contact-form .input-area input placeholder {
 }
 
 @media (min-width: 941px) and (max-width: 1100px) {
-  .hero-container .hero-text-content h1 {
-    font-size: 1.5rem;
-  }
   .contact-page-section .contact-container .contact-info {
     position: absolute;
     top: 40px;
@@ -619,19 +495,30 @@ section .contact-container .contact-form .input-area input placeholder {
     content: "\f00d";
   }
   nav ul {
-    position: fixed;
+    position: absolute;
     top: 80px;
     left: -100%;
     background: grey;
     width: 100%;
     text-align: center;
-    display: block;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
   #click:checked ~ ul {
     left: 0;
     z-index: 9999;
+    padding-bottom: 80px;
   }
   nav ul li {
     width: 100%;
@@ -640,7 +527,6 @@ section .contact-container .contact-form .input-area input placeholder {
   nav ul li a {
     width: 100%;
     margin-left: -100%;
-    display: block;
     font-size: 1.8rem;
     -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -653,71 +539,6 @@ section .contact-container .contact-form .input-area input placeholder {
   nav ul li a:hover {
     background: none;
     color: cyan;
-  }
-  .hero-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 90%;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .hero-container .hero-text-content {
-    width: 100%;
-    height: 50vh;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .hero-container .hero-text-content hero-title {
-    font-family: Poppins, sans-serif;
-    color: #2c2c2c;
-    font-size: 2rem;
-    line-height: 35px;
-    font-weight: 700;
-    text-align: left;
-  }
-  .hero-container .hero-text-content .hero-subtitle {
-    max-width: 620px;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    line-height: 1.8rem;
-    font-weight: 400;
-    text-align: left;
-  }
-  .hero-container .hero-image {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 75vw;
-    height: 50vh;
   }
   /*contact page styles */
   .negative-margin {
@@ -959,9 +780,6 @@ section .contact-container .contact-form .input-area input placeholder {
   .contact-page-section .contact-container .contact-form {
     height: inherit;
   }
-  .hero-container .hero-text-content h1 {
-    font-size: 1.8rem;
-  }
   .negative-margin {
     margin-top: -30px;
   }
@@ -977,28 +795,6 @@ section .contact-container .contact-form .input-area input placeholder {
 @media only screen and (max-width: 610px) {
   .negative-margin {
     height: 80px;
-  }
-  .logo {
-    display: block;
-  }
-  nav .logo .logo-name {
-    font-size: 1.3rem;
-  }
-  nav .logo.title {
-    font-size: 1.2rem;
-  }
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 1.2rem;
-  }
-  .hero-container .hero-text-content h1 {
-    font-size: 1.3rem;
-  }
-  .hero-container .hero-image {
-    width: 100vw;
-    height: 50vh;
   }
   .contact-page-section .contact-container .contact-form {
     height: 720px;
@@ -1017,20 +813,13 @@ section .contact-container .contact-form .input-area input placeholder {
     position: relative;
     top: 15px;
   }
-}
-
-.selected-btn,
-.button {
-  padding: 7px 12px;
+  .selected-btn,
+  .button {
+    padding: 7px 12px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-  .hero-container .hero-text-content h1 {
-    font-size: 1rem;
-  }
-  .hero-subtitle p {
-    font-size: 0.9rem;
-  }
   .contact-page-section .contact-container .contact-form {
     height: 770px;
     position: relative;
@@ -1075,12 +864,6 @@ section .contact-container .contact-form .input-area input placeholder {
 }
 
 @media only screen and (max-width: 375px) {
-  nav .logo .logo-name {
-    font-size: 1.1rem;
-  }
-  nav .logo .logo-title {
-    font-size: 0.7rem;
-  }
   .contact-page-section > .contact-container > .contact-form {
     position: absolute;
     top: -50px;
