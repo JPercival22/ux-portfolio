@@ -8,37 +8,42 @@
   <meta name="keywords" content="HTML, CSS, JavaScript" />
   <meta name="author" content="Joseph Percival" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Form</title>
+  <title>JPercival-UX</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    display="swap" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;700&display=swap"
     rel="stylesheet">
-  <script defer="" src="scripts/script.js"></script>
+  <script defer="" src="script.js"></script>
 </head>
 
 <body>
   <form method="POST" action="https://formspree.io/f/mleoyewl">
-    <nav>
-      <a class="logo" href="/index.html">
-        <img class="logo-placeholder" src="img/me-min.jpg" alt="image of the author" title="Joseph Percival" />
-        <div class="logo-name">Joseph Percival</div>
-        <div class="logo-title">UX RESEARCHER/DESIGNER</div>
-      </a>
-      <input type="checkbox" id="click" />
-      <label for="click" class="menu-btn">
-        <i class="fa fa-bars"> </i>
-      </label>
-      <ul>
-        <li><a class="active" href="/index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="/contact-form.html">Contact Me</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <header>
+        <a class="logo" href="/index.html">
+          <img class="logo-placeholder" src="img/me-min.jpg" alt="image of the author" title="Joseph Percival" width="40"
+            height="40" />
+          <div class="logo-name">Joseph Percival</div>
+          <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+        </a>
+        <nav>
+          <input type="checkbox" id="click" />
+          <label for="click" class="menu-btn">
+            <i class="fa fa-bars"></i>
+          </label>
+          <ul>
+            <li><a class="active" href="/index.html">MY WORK</a></li>
+            <li><a href="#">My Skills</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="/contact-form.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <section class="contact-page-section">
       <div class="contact-container">
