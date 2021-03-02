@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Averta-Regular";
+  font-family: "Averta";
   src: url("/fonts/Averta-Regular.woff") format("woff");
   src: url("/fonts/Averta-Regular.otf") format("otf");
   font-style: normal;
@@ -15,6 +15,11 @@
   font-family: "Raleway-Thin";
   src: url("/fonts/Raleway-ThinItalic.woff") format("woff");
   font-style: normal;
+}
+
+.hero-title h1 {
+  font-family: Averta;
+  font-size: 18px;
 }
 
 .mouse-scroller {
