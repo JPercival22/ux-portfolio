@@ -55,7 +55,6 @@ window.onload = function () {
         border-right: 0.08em solid #666;
         font-family: 'Poppins';
         font-weight: 700;
-        font-size: 50px;
         transform: none;
       }
     `;

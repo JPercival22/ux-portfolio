@@ -1,55 +1,154 @@
-@font-face {
-  font-family: "Averta";
-  src: url("/fonts/Averta-Regular.woff") format("woff");
-  src: url("/fonts/Averta-Regular.otf") format("otf");
-  font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300&family=Quicksand:wght@300&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", Arial;
 }
 
-@font-face {
-  font-family: "Raleway-SemiBold";
-  src: url("/fonts/Raleway-SemiBold.woff") format("woff");
-  font-style: normal;
+section {
+  padding: 4em 2em;
 }
 
-@font-face {
-  font-family: "Raleway-Thin";
-  src: url("/fonts/Raleway-ThinItalic.woff") format("woff");
-  font-style: normal;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-title h1 {
-  font-family: Averta;
-  font-size: 18px;
+a {
+  text-decoration: none;
 }
 
-.mouse-scroller {
-  position: absolute;
-  right: 0;
-  bottom: 50px;
-  left: 0;
-  margin: auto;
-  width: 34px;
-  height: 55px;
+.hero-design {
+  display: none;
 }
-  .mouse {
-    width: 25px;
-    padding: 10px 12px;
-    height: 75px;
-    border: 2px solid black;
-    border-radius: 25px;
-    opacity: 0.75;
-    box-sizing: content-box;
+
+.nav-container {
+  background: #6700ee;
+  a {
+    color: #fff;
   }
-  .mouse-animation {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color:black;
-    animation: scroll 3s linear infinite;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  .logo {
+    color: #00f7ff;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  .logo-title {
+    font-size: 12px;
+    color: #fff;
+  }
+  nav #click {
+    display: none;
+  }
+  nav .menu-btn i {
+    display: flex;
+    color: #00f7ff;
+    font-size: 1.3rem;
+    margin-top: 10px;
   }
 
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+    color: #fff;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    width: 100%;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    background: linear-gradient(0deg, #22b7c3 0%, #6700ee 90%);
+    text-transform: uppercase;
+  }
+
+  #click:checked ~ ul {
+    left: 0;
+    z-index: 9999;
+    padding-bottom: 80px;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+    padding: 25px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    font-size: 1.8rem;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+    font-size: 1.1rem;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+
+.hero-container {
+  background: #6e00ff;
+  color: #fff;
+  display: grid;
+  text-align: center;
+  padding: 4em;
+  .hero-title {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    .txt-rotate > .wrap {
+      font-size: 1.2em;
+    }
+  }
+  .mouse-scroller {
+    position: relative;
+    right: 0;
+    top: 15px;
+    left: 0;
+    margin: auto;
+    width: 30px;
+    height: 35px;
+
+    .mouse {
+      width: 15px;
+      padding: 5px 6px;
+      height: 45px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      opacity: 0.75;
+      box-sizing: content-box;
+      .mouse-animation {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: scroll 3s linear infinite;
+      }
+    }
+  }
   @keyframes scroll {
-    from{
+    from {
       opacity: 1;
       position: relative;
       top: 0;
@@ -57,6 +156,58 @@
     to {
       opacity: 0.5;
       position: relative;
-      top: 50px;
+      top: 25px;
     }
   }
+}
+
+.featured {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #9f82f3;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  .subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6e00ff;
+    letter-spacing: 0.2em;
+    font-size: 0.85em;
+  }
+  .featured-title {
+    color: #000;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: -0.4em;
+    display: block;
+  }
+  .featured-desc {
+    color: #252525;
+    margin-bottom: 3em;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    font-weight: 500;
+  }
+  img {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+.skills {
+  background: #ff64cb;
+}
+.skills-container ul li {
+  background: #fff;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
