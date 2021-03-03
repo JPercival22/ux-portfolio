@@ -348,7 +348,7 @@ img {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1050px) {
   .nav-container {
     display: -ms-grid;
     display: grid;
@@ -405,7 +405,7 @@ img {
     padding: 0;
   }
   .hero-container .hero-text-content {
-    background: #6E00FF;
+    background: #6e00ff;
     padding: 0em 8em 0 4em;
     text-align: left;
     display: -webkit-box;
@@ -428,9 +428,9 @@ img {
   }
   .hero-design {
     display: unset;
-    position: absolute;
-    right: 10.6%;
-    top: 30%;
+    margin-left: -50%;
+    margin-top: 15%;
+    width: 100%;
   }
   .wrap {
     font-size: 2em;
@@ -460,6 +460,47 @@ img {
     background-color: #fff;
     -webkit-animation: scroll 3s linear infinite;
             animation: scroll 3s linear infinite;
+  }
+  img {
+    max-width: 900px;
+  }
+  .portfolio img {
+    float: right;
+    max-width: 500px;
+  }
+  .card-3 {
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .social-header {
+    padding: 2em 10em 2em 0;
+  }
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+  .hero .text-content {
+    padding: 6em 8em 6em 10em;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  header {
+    padding: 2em 2em 2em 20em;
+  }
+  .social-header {
+    padding: 2em 20em 4em 0;
+  }
+  section {
+    padding: 6em 20em 4em 10em;
+  }
+  .hero-title,
+  .wrap {
+    padding-left: 8em;
+  }
+  .hero-design {
+    margin-left: -49.5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
