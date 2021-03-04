@@ -1,0 +1,22 @@
+    <svg xmlns="http://www.w3.org/2000/svg"  width="472" height="480" viewBox="0 0 472 480">
+      <g id="blockdesign" transform="translate(-426 -241.28)">
+        <rect class="square-anim" data-name="Rectangle 12" width="120" height="120" rx="15"
+          transform="translate(778 361.28)" fill="rgba(105,73,197,0.9)" opacity="0.31" />
+        <rect class="square-anim" data-name="Rectangle 13" width="120" height="120" rx="15"
+          transform="translate(658 241.28)" fill="rgba(105,73,197,0.9)" />
+        <rect class="square-anim" data-name="Rectangle 16" width="120" height="120" rx="15"
+          transform="translate(426 481.28)" fill="rgba(255,255,255,0.9)" />
+        <rect class="square-anim" data-name="Rectangle 17" width="120" height="120" rx="15"
+          transform="translate(540 601.28)" fill="#fff" />
+        <rect class="square-anim" data-name="Rectangle 11" width="120" height="120" rx="15"
+          transform="translate(540 361.28)" fill="#fff" />
+        <rect class="square-anim" data-name="Rectangle 10" width="120" height="120" rx="15"
+          transform="translate(426 481.28)" fill="rgba(105,73,197,0.9)" opacity="0.31" />
+        <rect class="square-anim" data-name="Rectangle 15" width="120" height="120" rx="15"
+          transform="translate(658 481.28)" fill="rgba(105,73,197,0.9)" opacity="0.31" />
+        <circle id="Ellipse_2" data-name="Ellipse 2" cx="54" cy="54" r="54" transform="translate(664 367.28)"
+          fill="rgba(217,0,255,0.9)" />
+        <circle id="Ellipse_3" data-name="Ellipse 3" cx="54" cy="54" r="54" transform="translate(546 487.28)"
+          fill="#63cb9e" />
+      </g>
+    </svg>

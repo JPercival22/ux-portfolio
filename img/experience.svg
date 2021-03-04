@@ -1,0 +1,7 @@
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226" height="126" viewBox="0 0 226 126">
+      <g id="Group_40" data-name="Group 40" transform="translate(-178 -3236.993)">
+        <text id="_4" data-name="4" transform="translate(224.5 3236.993)" fill="#ffd84b" font-size="85" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.026em"><tspan x="32.727" y="89">4</tspan></text>
+        <use id="star" transform="translate(178 3265)" xlink:href="#image"/>
+        <use id="star-2" data-name="star" transform="translate(349 3265)" xlink:href="#image"/>
+      </g>
+    </svg>
