@@ -29,6 +29,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 240px;
+}
+
 .hero-design {
   display: none;
 }
@@ -136,12 +140,13 @@ header #click:checked ~ ul li a {
 .hero-container .hero-title {
   font-family: "Poppins";
   font-style: italic;
-  font-weight: 300;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.3em;
+  // line-height: 1.2em;
 }
 
-.hero-container .hero-title .txt-rotate > .wrap {
-  font-size: 1.2em;
+.wrap {
+  font-size: 1.3em;
 }
 
 .hero-container .mouse-scroller {
@@ -202,6 +207,14 @@ header #click:checked ~ ul li a {
   display: block;
 }
 
+.featured {
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+    max-width: 250px;
+  }
+}
+
 .featured-desc {
   color: #252525;
   margin-bottom: 3em;
@@ -233,6 +246,43 @@ header #click:checked ~ ul li a {
 
 .skills {
   background: #63cb9e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    opacity: 1\9; /* IE9 only */
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in.transition-1 {
+  animation-delay: 0.8s;
+}
+
+.fade-in.transition-2 {
+  animation-delay: 1.2s;
+}
+
+.fade-in.transition-3 {
+  animation-delay: 1.6s;
+}
+
+.fade-in.transition-4 {
+  animation-delay: 2s;
+}
+
+.fade-in.transition-5 {
+  animation-delay: 2.4s;
 }
 
 .skills-container {
@@ -290,7 +340,7 @@ header #click:checked ~ ul li a {
 
 .about .about-container ul li {
   background: #fff;
-  padding: 2em;
+  padding: 1em;
   border-radius: 1em;
 }
 
@@ -329,10 +379,9 @@ header #click:checked ~ ul li a {
 }
 
 .portfolio-container img {
-  max-width: 500px;
+  max-width: fit-content;
   width: 100%;
   border-radius: 1em;
-  margin-bottom: 2em;
 }
 
 .footer-container {
@@ -365,6 +414,7 @@ header #click:checked ~ ul li a {
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
+  max-width: fit-content;
 }
 
 .footer-container .footer-details .social-icon {
@@ -644,6 +694,12 @@ section .contact-container .contact-form .input-area input {
     padding: 1em 2em;
   }
 
+  .featured {
+    .right {
+      max-width: 329px;
+    }
+  }
+
   .featured,
   .portfolio {
     text-align: left;
@@ -661,30 +717,25 @@ section .contact-container .contact-form .input-area input {
     place-content: center;
   }
 
-  .right {
-    margin-left: 2em;
-    margin-top: 1em;
-  }
-
   .portfolio {
-    padding-top: 7em;
+    padding: 2em;
   }
 
   .portfolio-container img {
-    margin-left: 2em;
+    margin: 1em 0;
+  }
+
+  .design img {
+    max-width: 500px;
   }
 
   .business-model-icon {
     height: 130px;
-    display: -ms-grid;
     display: grid;
     padding-top: 2em;
     padding-bottom: 3em;
     place-content: center;
     margin: 0 auto;
-  }
-
-  .business-model-icon {
     max-width: 249px;
   }
 
@@ -737,9 +788,17 @@ section .contact-container .contact-form .input-area input {
 }
 
 @media only screen and (min-width: 895px) {
-  .skills,
-  .about {
-    margin-top: -5em;
+  .featured {
+    padding: 7em 3em;
+    .right {
+      margin-left: 2em;
+      max-width: 494px;
+    }
+  }
+  .portfolio {
+    padding: 7em 3em 7em 2em;
+  }
+  .skills {
     margin-bottom: -7em;
     padding-top: 7em;
   }
@@ -749,6 +808,10 @@ section .contact-container .contact-form .input-area input {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
+  }
+
+  .about {
+    padding: 2em;
   }
 
   .about-container ul {
@@ -916,33 +979,18 @@ section .contact-container .contact-form .input-area input {
 
   .hero-container .mouse-scroller {
     position: absolute;
-    top: 75%;
-    left: 19%;
+    top: 60%;
+    left: 22%;
     margin: auto;
     z-index: 9999;
   }
 
-  .hero-container .mouse-scroller .mouse {
-    width: 25px;
-    padding: 25px 15px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 40%;
-    opacity: 0.75;
-    box-sizing: content-box;
-    margin-bottom: 20px;
-  }
-
-  .hero-container .mouse-scroller .mouse .mouse-animation {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #fff;
-    animation: scroll 3s linear infinite;
-  }
-
   img {
-    max-width: 900px;
+    max-width: 250px;
+  }
+
+  .featured .right {
+    max-width: 587px;
   }
 
   .portfolio img {
@@ -950,20 +998,17 @@ section .contact-container .contact-form .input-area input {
     max-width: 500px;
   }
 
+  .business-model-icon img {
+    width: 250px;
+    height: auto;
+  }
   .card-3 {
     margin-right: 1em;
   }
 
-  .featured,
-  .skills {
-    margin-left: 9em;
+  .portfolio {
+    padding: 7em 1em 7em 3em;
   }
-
-  .footer-container .footer-details .footer-title,
-  .footer-container .footer-details .footer-subtitle {
-    font-size: 1.2em;
-  }
-
   // contact page
 
   .contact-page-section .contact-container .contact-info h2 {
@@ -1041,6 +1086,13 @@ section .contact-container .contact-form .input-area input {
   .hero .text-content {
     padding: 6em 8em 6em 10em;
   }
+
+  .featured .right {
+    max-width: 700px;
+  }
+  .design img {
+    max-width: 900px;
+  }
   .footer-container .footer-details {
     background: #6e00ff;
     text-align: left;
@@ -1053,20 +1105,21 @@ section .contact-container .contact-form .input-area input {
     left: 56%;
   }
 }
-@media only screen and (min-width: 1550px) {
-  .footer-container .footer-design img {
-    max-width: 400px;
-    width: 100%;
-  }
-}
 
 @media only screen and (min-width: 1550px) {
+  header .logo {
+    margin-left: 5em;
+  }
+
   .social-header {
     padding: 2em 20em 4em 0;
   }
-  section {
-    padding: 6em 20em 4em 10em;
+
+  .portfolio,
+  .featured {
+    padding: 7em 5em 7em 5em;
   }
+
   .featured:before {
     top: 5em;
     left: 5em;
@@ -1080,11 +1133,20 @@ section .contact-container .contact-form .input-area input {
   .wrap {
     padding-left: 8em;
   }
+
+  .skills {
+    padding: 7em 14em 5em 14em;
+  }
+
   .skills-container {
     text-align: center;
   }
   .portfolio-left {
     padding-left: 8em;
+  }
+
+  .about {
+    padding: 6em;
   }
   svg.hero-design {
     margin-left: -49.5%;
@@ -1183,16 +1245,26 @@ section .contact-container .contact-form .input-area input {
     height: 45vh;
     width: 40vw;
   }
+
+  .footer-container .footer-design img {
+    max-width: 400px;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1650px) {
   .featured,
   .skills,
   .portfolio-left {
-    margin-left: 9em;
+    animation: fadeIn 5s ease-in-out;
   }
 
-  .about-container ul {
-    margin-left: 9em;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
