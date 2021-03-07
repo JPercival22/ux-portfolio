@@ -564,9 +564,12 @@ header nav ul {
     .social-icon {
       flex-direction: row;
       padding-top: 2em;
-      a img {
-        width: 40px;
-        height: auto;
+      a {
+        img {
+          width: 1.5em;
+          height: auto;
+          padding-right: 1em;
+        }
       }
     }
   }

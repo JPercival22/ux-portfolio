@@ -731,8 +731,9 @@ header nav ul li a a:hover {
 }
 
 .footer-container .footer-details .social-icon a img {
-  width: 40px;
+  width: 1.5em;
   height: auto;
+  padding-right: 1em;
 }
 
 .footer-container .footer-design {
