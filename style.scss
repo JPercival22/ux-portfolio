@@ -3,12 +3,16 @@ html {
 }
 
 body {
-  padding:0;
+  padding: 0;
   margin: 0;
   font-family: "Poppins", Arial;
+}
+
+.overlay {
   background-image: url(/img/dots.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 1em;
 }
 
 section {
@@ -332,9 +336,9 @@ header #click:checked ~ ul li a {
 }
 
 .footer-container {
-  height: 30vh;
+  height: 50vh;
   display: grid;
-  grid-template-columns: 78% auto;
+  grid-template-columns: 80% auto;
   background: unset;
   padding: 0;
 }
@@ -342,6 +346,7 @@ header #click:checked ~ ul li a {
 .footer-container .footer-details {
   background: #6e00ff;
   padding-left: 2em;
+  padding-top: 2em;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -363,9 +368,6 @@ header #click:checked ~ ul li a {
 }
 
 .footer-container .footer-details .social-icon {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   padding-top: 2em;
 }
@@ -380,6 +382,10 @@ header #click:checked ~ ul li a {
   margin-left: -50%;
   margin-top: 15%;
   width: 100%;
+  img {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 
 // contact page
@@ -632,7 +638,6 @@ section .contact-container .contact-form .input-area input {
 }
 
 @media only screen and (min-width: 610px) {
-
   header {
     display: flex;
     justify-content: space-between;
@@ -764,9 +769,6 @@ section .contact-container .contact-form .input-area input {
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  .footer-container {
-    margin-top: 7em;
-  }
 
   .contact-page-section {
     margin: 2em auto;
@@ -835,7 +837,6 @@ section .contact-container .contact-form .input-area input {
 }
 
 @media only screen and (min-width: 1050px) {
-
   .nav-container {
     display: grid;
     grid-template-columns: 80% auto;
@@ -1044,7 +1045,7 @@ section .contact-container .contact-form .input-area input {
     background: #6e00ff;
     text-align: left;
     display: grid;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
 
@@ -1052,9 +1053,14 @@ section .contact-container .contact-form .input-area input {
     left: 56%;
   }
 }
+@media only screen and (min-width: 1550px) {
+  .footer-container .footer-design img {
+    max-width: 400px;
+    width: 100%;
+  }
+}
 
 @media only screen and (min-width: 1550px) {
-
   .social-header {
     padding: 2em 20em 4em 0;
   }
@@ -1185,6 +1191,7 @@ section .contact-container .contact-form .input-area input {
   .portfolio-left {
     margin-left: 9em;
   }
+
   .about-container ul {
     margin-left: 9em;
   }

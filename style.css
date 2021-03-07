@@ -6,9 +6,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", Arial;
+}
+
+.overlay {
   background-image: url(/img/dots.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 1em;
 }
 
 section {
@@ -362,11 +366,11 @@ header #click:checked ~ ul li a {
 }
 
 .footer-container {
-  height: 30vh;
+  height: 50vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 78% auto;
-      grid-template-columns: 78% auto;
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
   background: unset;
   padding: 0;
 }
@@ -374,6 +378,7 @@ header #click:checked ~ ul li a {
 .footer-container .footer-details {
   background: #6e00ff;
   padding-left: 2em;
+  padding-top: 2em;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,8 +411,8 @@ header #click:checked ~ ul li a {
 .footer-container .footer-details .social-icon {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding-top: 2em;
 }
 
@@ -420,6 +425,11 @@ header #click:checked ~ ul li a {
   display: unset;
   margin-left: -50%;
   margin-top: 15%;
+  width: 100%;
+}
+
+.footer-container .footer-design img {
+  max-width: 300px;
   width: 100%;
 }
 
@@ -844,8 +854,10 @@ section .contact-container .contact-form .input-area input {
   }
   .skills-container ul,
   .about-container ul {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
   }
   .about-container ul {
@@ -865,9 +877,6 @@ section .contact-container .contact-form .input-area input {
     width: 50%;
     padding-top: 1em;
     padding-bottom: 1em;
-  }
-  .footer-container {
-    margin-top: 7em;
   }
   .contact-page-section {
     margin: 2em auto;
@@ -1140,15 +1149,22 @@ section .contact-container .contact-form .input-area input {
     text-align: left;
     display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .brand .logo-main {
     left: 56%;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .footer-container .footer-design img {
+    max-width: 400px;
+    width: 100%;
   }
 }
 
