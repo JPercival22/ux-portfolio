@@ -67,7 +67,15 @@ img {
   font-size: 12px;
   color: #fff;
 }
-
+.logo{
+  display: flex;  
+  flex-direction: row;
+}
+.logo-container {
+  display: flex;  
+  flex-direction: column;
+  margin-left: 10px;
+}
 .logo-name {
   color: #00f7ff;
   line-height: 20px;
@@ -1263,7 +1271,7 @@ svg.hero-design .Ellipse_green:hover {
 @media only screen and (min-width: 1050px) {
   .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
   .logo-name {

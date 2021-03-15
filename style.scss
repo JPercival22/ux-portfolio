@@ -78,7 +78,15 @@ img {
   color: $white;
   padding-left: 1em;
 }
-
+.logo{
+  display: flex;  
+  flex-direction: row;
+}
+.logo-container {
+  display: flex;  
+  flex-direction: column;
+  margin-left: 10px;
+}
 .nav-container header a .logo-placeholder {
   display: flex;
 }
@@ -1332,7 +1340,7 @@ svg.hero-design .Ellipse_green:hover {
 @media only screen and (min-width: 1050px) {
     .logo{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
     }
     .logo-name {
