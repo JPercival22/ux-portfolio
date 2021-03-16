@@ -461,7 +461,7 @@ header nav ul li a:hover {
 }
 
 .about {
-  background: #dd19ff;
+  background: #6700ff;
   .about-container {
     text-align: center;
     ul {
@@ -1001,7 +1001,7 @@ svg.hero-design .Ellipse_green:hover {
   background: unset;
   padding: 0;
   .footer-details {
-    background: #6e00ff;
+    background: #6e00ee;
     text-align: left;
     display: -ms-grid;
     display: grid;
@@ -1043,9 +1043,15 @@ svg.hero-design .Ellipse_green:hover {
 }
 
 .footer-container .footer-social-icon {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 6em;
 }
 
 .footer-container .footer-social-icon a {
@@ -1097,6 +1103,10 @@ svg.hero-design .Ellipse_green:hover {
   color: #04a9f4;
   background: #fff;
   border-radius: 5px;
+}
+
+small {
+  padding-top: 2em;
 }
 
 .mobile-social-icon i {
@@ -1223,10 +1233,6 @@ svg.hero-design .Ellipse_green:hover {
     font-weight: 100;
   }
 
-  .footer-container .footer-details {
-    padding-left: 2em;
-    justify-content: start;
-  }
   .footer-container .footer-design img {
     max-width: 250px;
     width: 100%;
@@ -1564,7 +1570,7 @@ svg.hero-design .Ellipse_green:hover {
     padding: 3em;
   }
   .business-model-icon img {
-    width: 250px;
+    width: 200px;
     height: auto;
   }
   .card-3 {
