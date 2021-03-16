@@ -396,12 +396,16 @@ header nav ul li a:hover {
   font-size: 0.85em;
 }
 
-.featured .left .inner .subtitle .featured-title {
-  color: #000;
+.featured .left .inner .featured-title {
+  color: #6e00ff;
   font-size: 1.3em;
   font-weight: 700;
   margin-top: -0.4em;
   display: block;
+}
+
+.featured .left .inner .featured-title:hover {
+  text-decoration: underline;
 }
 
 .featured .left .inner .subtitle .featured-title .featured-desc {
@@ -683,23 +687,21 @@ header nav ul li a:hover {
 
 svg.hero-design {
   margin-left: -49.5%;
-  -webkit-animation: flash 1.5s ease-in;
-  animation: flash 1.5s ease-in;
 }
 
 svg.hero-design .square-anim:hover {
   opacity: 1;
-  -webkit-animation: flash 1.5s;
-  animation: flash 1.5s;
+  -webkit-animation: flash 1s;
+  animation: flash 1s;
 }
 
-svg.hero-design .Ellipse_purple:hover {
+svg.hero-design #Ellipse_2:hover {
   -webkit-animation: 1s ease-in-out;
   animation: 1s ease-in-out;
   fill: #43e7ff;
 }
 
-svg.hero-design .Ellipse_green:hover {
+svg.hero-design #Ellipse_3:hover {
   -webkit-animation: 1s ease-in-out;
   animation: 1s ease-in-out;
   fill: #9c9c9c;
