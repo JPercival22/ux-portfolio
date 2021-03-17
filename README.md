@@ -39,4 +39,4 @@ Link to my Front End Website and some of my finished projects
 <h1> Design Spec</h1>
 https://xd.adobe.com/view/44d206ea-43af-4cc5-b81b-7990e9364e34-1181/ Design Specification
 <h1>Live URL: </h1>
-http://portfolio.josephmpercival.co.uk/index.html
+https://portfolio.josephmpercival.co.uk/index.html
