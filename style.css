@@ -285,7 +285,7 @@ header #click:checked ~ ul li a {
   color: #fff;
   display: -ms-grid;
   display: grid;
-  text-align: center;
+  text-align: left;
   padding: 2em;
 }
 
@@ -449,24 +449,6 @@ header #click:checked ~ ul li a {
   margin-bottom: 2em;
 }
 
-.about .about-container ul li .deliverables-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.about .about-container ul li .deliverables-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
 .about .about-container ul li .icon-container svg {
   width: 100%;
 }
@@ -478,10 +460,6 @@ header #click:checked ~ ul li a {
 .about .about-container ul li .degree img {
   width: 100px;
   padding: 1em 0;
-}
-
-.about .about-container ul li .design-process-diagram {
-  margin-top: 4em;
 }
 
 .about .about-container ul li .business-model-icon img {
@@ -732,7 +710,7 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .contact-form .w50 span {
-  color: #000;
+  color: #000100;
 }
 
 .modal {
@@ -756,7 +734,7 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
@@ -808,7 +786,7 @@ header #click:checked ~ ul li a {
 }
 
 .is-active ul li:active {
-  border: 1px solid dodgerblue;
+  border: 1px solid #1e90ff;
   padding: 5px;
 }
 
@@ -818,7 +796,7 @@ header #click:checked ~ ul li a {
 
 .is-active ul a span {
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -939,38 +917,26 @@ header #click:checked ~ ul li a {
 
 .mobile-social-icon .fa-twitter-square,
 .footer-container .footer-social-icon .fa-twitter-square {
-  color: #41bef8;
-  background: #fff;
-  border-radius: 5px;
+  color: #1da1f2;
 }
 
 .mobile-social-icon .fa-github,
 .footer-container .footer-social-icon .fa-github {
-  color: #0d0e09;
-  background: #fff;
-  border-radius: 47%;
+  color: #000100;
 }
 
 .mobile-social-icon .fa-linkedin,
 .footer-container .footer-social-icon .fa-linkedin {
   color: #007bb6;
-  background: #fff;
-  border-radius: 5px;
-}
-
-.fa-download {
-  color: #04a9f4;
 }
 
 .mobile-social-icon .fa-download,
 .footer-container .footer-social-icon .fa-download {
   color: #04a9f4;
-  background: #fff;
-  border-radius: 5px;
 }
 
 .mobile-social-icon i {
-  margin: 10px;
+  margin: 0 10px;
   width: 30px;
   height: 32px;
 }
@@ -985,53 +951,99 @@ header #click:checked ~ ul li a {
     justify-content: space-between;
     padding: 1em 2em;
   }
-  img {
-    max-width: 400px;
-    width: 100%;
+  header .logo .logo-name {
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
   }
-  .degree img {
-    width: 130px;
-    padding: 0;
+  header .logo .logo-title {
+    font-size: 15px;
   }
-  .deiverables-vector {
-    padding-top: 2em;
-    margin: 0 auto;
+  .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .icon-container {
-    padding: 2em;
-  }
-  .design img {
-    max-width: 500px;
-    width: 70%;
-  }
-  .degree img {
-    padding: 2em 0;
+  .featured {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
   }
   .featured .right {
-    max-width: 329px;
+    margin: 0 auto;
+    max-width: 60vw;
+    width: 100%;
+    height: auto;
   }
-  .featured,
-  .portfolio {
-    text-align: left;
+  .skills .skills-container ul li .icon-container {
+    height: auto;
   }
-  .featured,
-  .portfolio-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 40% auto;
-    grid-template-columns: 40% auto;
+  .skills .skills-container ul li .icon-container img {
+    width: 90px;
+    height: auto;
   }
-  .left,
-  .portfolio-left {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
+  .skills .skills-container ul li .icon-container .brand-awareness {
+    width: 150px;
+    height: auto;
+  }
+  .skills .skills-container ul li .skill-title {
+    color: #6e00ff;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: -0.4em;
+  }
+  .skills .skills-container ul li .feature-desc {
+    font-size: 1.1em;
   }
   .portfolio {
     padding: 2em;
   }
-  .portfolio .portfolio-container img {
-    margin: 1em 0;
+  .portfolio .portfolio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    place-content: center;
+  }
+  .portfolio .portfolio-container a {
+    margin: 0 auto;
+  }
+  .portfolio .portfolio-container a img {
+    padding: 1em;
+    width: 50vw;
+  }
+  .portfolio .portfolio-left h3 {
+    font-size: 1.3em;
+    text-transform: capitalize;
+  }
+  .portfolio .portfolio-left p {
+    font-size: 1.1em;
+  }
+  .about .about-container ul li .about-title {
+    font-size: 1.5em;
+    text-transform: capitalize;
+  }
+  .about .about-container ul li .deliverables-title {
+    padding-top: 2em;
+  }
+  .about .about-container ul li .column-stretch .design {
+    padding-top: 2em;
+  }
+  .about .about-container ul li .deliverables-img svg {
+    margin-top: 2em;
+    width: 450px;
+  }
+  .about .about-container ul li .icon-container {
+    padding-top: 3em;
+    padding-bottom: 1em;
+  }
+  .about .about-container ul li .business-model-icon {
+    padding-top: 10em;
+    padding-bottom: 8em;
+  }
+  .about .about-container ul li .business-model-icon img {
+    width: 420px;
+    height: auto;
   }
   .business-model-icon {
     height: 130px;
@@ -1090,9 +1102,12 @@ header #click:checked ~ ul li a {
     justify-content: start;
     padding-left: 2em;
   }
-  .footer-container .footer-design img {
-    max-width: 250px;
-    width: 100%;
+  .footer-container .footer-details .logo .logo-name {
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+  }
+  .footer-container .footer-details .logo .logo-title {
+    font-size: 15px;
   }
 }
 
