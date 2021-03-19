@@ -2,7 +2,7 @@
 
 My UX Portfolio showcasing my UX and UI skills
 
-Website built by me which includes and showcase some of my Front End Skills and understanding
+Website designed and developed by myself which includes and showcases my design and some of my Front End Skills and understanding.
 
 <ul>
 <li>
