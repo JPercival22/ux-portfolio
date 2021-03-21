@@ -230,7 +230,6 @@ header nav #click,
             width: 100%;
             margin-left: -100%;
             font-size: 1.8rem;
-            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             &:hover {
               background: none;
               color: $hover-color;
@@ -249,8 +248,8 @@ header nav .menu-btn i {
   margin-top: 10px;
 }
 
-header #click:checked ~ .menu-btn i:before {
-  content: "\f00d";
+header #click:checked ~ .menu-btn svg:before {
+  content: "/X";
   color: $light-text-color;
 }
 
@@ -335,7 +334,9 @@ header #click:checked ~ ul {
       border-radius: 1em;
       margin-bottom: 1em;
       .skill-title {
+        color: $hero-bg;
         font-weight: 700;
+        margin-top: -0.4em;
       }
       .featured-desc {
         margin-bottom: 2em;
@@ -381,6 +382,7 @@ header #click:checked ~ ul {
           display: grid;
           place-content: center;
           margin: 0 auto;
+          padding: 1em 0;
         }
         .one {
           width: 200px;
@@ -396,7 +398,6 @@ header #click:checked ~ ul {
           font-weight: 700;
           text-align: center;
           color: $dark-text-color;
-          padding: 1em 0;
         }
         .featured-desc {
           margin-bottom: 2em;
@@ -420,7 +421,11 @@ header #click:checked ~ ul {
     }
   }
 }
-
+.deliverables-img {
+  svg {
+    width: 230px;
+  }
+}
 .contact-page-section {
   padding: 2em;
   margin: 0 auto;
@@ -487,7 +492,6 @@ header #click:checked ~ ul {
               transition: all 0.75s ease-in-out;
             }
           }
-
           label {
             .first-child::placeholder,
             .second-child::placeholder,
@@ -679,17 +683,21 @@ header #click:checked ~ ul {
 }
 
 @media only screen and (min-width: 610px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 2em;
-    .logo {
-      .logo-name {
-        letter-spacing: 0.5px;
-        font-size: 1.5rem;
-      }
-      .logo-title {
-        font-size: 15px;
+  .nav-container {
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      .logo {
+        .logo-container {
+          .logo-name {
+            letter-spacing: 0.5px;
+            font-size: 1.6rem;
+          }
+          .logo-title {
+            font-size: 15px;
+          }
+        }
       }
     }
   }
@@ -706,30 +714,58 @@ header #click:checked ~ ul {
       height: auto;
     }
   }
+  .hero-container {
+    .hero-title,
+    .wrap {
+      font-size: 1.9em;
+    }
+  }
 
-  .skills {
-    .skills-container {
-      ul {
-        li {
-          .icon-container {
+  .about {
+    .about-container {
+      ul li {
+        .icon-container {
+          padding: 2em 0;
+        }
+        .about-title {
+          font-size: 1.5em;
+          text-transform: capitalize;
+        }
+        .degree img {
+          width: 8em;
+          height: auto;
+        }
+        .experience-vector {
+          padding: 0;
+          width: 100px;
+          height: auto;
+        }
+        .icon-container.design {
+          padding-top: 5em;
+        }
+        .design-process-title {
+          padding-top: 1em;
+        }
+        .deliverables-img svg {
+          width: 350px;
+          height: auto;
+        }
+        .deliverables-title {
+          padding-top: 2em;
+        }
+        .business-model-icon {
+          height: 130px;
+          display: grid;
+          padding-top: 2em;
+          padding-bottom: 3em;
+          place-content: center;
+          margin: 0 auto;
+          max-width: 249px;
+          padding-top: 10em;
+          padding-bottom: 8em;
+          img {
+            width: 420px;
             height: auto;
-            img {
-              width: 90px;
-              height: auto;
-            }
-            .brand-awareness {
-              width: 150px;
-              height: auto;
-            }
-          }
-          .skill-title {
-            color: $hero-bg;
-            font-size: 1.3em;
-            font-weight: 700;
-            margin-top: -0.4em;
-          }
-          .feature-desc {
-            font-size: 1.1em;
           }
         }
       }
@@ -761,93 +797,105 @@ header #click:checked ~ ul {
     }
   }
 
-  .about {
-    .about-container {
-      ul li {
-        .about-title {
-          font-size: 1.5em;
-          text-transform: capitalize;
-        }
-        .deliverables-title {
-          padding-top: 2em;
-        }
-        .column-stretch {
-          .design {
-            padding-top: 2em;
-          }
-        }
-        .deliverables-img {
-          svg {
-            margin-top: 2em;
-            width: 450px;
-          }
-        }
-        .icon-container {
-          padding-top: 3em;
-          padding-bottom: 1em;
-        }
-        .business-model-icon {
-          padding-top: 10em;
-          padding-bottom: 8em;
-          img {
-            width: 420px;
+  .skills {
+    .skills-container {
+      ul {
+        li {
+          .icon-container {
             height: auto;
+            img {
+              width: 90px;
+              height: auto;
+              margin-bottom: 2em;
+            }
+            .brand-awareness {
+              width: 150px;
+              height: auto;
+            }
+          }
+          .skill-title {
+            color: $hero-bg;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-top: -0.4em;
+          }
+          .feature-desc {
+            font-size: 1.1em;
           }
         }
       }
     }
   }
-  .business-model-icon {
-    height: 130px;
-    display: -ms-grid;
-    display: grid;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-  }
 
-  .contact-page-section .contact-container .contact-form {
-    padding: 2em;
-  }
-  .contact-page-section .contact-form {
-    padding: 2em;
-  }
-  .contact-page-section .contact-form .contact-form-title {
-    font-size: 1.5em;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area {
-    margin: 10px 0;
-    width: 92%;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    border-radius: 8px;
-    margin-bottom: -10px;
-    width: 98%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-    width: 40%;
-    margin: 0 auto;
-    padding: 10px 20px;
+  .contact-page-section {
+    .contact-container {
+      .contact-form {
+        padding: 2em;
+        .contact-form-title {
+          font-size: 1.5em;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        .contact-form-container {
+          .input-area {
+            margin: 10px 0;
+            width: 92%;
+            textarea {
+              margin: 10px auto;
+              width: 98%;
+            }
+            .text-field {
+              border-radius: 8px;
+              margin-bottom: -10px;
+              width: 100%;
+            }
+            .submit-button {
+              width: 40%;
+              margin: 0 auto;
+              padding: 10px 20px;
+            }
+            label {
+              .first-child::placeholder,
+              .second-child::placeholder,
+              .third-child::placeholder,
+              .text-field::placeholder {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .modal {
-    display: none;
-  }
-  .modal.is-active {
-    top: 23%;
+    top: 15%;
     left: 7%;
   }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.3em;
-  }
-  .modal.is-active p {
-    font-size: 1.1em;
-    font-weight: 100;
+  .is-active {
+    height: 25vh;
+    width: 82%;
+    height: 30vh;
+    .contact-modal-title {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    .close-modal {
+      font-size: 15px;
+      padding: 5px 10px;
+      &:hover {
+        color: #9c9c9c;
+      }
+    }
+    ul {
+      li {
+        span {
+          font-size: 1.3rem;
+        }
+      }
+    }
   }
 
   .footer-container {
@@ -855,12 +903,14 @@ header #click:checked ~ ul {
       justify-content: start;
       padding-left: 2em;
       .logo {
-        .logo-name {
-          letter-spacing: 0.5px;
-          font-size: 1.5rem;
-        }
-        .logo-title {
-          font-size: 15px;
+        .logo-container {
+          .logo-name {
+            letter-spacing: 0.5px;
+            font-size: 1.7rem;
+          }
+          .logo-title {
+            font-size: 1.1rem;
+          }
         }
       }
     }
@@ -885,6 +935,7 @@ header #click:checked ~ ul {
   .portfolio {
     padding: 7em 3em 7em 2em;
   }
+
   .skills {
     margin-bottom: -7em;
     padding-top: 7em;
@@ -908,9 +959,6 @@ header #click:checked ~ ul {
     margin-left: 0;
   }
 
-  .deiverables-vector {
-    padding: 3.5em 0 2em 0;
-  }
   .column-stretch {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -987,6 +1035,9 @@ header #click:checked ~ ul {
   }
 }
 @media only screen and (min-width: 1050px) {
+  .menu-btn {
+    display: none;
+  }
   .logo {
     display: flex;
     flex-direction: row;
