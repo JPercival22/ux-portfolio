@@ -22,8 +22,7 @@
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -50,8 +49,7 @@
   font-weight: 500;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -78,8 +76,7 @@
   font-weight: 600;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -106,8 +103,7 @@
   font-weight: 700;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html {
@@ -166,8 +162,8 @@ header nav #click,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1em;
 }
 
@@ -182,8 +178,8 @@ header nav #click,
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .nav-container header .logo .logo-placeholder {
@@ -198,8 +194,8 @@ header nav #click,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 10px;
 }
 
@@ -227,8 +223,8 @@ header nav #click,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background: -webkit-gradient(linear, left bottom, left top, from(#22b7c3), color-stop(90%, #6700ee));
@@ -247,8 +243,6 @@ header nav #click,
   width: 100%;
   margin-left: -100%;
   font-size: 1.8rem;
-  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .nav-container header nav ul li a:hover {
@@ -265,8 +259,8 @@ header nav .menu-btn i {
   margin-top: 10px;
 }
 
-header #click:checked ~ .menu-btn i:before {
-  content: "\f00d";
+header #click:checked ~ .menu-btn svg:before {
+  content: "/X";
   color: #fff;
 }
 
@@ -362,7 +356,9 @@ header #click:checked ~ ul li a {
 }
 
 .skills .skills-container ul li .skill-title {
+  color: #6e00ff;
   font-weight: 700;
+  margin-top: -0.4em;
 }
 
 .skills .skills-container ul li .featured-desc {
@@ -423,6 +419,7 @@ header #click:checked ~ ul li a {
   display: grid;
   place-content: center;
   margin: 0 auto;
+  padding: 1em 0;
 }
 
 .about .about-container ul li .one {
@@ -442,7 +439,6 @@ header #click:checked ~ ul li a {
   font-weight: 700;
   text-align: center;
   color: #000100;
-  padding: 1em 0;
 }
 
 .about .about-container ul li .featured-desc {
@@ -464,6 +460,10 @@ header #click:checked ~ ul li a {
 
 .about .about-container ul li .business-model-icon img {
   padding: 1em 0;
+}
+
+.deliverables-img svg {
+  width: 230px;
 }
 
 .contact-page-section {
@@ -519,13 +519,13 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
 }
 
@@ -540,11 +540,11 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #1e90ff;
   border: 2px solid;
   border-radius: 8px;
@@ -561,34 +561,10 @@ header #click:checked ~ ul li a {
   transition: all 0.75s ease-in-out;
 }
 
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .first-child::-webkit-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .second-child::-webkit-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .third-child::-webkit-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .text-field::-webkit-input-placeholder {
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-webkit-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-webkit-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-webkit-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-webkit-input-placeholder {
   color: #000100;
   font-size: 16px;
   padding: 0 5px 5px 5px;
@@ -597,34 +573,10 @@ header #click:checked ~ ul li a {
   font-family: "Poppins";
 }
 
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .first-child:-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .second-child:-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .third-child:-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .text-field:-ms-input-placeholder {
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child:-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child:-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child:-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field:-ms-input-placeholder {
   color: #000100;
   font-size: 16px;
   padding: 0 5px 5px 5px;
@@ -633,34 +585,10 @@ header #click:checked ~ ul li a {
   font-family: "Poppins";
 }
 
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .first-child::-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .second-child::-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .third-child::-ms-input-placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .text-field::-ms-input-placeholder {
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-ms-input-placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-ms-input-placeholder {
   color: #000100;
   font-size: 16px;
   padding: 0 5px 5px 5px;
@@ -669,34 +597,10 @@ header #click:checked ~ ul li a {
   font-family: "Poppins";
 }
 
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .first-child::placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .second-child::placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .third-child::placeholder,
-.contact-page-section
-  .contact-container
-  .contact-form
-  .contact-form-container
-  .input-area
-  label
-  .text-field::placeholder {
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::placeholder,
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::placeholder {
   color: #000100;
   font-size: 16px;
   padding: 0 5px 5px 5px;
@@ -737,11 +641,11 @@ header #click:checked ~ ul li a {
   color: #fff;
   font-size: 16px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 25vh;
   width: 82%;
 }
@@ -770,15 +674,15 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .is-active ul li {
@@ -831,7 +735,7 @@ header #click:checked ~ ul li a {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
-  grid-template-columns: 100%;
+      grid-template-columns: 100%;
   background: unset;
   padding: 0;
 }
@@ -843,11 +747,11 @@ header #click:checked ~ ul li a {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .footer-container .footer-details .logo {
@@ -877,14 +781,14 @@ header #click:checked ~ ul li a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-container .footer-social-icon a,
@@ -904,14 +808,14 @@ header #click:checked ~ ul li a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 1em;
 }
 
@@ -942,20 +846,20 @@ header #click:checked ~ ul li a {
 }
 
 @media only screen and (min-width: 610px) {
-  header {
+  .nav-container header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1em 2em;
   }
-  header .logo .logo-name {
+  .nav-container header .logo .logo-container .logo-name {
     letter-spacing: 0.5px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-  header .logo .logo-title {
+  .nav-container header .logo .logo-container .logo-title {
     font-size: 15px;
   }
   .right {
@@ -967,7 +871,7 @@ header #click:checked ~ ul li a {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
-    grid-template-columns: auto;
+        grid-template-columns: auto;
   }
   .featured .right {
     margin: 0 auto;
@@ -975,25 +879,54 @@ header #click:checked ~ ul li a {
     width: 100%;
     height: auto;
   }
-  .skills .skills-container ul li .icon-container {
+  .hero-container .hero-title,
+  .hero-container .wrap {
+    font-size: 1.9em;
+  }
+  .about .about-container ul li .icon-container {
+    padding: 2em 0;
+  }
+  .about .about-container ul li .about-title {
+    font-size: 1.5em;
+    text-transform: capitalize;
+  }
+  .about .about-container ul li .degree img {
+    width: 8em;
     height: auto;
   }
-  .skills .skills-container ul li .icon-container img {
-    width: 90px;
+  .about .about-container ul li .experience-vector {
+    padding: 0;
+    width: 100px;
     height: auto;
   }
-  .skills .skills-container ul li .icon-container .brand-awareness {
-    width: 150px;
+  .about .about-container ul li .icon-container.design {
+    padding-top: 5em;
+  }
+  .about .about-container ul li .design-process-title {
+    padding-top: 1em;
+  }
+  .about .about-container ul li .deliverables-img svg {
+    width: 350px;
     height: auto;
   }
-  .skills .skills-container ul li .skill-title {
-    color: #6e00ff;
-    font-size: 1.3em;
-    font-weight: 700;
-    margin-top: -0.4em;
+  .about .about-container ul li .deliverables-title {
+    padding-top: 2em;
   }
-  .skills .skills-container ul li .feature-desc {
-    font-size: 1.1em;
+  .about .about-container ul li .business-model-icon {
+    height: 130px;
+    display: -ms-grid;
+    display: grid;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    place-content: center;
+    margin: 0 auto;
+    max-width: 249px;
+    padding-top: 10em;
+    padding-bottom: 8em;
+  }
+  .about .about-container ul li .business-model-icon img {
+    width: 420px;
+    height: auto;
   }
   .portfolio {
     padding: 2em;
@@ -1002,7 +935,7 @@ header #click:checked ~ ul li a {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
-    grid-template-columns: auto;
+        grid-template-columns: auto;
     place-content: center;
   }
   .portfolio .portfolio-container a {
@@ -1019,95 +952,115 @@ header #click:checked ~ ul li a {
   .portfolio .portfolio-left p {
     font-size: 1.1em;
   }
-  .about .about-container ul li .about-title {
-    font-size: 1.5em;
-    text-transform: capitalize;
-  }
-  .about .about-container ul li .deliverables-title {
-    padding-top: 2em;
-  }
-  .about .about-container ul li .column-stretch .design {
-    padding-top: 2em;
-  }
-  .about .about-container ul li .deliverables-img svg {
-    margin-top: 2em;
-    width: 450px;
-  }
-  .about .about-container ul li .icon-container {
-    padding-top: 3em;
-    padding-bottom: 1em;
-  }
-  .about .about-container ul li .business-model-icon {
-    padding-top: 10em;
-    padding-bottom: 8em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 420px;
+  .skills .skills-container ul li .icon-container {
     height: auto;
   }
-  .business-model-icon {
-    height: 130px;
-    display: -ms-grid;
-    display: grid;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
+  .skills .skills-container ul li .icon-container img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 2em;
+  }
+  .skills .skills-container ul li .icon-container .brand-awareness {
+    width: 150px;
+    height: auto;
+  }
+  .skills .skills-container ul li .skill-title {
+    color: #6e00ff;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: -0.4em;
+  }
+  .skills .skills-container ul li .feature-desc {
+    font-size: 1.1em;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 2em;
   }
-  .contact-page-section .contact-form {
-    padding: 2em;
-  }
-  .contact-page-section .contact-form .contact-form-title {
+  .contact-page-section .contact-container .contact-form .contact-form-title {
     font-size: 1.5em;
   }
-  .contact-page-section .contact-form .contact-form-container .input-area {
+  .contact-page-section .contact-container .contact-form p {
+    font-size: 1.2rem;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
     margin: 10px 0;
     width: 92%;
   }
-  .contact-page-section .contact-form .contact-form-container .input-area textarea {
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
     margin: 10px auto;
     width: 98%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
     border-radius: 8px;
     margin-bottom: -10px;
-    width: 98%;
+    width: 100%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
     width: 40%;
     margin: 0 auto;
     padding: 10px 20px;
   }
-  .modal {
-    display: none;
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-webkit-input-placeholder {
+    font-size: 1.2rem;
   }
-  .modal.is-active {
-    top: 23%;
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::placeholder {
+    font-size: 1.2rem;
+  }
+  .modal {
+    top: 15%;
     left: 7%;
   }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.3em;
+  .is-active {
+    height: 25vh;
+    width: 82%;
+    height: 30vh;
   }
-  .modal.is-active p {
-    font-size: 1.1em;
-    font-weight: 100;
+  .is-active .contact-modal-title {
+    font-size: 2em;
+  }
+  .is-active p {
+    font-size: 1.3rem;
+  }
+  .is-active .close-modal {
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+  .is-active .close-modal:hover {
+    color: #9c9c9c;
+  }
+  .is-active ul li span {
+    font-size: 1.3rem;
   }
   .footer-container .footer-details {
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     padding-left: 2em;
   }
-  .footer-container .footer-details .logo .logo-name {
+  .footer-container .footer-details .logo .logo-container .logo-name {
     letter-spacing: 0.5px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
-  .footer-container .footer-details .logo .logo-title {
-    font-size: 15px;
+  .footer-container .footer-details .logo .logo-container .logo-title {
+    font-size: 1.1rem;
   }
 }
 
@@ -1137,7 +1090,8 @@ header #click:checked ~ ul li a {
   .about-container ul {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
   }
   .about {
@@ -1149,9 +1103,6 @@ header #click:checked ~ ul li a {
   }
   .about-container ul {
     margin-left: 0;
-  }
-  .deiverables-vector {
-    padding: 3.5em 0 2em 0;
   }
   .column-stretch {
     -ms-grid-column: 1;
@@ -1227,17 +1178,20 @@ header #click:checked ~ ul li a {
 }
 
 @media only screen and (min-width: 1050px) {
+  .menu-btn {
+    display: none;
+  }
   .logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .logo-name {
     font-size: 1.2rem;
@@ -1265,16 +1219,16 @@ header #click:checked ~ ul li a {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     text-transform: uppercase;
     background: none;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .nav-container header nav ul li {
     width: inherit;
@@ -1295,45 +1249,45 @@ header #click:checked ~ ul li a {
   svg.hero-design {
     margin-left: -49.5%;
     -webkit-animation: flash 1.5s ease-in;
-    animation: flash 1.5s ease-in;
+            animation: flash 1.5s ease-in;
   }
   svg.hero-design .square-anim:hover {
     opacity: 1;
     -webkit-animation: flash 1.5s;
-    animation: flash 1.5s;
+            animation: flash 1.5s;
   }
   svg.hero-design .Ellipse_purple:hover {
     -webkit-animation: 1s ease-in-out;
-    animation: 1s ease-in-out;
+            animation: 1s ease-in-out;
     fill: #43e7ff;
   }
   svg.hero-design .Ellipse_green:hover {
     -webkit-animation: 1s ease-in-out;
-    animation: 1s ease-in-out;
+            animation: 1s ease-in-out;
     fill: #9c9c9c;
   }
   .left,
   .portfolio-left {
     padding-left: 0;
     -webkit-animation: swing-right 1.5s ease-in-out;
-    animation: swing-right 1.5s ease-in-out;
+            animation: swing-right 1.5s ease-in-out;
   }
   .right,
   .portfolio img {
     -webkit-animation: swing-left 2.5s ease-in;
-    animation: swing-left 2.5s ease-in;
+            animation: swing-left 2.5s ease-in;
   }
   .transition-2a {
     -webkit-animation: reveal 2s ease-in;
-    animation: reveal 2s ease-in;
+            animation: reveal 2s ease-in;
   }
   .transition-2b {
     -webkit-animation: reveal 2.7s ease-in;
-    animation: reveal 2.7s ease-in;
+            animation: reveal 2.7s ease-in;
   }
   .transition-2c {
     -webkit-animation: reveal 3.5s ease-in;
-    animation: reveal 3.5s ease-in;
+            animation: reveal 3.5s ease-in;
   }
   @-webkit-keyframes reveal {
     0% {
@@ -1408,11 +1362,11 @@ header #click:checked ~ ul li a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .nav-container header nav ul {
     position: relative;
@@ -1508,14 +1462,14 @@ header #click:checked ~ ul li a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .hero-container .hero-text-content .hero-title {
     font-size: 2em;
@@ -1555,7 +1509,7 @@ header #click:checked ~ ul li a {
     border-radius: 50%;
     background-color: #fff;
     -webkit-animation: scroll 3s linear infinite;
-    animation: scroll 3s linear infinite;
+            animation: scroll 3s linear infinite;
   }
   @-webkit-keyframes scroll {
     from {
@@ -1600,37 +1554,37 @@ header #click:checked ~ ul li a {
   .fade-in {
     opacity: 0;
     -webkit-animation: fadeIn ease-in 1;
-    animation: fadeIn ease-in 1;
+            animation: fadeIn ease-in 1;
     -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+            animation-duration: 1s;
   }
   .fade-in.transition-1 {
     -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
+            animation-delay: 0.8s;
   }
   .fade-in.transition-2 {
     -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+            animation-delay: 1.2s;
   }
   .fade-in.transition-3 {
     -webkit-animation-delay: 1.6s;
-    animation-delay: 1.6s;
+            animation-delay: 1.6s;
   }
   .fade-in.transition-4 {
     -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+            animation-delay: 2s;
   }
   .fade-in.transition-5 {
     -webkit-animation-delay: 2.4s;
-    animation-delay: 2.4s;
+            animation-delay: 2.4s;
   }
   .featured,
   .skills,
   .portfolio-left {
     -webkit-animation: fadeIn 5s ease-in-out;
-    animation: fadeIn 5s ease-in-out;
+            animation: fadeIn 5s ease-in-out;
   }
   @keyframes fadeIn {
     from {
@@ -1711,8 +1665,8 @@ header #click:checked ~ ul li a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .contact-page-section .contact-container .contact-info h2 .info li a {
     color: #000000;
@@ -1916,8 +1870,8 @@ header #click:checked ~ ul li a {
 @media only screen and (min-width: 1870px) {
   .hero-container .hero-text-content {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0px 27em 0 0em;
   }
   .portfolio,
