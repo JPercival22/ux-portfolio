@@ -60,16 +60,3 @@ window.onload = function () {
     `;
   document.head.appendChild(style);
 };
-
-//   Modal toggle 
-
-const openBtn = document.querySelector('.open-modal');
-const closeBtn = document.querySelector('.close-modal');
-const modal = document.querySelector('.modal');
-
-openBtn.addEventListener('click', toggleModal);
-closeBtn.addEventListener('click', toggleModal);
-
-function toggleModal() {
-  modal.classList.toggle('is-active');
-}
