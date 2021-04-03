@@ -1697,28 +1697,6 @@ a {
   .hero-title,
   .mouse-scroller {
     padding-left: 0.5em;
-    -webkit-animation: fall-in 1s ease-in;
-    animation: fall-in 1s ease-in;
-  }
-  @-webkit-keyframes fall-in {
-    0% {
-      opacity: 0;
-      margin-bottom: 1000px;
-    }
-    100% {
-      opacity: 1;
-      margin-bottom: 0;
-    }
-  }
-  @keyframes fall-in {
-    0% {
-      opacity: 0;
-      margin-bottom: 1000px;
-    }
-    100% {
-      opacity: 1;
-      margin-bottom: 0;
-    }
   }
   .wrap {
     padding-left: 0.5em;
