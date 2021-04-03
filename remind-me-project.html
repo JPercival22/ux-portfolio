@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+    <meta name="description" content="UX Portfolio for Joseph Percival" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Joseph Percival" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPercival-UX</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <script defer="" src="/scripts/index-script.js"></script>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+</head>
+
+<body>
+
+    <div class="nav-container">
+        <header>
+            <a class="logo" href="/index.html">
+                <div class="logo-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                        <defs>
+                            <image width="40" height="40" id="A"
+                                href="data:image/png;base64,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" />
+                        </defs>
+                        <use href="#A" />
+                    </svg>
+                </div>
+                <div class="logo-container">
+                    <div class="logo-name">Joseph Percival</div>
+                    <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+                </div>
+            </a>
+            <nav>
+                <input type="checkbox" id="click" />
+                <label for="click" class="menu-btn">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    </svg>
+                </label>
+                <ul>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About </a></li>
+                    <li><a href="/contact-form.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="top-social-icon">
+            <a href="https://www.linkedin.com/in/joseph-percival">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                </svg>
+            </a>
+
+            <a href="https://mobile.twitter.com/percival_joseph">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                </svg>
+            </a>
+
+            <a href="https://github.com/JPercival22">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
+            </a>
+
+            <a href="assets/JPercival-CV2020.pdf">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-container-projects">
+        <div class="hero-content-grid">
+            <div class="hero-text-content">
+                <div class="hero-title-case-study">
+                    <h1>Remind Me <br>Case Study</h1>
+                    <h2>UX Research, UX & UI Design,User Testing</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-study-overlay">
+        <section>
+            <div class="case-study-inner">
+                <h1>The product</h1>
+                <p>Remind Me is a due to be deployed soon. The application is a user editable reminder application
+                    which allows the user to interact and engage fully to edit, delete, create and set reminders for
+                    their daily tasks.
+                    It has two versions a free version with generic allowances and a Premium version which has more
+                    advanced
+                    capabilities.
+                </p>
+                <h1>The problem</h1>
+                <p>The company wants a Website to be designed that:</p>
+                <ul class="case-study-list">
+                    <li>
+                        Defines their Brand
+                    </li>
+                    <li>
+                        Advertises both versions of their product using their market research
+                    </li>
+                    <li>Includes a gallery of images collected from their application</li>
+                    <li>
+                        A review section with the provided results from their user testing of their product
+                    </li>
+                    <li>
+                        Company contact section
+                    </li>
+                    <li>
+                        e-commerce order section
+                    </li>
+                    <li>
+                        User friendly site aimed at the given demographic
+                    </li>
+                </ul>
+                <h1>The Task</h1>
+                <p>Design a website for the development team, that advertises their product. Identify what the User
+                    wants to see and what is important
+                    to show them. </p>
+            </div>
+        </section>
+        <section>
+            <div class="case-study-container">
+                <h2 >Competitive Research</h2>
+                <p >I studied a few similar applications available to identify patterns.
+                    so that the new site, although unique to the company, would be familiar to the user too.
+                    It was identified that none of these sites had a gallery.
+                </p>
+                <img class="desk-research-image" src="img/application-desk-research.png" alt="to do app desk research images">
+            </div>
+        </section>
+        <section>
+            <div class="case-study-container">
+                <h2 >Sketches</h2>
+                <p >After completing my initial research, I sketch ideas. This allows for many leading iterations through varying design options.
+                </p>
+                <img class="sketches" src="img/sketches.png" alt="to do app desk research images">
+            </div>
+        </section>
+
+        <section class="full-width-banner">
+            <h1>Wire frames</h1>
+        </section>
+        <section class="full-width-section">
+            <img src="/img/wireframes.png" alt="">
+            <a href="https://xd.adobe.com/view/ba09d262-dc92-430c-84de-841e638dce99-ef5a/"><p class="secondary-button">
+                Click here to see the design sheets</p></a>
+        </section>
+
+        <section>
+            <div class="case-study-container">
+                <h2>User Testing - Round 1</h2>
+                <p>Using User Interviews and Think Aloud Protocol, I launched a small test using the Wire Frame Prototype
+                    to identify what the user's needs were:
+                </p>
+                <h2>
+                    Feedback
+                </h2>
+                <ul class="case-study-list">
+                    <li>
+                        Simple HCI and navigation on all View ports.
+                    </li>
+                    <li>
+                        Combined Feature and Price list.
+                    </li>
+                    <li>
+                        A more interactive and aesthetically pleasing review section, rather than a wall of text.
+                    </li>
+                    <li>
+                        Simplistic Contact Form
+                    </li>
+                    <li>
+                        Simplistic checkout.
+                    </li>
+                    <li>
+                        Aesthetically pleasing checkout
+                    </li>
+                    <li>
+                        A collective theme through out
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="case-study-container">
+                <h2>User Testing - Round 2</h2>
+                <p>Using User Interviews and Think Aloud Protocol, I launched another small test with a new set of O4xVkVi43oMETYa5Xb02FqqELHVVCHaPUarP4T4EFWIJkcsEWpqatrx5ptvvvSnPfrom the public
+                    domain. This round tested if the designs had improved in an un bias way, improved comprehension and user emotions whilst 
+                    navigating through the site with the simple tasks.
+                </p>
+                <h2>
+                    Feedback
+                </h2>
+                <ul class="case-study-list">
+                    <li>
+                       Having changed some of the buttons from a Primary button to a clickable text link instead, it was found that most user's 
+                       were no longer having cognitive overload, now they could differentiate themselves what was a primary and a secondary button themselves.
+                    </li>
+                    <li>
+                        The layout of the site has as a minimum amount of pages possible, to increase page loads on weaker networks.
+                    </li>
+                    <li>
+                        User's were intrigued at the Review section, they interacted more with the carousel and the eye tracker found that during the
+                         test, 80% of the user's spent more time focusing on that area,which would be fair to infer full engagement and are reading the reviews too. 
+                    </li>
+                    <li>
+                        90 % of the user's were able to navigate fully through the Designs, were able to hit the end point on the Checkout 
+                        section, inferring an aesthetically pleasing and simplistic layout was achieved.
+                    </li>
+                    <li>
+                        A blue theme was added through out the designs, using the psychological factors of blue as being sincere, trustworthy and a calm color.
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-details">
+                <a class="logo" href="/index.html">
+                    <div class="logo-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                            <defs>
+                                <image width="40" height="40"
+                                    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IB2cksfwAABk5JREFUeJzFWHlQlHUY9uDwKitrMh1LzdLGJjvG0skxNbOySWtG/0hHU6qZbKZMy3TKUjtmBFfII5A0TVNTU4HVRQQF5FDxQFCOELwQkEMQXECOZd+e51s+3F1gL3bznXn+2G+/45n3977P73l/nTq5EF7++zv5BIT1AUYA04FFgAYIBkKAQGApMAMYCTwKdHHlW04FPtKt+YMkcqWnJqJ+YHCUvLD5qLy9J1lmaE/JTODdf47LyD9j5ckNUdI7UNuAe68D+4DJQG9PEPMGxgPRIFXz7KYY+TEpW1KLb0lxdZ3UG5rEOhqbjFJaUyfpJZUSdDpXXv0rXh4MUsimAVMBX3eRGwBsBrHqcTsSRJtbJJV1Da0I2YvaRoOcLCxXsnzf6ggS1QHDvAPCOrtGzFRnzwOZQzYcNm69cE2qGxqdJmYdDU1NEnW5WEb8cUR8A8IK8f5pQFdns9YZeAMvKJqy97hcLNeLscPULKMEyz/n4BnpoQmvxbfmAF4OkttPcrO6a8LLP49Ok4o7zi+no1GH2g1OvYTaPKBvVgL7dYmbJnRbFV7y2eFzUlXf8SW1Fw1ophVoOHR7Jb49GwlqX45wQ38gg8taXlvvcXJq6FHb85AQrNo1fH90e+QoJSvYEKy59uIWlvyb2Asy68BpBV/EpLW6h9fU/9vCXN0Z+fJIuqyB/KQUVYgBWSzU3xGqBDhouQm0RXBUz9URJexWWw1RhBcNhw7ifgVPBB9qdQ+vqf/bgu+qMBnwW6TMizonebeqRZd3Q/qu01GC/LyhIubkuEOEjN4Wp6TbVriTYAtR4DVk73xplfjpzvJaCtDPnODLEGJ96LnLNsm5QrDvWp0swHJ+n5CpYCkwPyZdJv6dKPimBdHpYSkSe7UUWVWe/8hEzn8fCf5A4eS25W6CvJfPtBWRl4rloV8PtNwLTZT4/DKFKH5HqNmjK4lnFzkS7iTI+ORQqkUWNSkXZWPaFZKt9PGHeHM7Q3Pot2VcuycEd2VdtyD4dex5ySirksEhUfw9lgSnD8QL0+A67gXBHZn5FgQXx11QnNAYuB/8XkaCi1/cchRGwPC/EzQYjfLevhMWBEOw9TE+xD6N36EkqHkdHeVouIsgXY3/yRzptfpuJz+85qDiMRmLsBmoBIO5tXmK4ANBWkVS3oHjJiYD43cmqFJiAcqRan6XJWa1EAyZuveExwg6CiaJFkyN5YnZLQQD39jluSW2B7gYWXkip5VzYrOoBJe8tCVWajzUJP3W6WTpsUzxBwkVqtbFXClRzEdbMcesST7g9JVZdtsjBO3JTFtBd8M6xfM/k+BIpLl2T3aBss3QBqk4gn3ROmiLhm+8S3CgBwjmVujl6dDDfP4tEuwLnFx49LxsTr9qUR+fwgZZW6/00koZZFJ5Bc9sjHY7we0Z+XJ/oJZjQC8S7AKsfGVrnOz9t0Bg91teDvMq+VW1LQ9SWAOgXeYu5M3dSW4liNVVDC2ejTa3W+OhVzUs3sFm2SGo9DSxYTmF8lNytjxupV9Bp3LdSpC9wMTg2fnmBHsAOyfsTJS1Z/IU2+OIRDwHi3ansXX3u0oQC6R4RTjtbDw7yNryT8TEXxN+sQjGMkvRJ1vkhv0eLVk32+58VwkmF9zkChnx3EIf68MmXPAF1jMr7NQEdDTVnR/D3MqiVfbKoaHRwnnZlrmdtCtJaEAIlkhZjX0jfBtCzUMncEj2Mbf7ViSH8DhiNiYvDtVsihsgm4Mpj7WRV1GtDPJGO8cM3E9V0BTYO5WgvaKY99SEV4HDJC/zgck8MEnxVGEajyO4WXOo9nTwCxtSL9P6c5r7ysfeEQhu6ArMhQ3Sz4dY25vyOhLMHAe1R9YcrPcxHXj2sEnOjKQX4IeUV3JWKXRSaB0JPWqOU14fU+a+U0TZmWgmOYXHEeOwL3KoZj11NFi/xwvKlQaE4Fc2d2x3p8ip4e2vHMONArSPYeLnUM3udoUoyzkbsvRtfAaVgVKSxIawW3MOZpOjqR+Q0n99pOF9SMcm2CV2tsFGS/M/HmlwMPLD9vUUDAC20kt4zwJKiXd73epKeJtOXPsBM4HdnFtp08ZsP6YcCHGGWJGUpRylLYnLkI8jz8oElAZdSfPGH8PtCxjq8rGvU4RNNToWWE5j2Q5+oWVyugHM4j8pxYppzVD6JAAAAABJRU5ErkJggg==" />
+                            </defs>
+                            <use href="#A" />
+                        </svg>
+                    </div>
+                    <div class="logo-container">
+                        <div class="logo-name">Joseph Percival</div>
+                        <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+                        <p>St. Helens, Merseyside, UK.</p>
+                        <p>joseph.m.percival@gmail.com</p>
+                        <p>077709718757</p>
+                    </div>
+                </a>
+
+
+            </div>
+            <div class="footer-design">
+                <img src="img/footer-design.svg" width="250" height="200" alt="footer-design">
+            </div>
+            <div class="footer-social-icon">
+
+                <a href="https://www.linkedin.com/in/joseph-percival">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                </a>
+
+                <a href="https://mobile.twitter.com/percival_joseph">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                    </svg>
+                </a>
+
+                <a href="https://github.com/JPercival22">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </a>
+
+                <a href="assets/JPercival-CV2020.pdf">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                    </svg>
+                </a>
+            </div>
+            <small>
+                &copy; Copyright 2021 Joseph M Percival
+            </small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
