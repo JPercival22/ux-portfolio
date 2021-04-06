@@ -63,7 +63,6 @@ $download-color: $deep-sky-blue;
 $title-color: $dark-violet;
 $subtitle-color: $indigo;
 $hover-color: $cyan;
-
 html {
   scroll-behavior: smooth;
 }
@@ -103,7 +102,6 @@ header nav #click {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
     a {
       color: #fff;
       padding-left: 1em;
@@ -111,6 +109,7 @@ header nav #click {
     .logo {
       display: flex;
       flex-direction: row;
+      padding: 1em 0.5em;
       .logo-placeholder {
         display: flex;
         width: 35px;
@@ -133,7 +132,6 @@ header nav #click {
         }
       }
     }
-
     nav ul {
       position: absolute;
       top: 70px;
@@ -150,10 +148,12 @@ header nav #click {
       z-index: 1100;
       li {
         width: 100%;
-        height: 40px;
-        padding: 25px 0;
         margin: 25px 0;
         font-size: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         a {
           width: 100%;
           margin-left: -100%;
@@ -182,6 +182,10 @@ header #click:checked ~ ul {
     fill: #fff;
     width: 35px;
     height: auto;
+    height: 35px;
+  }
+  svg {
+    padding: 1em 0.5em;
   }
 }
 
@@ -191,6 +195,8 @@ header #click:checked ~ ul {
   display: grid;
   text-align: left;
   padding: 2em;
+  position: relative;
+  top: -1px;
   .hero-title {
     font-family: "Poppins";
     font-style: italic;
@@ -221,6 +227,7 @@ header #click:checked ~ ul {
     position: relative;
     display: grid;
     place-content: center;
+    padding: 2em 0.5em;
     &:before {
       content: "";
       position: absolute;
@@ -263,13 +270,14 @@ header #click:checked ~ ul {
 
   .skills {
     background: $skills-bkg;
+    padding: 2em 0.5em;
     .skills-container {
       text-align: center;
       ul li {
         background: $primary-background;
-        padding: 2em;
-        border-radius: 1em;
-        margin-bottom: 1em;
+        padding: 0.5em 2em;
+        border-radius: 5px;
+        margin-bottom: 2em;
         .skill-title {
           color: $hero-bg;
           font-weight: 700;
@@ -297,65 +305,69 @@ header #click:checked ~ ul {
       }
     }
   }
-
-  .portfolio .portfolio-container img {
-    max-width: fit-content;
-    width: 100%;
-    border-radius: 1em;
-  }
   .portfolio {
     padding: 2em;
     .portfolio-container {
       display: grid;
       grid-template-columns: auto;
       place-content: center;
-      a {
-        margin: 10px auto;
-        img {
-          width: 90vw;
-          height: 100%;
-          border-radius: 2px;
-        }
-      }
+      margin-bottom: 2em;
     }
     .portfolio-left {
       .inner {
         .subtitle {
           font-size: 1.3rem;
+          color: $subtitle-color;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
         }
         .featured-title {
           font-size: 1.1rem;
           text-transform: capitalize;
+          color: $title-color;
         }
         .featured-desc {
           font-size: 1rem;
           text-transform: normal;
-          color: #3d3d3d;
+          color: $dark-text-color;
         }
       }
     }
-    .case-study-btn {
+    .right {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 15px 30px;
-      background-color: $dodger-blue;
-      color: $primary-background;
-      border: 1px solid $primary-background;
-      font-size: 18px;
-      font-weight: 500;
-      border-radius: 5px;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        color: $dodger-blue;
-        background: transparent;
-        border-color: $dodger-blue;
+      img {
+        width: 300px;
+        border-radius: 5px;
+        height: auto;
+        margin: 10px 0;
+      }
+      .case-study-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        padding: 15px 30px;
+        background-color: $dodger-blue;
+        color: $primary-background;
+        border: 1px solid $primary-background;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: $dodger-blue;
+          background: transparent;
+          border-color: $dodger-blue;
+        }
       }
     }
   }
-
   .about {
     background: $hero-bg;
+    padding: 1.5em 0.5em;
     .about-container {
       text-align: center;
       ul {
@@ -364,7 +376,7 @@ header #click:checked ~ ul {
         li {
           background: $primary-background;
           padding: 1em;
-          border-radius: 1em;
+          border-radius: 5px;
           .icon-container {
             height: 100px;
             display: grid;
@@ -609,45 +621,64 @@ a {
   }
 }
 
-.footer-container {
-  height: 30vh;
-  display: grid;
-  grid-template-columns: 100%;
-  background: unset;
-  .footer-details {
-    background: #6700ee;
-    color: #fff;
-    text-align: left;
+footer {
+  position: relative;
+  top: -1px;
+  .footer-container {
+    height: 30vh;
     display: grid;
-    justify-content: center;
-    align-items: start;
-    padding: 2em 0;
-    .logo {
-      .logo-container {
-        .logo-name {
-          font-size: 18px;
-          color: #fff;
+    grid-template-columns: 100%;
+    background: unset;
+    .footer-details {
+      background: #6700ee;
+      color: #fff;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 2em 1em;
+      .footer-top-bar {
+        flex-direction: row;
+        .logo {
+          display: flex;
+          flex-direction: row;
+          .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: auto;
+            margin-right: 9px;
+            flex-direction: column;
+          }
+          .logo-name {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            color: #fff;
+            line-height: 23px;
+          }
+          .logo-title {
+            color: #fff;
+            font-size: 16px;
+            text-transform: capitalize;
+          }
         }
-        .logo-title {
-          color: #fff;
-          font-size: 16px;
-          text-transform: capitalize;
-        }
-        .address {
-          color: #fff;
-          font-size: 16px;
-          text-transform: capitalize;
-        }
-        p {
-          text-transform: lowercase;
-          color: #fff;
-          font-size: 16px;
+        .logo-container {
+          .address {
+            color: #fff;
+            font-size: 16px;
+            text-transform: capitalize;
+          }
+          p {
+            text-transform: lowercase;
+            color: #fff;
+            font-size: 16px;
+          }
         }
       }
     }
   }
 }
-
 .footer-container .footer-social-icon,
 .footer-container small {
   display: flex;
@@ -655,11 +686,9 @@ a {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gainsboro;
-}
-
-.footer-container .footer-social-icon a,
-.footer-container small a {
-  padding: 1rem;
+  a{
+    padding: 1rem;
+  }
 }
 
 @media only screen and (min-width: 610px) {
@@ -925,30 +954,99 @@ a {
 }
 
 @media only screen and (min-width: 895px) {
-  .overlay .portfolio .portfolio-container {
-    .case-study-btn {
-      width: 250px;
-      margin: 0 auto;
+  .hero-container {
+    height: 50vh;
+    place-content: center;
+    .hero-text-content {
+      p {
+        font-size: 1.27rem;
+      }
     }
-    a {
-      margin: 10px 0;
-      img {
-        width: 90vw;
-        height: auto;
-        border-radius: 2px;
+  }
+  .overlay {
+    .mobile-social-icon {
+      padding-top: 2em;
+      a {
+        padding: 0 1em;
+        svg {
+          width: 60px;
+          width: auto;
+        }
+      }
+    }
+    .featured {
+      padding: 7em 3em;
+      .left {
+        .inner {
+          .subtitle,
+          .featured-desc {
+            font-size: 1.27rem;
+          }
+        }
+        .right {
+          margin-left: 2em;
+          max-width: 494px;
+        }
+      }
+    }
+    .skills {
+      .skills-container {
+        ul li {
+          .skill-title {
+            font-size: 2rem;
+          }
+          .skill-desc {
+            font-size: 1.27rem;
+          }
+          .icon-container {
+            margin: 1em auto;
+          }
+        }
+      }
+    }
+    .portfolio {
+      .portfolio-container {
+        .portfolio-left {
+          .inner {
+            .subtitle {
+              color: $subtitle-color;
+              font-size: 2rem;
+            }
+            .featured-title {
+              text-transform: uppercase;
+              font-weight: 700;
+              color: $title-color;
+              letter-spacing: 0.2em;
+              font-size: 1.2rem;
+            }
+            .featured-desc {
+              font-size: 1.27rem;
+              text-transform: normal;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          .case-study-btn {
+            width: 250px;
+            margin: 1em auto;
+            order: 2;
+          }
+          img {
+            order: 2;
+            width: 100vw;
+            height: auto;
+            border-radius: 2px;
+          }
+        }
       }
     }
   }
   .icon-container {
     padding: 0;
   }
-  .featured {
-    padding: 7em 3em;
-  }
-  .featured .right {
-    margin-left: 2em;
-    max-width: 494px;
-  }
+
   .portfolio {
     margin: 7em 0;
   }
