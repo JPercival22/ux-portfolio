@@ -424,62 +424,55 @@ header #click:checked ~ ul {
 }
 
 .contact-page-section {
-  padding: 2em;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.contact-page-section .contact-container {
-  position: relative;
-  max-height: 100vh;
-  display: flex;
-  height: 100%;
-  z-index: 1000;
-}
-
-.contact-page-section .contact-container .contact-form {
-  border: 1px solid #000100;
-  border-radius: 8px;
   padding: 0.5em;
-  background-color: #fff;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-title {
-  color: #1e90ff;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-page-section .contact-container .contact-form p .open-modal {
-  font-weight: 500;
-}
-
-.contact-page-section .contact-container .contact-form p .open-modal:hover {
-  text-decoration: underline;
-  color: #1e90ff;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  position: relative;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container {
-  width: 75vw;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area span {
-  display: none;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area {
-  position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 auto;
+  width: 95%;
+  .contact-container {
+    position: relative;
+    max-height: 100vh;
+    width: 75vw;
+    display: flex;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+    .contact-form {
+      border: 1px solid #000100;
+      border-radius: 8px;
+      padding: 0.5em;
+      background-color: #fff;
+      .contact-form-title {
+        color: #1e90ff;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        color: $dark-text-color;
+        font-size: 1rem;
+        .open-modal {
+          font-weight: 500;
+          text-decoration: underline;
+          &:hover {
+            transition: all 0.5s ease-in-out;
+            text-decoration: none;
+            color: #1e90ff;
+          }
+        }
+      }
+    }
+    .input-area {
+      position: relative;
+      margin: 0 0 20px 0;
+      span {
+        display: none;
+      }
+    }
+  }
 }
 
 .contact-page-section
@@ -489,10 +482,9 @@ header #click:checked ~ ul {
   .input-area
   label
   .text-field::placeholder {
-  color: #000100;
-  font-size: 14px;
-  padding: 0 5px 5px 2px;
-  height: 200px;
+  color: #3d3d3d;
+  font-size: 16px;
+  height: 500px;
   font-weight: 300;
   font-family: "Poppins";
 }
@@ -500,37 +492,47 @@ header #click:checked ~ ul {
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child {
-  width: 70vw;
-  border-bottom: 1px solid #3d3d3d;
+  width: 80vw;
+  margin: 0 10px;
+  border-bottom: 1px solid $dark-text-color;
   border-top: none;
   border-left: none;
   border-right: none;
+  font-size: 16px;
+  color: #3d3d3d;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field {
-  width: 70vw;
-  overflow: hidden;
+.contact-page-section .contact-container .contact-form .contact-form-container .input-area label {
+  .text-field {
+    width: 80vw;
+    margin: 0 10px;
+    height: 14vh;
+    overflow: hidden;
+  }
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-  width: 75vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #004fa3;
-  border: 2px solid;
+  background: $dark-cyan;
+  border: $primary-background 2px solid;
   border-radius: 5px;
-  color: #fff;
-  padding: 5px;
+  color: $light-text-color;
+  padding: 5px 20px;
+  margin: 0 auto;
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 600;
   letter-spacing: 0.5px;
+  width: 265px;
+  margin: 0 8px;
+  &:hover {
+    background: #fff;
+    color: $dark-cyan;
+    border-color: $dark-cyan;
+    transition: all 0.5s ease-in-out;
+  }
 }
-
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button:hover {
-  background: #fff;
-  color: #004fa3;
+.contact-page-section .contact-container .contact-form .contact-form-container .w50 {
+  width: 100%;
 }
 
 a {
@@ -540,7 +542,7 @@ a {
 .modal {
   display: none;
 }
-.is-active {
+.show-modal {
   display: flex;
   pointer-events: all;
   z-index: 2000;
@@ -549,15 +551,14 @@ a {
   font-size: 16px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   flex-direction: column;
-  height: 25vh;
-  width: 82%;
+  width: 85%;
   position: absolute;
   max-width: 480px;
   background: #63cb9e;
   border: 2px solid #b5e6d1;
-  border-radius: 8px;
-  top: 15%;
-  left: 3%;
+  border-radius: 5px;
+  top: 25%;
+  left: 2px;
   transition: 0.4s ease-in-out;
   .contact-modal-title {
     font-size: 25px;
@@ -582,43 +583,37 @@ a {
     flex-direction: column;
     li {
       padding: 10px 0;
-      &:active {
-        border: 1px solid $blue-title-color;
-        padding: 5px;
-      }
-    }
-    a {
-      &:hover {
-        text-decoration: underline;
-      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       span {
-        font-weight: 300;
-        color: $light-text-color;
-        text-decoration: none;
+        .modal-icon {
+          width: 30px;
+          height: auto;
+          margin-right: 5px;
+        }
+      }
+      a {
+        line-height: 10px;
         &:hover {
           text-decoration: underline;
         }
-      }
-      img {
-        position: relative;
-        top: 5px;
-      }
-    }
-    span {
-      color: $light-text-color;
-      font-size: 14px;
-      font-weight: 600;
-      margin-left: 5px;
-      .mail-icon {
-        position: relative;
-        top: 5px;
-      }
-      .phone-icon {
-        position: relative;
-        top: 10px;
+        span {
+          font-weight: 300;
+          color: $light-text-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
+}
+
+.blur {
+  filter: blur(5px);
 }
 
 footer {
@@ -686,7 +681,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gainsboro;
-  a{
+  a {
     padding: 1rem;
   }
 }
