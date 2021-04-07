@@ -506,7 +506,7 @@ header #click:checked ~ ul li a {
 .contact-page-section .contact-container {
   position: relative;
   max-height: 100vh;
-  width: 75vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -905,7 +905,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   header #click:checked ~ ul li a {
     margin-left: 0px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     z-index: 90000;
   }
   .nav-container header {
@@ -915,7 +915,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 1em 2em;
+    padding: 1em;
   }
   .nav-container header .logo .logo-container .logo-name {
     letter-spacing: 0.8px;
@@ -942,6 +942,9 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
+  .overlay .featured .left .inner {
+    padding: 1em;
+  }
   .overlay .featured .left .inner .subtitle {
     font-size: 1.2rem;
   }
@@ -954,27 +957,34 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: 100%;
     height: auto;
   }
+  .overlay .skills {
+    padding: 2em;
+  }
+  .overlay .skills .skills-container ul li {
+    padding: 1em;
+  }
   .overlay .skills .skills-container ul li .icon-container {
     height: auto;
+    margin-top: 2em;
   }
   .overlay .skills .skills-container ul li .icon-container img {
-    width: 90px;
+    width: 80px;
     height: auto;
     margin-bottom: 2em;
   }
   .overlay .skills .skills-container ul li .icon-container .brand-awareness {
-    width: 150px;
+    width: 122px;
     height: auto;
   }
   .overlay .skills .skills-container ul li .skill-title {
     color: #6e00ff;
     font-size: 1.6rem;
     font-weight: 700;
-    margin-top: -0.4em;
+    margin-top: 0.6em;
   }
   .overlay .skills .skills-container ul li .feature-desc {
-    font-size: 1.1rem;
-    padding: 3rem;
+    font-size: 1.2rem;
+    padding: 2rem;
   }
   .overlay .portfolio .portfolio-container {
     display: -ms-grid;
@@ -998,6 +1008,12 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   .overlay .portfolio .portfolio-left .inner .featured-desc {
     font-size: 1.1em;
+  }
+  .overlay .about {
+    padding: 2em;
+  }
+  .overlay .about .about-container ul li {
+    margin-bottom: 1em;
   }
   .overlay .about .about-container ul li .icon-container {
     padding: 2em 0;
@@ -1046,7 +1062,8 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     height: auto;
   }
   .contact-page-section .contact-container .contact-form {
-    padding: 2em;
+    padding: 2em 1em;
+    margin: 0.7em 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-title {
     font-size: 1.5em;
@@ -1057,6 +1074,9 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
     margin: 10px 0;
     width: 92%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
     margin: 10px auto;
@@ -1071,6 +1091,12 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: 40%;
     margin: 0 auto;
     padding: 10px 20px;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field {
+    margin: 10px 20px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-webkit-input-placeholder,
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-webkit-input-placeholder,
@@ -1096,43 +1122,46 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::placeholder {
     font-size: 1.2rem;
   }
-  .modal {
-    top: 15%;
-    left: 7%;
-  }
-  .is-active {
+  .show-modal {
     height: 25vh;
     width: 82%;
     height: 30vh;
-  }
-  .is-active .contact-modal-title {
+    top: 27%;
+    left: 8%;
     font-size: 2em;
   }
-  .is-active p {
+  .show-modal p {
     font-size: 1.3rem;
   }
-  .is-active .close-modal {
-    font-size: 15px;
+  .show-modal .close-modal {
+    font-size: 0;
     padding: 5px 10px;
   }
-  .is-active .close-modal:hover {
+  .show-modal .close-modal .close-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .show-modal .close-modal .close-icon path {
+    fill: #fff;
+  }
+  .show-modal .close-modal:hover {
     color: #9c9c9c;
   }
-  .is-active ul li span {
+  .show-modal ul li span {
     font-size: 1.3rem;
   }
-  .footer-container .footer-details {
+  footer .footer-container .footer-details {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    padding-left: 2em;
+    padding: 2em;
   }
-  .footer-container .footer-details .logo .logo-container .logo-name {
-    letter-spacing: 0.5px;
-    font-size: 1.7rem;
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    font-size: 1.55rem;
+    letter-spacing: 0.7px;
   }
-  .footer-container .footer-details .logo .logo-container .logo-title {
-    font-size: 1.1rem;
+  footer .footer-container .footer-details .logo-container p {
+    font-size: 1.2rem;
   }
 }
 
