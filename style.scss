@@ -749,6 +749,7 @@ footer {
         max-width: 60vw;
         width: 100%;
         height: auto;
+        padding-bottom: 4em;
       }
     }
 
@@ -993,7 +994,7 @@ footer {
       }
     }
     .featured {
-      padding: 7em 3em;
+      padding: 3em 2em;
       .left {
         .inner {
           .subtitle,
@@ -1023,8 +1024,10 @@ footer {
       }
     }
     .portfolio {
+      margin: 0 2em;
       .portfolio-container {
         .portfolio-left {
+          margin: 2em;
           .inner {
             .subtitle {
               color: $subtitle-color;
@@ -1048,8 +1051,10 @@ footer {
           flex-direction: column;
           .case-study-btn {
             width: 250px;
-            margin: 1em auto;
+            margin: 3em auto;
             order: 2;
+            font-size: 22px;
+            font-weight: 600;
           }
           img {
             order: 2;

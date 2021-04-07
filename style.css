@@ -956,6 +956,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     max-width: 60vw;
     width: 100%;
     height: auto;
+    padding-bottom: 4em;
   }
   .overlay .skills {
     padding: 2em;
@@ -1184,7 +1185,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: auto;
   }
   .overlay .featured {
-    padding: 7em 3em;
+    padding: 3em 2em;
   }
   .overlay .featured .left .inner .subtitle,
   .overlay .featured .left .inner .featured-desc {
@@ -1202,6 +1203,12 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   .overlay .skills .skills-container ul li .icon-container {
     margin: 1em auto;
+  }
+  .overlay .portfolio {
+    margin: 0 2em;
+  }
+  .overlay .portfolio .portfolio-container .portfolio-left {
+    margin: 2em;
   }
   .overlay .portfolio .portfolio-container .portfolio-left .inner .subtitle {
     color: #551a8b;
@@ -1229,10 +1236,12 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   .overlay .portfolio .portfolio-container .right .case-study-btn {
     width: 250px;
-    margin: 1em auto;
+    margin: 3em auto;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    font-size: 22px;
+    font-weight: 600;
   }
   .overlay .portfolio .portfolio-container .right img {
     -webkit-box-ordinal-group: 3;
