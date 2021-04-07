@@ -430,7 +430,7 @@ header #click:checked ~ ul {
   .contact-container {
     position: relative;
     max-height: 100vh;
-    width: 75vw;
+    width: 100%;
     display: flex;
     height: 100%;
     z-index: 1000;
@@ -691,15 +691,16 @@ footer {
     left: 0;
     li a {
       margin-left: 0px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       z-index: 90000;
     }
   }
+
   .nav-container {
     header {
       display: flex;
       justify-content: space-between;
-      padding: 1em 2em;
+      padding: 1em;
       .logo {
         .logo-container {
           .logo-name {
@@ -713,6 +714,7 @@ footer {
       }
     }
   }
+
   .right {
     display: flex;
   }
@@ -733,6 +735,7 @@ footer {
       grid-template-columns: auto;
       .left {
         .inner {
+          padding: 1em;
           .subtitle {
             font-size: 1.2rem;
           }
@@ -746,22 +749,26 @@ footer {
         max-width: 60vw;
         width: 100%;
         height: auto;
+        padding-bottom: 4em;
       }
     }
 
     .skills {
+      padding: 2em;
       .skills-container {
         ul {
           li {
+            padding: 1em;
             .icon-container {
               height: auto;
+              margin-top: 2em;
               img {
-                width: 90px;
+                width: 80px;
                 height: auto;
                 margin-bottom: 2em;
               }
               .brand-awareness {
-                width: 150px;
+                width: 122px;
                 height: auto;
               }
             }
@@ -769,11 +776,11 @@ footer {
               color: $hero-bg;
               font-size: 1.6rem;
               font-weight: 700;
-              margin-top: -0.4em;
+              margin-top: 0.6em;
             }
             .feature-desc {
-              font-size: 1.1rem;
-              padding: 3rem;
+              font-size: 1.2rem;
+              padding: 2rem;
             }
           }
         }
@@ -807,8 +814,10 @@ footer {
     }
 
     .about {
+      padding: 2em;
       .about-container {
         ul li {
+          margin-bottom: 1em;
           .icon-container {
             padding: 2em 0;
           }
@@ -861,7 +870,8 @@ footer {
   .contact-page-section {
     .contact-container {
       .contact-form {
-        padding: 2em;
+        padding: 2em 1em;
+        margin: 0.7em 0;
         .contact-form-title {
           font-size: 1.5em;
         }
@@ -872,6 +882,7 @@ footer {
           .input-area {
             margin: 10px 0;
             width: 92%;
+            display: flex;
             textarea {
               margin: 10px auto;
               width: 98%;
@@ -887,6 +898,12 @@ footer {
               padding: 10px 20px;
             }
             label {
+              .first-child,
+              .second-child,
+              .third-child,
+              .text-field {
+                margin: 10px 20px;
+              }
               .first-child::placeholder,
               .second-child::placeholder,
               .third-child::placeholder,
@@ -899,23 +916,27 @@ footer {
       }
     }
   }
-  .modal {
-    top: 15%;
-    left: 7%;
-  }
-  .is-active {
+
+  .show-modal {
     height: 25vh;
     width: 82%;
     height: 30vh;
-    .contact-modal-title {
-      font-size: 2em;
-    }
+    top: 27%;
+    left: 8%;
+    font-size: 2em;
     p {
       font-size: 1.3rem;
     }
     .close-modal {
-      font-size: 15px;
+      font-size: 0;
       padding: 5px 10px;
+      .close-icon {
+        width: 30px;
+        height:30px;
+        path {
+          fill: #fff;
+        }
+      }
       &:hover {
         color: #9c9c9c;
       }
@@ -928,19 +949,22 @@ footer {
       }
     }
   }
-
-  .footer-container {
-    .footer-details {
-      justify-content: start;
-      padding-left: 2em;
-      .logo {
-        .logo-container {
-          .logo-name {
-            letter-spacing: 0.5px;
-            font-size: 1.7rem;
+  footer {
+    .footer-container {
+      .footer-details {
+        justify-content: start;
+        padding: 2em;
+        .footer-top-bar {
+          .logo {
+            .logo-name {
+              font-size: 1.55rem;
+              letter-spacing: 0.7px;
+            }
           }
-          .logo-title {
-            font-size: 1.1rem;
+        }
+        .logo-container {
+          p {
+            font-size: 1.2rem;
           }
         }
       }
@@ -970,7 +994,7 @@ footer {
       }
     }
     .featured {
-      padding: 7em 3em;
+      padding: 3em 2em;
       .left {
         .inner {
           .subtitle,
@@ -1000,8 +1024,10 @@ footer {
       }
     }
     .portfolio {
+      margin: 0 2em;
       .portfolio-container {
         .portfolio-left {
+          margin: 2em;
           .inner {
             .subtitle {
               color: $subtitle-color;
@@ -1025,8 +1051,10 @@ footer {
           flex-direction: column;
           .case-study-btn {
             width: 250px;
-            margin: 1em auto;
+            margin: 3em auto;
             order: 2;
+            font-size: 22px;
+            font-weight: 600;
           }
           img {
             order: 2;
