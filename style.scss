@@ -1468,10 +1468,6 @@ footer {
   }
   // case study styles
 
-  .case-study-overlay > section {
-    padding: 1em 15em;
-  }
-
   .hero-container-projects {
     height: 700px;
     display: block;
@@ -1495,12 +1491,12 @@ footer {
         text-align: left;
         .hero-title-case-study {
           position: absolute;
-          left: 0;
+          left: 27%;
           bottom: 32%;
-          font-size: 1.5rem;
-          color: #fff;
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-          width: 100%;
+          font-size: 18px;
+          color: #c738a1;
+          background: linear-gradient(#ffffff9c, #0000001f);
+          width: 38%;
           max-width: 100%;
           letter-spacing: 4px;
           line-height: 3rem;
@@ -1510,45 +1506,59 @@ footer {
     }
   }
 
-  .case-study-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-    min-height: 200px;
-    h1 {
-      font-size: 1.7em;
+  .case-study-overlay > section {
+    padding: 1em 15em;
+    .case-study-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
       text-align: left;
-    }
-
-    p {
-      font-size: 1.4rem;
-      text-align: left;
-    }
-    .case-study-list {
-      display: grid;
-      place-content: center;
-      text-align: left;
-      font-size: 1.4em;
-      li {
-        list-style: none;
-        margin-right: 10px;
-        padding: 10px;
+      min-height: 200px;
+      h1 {
+        font-size: 22px;
+        text-align: left;
       }
-      ::marker {
-        margin-left: 1em;
-        font-size: 1em;
+
+      p {
+        font-size: 18px;
+        text-align: left;
+      }
+      .case-study-list {
+        display: grid;
+        place-content: center;
+        text-align: left;
+        font-size: 1.4em;
+        li {
+          list-style: none;
+          margin-right: 10px;
+          padding: 10px;
+          font-size: 18px;
+        }
+        ::marker {
+          margin-left: 1em;
+          font-size: 18px;
+        }
       }
     }
   }
   .case-study-container {
     display: grid;
     grid-template-columns: none;
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 18px;
+    }
     img {
-      max-width: 90vw;
+      max-width: 40vw;
       width: 100%;
+      margin: 0 auto;
+    }
+    ul li {
+      font-size: 18px;
     }
   }
 
@@ -1565,21 +1575,18 @@ footer {
   }
 
   .full-width-section {
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    margin: 0 auto;
     img {
-      max-width: 100vw;
+      max-width: 40vw;
       width: 100%;
+      margin: 0 auto;
     }
-    .secondary-button {
-      font-family: Poppins;
-      font-size: 22px;
-      color: black;
-      text-decoration: underline;
-      margin: 1em 0;
-    }
+  }
+  .secondary-button {
+    font-family: Poppins;
+    font-size: 22px;
+    color: black;
+    text-decoration: underline;
+    margin: 1em 0;
   }
 }
 
