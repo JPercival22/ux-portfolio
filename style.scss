@@ -443,7 +443,7 @@ header #click:checked ~ ul {
       border: 1px solid #000100;
       border-radius: 8px;
       padding: 0.5em;
-      background-color: #fff;
+      background-color: #fffdf2ed;
       .contact-form-title {
         color: #1e90ff;
         font-size: 20px;
@@ -554,7 +554,7 @@ a {
   width: 85%;
   position: absolute;
   max-width: 480px;
-  background: #63cb9e;
+  background: #33a876fa;
   border: 2px solid #b5e6d1;
   border-radius: 5px;
   top: 25%;
@@ -916,7 +916,6 @@ footer {
       }
     }
   }
-
   .show-modal {
     height: 25vh;
     width: 82%;
@@ -932,7 +931,7 @@ footer {
       padding: 5px 10px;
       .close-icon {
         width: 30px;
-        height:30px;
+        height: 30px;
         path {
           fill: #fff;
         }
@@ -973,6 +972,12 @@ footer {
 }
 
 @media only screen and (min-width: 895px) {
+  .nav-container header nav ul {
+    top: 109px;
+    li a {
+      width: auto;
+    }
+  }
   .hero-container {
     height: 50vh;
     place-content: center;
@@ -1074,64 +1079,95 @@ footer {
     margin: 7em 0;
   }
 
-  .contact-page-section .contact-form {
-    padding: 2em;
-  }
-  .contact-page-section .contact-form .contact-form-title {
-    font-size: 1.5em;
-  }
-  .contact-page-section .contact-form .contact-form-container {
-    padding-top: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area {
-    margin: 10px 0;
-    width: 50%;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98.5%;
-  }
-  .w50 {
-    width: 100%;
+  .contact-page-section .contact-container .contact-form {
+    .contact-form-title {
+      font-size: 1.8rem;
+    }
+    .contact-form-container {
+      display: grid;
+      grid-template-columns: 49.3% auto;
+      background-image: url(/img/form-background-min.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      .left {
+        background-color: #5cb95c5c;
+      }
+      .right {
+        background-color: #f0c5175c;
+      }
+      .left {
+        background: #5cb95ca6;
+        grid-column: 1;
+        border-radius: 5px 0 0 5px;
+        .input-area {
+          margin: 10px 0;
+          padding: 10px 15px;
+          display: grid;
+          width: 100%;
+          label {
+            .first-child,
+            .second-child,
+            .third-child,
+            .text-field {
+              margin: 0;
+              padding: 5px 20px;
+              width: 37vw;
+              height: 40px;
+            }
+            .text-field {
+              height: 20vh;
+              padding-top: 20px;
+            }
+          }
+          .submit-button {
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+      .right {
+        display: grid;
+        grid-column: 2;
+        background-color: #f0c517bf;
+        border-radius: 0 5px 5px 0;
+        .brand {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .logo-main {
+            width: 30vw;
+            height: auto;
+            z-index: 2000;
+          }
+        }
+      }
+    }
   }
 
-  .brand {
-    display: block;
-  }
-  .brand .logo-main {
-    width: 250px;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    left: 57%;
-    top: 30%;
-    z-index: 2000;
-    height: auto;
-  }
-  .modal.is-active {
-    opacity: 1;
-    opacity: 1;
-    top: 28%;
-    left: 52%;
-    height: 25vh;
-    width: 31vw;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.5em;
-  }
-  .modal.is-active .contact-modal-subtitle p {
-    font-size: 1em;
-    margin-top: 5px;
-  }
-  .modal.is-active ul li a span {
-    &:hover {
-      text-decoration: underline;
+  .show-modal {
+    top: 40%;
+    left: 20%;
+    .close-modal {
+      .close-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .contact-modal-title {
+      font-size: 30px;
+    }
+    .contact-modal-subtitle {
+      font-size: 21px;
+    }
+    ul li {
+      a {
+        margin-bottom: 15px;
+      }
+      span {
+        font-size: 21px;
+        .modal-icon {
+          width: 40px;
+        }
+      }
     }
   }
 }
@@ -1201,12 +1237,13 @@ footer {
   }
 
   .footer-social-icon a:hover,
-  .top-social-icon i:hover {
+  .top-social-icon a:hover {
     opacity: 0.5;
+    transition: all 0.5s ease-in-out;
   }
 
   .hero-container {
-    height: 66vh;
+    height: 53vh;
     display: grid;
     grid-template-columns: 80% auto;
     background: unset;
@@ -1220,19 +1257,20 @@ footer {
       justify-content: center;
       align-items: flex-start;
       .hero-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 2rem;
         .wrap {
-          font-size: 2em;
+          font-size: 2.5em;
+          line-height: 2em;
         }
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
     }
     .mouse-scroller {
       position: absolute;
-      top: 60%;
+      top: 80%;
       left: 35%;
       margin: auto;
       z-index: 9999;
@@ -1276,29 +1314,26 @@ footer {
     }
   }
 
-  .left,
-  .portfolio-left {
-    padding-left: 0;
-  }
-
   .overlay {
     .mobile-social-icon {
       display: none;
     }
     .featured {
+      padding: 3em 2em;
       .left {
         .inner {
-          .subtitle,
-          .feature-desc {
-            font-size: 1.2rem;
+          .subtitle {
+            font-size: 1.27rem;
           }
-          .featured-title {
-            font-size: 1.4rem;
+          .featured-desc {
+            font-size: 1.5rem;
+            font-weight: 300;
           }
         }
-      }
-      .right {
-        max-width: 587px;
+        .right {
+          margin-left: 2em;
+          max-width: 494px;
+        }
       }
     }
     .skills {
@@ -1312,13 +1347,17 @@ footer {
               height: auto;
             }
             .brand-awareness {
-              padding: 1.5rem;
+              padding: 1.2rem;
               width: 170px;
               height: auto;
             }
           }
           .skill-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
+          }
+          .skill-desc {
+            font-size: 1.3rem;
+            font-weight: 300;
           }
         }
       }
@@ -1339,10 +1378,11 @@ footer {
               font-size: 2rem;
             }
             .featured-title {
-              font-size: 1.6rem;
+              font-size: 1.3rem;
+              letter-spacing: 0.1rem;
             }
             .featured-desc {
-              font-size: 1.3rem;
+              font-size: 1.1rem;
             }
           }
         }
@@ -1358,7 +1398,7 @@ footer {
       }
     }
     .about {
-      padding: 3em;
+      padding: 2em;
       .about-container {
         ul {
           grid-gap: 50px;
@@ -1381,81 +1421,27 @@ footer {
     }
   }
 
-  .footer-container {
-    .footer-details {
-      padding-left: 3em;
-      .footer-title {
-        font-size: 1.3em;
-        .footer-subtitle {
-          font-size: 1em;
-          padding: 1em 0;
+  .contact-page-section {
+    padding: 2em;
+    margin: 0 auto;
+    width: 94%;
+    .contact-container {
+      .contact-form {
+        .contact-form-title {
+          font-size: 1.9rem;
         }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+      .left .input-area .submit-button {
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 22px;
+        width: 190px;
       }
     }
   }
-
-  .contact-page-section {
-    padding: 4em;
-    margin: 0 auto;
-    width: 70%;
-  }
-  .contact-page-section .contact-container .contact-info h2 {
-    color: #000000;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  .contact-page-section .contact-container .contact-info h2 p {
-    color: #000000;
-    font-weight: 500;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info {
-    position: relative;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info li {
-    position: relative;
-    list-style: none;
-    margin: 20px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info li a {
-    color: #000000;
-    margin-left: 10px;
-    font-weight: 500;
-  }
-  .contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) {
-    width: 30px;
-    min-width: 30px;
-  }
-  .contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) > img {
-    max-width: 100%;
-    opacity: 0.76;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-title {
-    font-size: 1.7rem;
-  }
-  .contact-page-section .contact-container .contact-form p,
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area input,
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    font-size: 1.2rem;
-  }
-  .modal.is-active {
-    opacity: 1;
-    top: 33%;
-    left: 52%;
-    height: 23vh;
-    width: 27vw;
-  }
-  .brand .logo-main {
-    left: 55%;
-    top: 34%;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
-    width: 200px;
-    margin-left: 25%;
-  }
-
   // case study styles
 
   .case-study-overlay > section {
@@ -1573,52 +1559,26 @@ footer {
     }
   }
 }
-@media only screen and (min-width: 1250px) {
-  .hero-container .hero-text-content .hero-title {
-    font-size: 1.8em;
-    line-height: 1.5em;
-  }
-  .social-header {
-    padding: 2em 10em 2em 0;
-  }
 
-  section {
-    padding: 10em 10em 4em 10em;
-  }
-  .left,
-  .portfolio-left {
-    display: grid;
-    place-content: center;
-    padding: 0 3em;
-  }
-  .hero .text-content {
-    padding: 6em 8em 6em 10em;
-  }
-  .featured .right {
-    max-width: 700px;
-  }
-  .design img {
-    max-width: 900px;
-  }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.7em;
-  }
-  .modal.is-active ul li a span {
-    font-weight: 500;
-    margin-left: 10px;
-    font-size: 1.1rem;
-  }
-  .footer-container .footer-details {
-    background: #6e00ff;
-    text-align: left;
-    display: grid;
-    justify-content: start;
-    align-items: end;
-  }
-
-  .brand .logo-main {
-    top: 33%;
-    left: 58%;
+@media only screen and (min-width: 1250px) {  
+  
+  .overlay {
+    .featured:before {
+      top: 20px;
+    }
+    .featured {
+      .right {
+        max-width: 700px;
+      }
+    }
+    .about .about-container ul li {
+      margin-bottom: 0;
+    }
+    .portfolio .portfolio-container{
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+      margin: 30px;
+    }
   }
 }
 
@@ -1652,7 +1612,23 @@ footer {
   }
   .skills .skills-container {
     text-align: center;
+    ul {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 1em;
+      padding: 1em;
+      li {
+        .icon-container {
+          margin: 5em;
+          img.code-icon {
+            padding: 3rem;
+          }
+          height: auto;
+        }
+      }
+    }
   }
+
   .about {
     padding: 6em;
   }

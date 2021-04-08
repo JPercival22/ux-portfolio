@@ -528,7 +528,7 @@ header #click:checked ~ ul li a {
   border: 1px solid #000100;
   border-radius: 8px;
   padding: 0.5em;
-  background-color: #fff;
+  background-color: #fffdf2ed;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-title {
@@ -694,7 +694,7 @@ a {
   width: 85%;
   position: absolute;
   max-width: 480px;
-  background: #63cb9e;
+  background: #33a876fa;
   border: 2px solid #b5e6d1;
   border-radius: 5px;
   top: 25%;
@@ -1167,6 +1167,12 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
 }
 
 @media only screen and (min-width: 895px) {
+  .nav-container header nav ul {
+    top: 109px;
+  }
+  .nav-container header nav ul li a {
+    width: auto;
+  }
   .hero-container {
     height: 50vh;
     place-content: center;
@@ -1257,62 +1263,100 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   .portfolio {
     margin: 7em 0;
   }
-  .contact-page-section .contact-form {
-    padding: 2em;
+  .contact-page-section .contact-container .contact-form .contact-form-title {
+    font-size: 1.8rem;
   }
-  .contact-page-section .contact-form .contact-form-title {
-    font-size: 1.5em;
+  .contact-page-section .contact-container .contact-form .contact-form-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 49.3% auto;
+        grid-template-columns: 49.3% auto;
+    background-image: url(/img/form-background-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .contact-page-section .contact-form .contact-form-container {
-    padding-top: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .contact-page-section .contact-container .contact-form .contact-form-container .left {
+    background-color: #5cb95c5c;
   }
-  .contact-page-section .contact-form .contact-form-container .input-area {
+  .contact-page-section .contact-container .contact-form .contact-form-container .right {
+    background-color: #f0c5175c;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left {
+    background: #5cb95ca6;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    border-radius: 5px 0 0 5px;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area {
     margin: 10px 0;
-    width: 50%;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98.5%;
-  }
-  .w50 {
+    padding: 10px 15px;
+    display: -ms-grid;
+    display: grid;
     width: 100%;
   }
-  .brand {
-    display: block;
-  }
-  .brand .logo-main {
-    width: 250px;
-    position: absolute;
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .first-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .second-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .third-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
     margin: 0;
-    padding: 0;
-    left: 57%;
-    top: 30%;
-    z-index: 2000;
+    padding: 5px 20px;
+    width: 37vw;
+    height: 40px;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
+    height: 20vh;
+    padding-top: 20px;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    background-color: #f0c517bf;
+    border-radius: 0 5px 5px 0;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
+    width: 30vw;
     height: auto;
+    z-index: 2000;
   }
-  .modal.is-active {
-    opacity: 1;
-    opacity: 1;
-    top: 28%;
-    left: 52%;
-    height: 25vh;
-    width: 31vw;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  .show-modal {
+    top: 40%;
+    left: 20%;
   }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.5em;
+  .show-modal .close-modal .close-icon {
+    width: 40px;
+    height: 40px;
   }
-  .modal.is-active .contact-modal-subtitle p {
-    font-size: 1em;
-    margin-top: 5px;
+  .show-modal .contact-modal-title {
+    font-size: 30px;
   }
-  .modal.is-active ul li a span:hover {
-    text-decoration: underline;
+  .show-modal .contact-modal-subtitle {
+    font-size: 21px;
+  }
+  .show-modal ul li a {
+    margin-bottom: 15px;
+  }
+  .show-modal ul li span {
+    font-size: 21px;
+  }
+  .show-modal ul li span .modal-icon {
+    width: 40px;
   }
 }
 
@@ -1409,11 +1453,13 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
             justify-content: space-evenly;
   }
   .footer-social-icon a:hover,
-  .top-social-icon i:hover {
+  .top-social-icon a:hover {
     opacity: 0.5;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .hero-container {
-    height: 66vh;
+    height: 53vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 80% auto;
@@ -1440,18 +1486,19 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
             align-items: flex-start;
   }
   .hero-container .hero-text-content .hero-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
   .hero-container .hero-text-content .hero-title .wrap {
-    font-size: 2em;
+    font-size: 2.5em;
+    line-height: 2em;
   }
   .hero-container .hero-text-content p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .hero-container .mouse-scroller {
     position: absolute;
-    top: 60%;
+    top: 80%;
     left: 35%;
     margin: auto;
     z-index: 9999;
@@ -1506,22 +1553,22 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
       top: 25px;
     }
   }
-  .left,
-  .portfolio-left {
-    padding-left: 0;
-  }
   .overlay .mobile-social-icon {
     display: none;
   }
-  .overlay .featured .left .inner .subtitle,
-  .overlay .featured .left .inner .feature-desc {
-    font-size: 1.2rem;
+  .overlay .featured {
+    padding: 3em 2em;
   }
-  .overlay .featured .left .inner .featured-title {
-    font-size: 1.4rem;
+  .overlay .featured .left .inner .subtitle {
+    font-size: 1.27rem;
   }
-  .overlay .featured .right {
-    max-width: 587px;
+  .overlay .featured .left .inner .featured-desc {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .overlay .featured .left .right {
+    margin-left: 2em;
+    max-width: 494px;
   }
   .overlay .skills .skills-container ul li {
     margin-bottom: 2.5em;
@@ -1532,12 +1579,16 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     height: auto;
   }
   .overlay .skills .skills-container ul li .icon-container .brand-awareness {
-    padding: 1.5rem;
+    padding: 1.2rem;
     width: 170px;
     height: auto;
   }
   .overlay .skills .skills-container ul li .skill-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  .overlay .skills .skills-container ul li .skill-desc {
+    font-size: 1.3rem;
+    font-weight: 300;
   }
   .overlay .portfolio .portfolio img {
     float: right;
@@ -1560,10 +1611,11 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     font-size: 2rem;
   }
   .overlay .portfolio .portfolio-container .portfolio-left .inner .featured-title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
   }
   .overlay .portfolio .portfolio-container .portfolio-left .inner .featured-desc {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .overlay .portfolio .portfolio-container .right {
     height: auto;
@@ -1581,7 +1633,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: 45vw;
   }
   .overlay .about {
-    padding: 3em;
+    padding: 2em;
   }
   .overlay .about .about-container ul {
     grid-gap: 50px;
@@ -1596,80 +1648,22 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: 500px;
     height: auto;
   }
-  .footer-container .footer-details {
-    padding-left: 3em;
-  }
-  .footer-container .footer-details .footer-title {
-    font-size: 1.3em;
-  }
-  .footer-container .footer-details .footer-title .footer-subtitle {
-    font-size: 1em;
-    padding: 1em 0;
-  }
   .contact-page-section {
-    padding: 4em;
+    padding: 2em;
     margin: 0 auto;
-    width: 70%;
-  }
-  .contact-page-section .contact-container .contact-info h2 {
-    color: #000000;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  .contact-page-section .contact-container .contact-info h2 p {
-    color: #000000;
-    font-weight: 500;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info {
-    position: relative;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info li {
-    position: relative;
-    list-style: none;
-    margin: 20px 0;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .contact-page-section .contact-container .contact-info h2 .info li a {
-    color: #000000;
-    margin-left: 10px;
-    font-weight: 500;
-  }
-  .contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) {
-    width: 30px;
-    min-width: 30px;
-  }
-  .contact-page-section > .contact-container > .contact-info > .info > li > span > :nth-child(1) > img {
-    max-width: 100%;
-    opacity: 0.76;
+    width: 94%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-title {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
-  .contact-page-section .contact-container .contact-form p,
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area input,
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    font-size: 1.2rem;
+  .contact-page-section .contact-container .contact-form p {
+    font-size: 1.3rem;
   }
-  .modal.is-active {
-    opacity: 1;
-    top: 33%;
-    left: 52%;
-    height: 23vh;
-    width: 27vw;
-  }
-  .brand .logo-main {
-    left: 55%;
-    top: 34%;
-  }
-  .contact-page-section .contact-form .contact-form-container .input-area input.submit-button {
-    width: 200px;
-    margin-left: 25%;
+  .contact-page-section .contact-container .left .input-area .submit-button {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 22px;
+    width: 190px;
   }
   .case-study-overlay > section {
     padding: 1em 15em;
@@ -1800,55 +1794,20 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
 }
 
 @media only screen and (min-width: 1250px) {
-  .hero-container .hero-text-content .hero-title {
-    font-size: 1.8em;
-    line-height: 1.5em;
+  .overlay .featured:before {
+    top: 20px;
   }
-  .social-header {
-    padding: 2em 10em 2em 0;
-  }
-  section {
-    padding: 10em 10em 4em 10em;
-  }
-  .left,
-  .portfolio-left {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-    padding: 0 3em;
-  }
-  .hero .text-content {
-    padding: 6em 8em 6em 10em;
-  }
-  .featured .right {
+  .overlay .featured .right {
     max-width: 700px;
   }
-  .design img {
-    max-width: 900px;
+  .overlay .about .about-container ul li {
+    margin-bottom: 0;
   }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.7em;
-  }
-  .modal.is-active ul li a span {
-    font-weight: 500;
-    margin-left: 10px;
-    font-size: 1.1rem;
-  }
-  .footer-container .footer-details {
-    background: #6e00ff;
-    text-align: left;
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
-  .brand .logo-main {
-    top: 33%;
-    left: 58%;
+  .overlay .portfolio .portfolio-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 10px;
+    margin: 30px;
   }
 }
 
@@ -1879,6 +1838,21 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   .skills .skills-container {
     text-align: center;
+  }
+  .skills .skills-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    grid-gap: 1em;
+    padding: 1em;
+  }
+  .skills .skills-container ul li .icon-container {
+    margin: 5em;
+    height: auto;
+  }
+  .skills .skills-container ul li .icon-container img.code-icon {
+    padding: 3rem;
   }
   .about {
     padding: 6em;
