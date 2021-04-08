@@ -52,7 +52,7 @@ window.onload = function () {
   const style = document.createElement('style');
   style.innerHTML = `
   .txt-rotate > .wrap {
-        border-right: 0.08em solid #666;
+        border-right: 0.1em solid #fff;
         font-family: 'Poppins';
         font-weight: 700;
         transform: none;

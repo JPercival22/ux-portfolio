@@ -176,8 +176,6 @@ header nav #click {
 .nav-container header nav ul li a {
   width: 100%;
   margin-left: -100%;
-  -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .nav-container header nav ul li a:hover {
@@ -996,6 +994,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   }
   .overlay .portfolio .portfolio-container img {
     width: 70vw;
+    border-radius: 26px;
   }
   .overlay .portfolio .portfolio-left {
     margin: 10px;
@@ -1174,8 +1173,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: auto;
   }
   .hero-container {
-    height: 50vh;
-    place-content: center;
+    height: 25vh;
   }
   .hero-container .hero-text-content p {
     font-size: 1.27rem;
@@ -1274,6 +1272,7 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     background-image: url(/img/form-background-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
     background-color: #5cb95c5c;
@@ -1570,23 +1569,32 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     margin-left: 2em;
     max-width: 494px;
   }
-  .overlay .skills .skills-container ul li {
-    margin-bottom: 2.5em;
+  .overlay .skills .skills-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
   }
-  .overlay .skills .skills-container ul li .icon-container img {
+  .overlay .skills .skills-container li {
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+  }
+  .overlay .skills .skills-container li .icon-container img {
     padding: 1.5rem;
     width: 100px;
     height: auto;
   }
-  .overlay .skills .skills-container ul li .icon-container .brand-awareness {
+  .overlay .skills .skills-container li .icon-container .brand-awareness {
     padding: 1.2rem;
     width: 170px;
     height: auto;
   }
-  .overlay .skills .skills-container ul li .skill-title {
+  .overlay .skills .skills-container li .skill-title {
     font-size: 2rem;
   }
-  .overlay .skills .skills-container ul li .skill-desc {
+  .overlay .skills .skills-container li .skill-desc {
     font-size: 1.3rem;
     font-weight: 300;
   }
@@ -1633,20 +1641,47 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     width: 45vw;
   }
   .overlay .about {
-    padding: 2em;
+    padding: 3em;
+  }
+  .overlay .about .about-container {
+    text-align: center;
   }
   .overlay .about .about-container ul {
-    grid-gap: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
   }
-  .overlay .about .about-container ul li .icon-container .about-title {
-    font-size: 1.6rem;
+  .overlay .about .about-container ul li {
+    padding: 1em;
+    border-radius: 1em;
   }
-  .overlay .about .about-container ul li .business-model-icon {
-    padding-top: 7em;
+  .overlay .about .about-container ul li .icon-container {
+    margin: 3em auto;
+  }
+  .overlay .about .about-container ul li .about-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0em;
+    margin: 1em auto 1em auto;
+  }
+  .overlay .about .about-container ul li .deliverables-img svg {
+    width: 310px;
+    height: auto;
+  }
+  .overlay .about .about-container ul li .business-model-icon img {
+    width: 380px;
   }
   .overlay .about .about-container ul li img {
     width: 500px;
     height: auto;
+  }
+  .overlay .about .about-container ul .column-stretch {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
   }
   .contact-page-section {
     padding: 2em;
@@ -1755,8 +1790,6 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   .case-study-container {
     display: -ms-grid;
     display: grid;
-    -webkit-animation: none;
-            animation: none;
     -ms-grid-columns: none;
         grid-template-columns: none;
   }
@@ -1809,119 +1842,101 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     grid-gap: 10px;
     margin: 30px;
   }
+  .overlay .portfolio .portfolio-container .right img {
+    width: 45vw;
+    border-radius: 26px;
+  }
+  .overlay .portfolio .portfolio-container .right .case-study-btn {
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 1550px) {
   .nav-container header a {
     padding-left: 4em;
   }
-  .social-header {
-    padding: 2em 20em 4em 0;
-  }
-  .portfolio,
-  .featured {
-    padding: 7em 5em 7em 5em;
-  }
-  .featured:before {
-    top: 5em;
-    left: 5em;
-  }
-  .hero-title,
-  .mouse-scroller {
-    padding-left: 0.5em;
-  }
-  .wrap {
-    padding-left: 0.5em;
-  }
-  .skills {
-    padding: 7em 14em 5em 14em;
-  }
-  .skills .skills-container {
-    text-align: center;
-  }
-  .skills .skills-container ul {
+  .overlay .skills .skills-container ul {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
-    padding: 1em;
   }
-  .skills .skills-container ul li .icon-container {
-    margin: 5em;
+  .overlay .skills .skills-container li {
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+  }
+  .overlay .skills .skills-container li .icon-container img:first-child {
+    width: 100px;
+    height: auto;
+    padding: 0;
+  }
+  .overlay .skills .skills-container li .icon-container.two {
+    margin: 2.7em auto;
+  }
+  .overlay .skills .skills-container li .icon-container.three {
+    margin: 1.5em auto;
+  }
+  .overlay .skills .skills-container li .icon-container.three img {
+    width: 150px;
     height: auto;
   }
-  .skills .skills-container ul li .icon-container img.code-icon {
-    padding: 3rem;
+  .overlay .skills .skills-container li .skill-title {
+    font-size: 2rem;
   }
-  .about {
-    padding: 6em;
+  .overlay .skills .skills-container li .skill-desc {
+    font-size: 1.3rem;
+    font-weight: 300;
   }
-  .contact-page-section {
-    padding: 5em;
+  .overlay .about .about-container ul li .business-model-icon {
+    height: 100px;
+    width: auto;
+    display: -ms-grid;
+    display: grid;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    place-content: center;
     margin: 0 auto;
+    max-width: 249px;
+    padding-top: 5.5em;
+  }
+  .overlay .about .about-container ul li .business-model-icon img {
+    width: 250px;
+  }
+  .overlay .portfolio .portfolio-container .right img {
+    width: 34vw;
+    border-radius: 26px;
+    height: 36vh;
+    margin-right: 30px;
+    margin-top: 6em;
+  }
+  .overlay .portfolio .portfolio-container .right .case-study-btn {
+    width: 250px;
+    margin: 0em auto;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 2em;
   }
-  .brand .logo-main {
-    width: 300px;
-    left: 58%;
-    top: 32%;
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
+    width: 16vw;
   }
-  .modal.is-active {
-    top: 34%;
-    left: 52%;
-    height: 24vh;
-    width: 27vw;
-    padding: 2em;
-  }
-  .modal.is-active .contact-modal-title {
-    font-size: 1.7em;
-  }
-  .modal.is-active .contact-modal-subtitle p {
-    font-size: 1.2em;
-  }
-  .footer-container .footer-details {
-    padding-left: 6em;
-  }
-  .footer-container .footer-design {
-    position: relative;
-    right: 40%;
-  }
-  .footer-container .footer-design img {
-    max-width: 250px;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1650px) {
-  .modal.is-active {
-    top: 35%;
-    height: 24vh;
-  }
-  .about .about-container ul {
-    padding: 0 6%;
-  }
-  .footer-container .footer-design {
-    position: relative;
-    right: 37.5%;
-  }
-  .contact-form-container .input-area label .input placeholder {
-    color: red;
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    padding: 16px 20px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.7em;
   }
 }
 
 @media only screen and (min-width: 1870px) {
-  .hero-container .hero-text-content {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0px 27em 0 0em;
+  .nav-container header .logo {
+    padding-left: 3em;
   }
-  .portfolio,
-  .featured {
-    padding: 7em 0em;
+  .hero-container .hero-text-content .hero-title {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 300;
   }
   .featured:before {
     height: 300px;
@@ -1935,10 +1950,18 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     display: -ms-grid;
     display: grid;
     place-content: center;
-    padding: 0 3em 0 14em;
   }
   .about .about-container {
     margin: 0 2em;
+  }
+  .overlay .about .about-container ul li .icon-container.design {
+    padding-top: 25px;
+  }
+  .about .about-container {
+    margin: 0;
+  }
+  footer .footer-container .footer-details {
+    padding: 4em;
   }
 }
 /*# sourceMappingURL=style.css.map */
