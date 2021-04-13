@@ -1807,7 +1807,17 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     position: relative;
     padding: 0;
   }
-  .hero-container-projects .hero-content-grid {
+  .guitar-project {
+    height: 700px;
+    display: block;
+    background-image: url(/img/guitar-lessons.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    padding: 0;
+  }
+  .hero-content-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -1819,13 +1829,13 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     position: relative;
     z-index: 1;
   }
-  .hero-container-projects .hero-content-grid .hero-text-content {
+  .hero-content-grid .hero-text-content {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     text-align: left;
   }
-  .hero-container-projects .hero-content-grid .hero-text-content .hero-title-case-study {
+  .hero-content-grid .hero-text-content .hero-title-case-study {
     position: absolute;
     left: 27%;
     bottom: 32%;
@@ -1839,10 +1849,27 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     line-height: 3rem;
     padding-left: 3rem;
   }
-  .case-study-overlay > section {
+  .hero-content-grid .hero-text-content .hero-title-case-study {
+    position: absolute;
+    left: 18%;
+    bottom: 38%;
+    font-size: 18px;
+    color: dodgerblue;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffffff8c));
+    background: linear-gradient(white, #ffffff8c);
+    width: 63%;
+    max-width: 100%;
+    letter-spacing: 4px;
+    line-height: 2rem;
+  }
+  .case-study-overlay {
+    position: absolute;
+    top: 40em;
+  }
+  section {
     padding: 1em 15em;
   }
-  .case-study-overlay > section .case-study-inner {
+  section .case-study-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1860,28 +1887,28 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
     text-align: left;
     min-height: 200px;
   }
-  .case-study-overlay > section .case-study-inner h1 {
+  section .case-study-inner h1 {
     font-size: 22px;
     text-align: left;
   }
-  .case-study-overlay > section .case-study-inner p {
+  section .case-study-inner p {
     font-size: 18px;
     text-align: left;
   }
-  .case-study-overlay > section .case-study-inner .case-study-list {
+  section .case-study-inner .case-study-list {
     display: -ms-grid;
     display: grid;
     place-content: center;
     text-align: left;
     font-size: 1.4em;
   }
-  .case-study-overlay > section .case-study-inner .case-study-list li {
+  section .case-study-inner .case-study-list li {
     list-style: none;
     margin-right: 10px;
     padding: 10px;
     font-size: 18px;
   }
-  .case-study-overlay > section .case-study-inner .case-study-list ::marker {
+  section .case-study-inner .case-study-list ::marker {
     margin-left: 1em;
     font-size: 18px;
   }
