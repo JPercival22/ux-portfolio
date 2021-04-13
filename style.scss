@@ -1477,36 +1477,62 @@ footer {
     background-size: cover;
     position: relative;
     padding: 0;
-    .hero-content-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-column-gap: 20px;
-      max-width: 1240px;
-      height: 100%;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      .hero-text-content {
-        align-self: center;
-        text-align: left;
-        .hero-title-case-study {
-          position: absolute;
-          left: 27%;
-          bottom: 32%;
-          font-size: 18px;
-          color: #c738a1;
-          background: linear-gradient(#ffffff9c, #0000001f);
-          width: 38%;
-          max-width: 100%;
-          letter-spacing: 4px;
-          line-height: 3rem;
-          padding-left: 3rem;
-        }
+  }
+
+  .guitar-project {
+    height: 700px;
+    display: block;
+    background-image: url(/img/guitar-lessons.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    padding: 0;
+  }
+  .hero-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    max-width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    .hero-text-content {
+      align-self: center;
+      text-align: left;
+      .hero-title-case-study {
+        position: absolute;
+        left: 27%;
+        bottom: 32%;
+        font-size: 18px;
+        color: #c738a1;
+        background: linear-gradient(#ffffff9c, #0000001f);
+        width: 38%;
+        max-width: 100%;
+        letter-spacing: 4px;
+        line-height: 3rem;
+        padding-left: 3rem;
       }
     }
   }
-
-  .case-study-overlay > section {
+  .hero-content-grid .hero-text-content .hero-title-case-study {
+    position: absolute;
+    left: 18%;
+    bottom: 38%;
+    font-size: 18px;
+    color: dodgerblue;
+    background: linear-gradient(white, #ffffff8c);
+    width: 63%;
+    max-width: 100%;
+    letter-spacing: 4px;
+    line-height: 2rem;
+  }
+  .case-study-overlay {
+    position: absolute;
+    top: 40em;  
+  } 
+  section {
     padding: 1em 15em;
     .case-study-inner {
       display: flex;
