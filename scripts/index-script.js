@@ -52,10 +52,11 @@ window.onload = function () {
   const style = document.createElement('style');
   style.innerHTML = `
   .txt-rotate > .wrap {
-        border-right: 0.1em solid #fff;
+        border-right: 0.1em solid #5252ff;
         font-family: 'Poppins';
-        font-weight: 700;
+        font-weight: 600;
         transform: none;
+        color: #5252ff;
       }
     `;
   document.head.appendChild(style);

@@ -10,573 +10,694 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JPercival-UX</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <script defer="" src="/scripts/index-script.js"></script>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
+    <script defer="" src="scripts/projects-scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class="nav-container">
-        <header>
-            <a class="logo" href="/index.html">
-                <div class="logo-placeholder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-                        <defs>
-                            <image width="40" height="40" id="A"
-                                href="data:image/png;base64,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" />
-                        </defs>
-                        <use href="#A" />
+    <main>
+        <div class="nav-container">
+            <header>
+                <a class="logo" href="/index.html">
+                    <div class="logo-placeholder">
+                        <img alt="company logo" width="40" height="40"
+                            src="data:image/png;base64,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">
+                    </div>
+                    <div class="logo-container">
+                        <div class="logo-name">Joseph Percival</div>
+                        <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+                    </div>
+                </a>
+                <nav>
+                    <input type="checkbox" id="click" />
+                    <label for="click" class="menu-btn">
+                        <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                            <path fill="#fff" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                        </svg>
+                    </label>
+                    <ul>
+                        <li><a href="/#work">Projects</a></li>
+                        <li><a href="/#skills">Skills</a></li>
+                        <li><a href="/#about">About </a></li>
+                        <li><a href="/contact-form.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="top-social-icon">
+                <a href="https://www.linkedin.com/in/joseph-percival" title="link to my Linked in Profile">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#007bb6"
+                            d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
                     </svg>
-                </div>
-                <div class="logo-container">
-                    <div class="logo-name">Joseph Percival</div>
-                    <div class="logo-title">UX RESEARCHER/DESIGNER</div>
-                </div>
-            </a>
-            <nav>
-                <input type="checkbox" id="click" />
-                <label for="click" class="menu-btn">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </a>
+                <a href="https://mobile.twitter.com/percival_joseph" title="link to my Twitter Handle">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#1da1f2"
+                            d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
                     </svg>
-                </label>
-                <ul>
-                    <li><a href="/index.html">Projects</a></li>
-                    <li><a href="/index.html">Skills</a></li>
-                    <li><a href="/index.html">About </a></li>
-                    <li><a href="/contact-form.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="top-social-icon">
-            <a href="https://www.linkedin.com/in/joseph-percival">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-                </svg>
-            </a>
-
-            <a href="https://mobile.twitter.com/percival_joseph">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
-                </svg>
-            </a>
-
-            <a href="https://github.com/JPercival22">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                </svg>
-            </a>
-
-            <a href="assets/JPercival-CV2020.pdf">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <div class="hero-container-projects">
-        <div class="hero-content-grid">
-            <div class="hero-text-content">
-                <div class="hero-title-case-study">
-                    <h1>Remind Me <br>Case Study</h1>
-                    <h2>UX Research, UX & UI Design,User Testing</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-        <section>
-            <div class="case-study-inner">
-                <h1>The product</h1>
-                <p>Remind Me is a due to be deployed soon. The application is a user editable reminder application
-                    which allows the user to interact and engage fully to edit, delete, create and set reminders for
-                    their daily tasks.
-                    It has two versions a free version with generic allowances and a Premium version which has more
-                    advanced
-                    capabilities.
-                </p>
-                <h1>The problem</h1>
-                <p>The company wants a Website to be designed that:</p>
-                <ul class="case-study-list">
-                    <li>
-                        Defines their Brand
-                    </li>
-                    <li>
-                        Advertises both versions of their product using their market research
-                    </li>
-                    <li>Includes a gallery of images collected from their application</li>
-                    <li>
-                        A review section with the provided results from their user testing of their product
-                    </li>
-                    <li>
-                        Company contact section
-                    </li>
-                    <li>
-                        e-commerce order section
-                    </li>
-                    <li>
-                        User friendly site aimed at the given demographic
-                    </li>
-                </ul>
-                <h1>The Task</h1>
-                <p>Design a website for the development team, that advertises their product. Identify what the User
-                    wants to see and what is important
-                    to show them. </p>
-            </div>
-        </section>
-        <section>
-            <div class="case-study-container">
-                <h2>Competitive Research</h2>
-                <p>I studied a few similar applications available to identify patterns.
-                    so that the new site, although unique to the company, would be familiar to the user too.
-                    It was identified that none of these sites had a gallery.
-                </p>
-                <img class="desk-research-image" src="img/application-desk-research.png"
-                    alt="to do app desk research images">
-            </div>
-        </section>
-        <section>
-            <div class="case-study-container">
-                <h2>Sketches</h2>
-                <p>After completing my initial research, I sketch ideas. This allows for many leading iterations through
-                    varying design options.
-                </p>
-                <img class="sketches" src="img/sketches.png" alt="to do app desk research images">
-            </div>
-        </section>
-
-        <section>
-            <div class="case-study-container">
-                <h2>Wire frames</h2>
-                <p>
-                    Once a User Flow and a successful round of testing the User reaction and needs have yielded
-                    sufficient information,
-                    I graphically design the High Def Designs using Computer Design Software. My preferred choice is
-                    using Adobe XD although
-                    I am proficient in using inVision, Zeppelin and most other Design software too. Images and
-                    Vectors are created in Illustrator
-                    and Photoshop.
-                </p>
-                <img src="/img/wireframes.png" alt="">
-                <a href="https://xd.adobe.com/view/ba09d262-dc92-430c-84de-841e638dce99-ef5a/">
-                    <p class="secondary-button">
-                        Click here to see the design sheets</p>
+                </a>
+                <a href="https://github.com/JPercival22" title="link to view my Version Control">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#000000"
+                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </a>
+                <a href="assets/JPercival-CV2020.pdf" title="Click this link to view my CV pdf file">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#15a2e3" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                    </svg>
                 </a>
             </div>
-        </section>
+        </div>
+        <div class="hero-container-projects">
+            <div class="hero-content-grid">
+                <div class="hero-text-content">
+                    <div class="hero-title-case-study">
+                        <h1>Remind Me <br>Case Study</h1>
+                        <h2>UX Research, UX & UI Design, User Testing</h2>
 
+                    </div>
+                </div>
+            </div>
+        </div>
         <section>
-            <div class="case-study-container">
-                <h2>User Testing - Round 1</h2>
-                <p>Using User Interviews and Think Aloud Protocol, I launched a small test using the Wire Frame
-                    Prototype
-                    to identify what the user's needs were, to determine weather this first draft design had a credible User Flow,
-                    by recording the user interaction and following the natural flow of actions the User expected to happen on interacting:
-                </p>
-                <h2>
-                    Feedback
-                </h2>
-                <ul class="case-study-list">
-                    <li>
-                        Simple HCI and navigation on all View ports.
-                    </li>
-                    <li>
-                        Combined Feature and Price list.
-                    </li>
-                    <li>
-                        A more interactive and aesthetically pleasing review section, rather than a wall of text.
-                    </li>
-                    <li>
-                        Simplistic Contact Form
-                    </li>
-                    <li>
-                        Simplistic checkout.
-                    </li>
-                    <li>
-                        Aesthetically pleasing checkout
-                    </li>
-                    <li>
-                        A collective theme through out
-                    </li>
-                </ul>
-            </div>
-
-            <div class="case-study-container">
-                <h2>User Testing - Round 2</h2>
-                <p>After studying the results from the first round it was discovered, in combination with the User Survey conducted during the first round, 
-                    that users wanted a vertical scroll main index (home) page and by studying their interaction was able to design the initial User Flow.
-                This is displayed below. </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="1090" height="621" viewBox="0 0 1090 621">
-                    <g id="Group_77" data-name="Group 77" transform="translate(-73 -77)">
-                      <g id="Group_71" data-name="Group 71" transform="translate(-557.338 61.036)">
-                        <g id="Group_70" data-name="Group 70" transform="translate(203.838 -24.036)">
-                          <g id="Rectangle_42" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Home" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-24.448" y="0">Home</tspan></text>
-                        </g>
-                        <g id="Group_70-2" data-name="Group 70" transform="translate(203.838 437.964)">
-                          <g id="Rectangle_42-2" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Contact" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-33.56" y="0">Contact</tspan></text>
-                        </g>
-                        <g id="Group_70-3" data-name="Group 70" transform="translate(203.838 129.964)">
-                          <g id="Rectangle_42-3" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Pricing" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-28.648" y="0">Pricing</tspan></text>
-                        </g>
-                        <g id="Group_70-4" data-name="Group 70" transform="translate(203.838 283.964)">
-                          <g id="Rectangle_42-4" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Reviews" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-33.704" y="0">Reviews</tspan></text>
-                        </g>
-                        <g id="Group_72" data-name="Group 72" transform="translate(203.838 -24.036)">
-                          <g id="Rectangle_42-5" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Home-2" data-name="Home" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-24.448" y="0">Home</tspan></text>
-                        </g>
-                      </g>
-                      <g id="Group_71-2" data-name="Group 71" transform="translate(-203.338 59.817)">
-                        <g id="Group_70-5" data-name="Group 70" transform="translate(203.838 129.964)">
-                          <g id="Rectangle_42-6" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="FreeTrial" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-35.832" y="0">FreeTrial</tspan></text>
-                        </g>
-                        <g id="Group_70-6" data-name="Group 70" transform="translate(203.838 283.964)">
-                          <g id="Rectangle_42-7" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Premium" transform="translate(497 122)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-37.888" y="0">Premium</tspan></text>
-                        </g>
-                      </g>
-                      <g id="Group_71-3" data-name="Group 71" transform="translate(-21 138)">
-                        <g id="Group_70-7" data-name="Group 70" transform="translate(203.838 129.964)">
-                          <g id="Rectangle_42-8" data-name="Rectangle 42" transform="translate(439.162 50.036)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Checkout" transform="translate(497.162 123.036)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-40.024" y="0">Checkout</tspan></text>
-                        </g>
-                      </g>
-                      <g id="Group_71-4" data-name="Group 71" transform="translate(104.162 58.518)">
-                        <g id="Group_70-8" data-name="Group 70" transform="translate(299.838 3.964)">
-                          <g id="Rectangle_42-9" data-name="Rectangle 42" transform="translate(439 50)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Download_Screen" data-name="Download 
-                  Screen" transform="translate(497.162 111.036)" font-size="15" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-40.995" y="0">Download </tspan><tspan x="-26.775" y="23">Screen</tspan></text>
-                        </g>
-                        <g id="Group_70-9" data-name="Group 70" transform="translate(299.676 397.964)">
-                          <g id="Rectangle_42-10" data-name="Rectangle 42" transform="translate(439.162 50.518)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Credit_Card_Details" data-name="Credit 
-                  Card
-                  Details" transform="translate(497.162 97.518)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-27.544" y="0">Credit </tspan><tspan x="-20.512" y="25">Card</tspan><tspan x="-28.584" y="50">Details</tspan></text>
-                        </g>
-                        <g id="Group_70-10" data-name="Group 70" transform="translate(503.838 212.964)">
-                          <g id="Rectangle_42-11" data-name="Rectangle 42" transform="translate(439 26.518)" fill="#fff" stroke="#707070" stroke-width="1">
-                            <rect width="116" height="134" stroke="none"/>
-                            <rect x="0.5" y="0.5" width="115" height="133" fill="none"/>
-                          </g>
-                          <text id="Order_Confirmed" data-name="Order
-                  Confirmed" transform="translate(497 86.518)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-23.488" y="0">Order</tspan><tspan x="-44.264" y="25">Confirmed</tspan></text>
-                        </g>
-                      </g>
-                      <g id="Rectangle_43" data-name="Rectangle 43" transform="translate(73 77)" fill="none" stroke="#707070" stroke-width="1">
-                        <rect width="141" height="621" stroke="none"/>
-                        <rect x="0.5" y="0.5" width="140" height="620" fill="none"/>
-                      </g>
-                      <path id="Path_33" data-name="Path 33" d="M-3549.264,2454.343s377.991-145.11,455.6,81.274a253.347,253.347,0,0,1,11.611,52.479,344.882,344.882,0,0,1,2.286,38.835" transform="translate(3750.764 -2308.932)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_35" data-name="Path 35" d="M-3549.264,2619.289l66.5,117.4" transform="translate(3921.264 -2270.289)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_38" data-name="Path 38" d="M-3020.288,2759.691l93-202.759" transform="translate(3978.287 -2180.191)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_39" data-name="Path 39" d="M-2752.142,2574.192s32.909-156.012-147.48-125.541" transform="translate(3865 -2282)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_40" data-name="Path 40" d="M-2914.264,2449.5s-266.819-127.451-635,0" transform="translate(3751.264 -2282)" fill="none" stroke="#606060" stroke-width="1"/>
-                      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(184 146)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(834 160)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(615 377)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(439 453)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(439 306)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(828 313)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(826 415)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(729 377)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_20" data-name="Ellipse 20" transform="translate(537 306)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_21" data-name="Ellipse 21" transform="translate(662 315)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_22" data-name="Ellipse 22" transform="translate(1102 292)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_23" data-name="Ellipse 23" transform="translate(1042 364)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_24" data-name="Ellipse 24" transform="translate(947 571)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_25" data-name="Ellipse 25" transform="translate(947 159)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Group_73" data-name="Group 73">
-                        <g id="Ellipse_26" data-name="Ellipse 26" transform="translate(843 300)" fill="#fff" stroke="#707070" stroke-width="1">
-                          <ellipse cx="57.5" cy="23.5" rx="57.5" ry="23.5" stroke="none"/>
-                          <ellipse cx="57.5" cy="23.5" rx="57" ry="23" fill="none"/>
-                        </g>
-                        <text id="Free_Version" data-name="Free Version" transform="translate(901 329)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-51.136" y="0">Free Version</tspan></text>
-                      </g>
-                      <g id="Group_74" data-name="Group 74">
-                        <g id="Ellipse_27" data-name="Ellipse 27" transform="translate(843 400)" fill="#fff" stroke="#707070" stroke-width="1">
-                          <ellipse cx="57.5" cy="26.5" rx="57.5" ry="26.5" stroke="none"/>
-                          <ellipse cx="57.5" cy="26.5" rx="57" ry="26" fill="none"/>
-                        </g>
-                        <text id="Premium-2" data-name="Premium" transform="translate(901 432)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-37.888" y="0">Premium</tspan></text>
-                      </g>
-                      <path id="Path_41" data-name="Path 41" d="M-3176,2667l83.087-63.556" transform="translate(3923 -2282)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_42" data-name="Path 42" d="M-3099.737,2705.261l-79-36" transform="translate(3925.737 -2281.761)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_43" data-name="Path 43" d="M-2964.5,2789.927V2733.86" transform="translate(3865 -2282)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_44" data-name="Path 44" d="M-2964.5,2682v-55.4" transform="translate(3865 -2282)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <path id="Path_45" data-name="Path 45" d="M-2964.5,2582v-60.219" transform="translate(3865 -2282)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <g id="Ellipse_28" data-name="Ellipse 28" transform="translate(537 453)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <line id="Line_5" data-name="Line 5" x2="67" y2="70" transform="translate(555.5 315.5)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <line id="Line_6" data-name="Line 6" y1="74" x2="67" transform="translate(555.5 387.5)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <g id="Group_75" data-name="Group 75" transform="translate(-596 -60)">
-                        <g id="Ellipse_26-2" data-name="Ellipse 26" transform="translate(853 300)" fill="#fff" stroke="#707070" stroke-width="1">
-                          <ellipse cx="57.5" cy="23.5" rx="57.5" ry="23.5" stroke="none"/>
-                          <ellipse cx="57.5" cy="23.5" rx="57" ry="23" fill="none"/>
-                        </g>
-                        <text id="Free_Version-2" data-name="Free Version" transform="translate(911 329)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-51.136" y="0">Free Version</tspan></text>
-                      </g>
-                      <g id="Group_76" data-name="Group 76" transform="translate(-586 -84)">
-                        <g id="Ellipse_27-2" data-name="Ellipse 27" transform="translate(843 400)" fill="#fff" stroke="#707070" stroke-width="1">
-                          <ellipse cx="57.5" cy="26.5" rx="57.5" ry="26.5" stroke="none"/>
-                          <ellipse cx="57.5" cy="26.5" rx="57" ry="26" fill="none"/>
-                        </g>
-                        <text id="Premium-3" data-name="Premium" transform="translate(901 432)" font-size="16" font-family="Poppins-SemiBold, Poppins" font-weight="600" letter-spacing="0.012em"><tspan x="-37.888" y="0">Premium</tspan></text>
-                      </g>
-                      <g id="Ellipse_29" data-name="Ellipse 29" transform="translate(248 255)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_30" data-name="Ellipse 30" transform="translate(184 298)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(363 334)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(363 255)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(248 332)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <line id="Line_7" data-name="Line 7" x1="57" y1="55" transform="translate(381.5 263.5)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <line id="Line_8" data-name="Line 8" y1="37.5" x2="56" transform="translate(201.5 263.5)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <line id="Line_9" data-name="Line 9" x1="46" y1="28" transform="translate(202.5 306.5)" fill="none" stroke="#707070" stroke-width="1"/>
-                      <g id="Ellipse_33" data-name="Ellipse 33" transform="translate(892 508)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(892 232)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(892 297)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(892 340)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_37" data-name="Ellipse 37" transform="translate(892 400)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                      <g id="Ellipse_38" data-name="Ellipse 38" transform="translate(892 443)" fill="#fff" stroke="#387cb7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                        <ellipse cx="9" cy="8.5" rx="9" ry="8.5" stroke="none"/>
-                        <ellipse cx="9" cy="8.5" rx="7.5" ry="7" fill="none"/>
-                      </g>
-                    </g>
-                  </svg>
-                  
-                <p>Using User Interviews and Think Aloud Protocol, I launched another small test with the exact same
-                    set of tasks, however with a different set of Users. This was to create an un bias set of
-                    results and
-                    indeed to see if the concluding iteration was the most successful, improved comprehension,
-                    encapsulated
-                    the user emotions whilst keeping the cognitive load low whilst navigating through the site and
-                    completing
-                    the tasks.
-                </p>
-                <h2>
-                    Feedback
-                </h2>
-                <ul class="case-study-list">
-                    <li>
-                        Having changed some of the buttons from a Primary button to a clickable text link instead,
-                        it was found that most user's
-                        were no longer having cognitive overload, now they could differentiate themselves with what
-                        was a
-                        primary and a secondary button themselves. This was completed by using a pill button as the
-                        Primary Button
-                        on the Index page and using a designed camera icon for the secondary.
-                    </li>
-                    <li>
-                        The layout of the site has as a minimum amount of pages possible, to increase page load
-                        speeds on
-                        weaker networks and page refreshes.
-                    </li>
-                    <li>
-                        User's were intrigued at the Review section, they interacted more with the carousel and the
-                        eye tracker found that during the
-                        test, 80% of the user's spent more time focusing on that area, which would be fair to infer
-                        full engagement and are reading the reviews too.
-                    </li>
-                    <li>
-                        90% of the user's were able to navigate fully through the Designs, were able to hit the end
-                        point on the Checkout
-                        section, inferring an aesthetically pleasing and simplistic layout was achieved.
-                        At this point it was concluded that the minority of the participants failing the test
-                        didn't fully engage and were either willfully obstructing a fair result or were simply not
-                        bothered.
-                    </li>
-                    <li>
-                        A blue theme was added through out the designs, using the psychological factors of blue as
-                        being sincere, trustworthy and a being an overall calm color, with high contrast
-                        text color of black on a White or Gainsboro background for the Visual Hierarchy.
-                    </li>
-
-                </ul>
-
-                <h2>The finished Designs</h2>
-                <p>
-                    If you would like to view the mobile design prototype the please follow this link here: <a
-                        href="https://xd.adobe.com/view/cbf5c882-69ae-4974-ad9f-032363423edf-9ea6/">Remind ME mobile
-                        Prototype</a>
-                </p>
-                <p>Please Enjoy and Thank you.</p>
+            <div class="intro-container">
+                <div class="left">
+                    <h1>Remind ME</h1>
+                    <p>
+                        Remind Me was originally a Mobile Application work tool concept, an editable task schedular for
+                        busy
+                        professionals. <br>I was approached by a company - because their application is
+                        in development, their product and their name will remain anonymous for this case study at their
+                        request.
+                        <br>Tasked with designing a data driven advertising website for them, I was asked, "whether or
+                        not
+                        their application could be so much more than just another work tool?"
+                        <br> Using a wide array of User interaction, testing and application on their prototype,
+                        answered -
+                        yes it could and should be so much more!
+                        <br>This case study discovered that the target audience could be enhanced, further development
+                        opportunities to help the Application succeed and to be a potential competitor for this market
+                        and a data driven designed website too!
+                    </p>
+                </div>
+                <div class="right">
+                    <img src="/img/remind-me-project.png" width="150" height="150"
+                        alt="A caption of the Application in a real world environment">
+                </div>
             </div>
         </section>
+        <section class="summary">
+            <h1>Case Summary</h1>
+            <div class="summary-container">
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-details">
-                    <div class="footer-top-bar">
-                        <a class="logo" href="/index.html">
-                            <div class="logo-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-                                    <defs>
-                                        <image width="40" height="40"
-                                            href="data:image/png;base64,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" />
-                                    </defs>
-                                    <use href="#A" />
-                                </svg>
-
-                            </div>
-                            <div class="logo-container">
-                                <div class="logo-name">Joseph Percival</div>
-                                <div class="logo-title">UX RESEARCHER/DESIGNER</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="logo-container">
-                        <p>joseph.m.percival@gmail.com</p>
-                        <p>077709718757</p>
-                    </div>
+                <div class="start">
+                    <h2>Product Vision</h2>
+                    <p> The company's vision was to ascertain whether there was any demand from the general public to
+                        enhance their target audience,
+                        how their product stacked up against the three main competitors who also had a To-Do
+                        application,<br>
+                        discover any possible development opportunities to make the application appeal to the general
+                        public,<br>
+                        and collect the data from this research and Design a website around this data.</p>
                 </div>
-                <div class="footer-design">
-                    <img src="img/footer-design.svg" width="250" height="200" alt="footer-design">
+                <div class="middle">
+                    <h2>Discovered User Problem</h2>
+                    <p>
+                        It appeared that some aspects of their original plan were biased, in the sense that they did not
+                        include, or report, any user input
+                        throughout and so it was fair to infer that at this stage, was still in its infancy.
+                        <br>
+                        I highlighted my intentions to obtain some User input through public surveys and interviews
+                        ensuring
+                        total anonymity for
+                        the company, the product and the user was ethically upheld.
+                        This was to identify if there was any demand for their product from the general public, capture
+                        the
+                        user needs and
+                        emotions then design around the user and the business in a data driven method.
+                        <br>
+                    </p>
                 </div>
-                <div class="footer-social-icon">
-                    <a href="https://www.linkedin.com/in/joseph-percival">
-                        <svg style="width:35px;height:35px" viewBox="0 0 24 24">
-                            <path fill="#007bb6"
-                                d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
-                        </svg>
-                    </a>
-                    <a href="https://mobile.twitter.com/percival_joseph">
-                        <svg style="width:35px;height:35px" viewBox="0 0 24 24">
-                            <path fill="#1da1f2"
-                                d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
-                        </svg>
-                    </a>
-                    <a href="https://github.com/JPercival22">
-                        <svg style="width:35px;height:35px" viewBox="0 0 24 24">
-                            <path fill="#000000"
-                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg>
-                    </a>
-                    <a href="assets/JPercival-CV2020.pdf">
-                        <svg style="width:35px;height:35px" viewBox="0 0 24 24">
-                            <path fill="#15a2e3" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-                        </svg>
-                    </a>
+                <div class="end">
+                    <h2>Outcomes</h2>
+                    <p>
+                        Tasked with designing the website to advertise the product depending on whether there was any
+                        demand
+                        for
+                        their product from the general public or more business orientated. <br>
+                        This was answered using public surveys and interviews, comparing the prototype against three
+                        similar
+                        market leading
+                        products available on the market.
+                        I was also able to create a data-driven SWOT analysis and user Personas from this data.
+                        Using the data I was carried out the Ideation Prioritisation on what was
+                        most important to show the Users that visited the website.
+                        Rapid Prototyping, Wireframes and Hi-Def designs were drafted and user tested for the website so
+                        that they were in the
+                        best possible position for the developers, the user and for the business.
+                    </p>
                 </div>
-                <small>
-                    &copy; Copyright 2021 Joseph M Percival
-                </small>
             </div>
-        </footer>
+        </section>
+        <section>
+            <h1>Process Highlights</h1>
+            <div class="subtitle">Project plan and responsibilities overview</div>
+            <div class="project-plan">
+                <div class="team">
+                    <div class="project-title">
+                        <div class="project-placeholder">
+                            <img src="/img/team.svg" width="100" height=100 alt="">
+                        </div>
+                        <div class="project-plan-paragraph">
+                            <h2>Product Team</h2>
+                            <p>Consisted of UX Designer and Researcher</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsibilities">
+                    <div class="project-title">
+                        <div class="project-placeholder">
+                            <img src="/img/profile.svg" width="100" height="100"
+                                alt="image representing my responsibilities" />
+                        </div>
+                        <div class="project-plan-paragraph">
+                            <h2>My Responsibilities</h2>
+                            <p>Hands-on Designer, researcher, User Tester Facilitator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology">
+                    <div class="project-title">
+                        <div class="project-placeholder">
+                            <img src="/img/method-image(2).svg" class="method-icon" width="40" height="40"
+                                alt="image representing my methodologies" />
+                        </div>
+                        <div class="project-plan-paragraph">
+                            <h2>Methodology</h2>
+                            <p>Design thinking data driven product concept development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">
+                        <div class="project-placeholder">
+                            <img src="/img/briefcase-icon.svg" width="70" height="50"
+                                alt="image representing project planning" />
+                        </div>
+                        <div class="project-plan-paragraph">
+                            <h2>Project Plan</h2>
+                            <p>Two week's discovery and ideation, followed by one week of rapid prototyping,
+                                one week of User Testing and one week final product design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="nielson-qoute"
+            style=" background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/Design-Wallpaper-4k.jpg); background-repeat: no-repeat;background-size: cover;">
+            <div class="qoute-text" style="color:#fff; font-weight: 700;">
+                <h2>
+                    "Users spend most of their time on other sites. This means that users prefer your site to work the
+                    same
+                    way as all the other sites they already know." </q> </h2>
+                <br><sub style="font-weight: 500;font-size: 16px;">Jakobs Law Of Internet User Experience - Jacob Nielson</sub>
+            </div>
+        </section>
+        <section class="discovery-section" style="text-align:center;">
+            <h1>Discovery and Ideation</h1>
+            <p>
+                I began by researching the existing market on tailored Applications for task scheduling. After multiple
+                forum reviews and questionnaires, 72 responses were gathered and 15 moderated interviews
+                that were captured primarily via Social Media Networks and an online Survey.
+                The data allowed me to paint a clearer picture of what the User's wanted from the product, what they
+                expected and more importantly an accurate representation on who wanted the application.
+                This information provided me with enough information to build a SWOT Analysis and User personas for
+                further
+                research.
+            </p>
+            <p>
+                What followed were efforts to map the existing user experiences to identify other opportunity
+                developments:
+            </p>
+            <h1>SWOT Analysis and User Persona's</h1>
+            <div class="slider-container">
+                <div class="slider-content">
+
+                    <div class="slider-single">
+                        <img class="slider-single-image" src="/img/RemindME-SWOT.png" alt="1" />
+                        <h1 class="slider-single-title">SWOT Analysis</h1>
+                    </div>
+
+
+                    <div class="slider-single">
+                        <img class="slider-single-image" src="/img/JaneBailey.png" alt="2" />
+                        <h1 class="slider-single-title">Jane Bailey User Persona</h1>
+                    </div>
+
+                    <div class="slider-single">
+                        <img class="slider-single-image" src="/img/IanBradbury.png" alt="3" />
+                        <h1 class="slider-single-title">Nick Bradbury User Persona</h1>
+                    </div>
+
+                    <div class="slider-single">
+                        <img class="slider-single-image" src="/img/DianeTickle.png" alt="4" />
+                        <h1 class="slider-single-title">Diane Tickle User Persona</h1>
+                    </div>
+
+                </div>
+            </div>
+            <h2>Discovery Analysis</h2>
+            <p>
+                Whilst interviewing the user's I ascertained that most of the applications available on the market were
+                too
+                complicated for the everyday user. This answered why the company had such a narrow
+                target audience and aimed purely at professionals as a work tool. A suggestion that was accepted by the
+                company was to make the HCI simpler and less 'cumbersome or business-like,' this would make
+                it more appealable to the everyday user - thus expanding the target audience. I wasn't part of the
+                design
+                team for Application design, so defining it would have meant leveraging away from the scope of
+                this case study, nevertheless, the SWOT Analysis findings highlighted areas for further product
+                development
+                opportunities, so that the application could appeal to the every day user too.
+            </p>
+            <p>
+                During the survey, I asked whether any of the participants had a similar application, which brand did
+                they
+                prefer and also which they did not like and why? Interviews were arranged
+                through the survey, pain points were identified with our prototype and what the user would expect from
+                the
+                proposed website, this was so that I could paint a picture on a natural User flow for the site.
+            </p>
+        </section>
+        <section>
+            <div class="idea-container">
+                <div class="idea-left-col">
+                    <h1>Idea Prioritisation</h1>
+                    <p>
+                        Based on discovery research findings I came up with three hypothesis to ensure successful
+                        product
+                        adoption. These covered: <br>
+                        <br> Essential Security for the checkout areas.<br>
+                        <br> Visual hierarchy for the product.<br>
+                        <br> Simple and easily identifiable price section for the different versions of the product to
+                        enhance transparency and the trust from the user.<br>
+                        <br> A visually pleasing and interactive review section. <br>
+                        <br> A user friendly, safe and secure checkout section.<br>
+                        <br> A user friendly contact section.
+                    </p>
+                    <p>
+                        The features were listed and mapped based in technical complexity, potential Business and User
+                        efficiency values. The highest
+                        impact features were expected to be included in the developed product.
+                    </p>
+                </div>
+
+                <div class="discovery-card-inner">
+                    <div class="desk-research">
+                        <div class="card-image" style="cursor:zoom-in ">
+                            <img class="desk-research-image-main" src="img/Hypothesis.png"
+                                alt="to do app desk research images">
+                        </div>
+                        <div class="card-title">
+                            <h2>Hypothesis & Ideation</h2>
+                        </div>
+                        <div class="desk-research-editorial">
+                            <p>Data collected from the User Research and Discovery phase produced User expectations and
+                                Future Development Opportunities
+                                for further development of the application, which also gave more information on what to
+                                include for the website.
+                                This data along with expectations for the website design advanced Ideation into
+                                Hypothesis
+                                and Idea Prioritisation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="summary" style="text-align:center;">
+            <h1>Prototyping</h1>
+            <p>
+                Concentrating on high impact feature sets allowed me to create a story that could be split into a few
+                major
+                user scenarios: Product Identity, simple HCI and familiarity inspired by the product
+                itself and intrigue from the competitive research.
+                Focusing on the natural user flow, the usability and accessibility of the website, whilst keeping the
+                focus
+                on branding and the business advertisement requirements, the following steps in designing
+                the website followed.
+            </p>
+            <div class="summary-container">
+                <div class="discovery-cards">
+                    <div class="discovery-card-inner">
+                        <div class="desk-research">
+                            <div class="card-image">
+                                <img class="desk-research-image-standard" src="img/application-desk-research.png"
+                                    alt="to do app desk research images">
+                            </div>
+                            <div class="card-title">
+                                <h2>Competitive Research</h2>
+                            </div>
+                            <div class="desk-research-editorial">
+                                <p>
+                                    Using UX tools to gain some insights on what the competition's SEO keywords were,
+                                    how they ranked with other competitors, spot new opportunities, show the exact
+                                    content
+                                    needed and
+                                    revealed design patterns that are collectively successful for the user, product and
+                                    business.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discovery-card-inner">
+                        <div class="desk-research">
+                            <div class="card-image">
+                                <img class="desk-research-image" src="/img/user-flow.png" width="100" height="100"
+                                    alt="Pre-Determined User Flow Diagram" />
+                            </div>
+                            <div class="card-title">
+                                <h2>Natural User Flow</h2>
+                            </div>
+                            <div class="desk-research-editorial">
+                                <p>Data recorded during User Interviews and the public Surveys enabled me to capture and
+                                    encapsulate the users feelings towards the products tested
+                                    and through the data recorded during the interviews, now in Persona's, I was able to
+                                    produce a Naturel User Flow for the website.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discovery-card-inner">
+                        <div class="desk-research">
+                            <div class="card-image">
+                                <img class="desk-research-image-standard" src="/img/sketches.png" width="300"
+                                    height="250" alt="initial designs">
+                            </div>
+                            <div class="card-title">
+                                <h2>Rapid Prototyping</h2>
+                            </div>
+                            <div class="desk-research-editorial">
+                                <p>During Rapid Prototyping, several iterations generated during a short period of time,
+                                    the
+                                    features were created and tested in an attempt
+                                    to optimize characteristics like shape, size, and overall usability based on user
+                                    feedback and analysis. Final tests produced the final prototype
+                                    and the Natural User Flow had been established.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discovery-card-inner">
+                        <div class="desk-research">
+                            <div class="card-image">
+                                <img class="desk-research-image-standard" src="/img/wireframes.png" width="300"
+                                    height="250" alt="to do app desk research images">
+                                <figcaption class="caption-text">
+                                    <a href="https://xd.adobe.com/view/ba09d262-dc92-430c-84de-841e638dce99-ef5a/">
+                                        Click to go to Adobe XD Design Sheets</a>
+                                </figcaption>
+                            </div>
+                            </a>
+                            <div class="card-title">
+                                <h2>Hi-Def Designs</h2>
+                            </div>
+                            <div class="desk-research-editorial">
+                                <p>Once the final iteration of the wireframes were acknowledged after User testing, all
+                                    features and functionality was transferred
+                                    to Hi-Def Designs using Adobe XD and Illustrator for the icons. These were tested
+                                    using
+                                    Think Aloud Protocol, pain points were corrected
+                                    and final designs were completed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="idea-container">
+                <div class="idea-left-col">
+                    <h1>Validation</h1>
+                    <p>
+                        The prototype has been tested on 15 users (5 for each of the created persona's), in order to to
+                        validate my
+                        Hypothesis. Using the previously determined User Flow to guide the User through the prototype.
+                    </p>
+                    <p>
+                        From the previously conducted survey, willing participants were found to test the prototypes,
+                        on mobile and desktop. Using the Think Aloud method and asking a serious of open ended questions
+                        I
+                        was
+                        able to understand how the user's felt about the Prototype amongst the age ranges specified
+                        earlier.
+                        The early prototypes proved that the pre-determined User flow was correct, Primary and Secondary
+                        buttons
+                        were required for some of the features, such as the video section and the pricing detail. <br>
+                        Early designs were shown to have too much text content and delayed the user from efficiently
+                        moving
+                        through to complete
+                        tasks, the initial checkout design proved my hypothesis to be correct by adding different
+                        payment
+                        Methodologies,
+                        Color Psychology, Emphasis on SEO keywords such as, "Risk Free" and offering Credit Card
+                        Security
+                        increased efficiency and a positive emotion.
+                        The majority of User's found a scrollable review section cumbersome and preferred a more modern
+                        "swipeable" section instead.
+                        All Feedback was analysed, errors were caught and designs improved thanks to this.
+                        I observed almost entirely positive feedback from the final designs. User's loved the new
+                        buttons
+                        and the proposed video section of the working product being immediately available.
+                        I carried out some A/B testing on the review section, one that was scrollable and one that was
+                        swipeable.
+                        Analysis of this data showed that the majority of the users interacted and spent more time using
+                        the swipeable
+                        version of the review section. All participants were able to complete the checkout section with
+                        ease and return back
+                        to the home screen.
+                        User's paralinguistic features were recorded using a web cam and video recording software at the
+                        agreement of the participant and this displayed that none of the users were showing signs of
+                        confusion or stress with the final version.
+                    </p>
+                </div>
+                <div class="validation-image-container">
+                    <img class="ta1" src="/img/thinkaloud.png" alt="think aloud testing - 18y/o" width="50" height="50">
+                    <img class="ta2" src="/img/thinkaloud2.png" alt="think aloud testing - 45y/o" width="50"
+                        height="50">
+                    <img class="ta3" src="/img/thinkaloud3.png" alt="think aloud testing - 55y/o" width="50"
+                        height="50">
+                    <div class="column-stretch">
+                        <img src="/img/remindMe-ABTest.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="outcomes-section">
+            <h1>Outcomes</h1>
+            <p>
+                Based on the findings from both the UX research and the Design validation sessions I was able to produce
+                a list of changes that were addressed and updated in the prototype along with any potential future
+                alterations for the Application passed onto the company.<br>
+                It was realised during the Validation stage that all of the user's became concerned when they clicked on
+                the video section of the design and wondered why the video didn't play. It was mentioned prior to
+                testing that there was no promotional video provided as the
+                company wanted their application to appeal to the general public and at that moment in time was
+                developed as businesses tool.
+                They did
+                not want to confuse the participants by advertising something that it wasn't going to be, so a decision
+                on their part was to not include the video. Another thing was because of the potential improvements
+                found was
+                significantly different to the application that they had, some of the details in the designs such as
+                descriptive text will
+                change once those improvements are developed.
+                Below you will find links to the Mobile, Desktop and the Design Specifications for the website. Please
+                enjoy and thank you.
+            </p>
+
+
+            <div class="outcomes-gallery-container">
+                <h1>Final Design and Specifications</h1>
+                <div class="row">
+
+                    <div class="col">
+                        <div class="feature-img">
+                            <img src="/img/remind-me-project.png" width="100%">
+                            <figcaption class="caption-text">
+                                <a href="https://xd.adobe.com/view/99a16821-570f-414d-a915-e8680ff99e6a-ccf2/">
+                                    Click to go to Adobe XD Design Sheets</a>
+                            </figcaption>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="/img/mobile-RM.PNG" alt="">
+                                <img src="/img/play-btn.png" class="play-btn" id="designVideo"
+                                    onclick="playVideo('videos/Mobile-Designs.mp4')">
+                            </div>
+                            <h2>Mobile Design Video</h2>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="/img/remindMEWebsite.PNG" class="remindMe-content" height="90px" alt="">
+                                <img src="/img/play-btn.png" alt="" class="play-btn" id="designVideo2"
+                                    onclick="playVideo2('videos/Website-Designs.mp4')">
+                            </div>
+                            <h2>Web Site Design Video</h2>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="/img/degree.svg" style="visibility: hidden;" alt="">
+                                <img src="/img/play-btn.png" alt="" class="open-modal">
+                            </div>
+                            <h2>Final Design Specifications</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="video-player" id="videoPlayer">
+                <video id="designVideos" width="100%" height="500px" controls autoplay>
+                    <source src="/videos/Mobile-Designs.mp4" type="video/mp4">
+                </video>
+                <div class="close-btn" onclick="stopVideo()">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path fill="#fff"
+                            d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="video-player2" id="videoPlayer2">
+                <video id="designVideo2" width="100%" height="500px" controls autoplay>
+                    <source src="/videos/Website-Designs.mp4" type="video/mp4">
+                </video>
+                <div class="close-btn" onclick="stopVideo()">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path fill="#fff"
+                            d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="modal">
+
+                <img src="/img/Style-Guide-and-Typogrophy.PNG" alt="" />
+
+                <div class="close-modal">
+                    <svg viewBox="0 0 24 24" width="40" height="40">
+                        <path fill="#278388"
+                            d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- </div> -->
+            <script>
+                var videoPlayer = document.getElementById("videoPlayer");
+                var videoPlayer2 = document.getElementById("videoPlayer2");
+                var designVideo = document.getElementById("designVideo");
+                var designVideo2 = document.getElementById("designVideo2");
+
+                function stopVideo() {
+                    videoPlayer.style.display = "none";
+                    videoPlayer2.style.display = "none";
+                }
+                function playVideo(file) {
+                    designVideo.src = file;
+                    videoPlayer.style.display = "block"
+                }
+                function playVideo2(file) {
+                    designVideo2.src = file;
+                    videoPlayer2.style.display = "block"
+                }
+
+                var modal = document.querySelector('.modal');
+                var btn = document.querySelector('.open-modal');
+                var span = document.querySelector('.close-modal');
+
+                btn.onclick = function () {
+                    modal.style.display = "flex";
+                };
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+
+            </script>
+        </section>
+        <section>
+            <h1>Like What you see?</h1>
+            <p>Hopefully you liked what you seen, how the story unfolded and more importantly why the user experience
+                was so important for potential development opportunities for the actual application and for the website
+                design too.</p>
+            <p>You can click any of the links in the footer to contact myself through the social media platforms or by
+                clicking <span><a href="/contact-form.html">clicking here</a></span> and sending me a message. I usually
+                call or message back within 8 hours.</p>
+            <p>Thank you for your time.</p>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-details">
+                <div class="footer-top-bar">
+                    <a class="logo" href="/index.html">
+                        <div class="logo-placeholder">
+                            <img alt="company logo" width="40" height="40"
+                                src="data:image/png;base64,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">
+                        </div>
+                        <div class="logo-container">
+                            <div class="logo-name">Joseph Percival</div>
+                            <div class="logo-title">UX RESEARCHER/DESIGNER</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="logo-container">
+                    <p>joseph.m.percival@gmail.com</p>
+                    <p>077709718757</p>
+                </div>
+            </div>
+            <div class="footer-design">
+                <img src="img/footer-design.svg" width="250" height="200" alt="footer-design">
+            </div>
+            <div class="footer-social-icon">
+                <a href="https://www.linkedin.com/in/joseph-percival"
+                    title="Click this link to see my Linked In my account">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#007bb6"
+                            d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                </a>
+                <a href="https://mobile.twitter.com/percival_joseph"
+                    title="Click this link to see my Twitter my account">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#1da1f2"
+                            d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/JPercival22" title="Click this link to see my Version Control">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#000000"
+                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </a>
+                <a href="assets/JPercival-CV2020.pdf" title="Click this link to see my CV pdf file">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#15a2e3" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                    </svg>
+                </a>
+            </div>
+            <small>
+                &copy; Copyright 2021 Joseph M Percival
+            </small>
+        </div>
+    </footer>
+
 </body>
 
 </html>
