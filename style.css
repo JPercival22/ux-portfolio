@@ -147,7 +147,7 @@ header nav #click {
 
 .nav-container header nav ul {
   position: absolute;
-  top: 70px;
+  top: 40px;
   left: -100%;
   width: 100%;
   height: 99vh;
@@ -173,7 +173,7 @@ header nav #click {
 .nav-container header nav ul li {
   width: 100%;
   margin: 25px 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,6 +214,8 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
+  width: 25px;
+  height: auto;
 }
 
 .menu-btn svg path {
@@ -247,11 +249,11 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero-container .hero-text-content .hero-button-container {
@@ -336,9 +338,12 @@ header #click:checked ~ ul li a {
 
 .overlay .research-qoute .qoute-text {
   font-size: 12px;
-  font-weight: 500;
   font-style: oblique;
   padding: 17px;
+}
+
+.overlay .research-qoute .qoute-text h2 {
+  font-weight: 300;
 }
 
 .overlay .research-qoute .qoute-text sub {
@@ -376,7 +381,10 @@ header #click:checked ~ ul li a {
 .overlay .featured .left .inner .featured-title {
   color: #aa382b;
   font-size: 1.35rem;
-  font-weight: 700;
+}
+
+.overlay .featured .left .inner .featured-title h2 {
+  font-weight: 300;
 }
 
 .overlay .featured .right {
@@ -453,12 +461,13 @@ header #click:checked ~ ul li a {
   color: #aa382b;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .overlay .portfolio .portfolio-left .inner .featured-title {
   color: #aa382b;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .overlay .portfolio .right {
@@ -479,11 +488,17 @@ header #click:checked ~ ul li a {
 
 .overlay .portfolio .right img {
   width: 280px;
-  height: auto;
+  height: 166px;
   margin: 10px 0;
 }
 
 .overlay .portfolio .right .case-study-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -494,9 +509,6 @@ header #click:checked ~ ul li a {
           box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
   color: #fff;
   cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   font-weight: 600;
   height: 40px;
   letter-spacing: 1px;
@@ -518,9 +530,8 @@ header #click:checked ~ ul li a {
 }
 
 .overlay .portfolio .right .case-study-btn .primary-button {
-  padding: 8px 16px;
-  color: white;
-  font-size: 20px;
+  color: #fff;
+  font-size: 17px;
 }
 
 .research-qoute {
@@ -535,7 +546,6 @@ header #click:checked ~ ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1em;
-  margin-bottom: 1em;
 }
 
 .overlay .about .about-container {
@@ -545,6 +555,7 @@ header #click:checked ~ ul li a {
 .overlay .about .about-container ul {
   display: -ms-grid;
   display: grid;
+  grid-gap: 10px;
 }
 
 .overlay .about .about-container ul li {
@@ -562,12 +573,16 @@ header #click:checked ~ ul li a {
   display: grid;
   place-content: center;
   margin: 0 auto;
-  padding: 1em 0;
 }
 
 .overlay .about .about-container ul li .one {
   width: 200px;
   padding: 1em;
+}
+
+.overlay .about .about-container ul li .one img {
+  width: 100px;
+  height: auto;
 }
 
 .overlay .about .about-container ul li .two {
@@ -617,8 +632,8 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact-page-section .contact-container .contact-form {
@@ -801,7 +816,6 @@ a {
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   position: absolute;
@@ -848,7 +862,6 @@ a {
   -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -859,15 +872,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 
@@ -897,7 +909,7 @@ a {
 
 .blur {
   -webkit-filter: blur(5px);
-  filter: blur(5px);
+          filter: blur(5px);
 }
 
 footer {
@@ -910,7 +922,7 @@ footer .footer-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
-  grid-template-columns: 100%;
+      grid-template-columns: 100%;
   background: unset;
 }
 
@@ -922,7 +934,6 @@ footer .footer-container .footer-details {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: start;
@@ -933,7 +944,6 @@ footer .footer-container .footer-details {
 
 footer .footer-container .footer-details .footer-top-bar {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
@@ -943,7 +953,6 @@ footer .footer-container .footer-details .footer-top-bar .logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
@@ -953,16 +962,15 @@ footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 35px;
   height: auto;
   margin-right: 9px;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -998,15 +1006,14 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid gainsboro;
 }
 
@@ -1209,8 +1216,8 @@ section .case-study-inner-guitar {
     width: 66px;
     height: auto;
     margin-bottom: 2em;
-    -webkit-filter: hue-rotate(71deg);
-            filter: hue-rotate(71deg);
+    -webkit-filter: hue-rotate(21deg);
+            filter: hue-rotate(21deg);
   }
   .overlay .skills .skills-container ul li .icon-container .brand-awareness {
     width: 105px;
@@ -1223,18 +1230,18 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
-    grid-template-columns: auto;
+        grid-template-columns: auto;
     place-content: center;
   }
   .overlay .portfolio .portfolio-container img {
-    width: 70vw;
+    width: 45vw;
     border-radius: 5px;
   }
   .overlay .portfolio .portfolio-left {
     margin: 10px;
   }
-  .overlay .about {
-    padding: 1.5em;
+  .overlay .about .about-container ul {
+    grid-gap: 20px;
   }
   .overlay .about .about-container ul li {
     margin-bottom: 1.5em;
@@ -1243,6 +1250,10 @@ section .case-study-inner-guitar {
   }
   .overlay .about .about-container ul li .icon-container {
     padding: 2em 0;
+  }
+  .overlay .about .about-container ul li .icon-container img {
+    width: 16vw;
+    height: auto;
   }
   .overlay .about .about-container ul li .degree img {
     width: 8em;
@@ -1322,11 +1333,11 @@ section .case-study-inner-guitar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 10px 20px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
@@ -1516,7 +1527,7 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 80% auto;
-    grid-template-columns: 80% auto;
+        grid-template-columns: 80% auto;
     background: unset;
     padding: 0;
     top: 0;
@@ -1581,7 +1592,7 @@ section .case-study-inner-guitar {
   .overlay .skills .skills-container ul li {
     margin-bottom: 2.5em;
     -webkit-box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
-    box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
+            box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
   }
   .overlay .skills .skills-container ul li .icon-container {
     margin: 2em auto;
@@ -1592,8 +1603,8 @@ section .case-study-inner-guitar {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .icon-container {
     padding: 0;
@@ -1601,9 +1612,21 @@ section .case-study-inner-guitar {
   .portfolio {
     margin: 7em 0;
   }
+  .overlay .about {
+    padding: 1.5em;
+  }
+  .overlay .about .about-container ul {
+    grid-gap: 0;
+  }
   .overlay .about .about-container ul li {
     margin-bottom: 1.5em;
     padding: 2em;
+  }
+  .overlay .about .about-container ul li .icon-container img {
+    width: 11vw;
+  }
+  .overlay .about .about-container ul li .icon-container .degree-image {
+    width: 10vw;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 0;
@@ -1612,7 +1635,7 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 49.3% auto;
-    grid-template-columns: 49.3% auto;
+        grid-template-columns: 49.3% auto;
     background-image: url(/img/form-background-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1621,8 +1644,8 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-grid-column: 1;
     grid-column: 1;
     border-radius: 5px 0 0 5px;
@@ -1660,11 +1683,11 @@ section .case-study-inner-guitar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
     width: 20vw;
@@ -1690,21 +1713,21 @@ section .case-study-inner-guitar {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .nav-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 80% auto;
-    grid-template-columns: 80% auto;
+        grid-template-columns: 80% auto;
     background: unset;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
   }
   .nav-container header {
@@ -1716,11 +1739,11 @@ section .case-study-inner-guitar {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .nav-container header .logo-name {
     font-size: 1.2rem;
@@ -1735,8 +1758,8 @@ section .case-study-inner-guitar {
     height: 44px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     text-transform: uppercase;
     background: none;
   }
@@ -1761,11 +1784,11 @@ section .case-study-inner-guitar {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .footer-social-icon a:hover,
   .top-social-icon a:hover {
@@ -1787,7 +1810,7 @@ section .case-study-inner-guitar {
     border-radius: 25px;
     opacity: 0.75;
     -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+            box-sizing: content-box;
     margin-bottom: 20px;
   }
   .hero-container .mouse-scroller .mouse .mouse-animation {
@@ -1796,7 +1819,7 @@ section .case-study-inner-guitar {
     border-radius: 50%;
     background-color: black;
     -webkit-animation: scroll 3s linear infinite;
-    animation: scroll 3s linear infinite;
+            animation: scroll 3s linear infinite;
   }
   .hero-container .hero-design {
     display: unset;
@@ -1875,29 +1898,29 @@ section .case-study-inner-guitar {
   }
   .overlay .portfolio .portfolio-container {
     -ms-grid-columns: 50% auto;
-    grid-template-columns: 50% auto;
+        grid-template-columns: 50% auto;
   }
   .overlay .portfolio .portfolio-container .portfolio-left {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     display: -ms-grid;
     display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .overlay .portfolio .portfolio-container .right {
-    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
   }
   .overlay .portfolio .portfolio-container .right img {
     width: 45vw;
@@ -1963,7 +1986,7 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-column-gap: 20px;
     max-width: 1240px;
     height: 100%;
@@ -1973,8 +1996,8 @@ section .case-study-inner-guitar {
   }
   .hero-content-grid .hero-text-content {
     -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     text-align: left;
   }
   .hero-content-grid .hero-text-content .hero-title-case-study {
@@ -2016,15 +2039,15 @@ section .case-study-inner-guitar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     text-align: left;
     min-height: 200px;
@@ -2053,7 +2076,7 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: none;
-    grid-template-columns: none;
+        grid-template-columns: none;
   }
   .case-study-container h2 {
     font-size: 22px;
@@ -2108,7 +2131,7 @@ section .case-study-inner-guitar {
   }
   .overlay .portfolio .portfolio-container {
     -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
+        grid-template-columns: auto auto;
     grid-gap: 3em;
     margin: 30px;
   }
@@ -2141,14 +2164,26 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 80% auto;
-    grid-template-columns: 80% auto;
+        grid-template-columns: 80% auto;
     background: unset;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    background: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60px;
   }
   .nav-container header {
-    max-height: 40px;
+    max-height: 60px;
+    height: 60px;
   }
   .nav-container header .logo {
     display: -webkit-box;
@@ -2156,14 +2191,14 @@ section .case-study-inner-guitar {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 14em;
   }
   .nav-container header .logo .logo-container {
@@ -2172,8 +2207,8 @@ section .case-study-inner-guitar {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: 10px;
   }
   .nav-container header .logo .logo-placeholder {
@@ -2228,30 +2263,17 @@ section .case-study-inner-guitar {
     font-weight: 500;
     margin-bottom: 0.7em;
   }
-  .nav-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 70% auto;
-    grid-template-columns: 70% auto;
-    background: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .nav-container header .logo {
-    padding-left: 14em;
-  }
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
@@ -2266,18 +2288,18 @@ section .case-study-inner-guitar {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin-right: 13em;
   }
   .hero-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 70% auto;
-    grid-template-columns: 70% auto;
+        grid-template-columns: 70% auto;
     background: unset;
     padding: 0;
   }
@@ -2343,7 +2365,7 @@ section .case-study-inner-guitar {
   .hero-container .hero-design #blockdesign .square-anim:hover,
   .hero-container .hero-design #blockdesign circle:hover {
     -webkit-filter: brightness(5);
-    filter: brightness(5);
+            filter: brightness(5);
     -webkit-transition: linear 0.7s ease-in-out;
     transition: linear 0.7s ease-in-out;
   }
@@ -2362,8 +2384,15 @@ section .case-study-inner-guitar {
   .overlay .featured .right {
     width: auto;
     border-radius: 20px;
-    height: 30vh;
+    height: 25vh;
     padding: 1em;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .overlay .featured .right:hover {
+    -webkit-filter: contrast(0.5);
+            filter: contrast(0.5);
   }
   .overlay .skills {
     padding: 4em 15em;
@@ -2695,45 +2724,45 @@ section .case-study-inner-guitar {
   @-webkit-keyframes heartbeat {
     0% {
       -webkit-transform: scale(0);
-      transform: scale(0);
+              transform: scale(0);
     }
     25% {
       -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+              transform: scale(1.2);
     }
     50% {
       -webkit-transform: scale(1);
-      transform: scale(1);
+              transform: scale(1);
     }
     75% {
       -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+              transform: scale(1.2);
     }
     100% {
       -webkit-transform: scale(1);
-      transform: scale(1);
+              transform: scale(1);
     }
   }
   @keyframes heartbeat {
     0% {
       -webkit-transform: scale(0);
-      transform: scale(0);
+              transform: scale(0);
     }
     25% {
       -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+              transform: scale(1.2);
     }
     50% {
       -webkit-transform: scale(1);
-      transform: scale(1);
+              transform: scale(1);
     }
     75% {
       -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+              transform: scale(1.2);
     }
     100% {
       -webkit-transform: scale(1);
-      transform: scale(1);
+              transform: scale(1);
     }
   }
   .slider-container {
@@ -2750,11 +2779,11 @@ section .case-study-inner-guitar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .slider-container .bullet-container .bullet {
     margin-right: 14px;
@@ -2777,7 +2806,7 @@ section .case-study-inner-guitar {
     width: 77%;
     height: 80%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .slider-container .slider-content .slider-single {
     position: absolute;
@@ -2798,7 +2827,7 @@ section .case-study-inner-guitar {
     content: "";
     display: block;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     position: absolute;
     width: 15px;
     height: 15px;
@@ -2818,7 +2847,7 @@ section .case-study-inner-guitar {
     content: "";
     display: block;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     position: absolute;
     width: 15px;
     height: 15px;
@@ -3015,15 +3044,15 @@ section .case-study-inner-guitar {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     color: black;
   }
   .outcomes-gallery-container .row .col {
     -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+        flex-basis: 50%;
     min-width: 250px;
   }
   .outcomes-gallery-container .row .col .feature-img {
@@ -3041,9 +3070,9 @@ section .case-study-inner-guitar {
     padding: 0.75em 1em;
     font-weight: 700;
     z-index: 2;
-    -webkit-box-sizing: border-box;
     cursor: pointer;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.7);
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
@@ -3058,7 +3087,7 @@ section .case-study-inner-guitar {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     cursor: pointer;
   }
   .outcomes-gallery-container .row .col .small-img-row {
@@ -3106,7 +3135,7 @@ section .case-study-inner-guitar {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     cursor: pointer;
   }
   .video-player,
@@ -3147,15 +3176,15 @@ section .case-study-inner-guitar {
     height: 30%;
     display: none;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     top: -545px;
     left: 100px;
