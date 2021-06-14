@@ -130,7 +130,7 @@ header nav #click {
 
 .nav-container header nav ul {
   position: absolute;
-  top: 70px;
+  top: 40px;
   left: -100%;
   width: 100%;
   height: 99vh;
@@ -147,7 +147,7 @@ header nav #click {
 .nav-container header nav ul li {
   width: 100%;
   margin: 25px 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,11 +174,15 @@ header #click:checked ~ ul li a {
   left: 50%;
 }
 
-.menu-btn svg {
-  display: flex;
-  padding: 0.5em;
-  path {
-    fill: #fff;
+.menu-btn {
+  svg {
+    display: flex;
+    padding: 0.5em;
+    width: 25px;
+    height: auto;
+    path {
+      fill: #fff;
+    }
   }
 }
 
@@ -205,11 +209,9 @@ header #click:checked ~ ul li a {
 
 .hero-content-grid {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
 }
 
@@ -270,9 +272,11 @@ header #click:checked ~ ul li a {
   .research-qoute {
     .qoute-text {
       font-size: 12px;
-      font-weight: 500;
       font-style: oblique;
       padding: 17px;
+      h2 {
+        font-weight: 300;
+      }
       sub {
         font-style: normal;
         font-size: 14px;
@@ -311,7 +315,9 @@ header #click:checked ~ ul li a {
 .overlay .featured .left .inner .featured-title {
   color: #aa382b;
   font-size: 1.35rem;
-  font-weight: 700;
+  h2 {
+    font-weight: 300;
+  }
 }
 
 .overlay .featured .right {
@@ -384,12 +390,13 @@ header #click:checked ~ ul li a {
   color: #aa382b;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .overlay .portfolio .portfolio-left .inner .featured-title {
   color: #aa382b;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .overlay .portfolio .right {
@@ -401,39 +408,46 @@ header #click:checked ~ ul li a {
 
 .overlay .portfolio .right img {
   width: 280px;
-  height: auto;
+  height: 166px;
   margin: 10px 0;
 }
 
-.overlay .portfolio .right .case-study-btn {
-  align-items: center;
-  background-color: #3740ff;
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-weight: 600;
-  height: 40px;
-  letter-spacing: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-overflow: initial;
-  text-transform: uppercase;
-  width: 174px;
-  transition: 1s ease-in-out;
+.overlay {
+  .portfolio {
+    .right {
+      .case-study-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3740ff;
+        border: 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        height: 40px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        text-overflow: initial;
+        text-transform: uppercase;
+        width: 174px;
+        transition: 1s ease-in-out;
+        &:hover {
+          outline: 0;
+          text-decoration: none;
+          filter: hue-rotate(64deg);
+        }
+      }
+    }
+  }
 }
-.overlay .portfolio .right .case-study-btn:hover {
-  outline: 0;
-  text-decoration: none;
-  filter: hue-rotate(64deg);
-}
+
 .overlay .portfolio .right .case-study-btn .primary-button {
-  padding: 8px 16px;
-  color: white;
-  font-size: 20px;
+  color: #fff;
+  font-size: 17px;
 }
 .research-qoute {
   background: linear-gradient(#ffffff, #ffffffc9), url(img/uxWallpaper.png);
@@ -445,7 +459,6 @@ header #click:checked ~ ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1em;
-  margin-bottom: 1em;
 }
 
 .overlay .about .about-container {
@@ -454,6 +467,7 @@ header #click:checked ~ ul li a {
 
 .overlay .about .about-container ul {
   display: grid;
+  grid-gap: 10px;
 }
 
 .overlay .about .about-container ul li {
@@ -466,16 +480,18 @@ header #click:checked ~ ul li a {
 
 .overlay .about .about-container ul li .icon-container {
   height: 100px;
-  display: -ms-grid;
   display: grid;
   place-content: center;
   margin: 0 auto;
-  padding: 1em 0;
 }
 
 .overlay .about .about-container ul li .one {
   width: 200px;
   padding: 1em;
+  img {
+    width: 100px;
+    height: auto;
+  }
 }
 
 .overlay .about .about-container ul li .two {
@@ -521,11 +537,8 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
 }
 
@@ -554,7 +567,6 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .contact-form p .open-modal:hover {
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   text-decoration: underline;
 }
@@ -672,8 +684,7 @@ header #click:checked ~ ul li a {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   margin-bottom: 0.5em;
   cursor: pointer;
@@ -683,7 +694,7 @@ header #click:checked ~ ul li a {
   background: #fff;
   color: #3030db;
   border-color: #3030db;
-  -webkit-transition: all 0.5s ease-in-out;
+
   transition: all 0.5s ease-in-out;
 }
 
@@ -700,8 +711,6 @@ a {
 }
 
 .show-modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   pointer-events: all;
   z-index: 2000;
@@ -709,7 +718,7 @@ a {
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: column;
   flex-direction: column;
   position: absolute;
@@ -740,14 +749,13 @@ a {
 .show-modal .close-modal .close-icon:hover {
   -webkit-filter: brightness(4.5);
   filter: brightness(4.5);
-  -webkit-transition: all 0.5s ease-in-out;
+
   transition: all 0.5s ease-in-out;
 }
 
 .show-modal ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -756,25 +764,22 @@ a {
   -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .show-modal ul li {
   padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
   cursor: pointer;
 }
@@ -804,7 +809,6 @@ a {
 }
 
 .blur {
-  -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
@@ -815,9 +819,7 @@ footer {
 
 footer .footer-container {
   height: 30vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
   background: unset;
 }
@@ -826,11 +828,10 @@ footer .footer-container .footer-details {
   background: #030303;
   color: #fff;
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: start;
@@ -841,36 +842,30 @@ footer .footer-container .footer-details {
 
 footer .footer-container .footer-details .footer-top-bar {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
 footer .footer-container .footer-details .footer-top-bar .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
 footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
   width: 35px;
   height: auto;
   margin-right: 9px;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -902,18 +897,14 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
 
 .footer-container .footer-social-icon,
 .footer-container small {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
   border-bottom: 1px solid gainsboro;
 }
@@ -942,7 +933,6 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
 }
 
 .hero-content-grid-guitar {
-  display: -ms-grid;
   display: grid;
   position: relative;
   top: 170px;
@@ -1021,7 +1011,6 @@ section .case-study-inner-guitar {
 }
 
 .case-study-container {
-  display: -ms-grid;
   display: grid;
   -ms-grid-columns: none;
   grid-template-columns: none;
@@ -1067,8 +1056,6 @@ section .case-study-inner-guitar {
     justify-content: space-between;
   }
   .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .hero-container .hero-text-content {
@@ -1080,7 +1067,6 @@ section .case-study-inner-guitar {
     height: 150px;
   }
   .overlay .featured {
-    display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
     grid-template-columns: auto;
@@ -1113,7 +1099,7 @@ section .case-study-inner-guitar {
     width: 66px;
     height: auto;
     margin-bottom: 2em;
-    filter: hue-rotate(71deg);
+    filter: hue-rotate(21deg);
   }
   .overlay .skills .skills-container ul li .icon-container .brand-awareness {
     width: 105px;
@@ -1123,30 +1109,33 @@ section .case-study-inner-guitar {
     margin-bottom: 0;
   }
   .overlay .portfolio .portfolio-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto;
     grid-template-columns: auto;
     place-content: center;
   }
   .overlay .portfolio .portfolio-container img {
-    width: 70vw;
+    width: 45vw;
     border-radius: 5px;
   }
   .overlay .portfolio .portfolio-left {
     margin: 10px;
   }
-  .overlay .about {
-    padding: 1.5em;
+  .overlay .about .about-container ul {
+    grid-gap: 20px;
+    li {
+      margin-bottom: 1.5em;
+      margin-top: 1em;
+      padding: 1em;
+      .icon-container {
+        padding: 2em 0;
+        img {
+          width: 16vw;
+          height: auto;
+        }
+      }
+    }
   }
-  .overlay .about .about-container ul li {
-    margin-bottom: 1.5em;
-    margin-top: 1em;
-    padding: 1em;
-  }
-  .overlay .about .about-container ul li .icon-container {
-    padding: 2em 0;
-  }
+
   .overlay .about .about-container ul li .degree img {
     width: 8em;
     height: auto;
@@ -1206,8 +1195,6 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
     margin: 10px 0;
     width: 92%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
@@ -1220,14 +1207,8 @@ section .case-study-inner-guitar {
     width: 100%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 10px 20px;
   }
@@ -1416,9 +1397,7 @@ section .case-study-inner-guitar {
     top: 100px;
   }
   .hero-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 80% auto;
     grid-template-columns: 80% auto;
     background: unset;
     padding: 0;
@@ -1473,19 +1452,13 @@ section .case-study-inner-guitar {
   }
   .overlay .skills .skills-container ul li {
     margin-bottom: 2.5em;
-    -webkit-box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
     box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
   }
   .overlay .skills .skills-container ul li .icon-container {
     margin: 2em auto;
   }
   .overlay .portfolio .portfolio-container .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .icon-container {
@@ -1494,34 +1467,41 @@ section .case-study-inner-guitar {
   .portfolio {
     margin: 7em 0;
   }
-  .overlay .about .about-container ul li {
-    margin-bottom: 1.5em;
-    padding: 2em;
+  .overlay .about {
+    padding: 1.5em;
+    .about-container ul {
+      grid-gap: 0;
+      li {
+        margin-bottom: 1.5em;
+        padding: 2em;
+        .icon-container {
+          img {
+            width: 11vw;
+          }
+          .degree-image {
+            width: 10vw;
+          }
+        }
+      }
+    }
   }
   .contact-page-section .contact-container .contact-form {
     padding: 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 49.3% auto;
     grid-template-columns: 49.3% auto;
     background-image: url(/img/form-background-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -ms-grid-column: 1;
     grid-column: 1;
     border-radius: 5px 0 0 5px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area {
-    display: -ms-grid;
     display: grid;
     width: 100%;
   }
@@ -1537,26 +1517,17 @@ section .case-study-inner-guitar {
     height: 20vh;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-column: 2;
     grid-column: 2;
     background-color: #f0c5174d;
     border-radius: 0 5px 5px 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
@@ -1578,25 +1549,14 @@ section .case-study-inner-guitar {
     display: none;
   }
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 80% auto;
     grid-template-columns: 80% auto;
     background: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 0;
   }
@@ -1604,15 +1564,8 @@ section .case-study-inner-guitar {
     background: #252525;
   }
   .nav-container header .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .nav-container header .logo-name {
@@ -1626,9 +1579,6 @@ section .case-study-inner-guitar {
     top: 0;
     left: 45px;
     height: 44px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
     text-transform: uppercase;
     background: none;
@@ -1650,26 +1600,17 @@ section .case-study-inner-guitar {
     color: cyan;
   }
   .nav-container .top-social-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
   .footer-social-icon a:hover,
   .top-social-icon a:hover {
     opacity: 0.5;
-    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   .hero-container .mouse-scroller {
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .hero-container .mouse-scroller .mouse {
@@ -1679,7 +1620,6 @@ section .case-study-inner-guitar {
     border: 2px solid black;
     border-radius: 25px;
     opacity: 0.75;
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     margin-bottom: 20px;
   }
@@ -1688,7 +1628,6 @@ section .case-study-inner-guitar {
     height: 10px;
     border-radius: 50%;
     background-color: black;
-    -webkit-animation: scroll 3s linear infinite;
     animation: scroll 3s linear infinite;
   }
   .hero-container .hero-design {
@@ -1696,18 +1635,6 @@ section .case-study-inner-guitar {
     margin-left: -50%;
     margin-top: 15%;
     width: 100%;
-  }
-  @-webkit-keyframes scroll {
-    from {
-      opacity: 1;
-      position: relative;
-      top: 0;
-    }
-    to {
-      opacity: 0.5;
-      position: relative;
-      top: 25px;
-    }
   }
   @keyframes scroll {
     from {
@@ -1728,7 +1655,6 @@ section .case-study-inner-guitar {
     padding: 3em 2em;
   }
   .overlay .skills .skills-container ul {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
@@ -1766,30 +1692,18 @@ section .case-study-inner-guitar {
     margin: 0;
   }
   .overlay .portfolio .portfolio-container {
-    -ms-grid-columns: 50% auto;
     grid-template-columns: 50% auto;
   }
   .overlay .portfolio .portfolio-container .portfolio-left {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: -ms-grid;
     display: grid;
+    align-items: center;
+    justify-content: center;
   }
   .overlay .portfolio .portfolio-container .right {
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
+    height: auto;
   }
   .overlay .portfolio .portfolio-container .right img {
     width: 45vw;
@@ -1798,7 +1712,6 @@ section .case-study-inner-guitar {
     text-align: center;
   }
   .overlay .about .about-container ul {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 10px;
@@ -1823,8 +1736,6 @@ section .case-study-inner-guitar {
     height: auto;
   }
   .overlay .about .about-container ul .column-stretch {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
   .contact-page-section {
@@ -1851,9 +1762,7 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .hero-content-grid {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
     max-width: 1240px;
@@ -1863,8 +1772,6 @@ section .case-study-inner-guitar {
     z-index: 1;
   }
   .hero-content-grid .hero-text-content {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
     align-self: center;
     text-align: left;
   }
@@ -1903,18 +1810,9 @@ section .case-study-inner-guitar {
     padding: 5em 15em;
   }
   section .case-study-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     text-align: left;
@@ -1941,9 +1839,7 @@ section .case-study-inner-guitar {
     font-size: 18px;
   }
   .case-study-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: none;
     grid-template-columns: none;
   }
   .case-study-container h2 {
@@ -1998,7 +1894,6 @@ section .case-study-inner-guitar {
     margin-bottom: 0;
   }
   .overlay .portfolio .portfolio-container {
-    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
     grid-gap: 3em;
     margin: 30px;
@@ -2029,53 +1924,40 @@ section .case-study-inner-guitar {
     line-height: 3rem;
   }
   .nav-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 80% auto;
     grid-template-columns: 80% auto;
     background: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
+  .nav-container {
+    display: grid;
+    grid-template-columns: 70% auto;
+    background: unset;
+    align-items: center;
+    height: 60px;
+  }
   .nav-container header {
-    max-height: 40px;
+    max-height: 60px;
+    height: 60px;
   }
   .nav-container header .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding-left: 14em;
   }
   .nav-container header .logo .logo-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin-left: 10px;
   }
   .nav-container header .logo .logo-placeholder {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 40px;
     height: auto;
   }
   .overlay .skills .skills-container ul {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
@@ -2094,7 +1976,6 @@ section .case-study-inner-guitar {
   .overlay .about .about-container ul li .business-model-icon {
     height: 100px;
     width: auto;
-    display: -ms-grid;
     display: grid;
     padding-bottom: 3em;
     place-content: center;
@@ -2118,29 +1999,10 @@ section .case-study-inner-guitar {
     font-weight: 500;
     margin-bottom: 0.7em;
   }
-  .nav-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 70% auto;
-    grid-template-columns: 70% auto;
-    background: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .nav-container header .logo {
-    padding-left: 14em;
-  }
+
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: end;
     -ms-flex-align: end;
@@ -2152,21 +2014,13 @@ section .case-study-inner-guitar {
     left: -11px;
   }
   .nav-container .top-social-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     margin-right: 13em;
   }
   .hero-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 70% auto;
     grid-template-columns: 70% auto;
     background: unset;
     padding: 0;
@@ -2175,14 +2029,13 @@ section .case-study-inner-guitar {
     padding: 3em 10em 3em 15em;
   }
   .hero-container-projects {
-    display: -ms-grid;
     display: grid;
     background-size: cover;
     height: 76.5vh;
   }
   .guitar-project {
     background-repeat: no-repeat;
-    display: -ms-grid;
+
     display: grid;
     background-size: cover;
     height: 76.5vh;
@@ -2232,9 +2085,7 @@ section .case-study-inner-guitar {
   }
   .hero-container .hero-design #blockdesign .square-anim:hover,
   .hero-container .hero-design #blockdesign circle:hover {
-    -webkit-filter: brightness(5);
     filter: brightness(5);
-    -webkit-transition: linear 0.7s ease-in-out;
     transition: linear 0.7s ease-in-out;
   }
   .overlay .featured {
@@ -2252,8 +2103,13 @@ section .case-study-inner-guitar {
   .overlay .featured .right {
     width: auto;
     border-radius: 20px;
-    height: 30vh;
+    height: 25vh;
     padding: 1em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    &:hover {
+      filter: contrast(.5);
+    }
   }
   .overlay .skills {
     padding: 4em 15em;
@@ -2459,8 +2315,6 @@ section .case-study-inner-guitar {
     text-transform: uppercase;
   }
   .desk-research-image-standard {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-height: inherit;
     max-width: 69%;
@@ -2494,23 +2348,18 @@ section .case-study-inner-guitar {
 
   @keyframes heartbeat {
     0% {
-      -webkit-transform: scale(0);
       transform: scale(0);
     }
     25% {
-      -webkit-transform: scale(1.2);
       transform: scale(1.2);
     }
     50% {
-      -webkit-transform: scale(1);
       transform: scale(1);
     }
     75% {
-      -webkit-transform: scale(1.2);
       transform: scale(1.2);
     }
     100% {
-      -webkit-transform: scale(1);
       transform: scale(1);
     }
   }
@@ -2524,14 +2373,8 @@ section .case-study-inner-guitar {
     position: absolute;
     bottom: 10px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .slider-container .bullet-container .bullet {
@@ -2554,7 +2397,7 @@ section .case-study-inner-guitar {
     top: 50%;
     width: 77%;
     height: 80%;
-    -webkit-transform: translate(-50%, -50%);
+
     transform: translate(-50%, -50%);
   }
   .slider-container .slider-content .slider-single {
@@ -2575,7 +2418,6 @@ section .case-study-inner-guitar {
   .fa-arrow-left::after {
     content: "";
     display: block;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     width: 15px;
@@ -2595,7 +2437,6 @@ section .case-study-inner-guitar {
   .fa-arrow-right::after {
     content: "";
     display: block;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     width: 15px;
@@ -2738,7 +2579,6 @@ section .case-study-inner-guitar {
     padding-bottom: 1em;
   }
   .validation-image-container {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 1em;
@@ -2749,13 +2589,10 @@ section .case-study-inner-guitar {
   .validation-image-container .ta3 {
     border: 4px solid darkgray;
     border-radius: 8px;
-    display: -ms-grid;
     display: grid;
     place-content: center;
   }
   .validation-image-container .column-stretch {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
     grid-column: 1/5;
   }
   .outcomes-section {
@@ -2775,18 +2612,12 @@ section .case-study-inner-guitar {
     text-align: center;
   }
   .outcomes-gallery-container .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     color: black;
   }
   .outcomes-gallery-container .row .col {
-    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     min-width: 250px;
   }
@@ -2805,11 +2636,9 @@ section .case-study-inner-guitar {
     padding: 0.75em 1em;
     font-weight: 700;
     z-index: 2;
-    -webkit-box-sizing: border-box;
     cursor: pointer;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.7);
-    -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
   }
   .outcomes-gallery-container .row .col .feature-img .caption-text a:hover {
@@ -2821,13 +2650,10 @@ section .case-study-inner-guitar {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
   .outcomes-gallery-container .row .col .small-img-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background-color: #efefef;
     margin: 20px 0;
@@ -2865,7 +2691,6 @@ section .case-study-inner-guitar {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
@@ -2906,15 +2731,11 @@ section .case-study-inner-guitar {
     width: 80%;
     height: 30%;
     display: none;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+
     flex-direction: column;
     position: relative;
     top: -545px;
