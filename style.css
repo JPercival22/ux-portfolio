@@ -1704,92 +1704,6 @@ section .case-study-inner-guitar {
 
 /*Styles for Laptops*/
 @media only screen and (min-width: 1050px) {
-  .menu-btn {
-    display: none;
-  }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .nav-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 80% auto;
-        grid-template-columns: 80% auto;
-    background: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0;
-  }
-  .nav-container header {
-    background: #252525;
-  }
-  .nav-container header .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .nav-container header .logo-name {
-    font-size: 1.2rem;
-  }
-  .nav-container header a .logo-title {
-    font-size: 0.9rem;
-  }
-  .nav-container header nav ul {
-    position: relative;
-    top: 0;
-    left: 45px;
-    height: 44px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-transform: uppercase;
-    background: none;
-  }
-  .nav-container header nav ul li {
-    width: inherit;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    width: 26%;
-  }
-  .nav-container header nav ul li a {
-    font-size: 16px;
-    color: #fff;
-    display: initial;
-    padding: 0 10px;
-  }
-  .nav-container header nav ul li a:hover {
-    color: cyan;
-  }
-  .nav-container .top-social-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
   .footer-social-icon a:hover,
   .top-social-icon a:hover {
     opacity: 0.5;
@@ -2120,56 +2034,14 @@ section .case-study-inner-guitar {
 }
 
 @media only screen and (min-width: 1250px) {
-  .overlay .featured:before {
-    top: 20px;
-  }
-  .overlay .featured .right {
-    max-width: 500px;
-  }
-  .overlay .about .about-container ul li {
-    margin-bottom: 0;
-  }
-  .overlay .portfolio .portfolio-container {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    grid-gap: 3em;
-    margin: 30px;
-  }
-  .overlay .portfolio .portfolio-container .right img {
-    width: 40vw;
-    border-radius: 5px;
-  }
-  .overlay .about .about-container ul li .icon-container img {
-    width: 7vw;
-  }
-  .overlay .about .about-container ul li .icon-container .degree-image {
-    width: 10vw;
-  }
-  .overlay .about .about-container ul li .business-model-icon {
-    height: 20px;
+  .nav-container {
+    padding: 10px 15em;
+    height: 43px;
   }
 }
 
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
-  .nav-container header a {
-    padding-left: 4em;
-  }
-  .hero-container .hero-text-content .hero-title,
-  .hero-container .txt-rotate .wrap {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-  .nav-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 80% auto;
-        grid-template-columns: 80% auto;
-    background: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .nav-container {
     display: -ms-grid;
     display: grid;
@@ -2215,8 +2087,103 @@ section .case-study-inner-guitar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 40px;
-    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em;
+    padding-right: 0;
+  }
+  .menu-btn {
+    display: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    background: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .nav-container header {
+    background: #1e1e29;
+  }
+  .nav-container header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-container header .logo-name {
+    font-size: 1.2rem;
+  }
+  .nav-container header a .logo-title {
+    font-size: 0.9rem;
+  }
+  .nav-container header nav ul {
+    position: relative;
+    top: 0;
+    left: 45px;
+    height: 44px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-transform: uppercase;
+    background: none;
+  }
+  .nav-container header nav ul li {
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 26%;
+  }
+  .nav-container header nav ul li a {
+    font-size: 16px;
+    color: #fff;
+    display: initial;
+    padding: 0 10px;
+  }
+  .nav-container header nav ul li a:hover {
+    color: cyan;
+  }
+  .nav-container .top-social-icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .overlay .skills .skills-container ul {
     display: -ms-grid;
@@ -2387,8 +2354,8 @@ section .case-study-inner-guitar {
     height: 25vh;
     padding: 1em;
     cursor: pointer;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .overlay .featured .right:hover {
     -webkit-filter: contrast(0.5);
