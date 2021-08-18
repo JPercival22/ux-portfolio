@@ -1826,13 +1826,9 @@ section .case-study-inner-guitar {
 
 @media only screen and (min-width: 1250px) {
   .nav-container {
-    background: rgb(37 37 37);
+    // background: rgb(37 37 37);
     padding: 10px 15em;
     height: 43px;
-  }
-  .company-logo {
-    width: 42px;
-    height: 42px;
   }
 }
 
@@ -1863,8 +1859,10 @@ section .case-study-inner-guitar {
   }
   .nav-container header .logo .logo-placeholder {
     display: flex;
-    width: 40px;
-    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    padding-right: 0;
   }
   .menu-btn {
     display: none;
@@ -1882,12 +1880,13 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .nav-container header {
-    background: #252525;
+    background: #1e1e29;
   }
   .nav-container header .logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
   .nav-container header .logo-name {
     font-size: 1.2rem;
