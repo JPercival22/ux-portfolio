@@ -538,7 +538,6 @@ header #click:checked ~ ul li a {
 
 .contact-page-section .contact-container {
   display: flex;
-
   justify-content: center;
 }
 
@@ -572,9 +571,6 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container {
-  background-image: url(/img/form-background-min.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 0 0 5px 5px;
   padding: 0;
   margin: 0;
@@ -1180,9 +1176,9 @@ section .case-study-inner-guitar {
   }
   /*contact page styles*/
   .contact-page-section {
-    padding: 1.5em;
-    margin: 0 auto;
-    width: 90%;
+    background-image: url(/img/form-background-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .contact-page-section .contact-container .contact-form .contact-form-title {
     font-size: 1.5rem;
@@ -1491,9 +1487,6 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container {
     display: grid;
     grid-template-columns: 49.3% auto;
-    background-image: url(/img/form-background-min.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
     display: grid;
@@ -1522,7 +1515,7 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container .right {
     display: grid;
     grid-column: 2;
-    background-color: #f0c5174d;
+    background-color: #f0c51700;
     border-radius: 0 5px 5px 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand {
@@ -1681,8 +1674,7 @@ section .case-study-inner-guitar {
   }
   .contact-page-section {
     padding: 2em;
-    margin: 0 auto;
-    width: 94%;
+    width: 100%;
   }
   .contact-page-section .contact-container .left .input-area .submit-button {
     margin: 0 auto;
