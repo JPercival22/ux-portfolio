@@ -134,15 +134,17 @@ header nav #click {
 }
 
 .nav-container header .logo .logo-container .logo-name {
-  color: #b0b0ff;
-  line-height: 20px;
-  letter-spacing: 1px;
+  color: #fff;
+  line-height: 26px;
+  letter-spacing: 4pt;
   font-size: 1.1rem;
+  font-variant-caps: all-petite-caps;
 }
 
 .nav-container header .logo .logo-container .logo-title {
   font-size: 0.65rem;
   color: #fff;
+  letter-spacing: 2pt;
 }
 
 .nav-container header nav ul {
@@ -1669,23 +1671,7 @@ section .case-study-inner-guitar {
     display: grid;
     -ms-grid-column: 2;
     grid-column: 2;
-    background-color: #f0c51700;
     border-radius: 0 5px 5px 0;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
-    width: 20vw;
-    height: auto;
   }
   .show-modal {
     top: 40%;
@@ -2178,6 +2164,23 @@ section .case-study-inner-guitar {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .nav-container header .logo .logo-placeholder .company-logo img {
+    height: 35px;
+    width: auto;
+  }
+  .nav-container header .logo .logo-container .logo-name {
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: 4pt;
+    font-size: 1.5rem;
+    font-variant-caps: small-caps;
+  }
+  .nav-container header .logo .logo-container .logo-title {
+    font-size: 0.8rem;
+    color: #fff;
+    letter-spacing: 2pt;
+    font-variant-caps: small-caps;
+  }
   .overlay .skills .skills-container ul {
     display: -ms-grid;
     display: grid;
@@ -2385,8 +2388,57 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
     width: 30vw;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
-    width: 10vw;
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #011f48d4;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main {
+    width: 30vw;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #ffffff;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .brand-name {
+    font-family: "Poppins";
+    font-variant-caps: small-caps;
+    font-size: 40px;
+    letter-spacing: 2pt;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .job-title {
+    font-family: "Poppins";
+    font-variant-caps: small-caps;
+    font-size: 30px;
+    letter-spacing: 4pt;
   }
   .show-modal {
     top: 40%;
