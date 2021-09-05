@@ -1,6 +1,6 @@
 ﻿# UX-Portfolio
 
-My UX Portfolio showcasing my UX and UI skills Website, designed and developed by myself, which includes and showcases a large portion of my UX and UI Design and Front End skills and understanding.
+This site includes and showcases a small portion of my UX and UI Design and Front End skills and understanding.
 Listed below are some of the skills included to build this site:
 
 <ul>
