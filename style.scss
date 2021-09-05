@@ -326,16 +326,13 @@ header #click:checked ~ ul li a {
         font-size: 0.85em;
       }
 
-      .featured-title {
+      .featured-title h2 {
+        line-height: 27pt;
         color: $primary-core;
-        font-size: 1.35rem;
+        font-size: 1.7rem;
         font-weight: 500;
-        text-transform: capitalize;
         font-variant-caps: all-petite-caps;
-        h2 {
-          font-weight: 300;
-          letter-spacing: 5pt;
-        }
+        letter-spacing: 0.3rem;
       }
     }
   }
@@ -398,7 +395,7 @@ header #click:checked ~ ul li a {
         font-size: 1.7rem;
         font-weight: 500;
         font-variant-caps: all-petite-caps;
-        letter-spacing: .3rem;
+        letter-spacing: 0.3rem;
       }
       p {
         text-align: left;
@@ -428,60 +425,64 @@ header #click:checked ~ ul li a {
 
 .overlay .portfolio {
   padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay .portfolio .portfolio-container {
-  display: grid;
-  grid-template-columns: auto;
-  place-content: center;
   margin-bottom: 2em;
 }
 
-.overlay .portfolio .portfolio-left .inner .subtitle {
-  font-size: 1.5rem;
-  color: #aa382b;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-weight: 300;
+.overlay .portfolio .portfolio-left .inner {
+  .subtitle {
+    line-height: 27pt;
+    color: $primary-core;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-variant-caps: all-petite-caps;
+    letter-spacing: 0.3rem;
+  }
+  .featured-title {
+    font-size: 1.15rem;
+    font-weight: 300;
+    font-variant-caps: petite-caps;
+    letter-spacing: 2pt;
+    line-height: 16.3pt;
+  }
 }
-
-.overlay .portfolio .portfolio-left .inner .featured-title {
-  color: #aa382b;
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.overlay .portfolio .right .case-study-btn {
-  display: inline-flex;
-  justify-content: center;
+.portfolio .portfolio-container .right {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #2c4465;
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  height: 40px;
-  letter-spacing: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-overflow: initial;
-  text-transform: uppercase;
-  width: 174px;
-  transition: 1s ease-in-out;
-  &:hover {
-    outline: 0;
-    text-decoration: none;
-    filter: drop-shadow(2px 4px 6px black);
+  justify-content: space-evenly;
+  .case-study-button {
+    background-color: $primary-core;
+    padding: 6px 12px;
+    margin-top: 20px;
+    color: $core-light;
+    font-size: 17px;
+    border-radius: 5px;
+    border: $button-border-settings;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    box-shadow: 0 8px 13px -4px lightblue;
+    &:hover {
+      background: #618bc5;
+      color: $core-light;
+      border-color: $core-button-border;
+      box-shadow: 0 8px 13px -4px #0d4252c4;
+    }
+    .primary-button {
+      color: $core-light;
+    }
   }
 }
 
-.overlay .portfolio .right .case-study-btn .primary-button {
-  color: #fff;
-  font-size: 17px;
-}
 .research-qoute {
   background: linear-gradient(#ffffff, #ffffffc9), url(img/uxWallpaper.png);
   background-repeat: no-repeat;
@@ -492,75 +493,62 @@ header #click:checked ~ ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1em;
-}
-
-.overlay .about .about-container {
-  text-align: center;
-}
-
-.overlay .about .about-container ul {
-  display: grid;
-  grid-gap: 10px;
-}
-
-.overlay .about .about-container ul li {
-  background: #fff;
-  border-radius: 5px;
-  padding: 1em 1em 0 1em;
-  margin-bottom: 0.5em;
-  box-shadow: #000000ed 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
-}
-
-.overlay .about .about-container ul li .icon-container {
-  height: 100px;
-  display: grid;
-  place-content: center;
-  margin: 0 auto;
-}
-
-.overlay .about .about-container ul li .one {
-  width: 200px;
-  padding: 1em;
-  img {
-    width: 100px;
-    height: auto;
+  .about-container {
+    text-align: center;
+    ul {
+      display: grid;
+      grid-gap: 10px;
+      li {
+        background: #fff;
+        border-radius: 5px;
+        padding: 1em 1em 0 1em;
+        margin-bottom: 0.5em;
+        box-shadow: #000000ed 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
+        .icon-container {
+          height: 100px;
+          display: grid;
+          place-content: center;
+          margin: 0 auto;
+        }
+        .one {
+          width: 200px;
+          padding: 1em;
+          img {
+            width: 100px;
+            height: auto;
+          }
+        }
+        .two {
+          width: 50px;
+        }
+        .three {
+          width: 80px;
+        }
+        .about-title {
+          font-weight: 700;
+          text-align: center;
+          color: #000100;
+          text-transform: capitalize;
+        }
+        .featured-desc {
+          margin-bottom: 2em;
+        }
+        .icon-container svg {
+          width: 100%;
+        }
+        .experience-vector {
+          padding: 0;
+        }
+        .degree img {
+          width: 100px;
+          padding: 1em 0;
+        }
+        .deliverables-img svg {
+          width: 230px;
+        }
+      }
+    }
   }
-}
-
-.overlay .about .about-container ul li .two {
-  width: 50px;
-}
-
-.overlay .about .about-container ul li .three {
-  width: 80px;
-}
-
-.overlay .about .about-container ul li .about-title {
-  font-weight: 700;
-  text-align: center;
-  color: #000100;
-  text-transform: capitalize;
-}
-
-.overlay .about .about-container ul li .featured-desc {
-  margin-bottom: 2em;
-}
-
-.overlay .about .about-container ul li .icon-container svg {
-  width: 100%;
-}
-
-.overlay .about .about-container ul li .experience-vector {
-  padding: 0;
-}
-
-.overlay .about .about-container ul li .degree img {
-  width: 100px;
-  padding: 1em 0;
-}
-
-.overlay .about .about-container ul li .deliverables-img svg {
-  width: 230px;
 }
 
 .contact-page-section {
@@ -823,96 +811,71 @@ a {
 footer {
   position: relative;
   top: -1px;
-}
-
-footer .footer-container {
-  height: 30vh;
-  display: grid;
-  grid-template-columns: 100%;
-  background: unset;
-}
-
-footer .footer-container .footer-details {
-  background: #030303;
-  color: #fff;
-  text-align: left;
-
-  display: flex;
-  -webkit-box-orient: vertical;
-
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  padding: 1em;
-}
-
-footer .footer-container .footer-details .footer-top-bar {
-  -webkit-box-orient: horizontal;
-
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo {
-  display: flex;
-  -webkit-box-orient: horizontal;
-
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-  width: 35px;
-  height: auto;
-  margin-right: 9px;
-  -webkit-box-orient: vertical;
-
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
-  font-size: 18px;
-  letter-spacing: 0.5px;
-  color: #fff;
-  line-height: 23px;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
-  color: #fff;
-  font-size: 16px;
-  text-transform: capitalize;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo-container .address {
-  color: #fff;
-  font-size: 16px;
-  text-transform: capitalize;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo-container p {
-  text-transform: lowercase;
-  color: #fff;
-  font-size: 16px;
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    .footer-details {
+      background: $primary-core;
+      color: $core-light;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 1em;
+      .footer-top-bar {
+        flex-direction: row;
+        .logo {
+          display: flex;
+          flex-direction: row;
+          .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: auto;
+            margin-right: 9px;
+            flex-direction: column;
+          }
+          .logo-name {
+            font-size: 23px;
+            color: $core-light;
+            line-height: 11px;
+            font-variant-caps: all-petite-caps;
+            letter-spacing: 5pt;
+          }
+          .logo-title {
+            color: $core-light;
+            font-variant-caps: all-petite-caps;
+          }
+        }
+      }
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-bottom: 15px;
+        .mailto-link {
+          color: $core-light;
+          text-decoration: underline;
+          text-decoration-color: $core-light;
+          transition: 0.2s all;
+          margin-top: 20px;
+          &:hover {
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer-container .footer-social-icon,
 .footer-container small {
   display: flex;
-  -webkit-box-orient: horizontal;
-
-  -ms-flex-direction: row;
   flex-direction: row;
-
   align-items: center;
-
   justify-content: center;
   border-bottom: 1px solid gainsboro;
 }
