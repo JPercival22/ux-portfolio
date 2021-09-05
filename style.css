@@ -1096,30 +1096,36 @@ footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
   font-variant-caps: all-petite-caps;
 }
 
-footer .footer-container .footer-details .mailto-link {
+footer .footer-container .footer-details .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 15px;
+}
+
+footer .footer-container .footer-details .logo-container .mailto-link {
   color: #ffffff;
   text-decoration: underline;
   -webkit-text-decoration-color: #ffffff;
           text-decoration-color: #ffffff;
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  margin-top: 20px;
 }
 
-footer .footer-container .footer-details .mailto-link:hover {
+footer .footer-container .footer-details .logo-container .mailto-link:hover {
   text-decoration: none;
   font-weight: 500;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo-container .address {
-  color: #fff;
-  font-size: 16px;
-  text-transform: capitalize;
-}
-
-footer .footer-container .footer-details .footer-top-bar .logo-container p {
-  text-transform: lowercase;
-  color: #fff;
-  font-size: 16px;
 }
 
 .footer-container .footer-social-icon,
@@ -1128,8 +1134,9 @@ footer .footer-container .footer-details .footer-top-bar .logo-container p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
