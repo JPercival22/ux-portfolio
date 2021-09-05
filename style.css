@@ -56,15 +56,17 @@ ul {
 }
 
 .tertiary-button {
-  color: #3030db;
+  color: #2c4465;
   font-weight: 300;
   text-decoration: underline;
+  -webkit-text-decoration-color: #2c4465;
+          text-decoration-color: #2c4465;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
 .tertiary-button:hover {
-  color: #b0b0ffaf;
+  color: #2c4465;
   text-decoration: none;
 }
 
@@ -271,7 +273,7 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container .hero-text-content .hero-button-container .primary-button {
-  background-color: #3030db;
+  background-color: #2c4465;
   padding: 6px 12px;
   color: white;
   font-size: 17px;
@@ -293,17 +295,17 @@ header #click:checked ~ ul li a {
 
 .hero-container .hero-text-content .hero-button-container .primary-button:hover {
   background: #fff;
-  color: #3030db;
-  border-color: #3030db;
+  color: #2c4465;
+  border-color: #2c4465;
 }
 
 .hero-container .hero-text-content .hero-button-container .secondary-button {
   background: white;
   padding: 6px 12px;
-  color: #3030db;
+  color: #2c4465;
   font-size: 16px;
   text-decoration: none;
-  border: 1px solid #3030db;
+  border: 1px solid #2c4465;
   border-radius: 5px;
   margin: 0;
   display: -webkit-box;
@@ -320,7 +322,7 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container .hero-text-content .hero-button-container .secondary-button:hover {
-  background-color: #3030db;
+  background-color: #2c4465;
   color: #fff;
   border-color: #fff;
 }
@@ -339,7 +341,7 @@ header #click:checked ~ ul li a {
 }
 
 .overlay .research-qoute .qoute-text {
-  font-size: 12px;
+  font-size: 14px;
   font-style: oblique;
   padding: 17px;
 }
@@ -504,7 +506,7 @@ header #click:checked ~ ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3740ff;
+  background-color: #2c4465;
   border: 0;
   border-radius: 6px;
   -webkit-box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
@@ -527,8 +529,8 @@ header #click:checked ~ ul li a {
 .overlay .portfolio .right .case-study-btn:hover {
   outline: 0;
   text-decoration: none;
-  -webkit-filter: hue-rotate(64deg);
-          filter: hue-rotate(64deg);
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+          filter: drop-shadow(2px 4px 6px black);
 }
 
 .overlay .portfolio .right .case-study-btn .primary-button {
@@ -1869,8 +1871,8 @@ section .case-study-inner-guitar {
   .guitar-project {
     height: 700px;
     display: block;
-    background-image: url(/img/guitar-lessons.png);
-    background-size: cover;
+    background-image: url(/img/guitar-lesson-header.png);
+    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     padding: 0;
@@ -2102,7 +2104,7 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .nav-container header {
-    background: #1e1e29;
+    background: #2c4465;
   }
   .nav-container header .logo {
     display: -webkit-box;
@@ -2276,37 +2278,59 @@ section .case-study-inner-guitar {
     height: 76.5vh;
   }
   .guitar-project {
-    background-repeat: no-repeat;
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-size: cover;
-    height: 76.5vh;
+    background-repeat: no-repeat;
   }
-  .hero-content-grid {
+  .guitar-project .hero-content-grid {
     position: static;
+  }
+  .guitar-project .hero-content-grid .hero-text-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .guitar-project .hero-content-grid .hero-text-content .hero-title-case-study {
+    font-size: 18px;
+    color: #2c4465;
+    font-variant-caps: petite-caps;
+    padding: 15px;
+    background: white;
+    border: 3px solid dodgerblue;
+    border-radius: 5px;
+    letter-spacing: 5pt;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 24vw;
+    position: relative;
+    left: 640px;
   }
   .hero-content-grid-guitar {
     position: relative;
     top: 50%;
     left: 33%;
   }
-  .hero-content-grid .hero-text-content .hero-title-case-study {
-    position: relative;
-    font-size: 18px;
-    color: dodgerblue;
-    line-height: 1.7rem;
-    padding: 10px;
-    background: #ffffff;
-    width: 100%;
-    border: 3px solid dodgerblue;
-    border-radius: 5px;
-  }
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
     font-size: 1.5rem;
     line-height: 1.5rem;
     -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
     color: #252525;
@@ -2445,6 +2469,19 @@ section .case-study-inner-guitar {
     left: 30%;
     width: 30vw;
     height: 30vh;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    color: #fff;
+    line-height: 23px;
+    letter-spacing: 6.9pt;
+    font-size: 30px;
+    font-variant-caps: small-caps;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 2pt;
+    font-variant-caps: small-caps;
   }
   .footer-container .footer-design {
     position: relative;
