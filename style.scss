@@ -59,12 +59,13 @@ ul {
 }
 
 .tertiary-button {
-  color: #3030db;
+  color: #2c4465;
   font-weight: 300;
   text-decoration: underline;
+  text-decoration-color: #2c4465;
   transition: 1s ease-in-out;
   &:hover {
-    color: #b0b0ffaf;
+    color: #2c4465;
     text-decoration: none;
   }
 }
@@ -225,7 +226,7 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container .hero-text-content .hero-button-container .primary-button {
-  background-color: #3030db;
+  background-color: #2c4465;
   padding: 6px 12px;
   color: white;
   font-size: 17px;
@@ -236,30 +237,30 @@ header #click:checked ~ ul li a {
   align-items: center;
   justify-content: center;
   transition: 1s ease-in-out;
-}
-.hero-container .hero-text-content .hero-button-container .primary-button:hover {
-  background: #fff;
-  color: #3030db;
-  border-color: #3030db;
+  &:hover {
+    background: #fff;
+    color: #2c4465;
+    border-color: #2c4465;
+  }
 }
 .hero-container .hero-text-content .hero-button-container .secondary-button {
   background: white;
   padding: 6px 12px;
-  color: #3030db;
+  color: #2c4465;
   font-size: 16px;
   text-decoration: none;
-  border: 1px solid #3030db;
+  border: 1px solid #2c4465;
   border-radius: 5px;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 1s ease-in-out;
-}
-.hero-container .hero-text-content .hero-button-container .secondary-button:hover {
-  background-color: #3030db;
-  color: #fff;
-  border-color: #fff;
+  &:hover {
+    background-color: #2c4465;
+    color: #fff;
+    border-color: #fff;
+  }
 }
 .overlay .mobile-social-icon {
   display: flex;
@@ -273,7 +274,7 @@ header #click:checked ~ ul li a {
 .overlay {
   .research-qoute {
     .qoute-text {
-      font-size: 12px;
+      font-size: 14px;
       font-style: oblique;
       padding: 17px;
       h2 {
@@ -421,7 +422,7 @@ header #click:checked ~ ul li a {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        background-color: #3740ff;
+        background-color: #2c4465;
         border: 0;
         border-radius: 6px;
         box-shadow: 0 2px 4px -1px #0003, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
@@ -440,7 +441,7 @@ header #click:checked ~ ul li a {
         &:hover {
           outline: 0;
           text-decoration: none;
-          filter: hue-rotate(64deg);
+          filter: drop-shadow(2px 4px 6px black);
         }
       }
     }
@@ -1681,8 +1682,8 @@ section .case-study-inner-guitar {
   .guitar-project {
     height: 700px;
     display: block;
-    background-image: url(/img/guitar-lessons.png);
-    background-size: cover;
+    background-image: url(/img/guitar-lesson-header.png);
+    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     padding: 0;
@@ -1865,7 +1866,7 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .nav-container header {
-    background: #1e1e29;
+    background: #2c4465;
   }
   .nav-container header .logo {
     display: flex;
@@ -1910,7 +1911,7 @@ section .case-study-inner-guitar {
     justify-content: space-evenly;
   }
   .nav-container header .logo {
-     .logo-placeholder .company-logo {
+    .logo-placeholder .company-logo {
       img {
         height: 35px;
         width: auto;
@@ -2157,6 +2158,22 @@ section .case-study-inner-guitar {
     width: 30vw;
     height: 30vh;
   }
+  footer .footer-container .footer-details .footer-top-bar .logo {
+    .logo-name {
+      color: #fff;
+      line-height: 23px;
+      letter-spacing: 6.9pt;
+      font-size: 30px;
+      font-variant-caps: small-caps;
+    }
+    .logo-title {
+      font-size: 11px;
+      color: #fff;
+      letter-spacing: 2pt;
+      font-variant-caps: small-caps;
+    }
+  }
+
   .footer-container .footer-design {
     position: relative;
     right: 33%;
