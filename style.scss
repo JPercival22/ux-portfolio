@@ -192,24 +192,22 @@ header #click:checked ~ ul li a {
 .hero-container {
   background: linear-gradient(180deg, #ffee95 -65%, white 100%);
   padding: 1em;
-}
+  .hero-title {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #c1465d;
+  }
 
-.hero-container .hero-title {
-  font-family: "Poppins";
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: #c1465d;
+  .wrap {
+    font-family: "Poppins";
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+  }
 }
-
-.hero-container .wrap {
-  font-family: "Poppins";
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0;
-}
-
 .hero-content-grid {
   display: flex;
 
@@ -2004,42 +2002,51 @@ section .case-study-inner-guitar {
   .hero-container .hero-text-content {
     padding: 3em 10em 3em 15em;
   }
+
   .hero-container-projects {
     display: grid;
     background-size: cover;
     height: 76.5vh;
   }
   .guitar-project {
+    display: flex;
+    background-size: cover;
     background-repeat: no-repeat;
 
-    display: grid;
-    background-size: cover;
-    height: 76.5vh;
-  }
-  .hero-content-grid {
-    position: static;
+    .hero-content-grid {
+      position: static;
+      .hero-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        .hero-title-case-study {
+          font-size: 18px;
+          color: #2c4465;
+          font-variant-caps: petite-caps;
+          padding: 15px;
+          background: white;
+          border: 3px solid dodgerblue;
+          border-radius: 5px;
+          letter-spacing: 5pt;
+          display: flex;
+          flex-direction: column;
+          width: 24vw;
+          position: relative;
+          left: 640px;
+        }
+      }
+    }
   }
   .hero-content-grid-guitar {
     position: relative;
     top: 50%;
     left: 33%;
   }
-  .hero-content-grid .hero-text-content .hero-title-case-study {
-    position: relative;
-    font-size: 18px;
-    color: dodgerblue;
-    line-height: 1.7rem;
-    padding: 10px;
-    background: #ffffff;
-    width: 100%;
-    border: 3px solid dodgerblue;
-    border-radius: 5px;
-  }
+
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
     font-size: 1.5rem;
     line-height: 1.5rem;
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
     order: 1;
   }
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
