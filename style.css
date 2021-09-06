@@ -664,9 +664,7 @@ header #click:checked ~ ul li a {
 }
 
 .overlay .about {
-  background-image: url(img/work-hard.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #86aba7;
   padding: 1em;
 }
 
@@ -685,8 +683,8 @@ header #click:checked ~ ul li a {
   border-radius: 5px;
   padding: 1em 1em 0 1em;
   margin-bottom: 0.5em;
-  -webkit-box-shadow: #000000ed 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
-          box-shadow: #000000ed 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
+  -webkit-box-shadow: #00000087 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
+          box-shadow: #00000087 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
 }
 
 .overlay .about .about-container ul li .icon-container {
@@ -1317,31 +1315,16 @@ section .case-study-inner-guitar {
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
     letter-spacing: 4.8pt;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 
 @media only screen and (min-width: 610px) {
-  .nav-container header nav ul {
-    position: absolute;
-    top: 100px;
+  .nav-container {
+    padding-left: 2em;
   }
-  header #click:checked ~ ul {
-    left: 0;
-  }
-  header #click:checked ~ ul li a {
-    margin-left: 0;
-    font-size: 1.5rem;
-    z-index: 90000;
-    left: 0;
-  }
-  .nav-container header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .menu-btn svg {
+    padding-right: 2em;
   }
   .right {
     display: -webkit-box;
@@ -1360,13 +1343,10 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
-    grid-template-columns: auto;
+        grid-template-columns: auto;
   }
   .overlay .featured .left {
     margin: 0 0.7em;
-  }
-  .overlay .featured .left .inner {
-    padding: 1em;
   }
   .overlay .featured .right {
     margin: 0 auto;
@@ -1418,8 +1398,7 @@ section .case-study-inner-guitar {
     grid-gap: 20px;
   }
   .overlay .about .about-container ul li {
-    margin-bottom: 1.5em;
-    margin-top: 1em;
+    margin: 1em 0.8em;
     padding: 1em;
   }
   .overlay .about .about-container ul li .icon-container {
@@ -1429,48 +1408,17 @@ section .case-study-inner-guitar {
     width: 16vw;
     height: auto;
   }
-  .overlay .about .about-container ul li .degree img {
-    width: 8em;
-    height: auto;
-  }
-  .overlay .about .about-container ul li .experience-vector {
-    padding: 0;
-    width: 100px;
-    height: auto;
-  }
-  .overlay .about .about-container ul li .icon-container.design {
-    padding-top: 5em;
-  }
-  .overlay .about .about-container ul li .design-process-title {
-    padding-top: 1em;
-  }
-  .overlay .about .about-container ul li .deliverables-img svg {
-    width: 350px;
-    height: auto;
-  }
-  .overlay .about .about-container ul li .deliverables-title {
-    padding-top: 2em;
+  .overlay .about .about-container ul li .icon-container {
+    padding: 2em 0;
+    width: 80%;
   }
   .overlay .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 10em;
-    padding-bottom: 8em;
+    width: 80%;
+    padding: 2em;
   }
   .overlay .about .about-container ul li .business-model-icon img {
     width: 350px;
     height: auto;
-  }
-  .overlay .about .about-container ul li .icon-container img {
-    width: 10vw;
-  }
-  .overlay .about .about-container ul li .icon-container .degree-image {
-    width: 13vw;
   }
   /*contact page styles*/
   .contact-page-section {
