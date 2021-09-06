@@ -522,11 +522,10 @@ header #click:checked ~ ul li a {
 }
 
 .overlay .skills .skills-container ul li .icon-container {
-  -webkit-filter: hue-rotate(71deg);
-          filter: hue-rotate(71deg);
+  -webkit-filter: hue-rotate(360deg);
+          filter: hue-rotate(360deg);
   margin-top: 20px;
   margin-bottom: 0;
-  filter: hue-rotate(71deg);
 }
 
 .overlay .skills .skills-container ul li .one {
@@ -569,6 +568,7 @@ header #click:checked ~ ul li a {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 .overlay .portfolio .portfolio-left .inner .featured-title {
@@ -1326,11 +1326,6 @@ section .case-study-inner-guitar {
   .menu-btn svg {
     padding-right: 2em;
   }
-  .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .hero-container .hero-text-content {
     padding: 1em;
   }
@@ -1339,11 +1334,8 @@ section .case-study-inner-guitar {
     width: 150px;
     height: 150px;
   }
-  .overlay .featured {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+  .research-qoute {
+    margin: 0 0.5em;
   }
   .overlay .featured .left {
     margin: 0 0.7em;
@@ -1363,36 +1355,44 @@ section .case-study-inner-guitar {
     margin-top: 0.7em;
   }
   .overlay .skills .skills-container ul li .icon-container {
-    height: auto;
     margin-top: 2em;
   }
   .overlay .skills .skills-container ul li .icon-container img {
     width: 66px;
     height: auto;
     margin-bottom: 2em;
-    -webkit-filter: hue-rotate(21deg);
-            filter: hue-rotate(21deg);
   }
   .overlay .skills .skills-container ul li .icon-container .brand-awareness {
     width: 105px;
     height: auto;
   }
-  .overlay .about {
-    margin-bottom: 0;
+  .overlay .portfolio .portfolio-left {
+    margin: 15px;
+  }
+  .overlay .portfolio .portfolio-left .inner .featured-desc {
+    padding-bottom: 10px;
   }
   .overlay .portfolio .portfolio-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    place-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .overlay .portfolio .portfolio-container img {
-    width: 45vw;
+    width: 89vw;
     border-radius: 5px;
   }
-  .overlay .portfolio .portfolio-left {
-    margin: 10px;
+  .overlay .about {
+    margin-bottom: 0;
   }
   .overlay .about .about-container ul {
     grid-gap: 20px;
@@ -1408,15 +1408,11 @@ section .case-study-inner-guitar {
     width: 16vw;
     height: auto;
   }
-  .overlay .about .about-container ul li .icon-container {
-    padding: 2em 0;
-    width: 80%;
-  }
-  .overlay .about .about-container ul li .business-model-icon {
+  .overlay .about .about-container ul .business-model .business-model-icon {
     width: 80%;
     padding: 2em;
   }
-  .overlay .about .about-container ul li .business-model-icon img {
+  .overlay .about .about-container ul .business-model .business-model-icon img {
     width: 350px;
     height: auto;
   }
@@ -1619,71 +1615,55 @@ section .case-study-inner-guitar {
   }
   footer .footer-container .footer-details {
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 2em;
   }
 }
 
-/*Styles for small tablets */
 @media only screen and (min-width: 895px) {
-  .nav-container {
-    background: #252525;
-    padding: 0 1em 0 1.5em;
+  .nav-container header nav ul li {
+    font-size: 2rem;
+    font-variant-caps: all-petite-caps;
   }
-  .nav-container header nav ul {
-    top: 109px;
+  .nav-container header .logo .logo-container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .nav-container header nav ul li a {
-    width: auto;
+  .nav-container header .logo .logo-container .logo-name {
+    font-size: 1.8rem;
   }
-  header #click:checked ~ ul {
-    left: 0;
-    top: 100px;
-  }
-  .hero-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 80% auto;
-        grid-template-columns: 80% auto;
-    background: unset;
-    padding: 0;
-    top: 0;
-  }
-  .hero-container .hero-text-content {
-    text-align: left;
+  .nav-container header .logo .logo-container .logo-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(white));
-    background: linear-gradient(180deg, #ffee95 -65%, white 100%);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 3em 10em 3em 3em;
+    color: #ffffff;
+    font-size: 0.8rem;
+  }
+  header #click:checked ~ ul {
+    left: 0;
+    top: 57px;
+  }
+  .hero-container {
+    background-color: #f9f9f9;
   }
   .hero-container .hero-title,
   .hero-container .txt-rotate .wrap {
     font-size: 1.5rem;
   }
-  .hero-container .hero-design {
-    display: unset;
-    margin-left: -50%;
-    margin-top: 15%;
-    width: 100%;
-  }
-  .overlay .mobile-social-icon {
-    padding-top: 2em;
-  }
   .overlay .mobile-social-icon a {
-    padding: 0 1em;
+    padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .overlay .mobile-social-icon a svg {
     width: auto;
@@ -1707,13 +1687,17 @@ section .case-study-inner-guitar {
     padding-bottom: 2em;
     margin-top: 2em;
   }
-  .overlay .skills .skills-container ul li {
-    margin-bottom: 2.5em;
-    -webkit-box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
-            box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
-  }
   .overlay .skills .skills-container ul li .icon-container {
     margin: 2em auto;
+  }
+  .overlay .skills .skills-container ul li .icon-container img {
+    margin-bottom: 0;
+  }
+  .overlay .portfolio {
+    margin: 7em 0;
+  }
+  .overlay .portfolio .portfolio-container img {
+    width: 50vw;
   }
   .overlay .portfolio .portfolio-container .right {
     display: -webkit-box;
@@ -1723,12 +1707,6 @@ section .case-study-inner-guitar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .icon-container {
-    padding: 0;
-  }
-  .portfolio {
-    margin: 7em 0;
   }
   .overlay .about {
     padding: 1.5em;
@@ -1740,11 +1718,13 @@ section .case-study-inner-guitar {
     margin-bottom: 1.5em;
     padding: 2em;
   }
-  .overlay .about .about-container ul li .icon-container img {
-    width: 11vw;
+  .overlay .about .about-container ul li .icon-container img, .overlay .about .about-container ul li .icon-container .degree-image {
+    width: 12vw;
+    height: auto;
   }
-  .overlay .about .about-container ul li .icon-container .degree-image {
-    width: 10vw;
+  .overlay .about .about-container ul li .deliverables-img svg {
+    width: 35vw;
+    height: auto;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 0;
@@ -1798,6 +1778,13 @@ section .case-study-inner-guitar {
   }
   footer .footer-container .footer-details {
     padding: 2em 3em;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    letter-spacing: 5.2pt;
+    font-size: 1.8rem;
+  }
+  footer .footer-container .footer-details .logo-title {
+    font-size: 1.2rem;
   }
 }
 
