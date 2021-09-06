@@ -1031,6 +1031,11 @@ section .case-study-inner-guitar {
   .overlay .about .about-container ul li .icon-container {
     height: inherit;
   }
+
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    letter-spacing: 4.8pt;
+    margin-top: .5em;
+  }
 }
 // Large mobile Phone Viewport styles
 @media only screen and (min-width: 610px) {
