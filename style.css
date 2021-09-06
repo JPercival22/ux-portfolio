@@ -181,7 +181,7 @@ header nav #click {
   text-align: center;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background: linear-gradient(225deg, #22b7c3 0, #2c4465 90%);
+  background: #396baf;
   text-transform: uppercase;
   z-index: 1100;
 }
@@ -355,21 +355,12 @@ header #click:checked ~ ul li a {
   border-radius: 50%;
   padding: 10px;
   padding-bottom: 0;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
-.overlay .research-qoute .qoute-text {
-  font-size: 14px;
-  font-style: oblique;
-  padding: 17px;
-}
-
-.overlay .research-qoute .qoute-text h2 {
-  font-weight: 300;
-}
-
-.overlay .research-qoute .qoute-text sub {
-  font-style: normal;
-  font-size: 14px;
+.overlay .mobile-social-icon a:hover {
+  background-image: radial-gradient(#fff 0%, #2c446585 100%);
 }
 
 .overlay .featured {
@@ -520,11 +511,14 @@ header #click:checked ~ ul li a {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 20pt;
 }
 
 .overlay .skills .skills-container ul li p {
   text-align: left;
-  padding: 1em;
+  padding: 0 1em;
 }
 
 .overlay .skills .skills-container ul li .icon-container {
@@ -642,6 +636,31 @@ header #click:checked ~ ul li a {
   background: linear-gradient(#ffffff, #ffffffc9), url(img/uxWallpaper.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.research-qoute .qoute-text {
+  font-size: 1.1rem;
+  font-style: oblique;
+  letter-spacing: 1.2pt;
+}
+
+.research-qoute .qoute-text sub {
+  font-style: initial;
+  font-variant-caps: petite-caps;
+  font-size: 1rem;
 }
 
 .overlay .about {
@@ -1275,7 +1294,29 @@ section .case-study-inner-guitar {
   color: #5252ff;
 }
 
-/*Large mobile Phone Viewport */
+@media only screen and (min-width: 375px) {
+  .nav-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 15px;
+  }
+  .menu-btn svg {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  section {
+    padding: 1.5em;
+  }
+  .overlay .about .about-container ul li .icon-container {
+    height: inherit;
+  }
+}
+
 @media only screen and (min-width: 610px) {
   .nav-container header nav ul {
     position: absolute;
@@ -1619,10 +1660,6 @@ section .case-study-inner-guitar {
     background: linear-gradient(#9191e833, #00000080), url(img/Design-Wallpaper-4k.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .qoute-text {
-    color: black;
-    font-weight: 700;
   }
   sub {
     font-weight: 500;
