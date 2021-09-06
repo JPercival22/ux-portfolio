@@ -149,7 +149,7 @@ header nav #click {
   justify-content: center;
   text-align: center;
   transition: all 0.5s ease;
-  background: linear-gradient(225deg, #22b7c3 0, $brand-color 90%);
+  background: #396baf;
   text-transform: uppercase;
   z-index: 1100;
   li {
@@ -272,22 +272,9 @@ header #click:checked ~ ul li a {
     border-radius: 50%;
     padding: 10px;
     padding-bottom: 0;
-  }
-}
-
-.overlay {
-  .research-qoute {
-    .qoute-text {
-      font-size: 14px;
-      font-style: oblique;
-      padding: 17px;
-      h2 {
-        font-weight: 300;
-      }
-      sub {
-        font-style: normal;
-        font-size: 14px;
-      }
+    transition: all 2s ease;
+    &:hover {
+      background-image: radial-gradient(#fff 0%, #2c446585 100%);
     }
   }
 }
@@ -396,16 +383,18 @@ header #click:checked ~ ul li a {
         font-weight: 500;
         font-variant-caps: all-petite-caps;
         letter-spacing: 0.3rem;
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 20pt;
       }
       p {
         text-align: left;
-        padding: 1em;
+        padding: 0 1em;
       }
       .icon-container {
-        filter: hue-rotate(71deg);
+        filter: hue-rotate(360deg);
         margin-top: 20px;
         margin-bottom: 0;
-        filter: hue-rotate(71deg);
       }
     }
   }
@@ -429,10 +418,9 @@ header #click:checked ~ ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.overlay .portfolio .portfolio-container {
-  margin-bottom: 2em;
+  .portfolio-container {
+    margin-bottom: 2em;
+  }
 }
 
 .overlay .portfolio .portfolio-left .inner {
@@ -443,6 +431,7 @@ header #click:checked ~ ul li a {
     font-weight: 500;
     font-variant-caps: all-petite-caps;
     letter-spacing: 0.3rem;
+    text-align: center;
   }
   .featured-title {
     font-size: 1.15rem;
@@ -452,6 +441,7 @@ header #click:checked ~ ul li a {
     line-height: 16.3pt;
   }
 }
+
 .portfolio .portfolio-container .right {
   display: flex;
   flex-direction: column;
@@ -487,11 +477,27 @@ header #click:checked ~ ul li a {
   background: linear-gradient(#ffffff, #ffffffc9), url(img/uxWallpaper.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .qoute-text {
+    font-size: 1.1rem;
+    font-style: oblique;
+    letter-spacing: 1.2pt;
+    sub {
+      font-style: initial;
+      font-variant-caps: petite-caps;
+      font-size: 1rem;
+    }
+  }
 }
+
 .overlay .about {
-  background-image: url(img/work-hard.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(img/work-hard.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #86aba7;
   padding: 1em;
   .about-container {
     text-align: center;
@@ -503,7 +509,7 @@ header #click:checked ~ ul li a {
         border-radius: 5px;
         padding: 1em 1em 0 1em;
         margin-bottom: 0.5em;
-        box-shadow: #000000ed 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
+        box-shadow: #00000087 0 20px 25px -5px, #0000000a 0 10px 10px -5px;
         .icon-container {
           height: 100px;
           display: grid;
@@ -551,6 +557,7 @@ header #click:checked ~ ul li a {
   }
 }
 
+// contact page styles
 .contact-page-section {
   padding: 0.5em;
   margin: 0 auto;
@@ -701,7 +708,6 @@ header #click:checked ~ ul li a {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-
   display: flex;
   margin-bottom: 0.5em;
   cursor: pointer;
@@ -1007,28 +1013,43 @@ section .case-study-inner-guitar {
   color: #5252ff;
 }
 
-/*Large mobile Phone Viewport */
-@media only screen and (min-width: 610px) {
-  .nav-container header nav ul {
+// medium mobile viewport styles
+@media only screen and (min-width: 375px) {
+  .nav-container {
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+  .menu-btn svg {
     position: absolute;
-    top: 100px;
+    right: 10px;
+    top: 7px;
   }
-  header #click:checked ~ ul {
-    left: 0;
+}
+// Large mobile Phone Viewport styles
+@media only screen and (min-width: 425px) {
+  section {
+    padding: 1.5em;
   }
-  header #click:checked ~ ul li a {
-    margin-left: 0;
-    font-size: 1.5rem;
-    z-index: 90000;
-    left: 0;
+  .overlay .about .about-container ul li .icon-container {
+    height: inherit;
   }
-  .nav-container header {
-    display: flex;
-    justify-content: space-between;
+
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    letter-spacing: 4.8pt;
+    margin-top: 0.5em;
   }
-  .right {
-    display: flex;
+}
+
+// tablets to small laptops
+@media only screen and (min-width: 610px) {
+  .nav-container {
+    padding-left: 2em;
   }
+
+  .menu-btn svg {
+    padding-right: 2em;
+  }
+
   .hero-container .hero-text-content {
     padding: 1em;
   }
@@ -1037,16 +1058,12 @@ section .case-study-inner-guitar {
     width: 150px;
     height: 150px;
   }
-  .overlay .featured {
-    display: grid;
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
+
+  .research-qoute {
+    margin: 0 0.5em;
   }
   .overlay .featured .left {
     margin: 0 0.7em;
-  }
-  .overlay .featured .left .inner {
-    padding: 1em;
   }
   .overlay .featured .right {
     margin: 0 auto;
@@ -1055,100 +1072,74 @@ section .case-study-inner-guitar {
     height: auto;
     padding-bottom: 4em;
   }
+
   .overlay .skills {
     padding: 2em 2em 0.5em 2em;
-  }
-  .overlay .skills .skills-container ul li {
-    padding: 1em;
-    margin-top: 0.7em;
-  }
-  .overlay .skills .skills-container ul li .icon-container {
-    height: auto;
-    margin-top: 2em;
-  }
-  .overlay .skills .skills-container ul li .icon-container img {
-    width: 66px;
-    height: auto;
-    margin-bottom: 2em;
-    filter: hue-rotate(21deg);
-  }
-  .overlay .skills .skills-container ul li .icon-container .brand-awareness {
-    width: 105px;
-    height: auto;
-  }
-  .overlay .about {
-    margin-bottom: 0;
-  }
-  .overlay .portfolio .portfolio-container {
-    display: grid;
-    grid-template-columns: auto;
-    place-content: center;
-  }
-  .overlay .portfolio .portfolio-container img {
-    width: 45vw;
-    border-radius: 5px;
-  }
-  .overlay .portfolio .portfolio-left {
-    margin: 10px;
-  }
-  .overlay .about .about-container ul {
-    grid-gap: 20px;
-    li {
-      margin-bottom: 1.5em;
-      margin-top: 1em;
+    .skills-container ul li {
       padding: 1em;
+      margin-top: 0.7em;
       .icon-container {
-        padding: 2em 0;
+        margin-top: 2em;
         img {
-          width: 16vw;
+          width: 66px;
+          height: auto;
+          margin-bottom: 2em;
+        }
+        .brand-awareness {
+          width: 105px;
           height: auto;
         }
       }
     }
   }
 
-  .overlay .about .about-container ul li .degree img {
-    width: 8em;
-    height: auto;
+  .overlay .portfolio {
+    .portfolio-left {
+      margin: 15px;
+      .inner .featured-desc {
+        padding-bottom: 10px;
+      }
+    }
+    .portfolio-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 89vw;
+        border-radius: 5px;
+      }
+    }
   }
-  .overlay .about .about-container ul li .experience-vector {
-    padding: 0;
-    width: 100px;
-    height: auto;
+
+  .overlay .about {
+    margin-bottom: 0;
+    .about-container ul {
+      grid-gap: 20px;
+      li {
+        margin: 1em 0.8em;
+        padding: 1em;
+        .icon-container {
+          padding: 2em 0;
+          img {
+            width: 16vw;
+            height: auto;
+          }
+        }
+      }
+      .business-model {
+        .business-model-icon {
+          width: 80%;
+          padding: 2em;
+          img {
+            width: 350px;
+            height: auto;
+          }
+        }
+      }
+    }
   }
-  .overlay .about .about-container ul li .icon-container.design {
-    padding-top: 5em;
-  }
-  .overlay .about .about-container ul li .design-process-title {
-    padding-top: 1em;
-  }
-  .overlay .about .about-container ul li .deliverables-img svg {
-    width: 350px;
-    height: auto;
-  }
-  .overlay .about .about-container ul li .deliverables-title {
-    padding-top: 2em;
-  }
-  .overlay .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: grid;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 10em;
-    padding-bottom: 8em;
-  }
-  .overlay .about .about-container ul li .business-model-icon img {
-    width: 350px;
-    height: auto;
-  }
-  .overlay .about .about-container ul li .icon-container img {
-    width: 10vw;
-  }
-  .overlay .about .about-container ul li .icon-container .degree-image {
-    width: 13vw;
-  }
+
   /*contact page styles*/
   .contact-page-section {
     background-image: url(/img/form-background-min.jpg);
@@ -1334,110 +1325,103 @@ section .case-study-inner-guitar {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .qoute-text {
-    color: black;
-    font-weight: 700;
-  }
+
   sub {
     font-weight: 500;
     font-size: 16px;
   }
 
   footer .footer-container .footer-details {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
     padding: 2em;
   }
 }
 
-/*Styles for small tablets */
+// /*Styles for tablets and small laptops
 @media only screen and (min-width: 895px) {
-  .nav-container {
-    background: #252525;
-    padding: 0 1em 0 1.5em;
+  .nav-container header {
+    nav ul li {
+      font-size: 2rem;
+      font-variant-caps: all-petite-caps;
+    }
+    .logo .logo-container {
+      align-items: baseline;
+      flex-direction: row;
+      .logo-name {
+        font-size: 1.8rem;
+      }
+      .logo-title {
+        display: flex;
+        justify-content: center;
+        color: $core-light;
+        font-size: 0.8rem;
+      }
+    }
   }
-  .nav-container header nav ul {
-    top: 109px;
-  }
-  .nav-container header nav ul li a {
-    width: auto;
-  }
+
   header #click:checked ~ ul {
     left: 0;
-    top: 100px;
+    top: 57px;
   }
+
   .hero-container {
-    display: grid;
-    grid-template-columns: 80% auto;
-    background: unset;
-    padding: 0;
-    top: 0;
+    background-color: #f9f9f9;
   }
-  .hero-container .hero-text-content {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, #ffee95 -65%, white 100%);
-    align-items: flex-start;
-    justify-content: center;
-    padding: 3em 10em 3em 3em;
-  }
+
   .hero-container .hero-title,
   .hero-container .txt-rotate .wrap {
     font-size: 1.5rem;
   }
-  .hero-container .hero-design {
-    display: unset;
-    margin-left: -50%;
-    margin-top: 15%;
-    width: 100%;
-  }
-  .overlay .mobile-social-icon {
-    padding-top: 2em;
-  }
+
   .overlay .mobile-social-icon a {
-    padding: 0 1em;
-  }
-  .overlay .mobile-social-icon a svg {
-    width: auto;
+    padding: 1em;
+    display: flex;
+    svg {
+      width: auto;
+    }
   }
   .overlay .featured {
     padding: 2em;
+    &:before {
+      top: 0;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+    }
+    .left {
+      margin: 0;
+      .inner {
+        padding: 0;
+      }
+    }
+    .right {
+      padding-bottom: 2em;
+      margin-top: 2em;
+    }
   }
-  .overlay .featured:before {
-    top: 0;
-    left: 10px;
-    width: 100px;
-    height: 100px;
-  }
-  .overlay .featured .left {
-    margin: 0;
-  }
-  .overlay .featured .left .inner {
-    padding: 0;
-  }
-  .overlay .featured .right {
-    padding-bottom: 2em;
-    margin-top: 2em;
-  }
+
   .overlay .skills .skills-container ul li {
-    margin-bottom: 2.5em;
-    box-shadow: #000000ed 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
+    .icon-container {
+      margin: 2em auto;
+      img {
+        margin-bottom: 0;
+      }
+    }
   }
-  .overlay .skills .skills-container ul li .icon-container {
-    margin: 2em auto;
-  }
-  .overlay .portfolio .portfolio-container .right {
-    display: flex;
-    flex-direction: column;
-  }
-  .icon-container {
-    padding: 0;
-  }
-  .portfolio {
+
+  .overlay .portfolio {
     margin: 7em 0;
+    .portfolio-container {
+      img {
+        width: 50vw;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
+
   .overlay .about {
     padding: 1.5em;
     .about-container ul {
@@ -1446,16 +1430,21 @@ section .case-study-inner-guitar {
         margin-bottom: 1.5em;
         padding: 2em;
         .icon-container {
-          img {
-            width: 11vw;
+          img, .degree-image {
+            width: 12vw;
+            height: auto;
           }
-          .degree-image {
-            width: 10vw;
+        }
+        .deliverables-img {
+          svg {
+            width: 35vw;
+            height: auto;
           }
         }
       }
     }
   }
+
   .contact-page-section .contact-container .contact-form {
     padding: 0;
   }
@@ -1499,6 +1488,13 @@ section .case-study-inner-guitar {
   }
   footer .footer-container .footer-details {
     padding: 2em 3em;
+    .footer-top-bar .logo .logo-name {
+      letter-spacing: 5.2pt;
+      font-size: 1.8rem;
+    }
+    .logo-title {
+      font-size:1.2rem;
+    }
   }
 }
 
