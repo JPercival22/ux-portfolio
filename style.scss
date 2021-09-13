@@ -195,7 +195,6 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container {
-  // background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
   background: $core-light;
   padding: 1em;
   .hero-title {
@@ -377,7 +376,7 @@ header #click:checked ~ ul li a {
       background: #fff;
       padding: 0.5em;
       border-radius: 5px;
-      margin-bottom: 1.2em;
+      margin-bottom: 2em;
       .skill-title {
         color: $primary-core;
         font-size: 1.7rem;
@@ -495,9 +494,6 @@ header #click:checked ~ ul li a {
 }
 
 .about {
-  // background-image: url(img/work-hard.jpg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
   background-color: #86aba7;
   padding: 1em;
   .about-container {
@@ -1108,13 +1104,13 @@ section .case-study-inner-guitar {
         align-items: center;
         justify-content: center;
         img {
-          width: 89vw;
+          width: 40vw;
           border-radius: 5px;
         }
       }
       .right {
         img {
-          width: 60vw;
+          width: 40vw;
         }
       }
     }
@@ -1379,14 +1375,6 @@ section .case-study-inner-guitar {
     }
   }
 
-  .hero-container .hero-design {
-    display: flex;
-    width: 18%;
-    position: absolute;
-    right: 19px;
-    bottom: 208px;
-  }
-
   .hero-container .hero-title,
   .hero-container .txt-rotate .wrap {
     font-size: 1.5rem;
@@ -1523,37 +1511,19 @@ section .case-study-inner-guitar {
   .nav-container {
     height: 60px;
     header {
-      background: #2c4465;
-      max-height: 60px;
-      height: 60px;
       .logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
         .logo-container {
           flex-direction: column;
           .logo-name {
-            color: #fff;
-            line-height: 20px;
-            letter-spacing: 4pt;
             font-size: 1.5rem;
-            font-variant-caps: small-caps;
           }
           .logo-title {
             font-size: 0.8rem;
-            color: #fff;
             letter-spacing: 2pt;
-            font-variant-caps: small-caps;
           }
         }
         .logo-placeholder {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           padding: 1em;
-          padding-right: 0;
           .company-logo {
             img {
               height: 35px;
@@ -1562,47 +1532,25 @@ section .case-study-inner-guitar {
           }
         }
       }
-      nav {
-        position: relative;
-        top: 5px;
-        left: 20em;
-        height: 44px;
-        flex-direction: row;
-        background: none;
-        display: flex;
-        ul {
-          position: relative;
-          top: 0;
-          left: 20px;
-          height: 44px;
-          display: flex;
-          flex-direction: row;
-          text-transform: uppercase;
-          background: none;
-          li {
-            a {
-              font-size: 18px;
-              color: #fff;
-              display: initial;
-              padding: 0 10px;
-              &:hover {
-                color: cyan;
-              }
-            }
-          }
-        }
-      }
     }
   }
   .menu-btn svg {
-    display: none;
+    top: 7px;
+    right: 24px;
   }
   .hero-container {
-    display: grid;
     grid-template-columns: 70% auto;
-    background: unset;
+
     .hero-text-content {
+      background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
       padding: 2.3rem;
+    }
+    .hero-design {
+      display: block;
+      width: 18%;
+      position: absolute;
+      right: 19px;
+      bottom: 208px;
     }
     .mouse-scroller {
       display: flex;
@@ -1711,52 +1659,59 @@ section .case-study-inner-guitar {
         justify-content: center;
         height: auto;
         img {
-          width: 45vw;
+          width: 30vw;
         }
-      }
-    }
-  }
-
-  .about .about-container {
-    text-align: center;
-    ul {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-gap: 2em;
-      li {
-        padding: 1em;
-        border-radius: 5px;
-        margin: 0;
-        .icon-container {
-          margin: 3em auto;
-          .degree-image {
-            width: 8.5vw;
-          }
-
-        img {
-          width: 5.9em;
-          height: auto;
-        }
-      }
-      .deliverables-img svg {
-        width: 290px;
-        height: auto;
-      }
-    }
-      .business-model {
-        .business-model-icon img {
-          width: 260px;
-        }
-      }
-      .column-stretch {
-        grid-column: 1/3;
       }
     }
   }
 
   .about {
+    background-image: url(img/work-hard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2.1em;
+    .about-container {
+      text-align: center;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 2em;
+        li {
+          padding: 1em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          .icon-container {
+            margin: 0;
+            padding: 0;
+            .degree-image {
+              width: 8.5vw;
+            }
+
+            img {
+              width: 5.9em;
+              height: auto;
+            }
+          }
+          .deliverables-img svg {
+            width: 290px;
+            height: auto;
+          }
+        }
+        .business-model {
+          .business-model-icon img {
+            width: 260px;
+          }
+        }
+        .column-stretch {
+          grid-column: 1/3;
+        }
+      }
+    }
   }
+
   .contact-page-section {
     padding: 2em;
     width: 100%;
@@ -1900,104 +1855,65 @@ section .case-study-inner-guitar {
 
 @media only screen and (min-width: 1250px) {
   .nav-container {
-    // background: rgb(37 37 37);
-    padding: 10px 15em;
-    height: 43px;
-  }
-}
-
-/*Large Laptop/ Desktop viewport styles */
-@media only screen and (min-width: 1550px) {
-  .nav-container {
     display: grid;
     grid-template-columns: 70% auto;
     background: unset;
     align-items: center;
-    height: 60px;
+    padding: 0;
     header {
-      max-height: 60px;
       height: 60px;
-      .logo {
+      background: #2c4465;
+      nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding-left: 14em;
-        .logo-container {
+        ul {
+          position: unset;
           display: flex;
-          flex-direction: column;
-          margin-left: 10px;
+          flex-direction: row;
+          background: none;
+          li {
+            font-size: 18px;
+            width: 26%;
+            a {
+              font-size: 18px;
+              color: #fff;
+              display: initial;
+              padding: 0 10px;
+              transition: 1s all;
+              &:hover {
+                color: cyan;
+              }
+            }
+          }
         }
-        .logo-placeholder {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 1em;
-          padding-right: 0;
-        }
+      }
+      .logo {
+        padding-left: 2em;
         .menu-btn {
           display: none;
         }
       }
+      .logo-name {
+        font-size: 1.2rem;
+      }
+      .logo-name {
+        font-size: 1.2rem;
+      }
+    }
+    .top-social-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0 3.5em;
+      a {
+        margin: 0 1em;
+        transition: 1s all;
+      }
     }
   }
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .nav-container {
-    display: grid;
-    grid-template-columns: 70% auto;
-    background: unset;
-    align-items: center;
-    padding: 0;
-  }
-  .nav-container header {
-    background: #2c4465;
-  }
-  .nav-container header .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav-container header .logo-name {
-    font-size: 1.2rem;
-  }
-  .nav-container header a .logo-title {
-    font-size: 0.9rem;
-  }
-  .nav-container header nav ul {
-    position: relative;
-    top: 0;
-    left: 45px;
-    height: 44px;
-    flex-direction: row;
-    text-transform: uppercase;
-    background: none;
-  }
-  .nav-container header nav ul li {
-    width: inherit;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    width: 26%;
-  }
-  .nav-container header nav ul li a {
-    font-size: 16px;
-    color: #fff;
-    display: initial;
-    padding: 0 10px;
-  }
-  .nav-container header nav ul li a:hover {
-    color: cyan;
-  }
-  .nav-container .top-social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+
   .nav-container header .logo {
     .logo-placeholder .company-logo {
       img {
@@ -2007,11 +1923,8 @@ section .case-study-inner-guitar {
     }
     .logo-container {
       .logo-name {
-        color: #fff;
         line-height: 20px;
-        letter-spacing: 4pt;
-        font-size: 1.5rem;
-        font-variant-caps: small-caps;
+        font-variant-caps: all-petite-caps;
       }
       .logo-title {
         font-size: 0.8rem;
@@ -2021,6 +1934,22 @@ section .case-study-inner-guitar {
       }
     }
   }
+
+  .about .about-container ul li {
+    justify-content: space-evenly;
+  }
+  .about .about-container ul li .icon-container img,
+  .about .about-container ul li .icon-container .degree-image {
+    width: 94.39px;
+    height: 96.67px;
+  }
+  .about .about-container ul .business-model .business-model-icon {
+    padding: 0;
+  }
+}
+
+/*Large Laptop/ Desktop viewport styles */
+@media only screen and (min-width: 1550px) {
   .skills .skills-container ul {
     display: grid;
     grid-template-columns: repeat(3, auto);
