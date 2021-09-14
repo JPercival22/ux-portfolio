@@ -1955,26 +1955,33 @@ section .case-study-inner-guitar {
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
   p,
-  .qoute-text, 
+  .qoute-text,
   .hero-text-content p,
   .qoute-text p,
-  .featured-desc p
-    { font-size: 1em;}
+  .featured-desc p {
+    font-size: 1em;
+  }
 
-
+  // top-nav styles
   .nav-container {
     header {
       .logo {
-        padding-left: 12em;;
+        padding-left: 12em;
+        .logo-container {
+          .logo-name {
+            line-height: 23px;
+            letter-spacing: 7.6pt;
+            font-size: 30px;
+            font-variant-caps: all-petite-caps;
+          }
+          .logo-title {
+            font-size: 11px;
+          }
+        }
       }
     }
-  }  
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
   }
+
   .nav-container header nav ul {
     position: relative;
     top: 0;
@@ -1986,64 +1993,56 @@ section .case-study-inner-guitar {
     justify-content: space-evenly;
     margin-right: 13em;
   }
+  nav {
+    display: flex;
+  }
+  // index-page
   .hero-container {
     display: grid;
     grid-template-columns: 70% auto;
     background: unset;
     padding: 0;
+    .hero-text-content {
+      padding: 3em 8em 3em 13em;
+      .hero-title {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 300;
+      }
+    }
+    .hero-design {
+      display: unset;
+      width: 56%;
+      left: -28%;
+
+      #blockdesign .square-anim:hover,
+      #blockdesign circle:hover {
+        filter: brightness(5);
+        transition: linear 0.7s ease-in-out;
+      }
+    }
   }
-  // index-page
-  .hero-container .hero-text-content {
-    padding: 3em 8em 3em 13em;
-  }
-  .hero-container .hero-text-content .hero-title {
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 300;
-  }
-  .hero-container .hero-design {
-    display: unset;
-    width: 84%;
-  }
-  .hero-container .hero-design #blockdesign .square-anim:hover,
-  .hero-container .hero-design #blockdesign circle:hover {
-    filter: brightness(5);
-    transition: linear 0.7s ease-in-out;
-  }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    order: 1;
-  }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-    color: #252525;
-    order: 2;
-  }
+
   .research-qoute {
     margin: 0 11.5em;
   }
 
   .featured {
     padding: 3em 4em;
-  }
-  .featured:before {
-    height: 150px;
-    width: 150px;
-    left: 10em;
-    top: 0;
-  }
-  .featured .left {
-    margin: 0 9em;
-  }
-  .featured .left .inner .subtitle {
-    text-align: left;
-  }
-  .featured .right {
-    width: auto;
-    border-radius: 5px;
-    height: fit-content;
-    padding: 1em;
-    cursor: pointer;
+    &:before {
+      height: 150px;
+      width: 150px;
+      left: 10em;
+    }
+    .left {
+      margin: 0 9em;
+      .inner .subtitle {
+        text-align: left;
+      }
+    }
+    .right {
+      cursor: pointer;
+    }
   }
 
   .skills {
@@ -2053,7 +2052,6 @@ section .case-study-inner-guitar {
       grid-template-columns: repeat(3, auto);
       grid-gap: 3em;
       li {
-        padding: 1em;
         margin-bottom: 1em;
       }
       p {
@@ -2061,136 +2059,84 @@ section .case-study-inner-guitar {
       }
     }
   }
-  .portfolio .portfolio-left .inner .featured-title {
-    font-size: 1.3rem;
-  }
+
   .portfolio {
     padding: 2em 11em;
     .portfolio-container {
       .portfolio-left {
-        display: grid;
-        place-content: center;
-        margin: 0;
         .inner {
+          .featured-title {
+            font-size: 1.3rem;
+          }
           .featured-desc {
-            font-size:  1em;
+            font-size: 1em;
           }
         }
       }
       .right img {
-        width: 18vw;
         border-radius: 20px;
-        height: 22vh;
         padding: 1em;
-        height: 28vh;
-        margin-top: 2em;
+        height: 27vh;
+        width: 20vw;
+        margin-top: 1em;
       }
     }
-  }
-  .about .about-container ul li .icon-container img {
-    width: 6vw;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 8vw;
-  }
-  .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: grid;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 5.5em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 250px;
-  }
-
-
-  .about .about-container ul li .icon-container img {
-    width: 6vw;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 8vw;
-  }
-  .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: grid;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 5.5em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 250px;
   }
 
   .about {
     padding: 4em 13em;
-  }
-  .about .about-container ul {
-    grid-gap: 2em;
-  }
-  .about .about-container ul li .icon-container.design {
-    padding-top: 25px;
-  }
-  .about .about-container {
-    margin: 0;
-  }
-  .about .about-container ul li .deliverables-title {
-    padding: 1em;
-  }
-  .about .about-container ul li .about-title {
-    padding: 1em;
-  }
-  .about .about-container ul li .icon-container img {
-    width: 5.5vw;
-  }
-  .about .about-container ul li.column-stretch .icon-container .design-process-diagram {
-    width: 26vw;
-    height: auto;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 6vw;
-  }
-
-
-  footer .footer-container .footer-details .footer-top-bar .logo {
-    .logo-name {
-      color: #fff;
-      line-height: 23px;
-      letter-spacing: 6.9pt;
-      font-size: 30px;
-      font-variant-caps: small-caps;
+    .about-container ul {
+      .business-model .business-model-icon {
+        height: 100px;
+        width: auto;
+        display: grid;
+        padding: 3em;
+        place-content: center;
+        margin: 0 auto;
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
     }
-    .logo-title {
-      font-size: 11px;
-      color: #fff;
-      letter-spacing: 2pt;
-      font-variant-caps: small-caps;
+    li {
+      .icon-container {
+        padding-top: 25px;
+
+        .deliverables-title {
+          padding: 1em;
+        }
+        .about-title {
+          padding: 1em;
+        }
+        .design-process-diagram {
+          width: 26vw;
+          height: auto;
+        }
+      }
     }
   }
 
-  .footer-container .footer-design {
-    position: relative;
-    right: 33%;
+  footer .footer-container {
+    .footer-details {
+      padding: 2em 13em;
+      .footer-top-bar .logo {
+        .logo-name {
+          line-height: 23px;
+          letter-spacing: 7.5pt;
+          font-size: 30px;
+          font-variant-caps: all-petite-caps;
+        }
+        .logo-title {
+          font-size: 11px;
+          letter-spacing: 2pt;
+          font-variant-caps: inherit;
+        }
+      }
+    }
   }
 
-  .case-study-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  footer .footer-container .footer-details {
-    padding: 4em 13em;
-  }
-
-
-  // contact page styles 
+  // contact page styles
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
     width: 12vw;
   }
@@ -2261,10 +2207,24 @@ section .case-study-inner-guitar {
     height: 30vh;
   }
 
-  // End of Home and Contact Page Styles 
+  // End of Home and Contact Page Styles
+  // guitar-project
+  .case-study-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-
-  
+  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    order: 1;
+  }
+  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
+    color: #252525;
+    order: 2;
+  }
   .hero-container-projects {
     display: grid;
     background-size: cover;
