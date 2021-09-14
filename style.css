@@ -2339,20 +2339,14 @@ section .case-study-inner-guitar {
   .nav-container header .logo {
     padding-left: 12em;
   }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+  .nav-container header .logo .logo-container .logo-name {
+    line-height: 23px;
+    letter-spacing: 7.6pt;
+    font-size: 30px;
+    font-variant-caps: all-petite-caps;
+  }
+  .nav-container header .logo .logo-container .logo-title {
+    font-size: 11px;
   }
   .nav-container header nav ul {
     position: relative;
@@ -2370,6 +2364,11 @@ section .case-study-inner-guitar {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin-right: 13em;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .hero-container {
     display: -ms-grid;
@@ -2389,7 +2388,8 @@ section .case-study-inner-guitar {
   }
   .hero-container .hero-design {
     display: unset;
-    width: 84%;
+    width: 56%;
+    left: -28%;
   }
   .hero-container .hero-design #blockdesign .square-anim:hover,
   .hero-container .hero-design #blockdesign circle:hover {
@@ -2397,19 +2397,6 @@ section .case-study-inner-guitar {
             filter: brightness(5);
     -webkit-transition: linear 0.7s ease-in-out;
     transition: linear 0.7s ease-in-out;
-  }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-    color: #252525;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
   .research-qoute {
     margin: 0 11.5em;
@@ -2421,7 +2408,6 @@ section .case-study-inner-guitar {
     height: 150px;
     width: 150px;
     left: 10em;
-    top: 0;
   }
   .featured .left {
     margin: 0 9em;
@@ -2430,12 +2416,6 @@ section .case-study-inner-guitar {
     text-align: left;
   }
   .featured .right {
-    width: auto;
-    border-radius: 5px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 1em;
     cursor: pointer;
   }
   .skills {
@@ -2449,137 +2429,69 @@ section .case-study-inner-guitar {
     grid-gap: 3em;
   }
   .skills .skills-container ul li {
-    padding: 1em;
     margin-bottom: 1em;
   }
   .skills .skills-container ul p {
     font-size: 1em;
   }
-  .portfolio .portfolio-left .inner .featured-title {
-    font-size: 1.3rem;
-  }
   .portfolio {
     padding: 2em 11em;
   }
-  .portfolio .portfolio-container .portfolio-left {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-    margin: 0;
+  .portfolio .portfolio-container .portfolio-left .inner .featured-title {
+    font-size: 1.3rem;
   }
   .portfolio .portfolio-container .portfolio-left .inner .featured-desc {
     font-size: 1em;
   }
   .portfolio .portfolio-container .right img {
-    width: 18vw;
     border-radius: 20px;
-    height: 22vh;
     padding: 1em;
-    height: 28vh;
-    margin-top: 2em;
-  }
-  .about .about-container ul li .icon-container img {
-    width: 6vw;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 8vw;
-  }
-  .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: -ms-grid;
-    display: grid;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 5.5em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 250px;
-  }
-  .about .about-container ul li .icon-container img {
-    width: 6vw;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 8vw;
-  }
-  .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: -ms-grid;
-    display: grid;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 5.5em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 250px;
+    height: 27vh;
+    width: 20vw;
+    margin-top: 1em;
   }
   .about {
     padding: 4em 13em;
   }
-  .about .about-container ul {
-    grid-gap: 2em;
+  .about .about-container ul .business-model .business-model-icon {
+    height: 100px;
+    width: auto;
+    display: -ms-grid;
+    display: grid;
+    padding: 3em;
+    place-content: center;
+    margin: 0 auto;
   }
-  .about .about-container ul li .icon-container.design {
+  .about .about-container ul .business-model .business-model-icon img {
+    width: 200px;
+    height: auto;
+  }
+  .about li .icon-container {
     padding-top: 25px;
   }
-  .about .about-container {
-    margin: 0;
-  }
-  .about .about-container ul li .deliverables-title {
+  .about li .icon-container .deliverables-title {
     padding: 1em;
   }
-  .about .about-container ul li .about-title {
+  .about li .icon-container .about-title {
     padding: 1em;
   }
-  .about .about-container ul li .icon-container img {
-    width: 5.5vw;
-  }
-  .about .about-container ul li.column-stretch .icon-container .design-process-diagram {
+  .about li .icon-container .design-process-diagram {
     width: 26vw;
     height: auto;
   }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 6vw;
+  footer .footer-container .footer-details {
+    padding: 2em 13em;
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
-    color: #fff;
     line-height: 23px;
-    letter-spacing: 6.9pt;
+    letter-spacing: 7.5pt;
     font-size: 30px;
-    font-variant-caps: small-caps;
+    font-variant-caps: all-petite-caps;
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
     font-size: 11px;
-    color: #fff;
     letter-spacing: 2pt;
-    font-variant-caps: small-caps;
-  }
-  .footer-container .footer-design {
-    position: relative;
-    right: 33%;
-  }
-  .case-study-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer .footer-container .footer-details {
-    padding: 4em 13em;
+    font-variant-caps: inherit;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
     width: 12vw;
@@ -2666,6 +2578,34 @@ section .case-study-inner-guitar {
     left: 30%;
     width: 30vw;
     height: 30vh;
+  }
+  .case-study-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
+    color: #252525;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .hero-container-projects {
     display: -ms-grid;
