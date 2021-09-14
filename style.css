@@ -1339,7 +1339,7 @@ section .case-study-inner-guitar {
     margin: 0 0.5em;
   }
   .featured .left {
-    margin: 0 0.7em;
+    margin: 0 9em;
   }
   .featured .right {
     margin: 0 auto;
@@ -1347,6 +1347,10 @@ section .case-study-inner-guitar {
     width: 100%;
     height: auto;
     padding-bottom: 4em;
+  }
+  .featured .right img {
+    width: 66%;
+    height: auto;
   }
   .skills {
     padding: 2em 2em 0.5em 2em;
@@ -1934,12 +1938,12 @@ section .case-study-inner-guitar {
     margin: 2.2em auto;
   }
   .skills .skills-container li .icon-container img {
-    padding: 1.5rem;
+    padding: 0;
     width: 100px;
     height: auto;
   }
   .skills .skills-container li .icon-container .brand-awareness {
-    padding: 1.2rem;
+    padding: 0;
     width: 170px;
     height: auto;
   }
@@ -2325,50 +2329,15 @@ section .case-study-inner-guitar {
 
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
-  .skills .skills-container ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
-    grid-gap: 1em;
+  p,
+  .qoute-text,
+  .hero-text-content p,
+  .qoute-text p,
+  .featured-desc p {
+    font-size: 1em;
   }
-  .skills .skills-container li {
-    padding: 2em;
-    border-radius: 1em;
-    margin-bottom: 1em;
-  }
-  .about .about-container ul li .icon-container img {
-    width: 6vw;
-  }
-  .about .about-container ul li .icon-container .degree-image {
-    width: 8vw;
-  }
-  .about .about-container ul li .business-model-icon {
-    height: 100px;
-    width: auto;
-    display: -ms-grid;
-    display: grid;
-    padding-bottom: 3em;
-    place-content: center;
-    margin: 0 auto;
-    max-width: 249px;
-    padding-top: 5.5em;
-  }
-  .about .about-container ul li .business-model-icon img {
-    width: 250px;
-  }
-  .portfolio .portfolio-container .right img {
-    width: 34vw;
-    height: 36vh;
-    margin-top: 2em;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
-    width: 12vw;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0.7em;
+  .nav-container header .logo {
+    padding-left: 12em;
   }
   nav {
     display: -webkit-box;
@@ -2382,8 +2351,8 @@ section .case-study-inner-guitar {
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .nav-container header nav ul {
     position: relative;
@@ -2411,61 +2380,23 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .hero-container .hero-text-content {
-    padding: 3em 10em 3em 15em;
+    padding: 3em 8em 3em 13em;
   }
-  .hero-container-projects {
-    display: -ms-grid;
-    display: grid;
-    background-size: cover;
-    height: 76.5vh;
+  .hero-container .hero-text-content .hero-title {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 300;
   }
-  .guitar-project {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
+  .hero-container .hero-design {
+    display: unset;
+    width: 84%;
   }
-  .guitar-project .hero-content-grid {
-    position: static;
-  }
-  .guitar-project .hero-content-grid .hero-text-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: left;
-  }
-  .guitar-project .hero-content-grid .hero-text-content .hero-title-case-study {
-    font-size: 18px;
-    color: #2c4465;
-    font-variant-caps: petite-caps;
-    padding: 15px;
-    background: white;
-    border: 3px solid dodgerblue;
-    border-radius: 5px;
-    letter-spacing: 5pt;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 24vw;
-    position: relative;
-    left: 640px;
-  }
-  .hero-content-grid-guitar {
-    position: relative;
-    top: 50%;
-    left: 33%;
+  .hero-container .hero-design #blockdesign .square-anim:hover,
+  .hero-container .hero-design #blockdesign circle:hover {
+    -webkit-filter: brightness(5);
+            filter: brightness(5);
+    -webkit-transition: linear 0.7s ease-in-out;
+    transition: linear 0.7s ease-in-out;
   }
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
     font-size: 1.5rem;
@@ -2477,26 +2408,11 @@ section .case-study-inner-guitar {
   .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
     color: #252525;
     -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
+        -ms-flex-order: 2;
+            order: 2;
   }
-  .hero-container .hero-text-content .hero-title {
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 300;
-  }
-  .hero-container .hero-design {
-    display: unset;
-    margin-left: -25%;
-    margin-top: 0;
-    width: 50%;
-  }
-  .hero-container .hero-design #blockdesign .square-anim:hover,
-  .hero-container .hero-design #blockdesign circle:hover {
-    -webkit-filter: brightness(5);
-            filter: brightness(5);
-    -webkit-transition: linear 0.7s ease-in-out;
-    transition: linear 0.7s ease-in-out;
+  .research-qoute {
+    margin: 0 11.5em;
   }
   .featured {
     padding: 3em 4em;
@@ -2504,33 +2420,121 @@ section .case-study-inner-guitar {
   .featured:before {
     height: 150px;
     width: 150px;
-    left: 11em;
-    top: 3em;
+    left: 10em;
+    top: 0;
   }
   .featured .left {
-    margin: 4em 11em;
+    margin: 0 9em;
+  }
+  .featured .left .inner .subtitle {
+    text-align: left;
   }
   .featured .right {
     width: auto;
+    border-radius: 5px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1em;
+    cursor: pointer;
+  }
+  .skills {
+    padding: 3em 13em;
+  }
+  .skills .skills-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: 3em;
+  }
+  .skills .skills-container ul li {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .skills .skills-container ul p {
+    font-size: 1em;
+  }
+  .portfolio .portfolio-left .inner .featured-title {
+    font-size: 1.3rem;
+  }
+  .portfolio {
+    padding: 2em 11em;
+  }
+  .portfolio .portfolio-container .portfolio-left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    margin: 0;
+  }
+  .portfolio .portfolio-container .portfolio-left .inner .featured-desc {
+    font-size: 1em;
+  }
+  .portfolio .portfolio-container .right img {
+    width: 18vw;
     border-radius: 20px;
     height: 22vh;
     padding: 1em;
-    cursor: pointer;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    height: 28vh;
+    margin-top: 2em;
   }
-  .featured .right:hover {
-    -webkit-filter: contrast(0.5);
-            filter: contrast(0.5);
+  .about .about-container ul li .icon-container img {
+    width: 6vw;
   }
-  .skills {
-    padding: 4em 15em;
+  .about .about-container ul li .icon-container .degree-image {
+    width: 8vw;
   }
-  .skills .skills-container ul {
-    grid-gap: 1em;
+  .about .about-container ul li .business-model-icon {
+    height: 100px;
+    width: auto;
+    display: -ms-grid;
+    display: grid;
+    padding-bottom: 3em;
+    place-content: center;
+    margin: 0 auto;
+    max-width: 249px;
+    padding-top: 5.5em;
   }
-  .portfolio {
-    padding: 2em 13em;
+  .about .about-container ul li .business-model-icon img {
+    width: 250px;
+  }
+  .about .about-container ul li .icon-container img {
+    width: 6vw;
+  }
+  .about .about-container ul li .icon-container .degree-image {
+    width: 8vw;
+  }
+  .about .about-container ul li .business-model-icon {
+    height: 100px;
+    width: auto;
+    display: -ms-grid;
+    display: grid;
+    padding-bottom: 3em;
+    place-content: center;
+    margin: 0 auto;
+    max-width: 249px;
+    padding-top: 5.5em;
+  }
+  .about .about-container ul li .business-model-icon img {
+    width: 250px;
+  }
+  .about {
+    padding: 4em 13em;
+  }
+  .about .about-container ul {
+    grid-gap: 2em;
+  }
+  .about .about-container ul li .icon-container.design {
+    padding-top: 25px;
+  }
+  .about .about-container {
+    margin: 0;
+  }
+  .about .about-container ul li .deliverables-title {
+    padding: 1em;
+  }
+  .about .about-container ul li .about-title {
+    padding: 1em;
   }
   .about .about-container ul li .icon-container img {
     width: 5.5vw;
@@ -2541,6 +2545,57 @@ section .case-study-inner-guitar {
   }
   .about .about-container ul li .icon-container .degree-image {
     width: 6vw;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+    color: #fff;
+    line-height: 23px;
+    letter-spacing: 6.9pt;
+    font-size: 30px;
+    font-variant-caps: small-caps;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 2pt;
+    font-variant-caps: small-caps;
+  }
+  .footer-container .footer-design {
+    position: relative;
+    right: 33%;
+  }
+  .case-study-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-container .footer-details {
+    padding: 4em 13em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
+    width: 12vw;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0.7em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
+    width: 12vw;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0.7em;
   }
   .contact-page-section .contact-container {
     padding: 4em 12em;
@@ -2612,75 +2667,60 @@ section .case-study-inner-guitar {
     width: 30vw;
     height: 30vh;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
-    color: #fff;
-    line-height: 23px;
-    letter-spacing: 6.9pt;
-    font-size: 30px;
-    font-variant-caps: small-caps;
-  }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
-    font-size: 11px;
-    color: #fff;
-    letter-spacing: 2pt;
-    font-variant-caps: small-caps;
-  }
-  .footer-container .footer-design {
-    position: relative;
-    right: 33%;
-  }
-  .portfolio-left {
+  .hero-container-projects {
     display: -ms-grid;
     display: grid;
-    place-content: center;
+    background-size: cover;
+    height: 76.5vh;
   }
-  .portfolio .portfolio-container .right img {
-    width: 18vw;
-    border-radius: 20px;
-    height: 25vh;
-    padding: 1em;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
-  .portfolio .portfolio-container .right img:hover {
-    -webkit-filter: contrast(0.5);
-            filter: contrast(0.5);
-  }
-  .about {
-    padding: 4em 15em;
-  }
-  .about .about-container ul {
-    grid-gap: 2em;
-  }
-  .about .about-container ul li .icon-container.design {
-    padding-top: 25px;
-  }
-  .about .about-container {
-    margin: 0;
-  }
-  .about .about-container ul li .deliverables-title {
-    padding: 1em;
-  }
-  .about .about-container ul li .about-title {
-    padding: 1em;
-  }
-  .case-study-container {
+  .guitar-project {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .guitar-project .hero-content-grid {
+    position: static;
+  }
+  .guitar-project .hero-content-grid .hero-text-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    padding: 3em 8em 3em 13em;
   }
-  footer .footer-container .footer-details {
-    padding: 4em 15em;
+  .guitar-project .hero-content-grid .hero-text-content .hero-title-case-study {
+    font-size: 18px;
+    color: #2c4465;
+    font-variant-caps: petite-caps;
+    padding: 15px;
+    background: white;
+    border: 3px solid dodgerblue;
+    border-radius: 5px;
+    letter-spacing: 5pt;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 24vw;
+    position: relative;
+    left: 640px;
+  }
+  .hero-content-grid-guitar {
+    position: relative;
+    top: 50%;
+    left: 33%;
   }
   .intro-container {
     display: -webkit-box;
@@ -2744,12 +2784,6 @@ section .case-study-inner-guitar {
         grid-template-columns: auto auto;
     padding: 10px;
     grid-gap: 3em;
-  }
-  .portfolio .portfolio-left .inner .featured-title {
-    font-size: 1.3rem;
-  }
-  .featured .left .inner .subtitle {
-    text-align: left;
   }
   .team {
     display: -webkit-box;
