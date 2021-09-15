@@ -1641,31 +1641,21 @@ section .case-study-inner-guitar {
     }
   }
 
-  .portfolio .portfolio img {
-    float: right;
-    max-width: 500px;
-  }
   .portfolio {
     padding: 0;
-    margin: 0;
     .portfolio-container {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
       margin: 0 2em;
-      .portfolio-left {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-      }
       .right {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        height: auto;
         img {
-          width: 30vw;
+          width: 36vw;
+          height: 30vh;
+          padding-top: 2em;
+        }
+        .case-study-button {
+          width: 20vw;
         }
       }
     }
@@ -1677,20 +1667,17 @@ section .case-study-inner-guitar {
     background-size: cover;
     padding: 2.1em;
     .about-container {
-      text-align: center;
       ul {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 2em;
         li {
-          padding: 1em;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           margin: 0;
           .icon-container {
-            margin: 0;
             padding: 0;
             .degree-image {
               width: 8.5vw;
