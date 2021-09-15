@@ -101,7 +101,8 @@ header nav #click {
   height: 57px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 15px;
   header {
     display: flex;
     justify-content: space-between;
@@ -188,6 +189,9 @@ header #click:checked ~ ul li a {
     padding: 0.5em;
     width: 25px;
     height: auto;
+    position: absolute;
+    right: 10px;
+    top: 7px;
     path {
       fill: $core-light;
     }
@@ -204,7 +208,6 @@ header #click:checked ~ ul li a {
     font-size: 1.3rem;
     line-height: 2rem;
   }
-
   .wrap {
     font-family: "Poppins";
     font-size: 1.3rem;
@@ -212,11 +215,10 @@ header #click:checked ~ ul li a {
     margin: 0;
   }
 }
+
 .hero-content-grid {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
@@ -329,7 +331,6 @@ header #click:checked ~ ul li a {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 22vh;
     img {
       border-radius: 5px;
       margin-top: 0;
@@ -337,12 +338,13 @@ header #click:checked ~ ul li a {
     }
     button {
       background-color: $primary-core;
-      padding: 6px 12px;
+      width: 100%;
+      padding: 8px;
       color: $core-light;
       font-size: 17px;
       border-radius: 5px;
       border: $button-border-settings;
-      margin-right: 10px;
+      margin: 1em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -357,6 +359,10 @@ header #click:checked ~ ul li a {
     }
     a {
       color: $core-light;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-weight: 600;
     }
   }
 }
@@ -389,7 +395,7 @@ header #click:checked ~ ul li a {
       }
       p {
         text-align: left;
-        padding: 0 1em;
+        padding: 0 5px;
       }
       .icon-container {
         filter: hue-rotate(360deg);
@@ -418,9 +424,6 @@ header #click:checked ~ ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .portfolio-container {
-    margin-bottom: 2em;
-  }
 }
 
 .portfolio .portfolio-left .inner {
@@ -449,13 +452,13 @@ header #click:checked ~ ul li a {
   justify-content: space-evenly;
   .case-study-button {
     background-color: $primary-core;
-    padding: 6px 12px;
-    margin-top: 20px;
+    width: 100%;
+    padding: 8px;
     color: $core-light;
     font-size: 17px;
     border-radius: 5px;
     border: $button-border-settings;
-    margin-right: 10px;
+    margin: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -469,6 +472,10 @@ header #click:checked ~ ul li a {
     }
     .primary-button {
       color: $core-light;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-weight: 600;
     }
   }
 }
@@ -840,7 +847,7 @@ footer {
             flex-direction: column;
           }
           .logo-name {
-            font-size: 23px;
+            font-size: 22px;
             color: $core-light;
             line-height: 11px;
             font-variant-caps: all-petite-caps;
@@ -1010,29 +1017,17 @@ section .case-study-inner-guitar {
   color: #5252ff;
 }
 
-// medium mobile viewport styles
-@media only screen and (min-width: 375px) {
-  .nav-container {
-    justify-content: flex-start;
-    padding-left: 15px;
-  }
-  .menu-btn svg {
-    position: absolute;
-    right: 10px;
-    top: 7px;
-  }
-}
 // Large mobile Phone Viewport styles
 @media only screen and (min-width: 425px) {
   section {
-    padding: 1.5em;
+    padding: 1em;
   }
   .about .about-container ul li .icon-container {
     height: inherit;
   }
 
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
-    letter-spacing: 4.8pt;
+    letter-spacing: 5pt;
     margin-top: 0.5em;
   }
 }
@@ -1044,7 +1039,11 @@ section .case-study-inner-guitar {
   }
 
   .menu-btn svg {
-    padding-right: 2em;
+    padding-right: 1em;
+  }
+
+  .research-qoute {
+    margin: 0 1em;
   }
 
   .hero-container .hero-text-content {
@@ -1052,26 +1051,17 @@ section .case-study-inner-guitar {
   }
   .featured:before {
     left: 34px;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
 
-  .research-qoute {
-    margin: 0 0.5em;
-  }
   .featured .left {
-    margin: 0 9em;
+    margin: 0 1em;
   }
   .featured .right {
-    margin: 0 auto;
-    max-width: 60vw;
-    width: 100%;
+    width: 65%;
     height: auto;
-    padding-bottom: 4em;
-    img {
-      width: 66%;
-      height: auto;
-    }
+    padding-bottom: 1em;
   }
 
   .skills {
@@ -1082,8 +1072,6 @@ section .case-study-inner-guitar {
       .icon-container {
         margin-top: 2em;
         img {
-          width: 66px;
-          height: auto;
           margin-bottom: 2em;
         }
         .brand-awareness {
@@ -1102,23 +1090,20 @@ section .case-study-inner-guitar {
           padding-bottom: 10px;
         }
       }
-      .portfolio-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        img {
-          width: 40vw;
-          border-radius: 5px;
-        }
-      }
       .right {
+        margin-bottom: 1em;
         img {
-          width: 40vw;
+          width: 65%;
+          height: auto;
+          padding-bottom: 1em;
+        }
+        .case-study-button {
+          width: 65%;
         }
       }
     }
   }
+
   .about {
     margin-bottom: 0;
     .about-container ul {
@@ -1129,9 +1114,26 @@ section .case-study-inner-guitar {
         .icon-container {
           padding: 2em 0;
           img {
-            width: 16vw;
+            width: 65%;
             height: auto;
+            margin: 0 auto;
           }
+          svg {
+            width: 85%;
+            height: auto;
+            margin: 0 auto;
+          }
+        }
+        .degree {
+          .degree-image {
+            width: 130%;
+            height: auto;
+            margin: 0 auto;
+          }
+        }
+        .deliverables-img svg {
+          width: 45vw;
+          height: auto;
         }
       }
       .business-model {
@@ -1139,7 +1141,7 @@ section .case-study-inner-guitar {
           width: 80%;
           padding: 2em;
           img {
-            width: 350px;
+            width: 70%;
             height: auto;
           }
         }
@@ -1339,7 +1341,6 @@ section .case-study-inner-guitar {
   }
 
   footer .footer-container .footer-details {
-    justify-content: flex-start;
     padding: 2em;
   }
 }
@@ -1352,10 +1353,9 @@ section .case-study-inner-guitar {
       font-variant-caps: all-petite-caps;
     }
     .logo .logo-container {
-      align-items: baseline;
-      flex-direction: row;
       .logo-name {
         font-size: 1.8rem;
+        letter-spacing: 5pt;
       }
       .logo-title {
         display: flex;
@@ -1366,16 +1366,12 @@ section .case-study-inner-guitar {
     }
   }
 
-  header #click:checked ~ ul {
-    left: 0;
-    top: 57px;
-  }
-
   .hero-container {
     display: grid;
     padding: 0;
     .hero-text-content {
       background: #fff8dc;
+      padding: 2em;
     }
   }
 
@@ -1387,23 +1383,22 @@ section .case-study-inner-guitar {
   .mobile-social-icon a {
     padding: 1em;
     display: flex;
-    svg {
-      width: auto;
-    }
   }
+
+  .research-qoute .qoute-text {
+    font-size: 1rem;
+  }
+
   .featured {
     padding: 2em;
     &:before {
       top: 0;
-      left: 10px;
-      width: 100px;
-      height: 100px;
+      left: 2em;
+      width: 150px;
+      height: 150px;
     }
     .left {
       margin: 0;
-      .inner {
-        padding: 0;
-      }
     }
     .right {
       padding-bottom: 2em;
@@ -1415,31 +1410,34 @@ section .case-study-inner-guitar {
     .icon-container {
       margin: 2em auto;
       img {
-        margin-bottom: 0;
+        width: 90px;
+        margin: 0 auto;
+        height: auto;
       }
     }
   }
 
   .portfolio {
-    margin: 0 1em;
+    margin: 0;
     .portfolio-container {
-      img {
-        width: 50vw;
-      }
       .right {
         display: flex;
         flex-direction: column;
+        img,
+        .case-study-button {
+          width: 50vw;
+        }
       }
     }
   }
 
   .about {
-    padding: 1.5em;
+    padding: 1.4em;
     .about-container ul {
       grid-gap: 0;
       li {
         margin-bottom: 1.5em;
-        padding: 2em;
+        padding: 1em;
         .icon-container {
           img,
           .degree-image {
@@ -1453,6 +1451,10 @@ section .case-study-inner-guitar {
             height: auto;
           }
         }
+      }
+      .business-model .business-model-icon img {
+        width: 50%;
+        height: auto;
       }
     }
   }
@@ -1500,7 +1502,7 @@ section .case-study-inner-guitar {
   }
   footer .footer-container .footer-details {
     padding: 2em 3em;
-    .footer-top-bar .logo .logo-name {
+    .footer-top-bar .logo .logo-container .logo-name {
       letter-spacing: 5.2pt;
       font-size: 1.8rem;
     }
@@ -1520,9 +1522,9 @@ section .case-study-inner-guitar {
           flex-direction: column;
           .logo-name {
             font-size: 1.5rem;
+            letter-spacing: 11pt;
           }
           .logo-title {
-            font-size: 0.8rem;
             letter-spacing: 2pt;
           }
         }
@@ -1538,27 +1540,30 @@ section .case-study-inner-guitar {
       }
     }
   }
+
   .menu-btn svg {
-    top: 7px;
-    right: 24px;
+    top: 5px;
+    right: 1.4em;
+    width: 35px;
+    height: auto;
   }
+
   .hero-container {
     grid-template-columns: 70% auto;
-
     .hero-text-content {
       background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
       padding: 2.3rem;
     }
     .hero-design {
-      display: block;
-      width: 18%;
-      position: absolute;
-      right: 19px;
-      bottom: 208px;
+      display: grid;
+      position: relative;
+      left: -40%;
+      top: 40%;
+      width: 80%;
+      height: auto;
     }
     .mouse-scroller {
       display: flex;
-      align-items: center;
       justify-content: center;
       .mouse {
         width: 10px;
@@ -1578,18 +1583,6 @@ section .case-study-inner-guitar {
         }
       }
     }
-    .hero-design {
-      position: relative;
-      left: -42%;
-      top: 78px;
-      width: 90%;
-    }
-  }
-
-  .footer-social-icon a:hover,
-  .top-social-icon a:hover {
-    opacity: 0.5;
-    transition: all 0.5s ease-in-out;
   }
 
   @keyframes scroll {
@@ -1604,6 +1597,13 @@ section .case-study-inner-guitar {
       top: 25px;
     }
   }
+
+  .footer-social-icon a:hover,
+  .top-social-icon a:hover {
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+  }
+
   .mobile-social-icon {
     display: none;
   }
@@ -1611,34 +1611,36 @@ section .case-study-inner-guitar {
     padding: 3em 2em;
   }
   .skills .skills-container ul {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 1em;
+    display: flex;
+    flex-direction: row;
+    li {
+      justify-content: space-evenly;
+      margin-left: 1em;
+      .icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .two {
+          margin: 3em auto;
+          width: auto;
+        }
+        .three {
+          margin: 2.2em auto;
+          width: auto;
+        }
+        img {
+          padding: 0;
+          width: 140%;
+          height: auto;
+        }
+      }
+      .skill-title {
+        font-size: 2rem;
+      }
+    }
   }
-  .skills .skills-container li {
-    padding: 2em;
-    border-radius: 1em;
-    margin-bottom: 1em;
-  }
-  .skills .skills-container ul li .two {
-    margin: 3em auto;
-  }
-  .skills .skills-container ul li .three {
-    margin: 2.2em auto;
-  }
-  .skills .skills-container li .icon-container img {
-    padding: 0;
-    width: 100px;
-    height: auto;
-  }
-  .skills .skills-container li .icon-container .brand-awareness {
-    padding: 0;
-    width: 170px;
-    height: auto;
-  }
-  .skills .skills-container li .skill-title {
-    font-size: 2rem;
-  }
+
   .portfolio .portfolio img {
     float: right;
     max-width: 500px;
