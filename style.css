@@ -2186,7 +2186,7 @@ section .case-study-inner-guitar {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0;
+    padding-left: 0;
   }
   .nav-container header {
     height: 60px;
@@ -2203,7 +2203,7 @@ section .case-study-inner-guitar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: -36px;
+    margin-right: -22px;
   }
   .nav-container header nav ul {
     position: unset;
@@ -2221,9 +2221,6 @@ section .case-study-inner-guitar {
     width: 26%;
   }
   .nav-container header nav ul li a {
-    font-size: 18px;
-    color: #fff;
-    display: initial;
     padding: 0 10px;
     -webkit-transition: 1s all;
     transition: 1s all;
@@ -2235,46 +2232,21 @@ section .case-study-inner-guitar {
   .nav-container header .logo {
     padding-left: 2em;
     font-size: 0.8rem;
-    color: #fff;
-    letter-spacing: 2pt;
-    font-variant-caps: small-caps;
-  }
-  .nav-container header .logo .menu-btn {
-    display: none;
   }
   .nav-container header .logo-name {
     font-size: 1.5rem;
-    line-height: 20px;
-    font-variant-caps: all-petite-caps;
+    letter-spacing: 10pt;
+  }
+  .nav-container header .logo-title {
     letter-spacing: 1.5pt;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .nav-container header .logo-title {
-    font-size: 0.8rem;
-    color: #fff;
-    letter-spacing: 2pt;
-    font-variant-caps: small-caps;
-  }
-  .nav-container header .logo-placeholder .company-logo img {
-    height: 35px;
-    width: auto;
-  }
   .nav-container .top-social-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin: 0px 1.5em;
   }
   .nav-container .top-social-icon a {
@@ -2324,7 +2296,7 @@ section .case-study-inner-guitar {
     font-size: 1em;
   }
   .nav-container header .logo {
-    padding-left: 12em;
+    padding-left: 16em;
   }
   .nav-container header .logo .logo-container .logo-name {
     line-height: 23px;
@@ -2334,36 +2306,15 @@ section .case-study-inner-guitar {
   }
   .nav-container header .logo .logo-container .logo-title {
     font-size: 11px;
+    letter-spacing: 2pt;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .nav-container header nav ul {
     position: relative;
     top: 0;
     left: -11px;
-  }
-  .nav-container .top-social-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-right: 13em;
-  }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .hero-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 70% auto;
-        grid-template-columns: 70% auto;
-    background: unset;
-    padding: 0;
   }
   .hero-container .hero-text-content {
     padding: 3em 8em 3em 13em;
@@ -2371,12 +2322,9 @@ section .case-study-inner-guitar {
   .hero-container .hero-text-content .hero-title {
     font-size: 2rem;
     line-height: 3rem;
-    font-weight: 300;
   }
   .hero-container .hero-design {
-    display: unset;
-    width: 56%;
-    left: -28%;
+    left: -40%;
   }
   .hero-container .hero-design #blockdesign .square-anim:hover,
   .hero-container .hero-design #blockdesign circle:hover {
@@ -2385,6 +2333,9 @@ section .case-study-inner-guitar {
     -webkit-transition: linear 0.7s ease-in-out;
     transition: linear 0.7s ease-in-out;
   }
+  .hero-container .txt-rotate .wrap {
+    font-size: 2.5rem;
+  }
   .research-qoute {
     margin: 0 11.5em;
   }
@@ -2392,8 +2343,6 @@ section .case-study-inner-guitar {
     padding: 3em 4em;
   }
   .featured:before {
-    height: 150px;
-    width: 150px;
     left: 10em;
   }
   .featured .left {
@@ -2407,13 +2356,6 @@ section .case-study-inner-guitar {
   }
   .skills {
     padding: 3em 13em;
-  }
-  .skills .skills-container ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
-    grid-gap: 3em;
   }
   .skills .skills-container ul li {
     margin-bottom: 1em;
@@ -2447,35 +2389,26 @@ section .case-study-inner-guitar {
     display: grid;
     padding: 3em;
     place-content: center;
-    margin: 0 auto;
   }
   .about .about-container ul .business-model .business-model-icon img {
     width: 200px;
     height: auto;
   }
-  .about li .icon-container {
-    padding-top: 25px;
-  }
-  .about li .icon-container .deliverables-title {
+  .about li .deliverables-title {
     padding: 1em;
   }
-  .about li .icon-container .about-title {
+  .about li .about-title {
     padding: 1em;
-  }
-  .about li .icon-container .design-process-diagram {
-    width: 26vw;
-    height: auto;
   }
   footer .footer-container .footer-details {
     padding: 2em 13em;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
     line-height: 23px;
     letter-spacing: 7.5pt;
     font-size: 30px;
-    font-variant-caps: all-petite-caps;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
     font-size: 11px;
     letter-spacing: 2pt;
     font-variant-caps: inherit;

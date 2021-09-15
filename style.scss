@@ -1854,7 +1854,7 @@ section .case-study-inner-guitar {
     grid-template-columns: 75% auto;
     background: unset;
     align-items: center;
-    padding: 0;
+    padding-left: 0;
     header {
       height: 60px;
       background: #2c4465;
@@ -1862,7 +1862,7 @@ section .case-study-inner-guitar {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: -36px;
+        margin-right: -22px;
         ul {
           position: unset;
           display: flex;
@@ -1872,9 +1872,6 @@ section .case-study-inner-guitar {
             font-size: 18px;
             width: 26%;
             a {
-              font-size: 18px;
-              color: #fff;
-              display: initial;
               padding: 0 10px;
               transition: 1s all;
               margin-right: 7px;
@@ -1888,38 +1885,18 @@ section .case-study-inner-guitar {
       .logo {
         padding-left: 2em;
         font-size: 0.8rem;
-        color: #fff;
-        letter-spacing: 2pt;
-        font-variant-caps: small-caps;
-        .menu-btn {
-          display: none;
-        }
       }
       .logo-name {
         font-size: 1.5rem;
-        line-height: 20px;
-        font-variant-caps: all-petite-caps;
-        letter-spacing: 1.5pt;
-        justify-content: flex-start;
+        letter-spacing: 10pt;
       }
       .logo-title {
-        font-size: 0.8rem;
-        color: #fff;
-        letter-spacing: 2pt;
-        font-variant-caps: small-caps;
-      }
-      .logo-placeholder .company-logo {
-        img {
-          height: 35px;
-          width: auto;
-        }
+        letter-spacing: 1.5pt;
+        justify-content: flex-start;
       }
     }
     .top-social-icon {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
       margin: 0px 1.5em;
       a {
         margin: 0 1em;
@@ -1929,7 +1906,6 @@ section .case-study-inner-guitar {
   }
 
   .menu-btn svg {display: none;}
-
   .hero-container {grid-template-columns: 75% auto;}
   .featured .right img { width: 70%;}
   .about .about-container ul li { justify-content: space-evenly;}
@@ -1955,77 +1931,37 @@ section .case-study-inner-guitar {
   }
 
   // top-nav styles
-  .nav-container {
-    header {
-      .logo {
-        padding-left: 12em;
-        .logo-container {
-          .logo-name {
-            line-height: 23px;
-            letter-spacing: 7.6pt;
-            font-size: 30px;
-            font-variant-caps: all-petite-caps;
-          }
-          .logo-title {
-            font-size: 11px;
-          }
-        }
-      }
-    }
-  }
 
-  .nav-container header nav ul {
-    position: relative;
-    top: 0;
-    left: -11px;
-  }
-  .nav-container .top-social-icon {
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    margin-right: 13em;
-  }
-  nav {
-    display: flex;
-  }
+  .nav-container header .logo { padding-left: 16em;}
+  .nav-container  header .logo .logo-container .logo-name {line-height: 23px; letter-spacing: 7.6pt;font-size: 30px; font-variant-caps: all-petite-caps;}
+  .nav-container  header .logo .logo-container .logo-title {font-size: 11px;letter-spacing: 2pt;justify-content: flex-start;}
+  .nav-container header nav ul { position: relative; top: 0; left: -11px;}
+
   // index-page
   .hero-container {
-    display: grid;
-    grid-template-columns: 70% auto;
-    background: unset;
-    padding: 0;
     .hero-text-content {
       padding: 3em 8em 3em 13em;
       .hero-title {
         font-size: 2rem;
         line-height: 3rem;
-        font-weight: 300;
       }
     }
     .hero-design {
-      display: unset;
-      width: 56%;
-      left: -28%;
-
+      left: -40%;
       #blockdesign .square-anim:hover,
       #blockdesign circle:hover {
         filter: brightness(5);
         transition: linear 0.7s ease-in-out;
       }
     }
+    .txt-rotate .wrap {font-size: 2.5rem;}
   }
-
-  .research-qoute {
-    margin: 0 11.5em;
-  }
+  
+  .research-qoute {  margin: 0 11.5em;}
 
   .featured {
     padding: 3em 4em;
-    &:before {
-      height: 150px;
-      width: 150px;
-      left: 10em;
-    }
+    &:before { left: 10em;}
     .left {
       margin: 0 9em;
       .inner .subtitle {
@@ -2040,9 +1976,6 @@ section .case-study-inner-guitar {
   .skills {
     padding: 3em 13em;
     .skills-container ul {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-gap: 3em;
       li {
         margin-bottom: 1em;
       }
@@ -2084,7 +2017,6 @@ section .case-study-inner-guitar {
         display: grid;
         padding: 3em;
         place-content: center;
-        margin: 0 auto;
         img {
           width: 200px;
           height: auto;
@@ -2092,32 +2024,23 @@ section .case-study-inner-guitar {
       }
     }
     li {
-      .icon-container {
-        padding-top: 25px;
-
         .deliverables-title {
           padding: 1em;
         }
         .about-title {
           padding: 1em;
         }
-        .design-process-diagram {
-          width: 26vw;
-          height: auto;
-        }
       }
     }
-  }
 
   footer .footer-container {
     .footer-details {
       padding: 2em 13em;
-      .footer-top-bar .logo {
+      .footer-top-bar .logo .logo-container  {
         .logo-name {
           line-height: 23px;
           letter-spacing: 7.5pt;
           font-size: 30px;
-          font-variant-caps: all-petite-caps;
         }
         .logo-title {
           font-size: 11px;
