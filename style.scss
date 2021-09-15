@@ -1609,6 +1609,9 @@ section .case-study-inner-guitar {
   }
   .featured {
     padding: 3em 2em;
+    .right button {
+      width: 20vw;
+    }
   }
   .skills .skills-container ul {
     display: flex;
@@ -1682,7 +1685,6 @@ section .case-study-inner-guitar {
             .degree-image {
               width: 8.5vw;
             }
-
             img {
               width: 5.9em;
               height: auto;
@@ -1849,7 +1851,7 @@ section .case-study-inner-guitar {
 @media only screen and (min-width: 1250px) {
   .nav-container {
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 75% auto;
     background: unset;
     align-items: center;
     padding: 0;
@@ -1860,6 +1862,7 @@ section .case-study-inner-guitar {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-right: -36px;
         ul {
           position: unset;
           display: flex;
@@ -1874,6 +1877,7 @@ section .case-study-inner-guitar {
               display: initial;
               padding: 0 10px;
               transition: 1s all;
+              margin-right: 7px;
               &:hover {
                 color: cyan;
               }
@@ -1883,41 +1887,20 @@ section .case-study-inner-guitar {
       }
       .logo {
         padding-left: 2em;
+        font-size: 0.8rem;
+        color: #fff;
+        letter-spacing: 2pt;
+        font-variant-caps: small-caps;
         .menu-btn {
           display: none;
         }
       }
       .logo-name {
-        font-size: 1.2rem;
-      }
-      .logo-name {
-        font-size: 1.2rem;
-      }
-    }
-    .top-social-icon {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      margin: 0 3.5em;
-      a {
-        margin: 0 1em;
-        transition: 1s all;
-      }
-    }
-  }
-
-  .nav-container header .logo {
-    .logo-placeholder .company-logo {
-      img {
-        height: 35px;
-        width: auto;
-      }
-    }
-    .logo-container {
-      .logo-name {
+        font-size: 1.5rem;
         line-height: 20px;
         font-variant-caps: all-petite-caps;
+        letter-spacing: 1.5pt;
+        justify-content: flex-start;
       }
       .logo-title {
         font-size: 0.8rem;
@@ -1925,20 +1908,40 @@ section .case-study-inner-guitar {
         letter-spacing: 2pt;
         font-variant-caps: small-caps;
       }
+      .logo-placeholder .company-logo {
+        img {
+          height: 35px;
+          width: auto;
+        }
+      }
+    }
+    .top-social-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0px 1.5em;
+      a {
+        margin: 0 1em;
+        transition: 1s all;
+      }
     }
   }
 
-  .about .about-container ul li {
-    justify-content: space-evenly;
-  }
+  .menu-btn svg {display: none;}
+
+  .hero-container {grid-template-columns: 75% auto;}
+  .featured .right img { width: 70%;}
+  .about .about-container ul li { justify-content: space-evenly;}
   .about .about-container ul li .icon-container img,
   .about .about-container ul li .icon-container .degree-image {
     width: 94.39px;
     height: 96.67px;
   }
-  .about .about-container ul .business-model .business-model-icon {
-    padding: 0;
-  }
+  .about .about-container ul .business-model .business-model-icon {padding: 0;}
+  .portfolio .portfolio-container .right img {width: 26vw;}
+  .portfolio .portfolio-container .right .case-study-button,
+  .featured .right button  {width: 17vw;}
 }
 
 /*Large Laptop/ Desktop viewport styles */
