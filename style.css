@@ -232,7 +232,7 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
-  width: 25px;
+  width: 26px;
   height: auto;
   position: absolute;
   right: 10px;
@@ -751,9 +751,7 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section {
-  padding: 0.5em;
-  margin: 0 auto;
-  width: 95%;
+  overflow-x: hidden;
 }
 
 .contact-page-section .contact-container {
@@ -774,9 +772,12 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-title {
-  color: #5252ff;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 4pt;
+  font-size: 1.3rem;
+  font-variant-caps: all-petite-caps;
+  color: #2c4465;
   padding: 0 0.5em;
 }
 
@@ -785,14 +786,16 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .contact-form p .open-modal {
-  font-weight: 600;
+  color: #213550;
+  font-weight: 500;
   cursor: pointer;
+  text-decoration: underline;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .contact-page-section .contact-container .contact-form p .open-modal:hover {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container {
@@ -806,8 +809,14 @@ header #click:checked ~ ul li a {
   padding-top: 0.5em;
 }
 
+.contact-page-section .contact-container .contact-form .contact-form-container .w50 {
+  width: 100%;
+}
+
 .contact-page-section .contact-container .input-area {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0.5em;
 }
 
@@ -874,54 +883,61 @@ label
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child {
-  width: 80vw;
+  width: 85vw;
   padding: 5px;
-  border-bottom: 1px solid #000100;
+  border-bottom: 1px solid #2c4465;
   border-top: none;
   border-left: none;
   border-right: none;
   font-size: 18px;
-  color: #000;
+  color: #2c4465;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field {
-  width: 80vw;
+  width: 85vw;
   padding: 5px;
   height: 14vh;
   overflow: hidden;
   font-family: "Poppins";
   font-size: 18px;
-  color: #000;
+  color: #2c4465;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-  background: #3030db;
-  border: white 2px solid;
+  background-color: #2c4465;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 17px;
   border-radius: 5px;
-  padding: 8px 16px;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  margin: 0 auto;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
+  border: 1px solid #2c4465;
+  margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0.5em;
-  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-box-shadow: 0 8px 13px -4px lightblue;
+          box-shadow: 0 8px 13px -4px lightblue;
+  color: #ffffff;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  font-weight: 600;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button:hover {
-  background: #fff;
-  color: #3030db;
-  border-color: #3030db;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container .w50 {
-  width: 100%;
+  background: #618bc5;
+  color: #ffffff;
+  border-color: #2c4465;
+  -webkit-box-shadow: 0 8px 13px -4px #0d4252c4;
+          box-shadow: 0 8px 13px -4px #0d4252c4;
 }
 
 a {
@@ -946,35 +962,23 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  background: #fff;
-  border: 2px solid silver;
+  background: #ffffff;
+  border: 2px solid #2c4465;
   border-radius: 5px;
   top: 25%;
-  left: 0;
+  left: 4%;
+  width: 80vw;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 
 .show-modal .contact-modal-title {
-  font-size: 1.2em;
   font-weight: 500;
-}
-
-.show-modal .close-modal .close-icon {
-  color: #252525;
-  cursor: pointer;
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 30px;
-  height: auto;
-}
-
-.show-modal .close-modal .close-icon:hover {
-  -webkit-filter: brightness(4.5);
-          filter: brightness(4.5);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  line-height: 21px;
+  letter-spacing: 4pt;
+  font-size: 1.3rem;
+  font-variant-caps: all-petite-caps;
+  color: #2c4465;
 }
 
 .show-modal ul {
@@ -995,7 +999,7 @@ a {
 }
 
 .show-modal ul li {
-  padding: 10px 0;
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1027,6 +1031,7 @@ a {
 }
 
 .show-modal ul li a span {
+  font-size: 14px;
   font-weight: 300;
   color: #252525;
   text-decoration: none;
@@ -1034,6 +1039,23 @@ a {
 
 .show-modal ul li a span:hover {
   text-decoration: underline;
+}
+
+.show-modal .close-modal .close-icon {
+  color: #252525;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 30px;
+  height: auto;
+}
+
+.show-modal .close-modal .close-icon:hover {
+  -webkit-filter: brightness(4.5);
+          filter: brightness(4.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .blur {
@@ -1315,9 +1337,6 @@ section .case-study-inner-guitar {
 }
 
 @media only screen and (min-width: 610px) {
-  .nav-container {
-    padding-left: 2em;
-  }
   .menu-btn svg {
     padding-right: 1em;
   }
@@ -1415,47 +1434,6 @@ section .case-study-inner-guitar {
     height: auto;
   }
   /*contact page styles*/
-  .contact-page-section {
-    background-image: url(/img/form-background-min.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-title {
-    font-size: 1.5rem;
-    padding: 0 0.7em;
-  }
-  .contact-page-section .contact-container .contact-form p {
-    font-size: 1.3em;
-    padding: 0 1em;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
-    margin: 10px 0;
-    width: 92%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    border-radius: 8px;
-    margin-bottom: -10px;
-    width: 100%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 10px 20px;
-  }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child,
@@ -1464,124 +1442,28 @@ section .case-study-inner-guitar {
     padding-left: 0.5em;
     padding-top: 0.5em;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::-webkit-input-placeholder {
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-webkit-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-webkit-input-placeholder {
     font-size: 18px;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field:-ms-input-placeholder {
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child:-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field:-ms-input-placeholder {
     font-size: 18px;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::-ms-input-placeholder {
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::-ms-input-placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::-ms-input-placeholder {
     font-size: 18px;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::placeholder {
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child::placeholder,
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::placeholder {
     font-size: 18px;
   }
   .show-modal {
