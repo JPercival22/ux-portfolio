@@ -94,7 +94,7 @@ header nav #click {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .nav-container header {
@@ -235,8 +235,8 @@ header #click:checked ~ ul li a {
   width: 25px;
   height: auto;
   position: absolute;
-  right: 10px;
-  top: 7px;
+  right: 0;
+  top: 2px;
 }
 
 .menu-btn svg path {
@@ -658,6 +658,7 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1em;
 }
 
 .research-qoute .qoute-text {
@@ -750,13 +751,7 @@ header #click:checked ~ ul li a {
   width: 230px;
 }
 
-.contact-page-section {
-  padding: 0.5em;
-  margin: 0 auto;
-  width: 95%;
-}
-
-.contact-page-section .contact-container {
+.contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,50 +760,88 @@ header #click:checked ~ ul li a {
           justify-content: center;
 }
 
-.contact-page-section .contact-container .contact-form {
+.contact-container .contact-form {
   border: 1px solid #000100;
   border-radius: 8px;
   background-color: #fffdf2ed;
   padding-bottom: 0;
   margin-bottom: 0;
+  padding: 0 10px;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-title {
-  color: #5252ff;
-  font-size: 1.2rem;
-  font-weight: 700;
+.contact-container .contact-form .contact-form-title {
+  line-height: 27pt;
+  color: #2c4465;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 5px;
+}
+
+.contact-container .contact-form p {
   padding: 0 0.5em;
 }
 
-.contact-page-section .contact-container .contact-form p {
-  padding: 0 0.5em;
-}
-
-.contact-page-section .contact-container .contact-form p .open-modal {
+.contact-container .contact-form p span {
+  color: #213550;
   font-weight: 600;
+  text-decoration: underline;
   cursor: pointer;
-}
-
-.contact-page-section .contact-container .contact-form p .open-modal:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  text-decoration: underline;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-container {
+.contact-container .contact-form p span:hover {
+  text-decoration: none;
+}
+
+.contact-container .contact-form-container {
   border-radius: 0 0 5px 5px;
   padding: 0;
   margin: 0;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-container .left {
+.contact-container .contact-form-container .left {
   background: #5cb95c2b;
   padding-top: 0.5em;
 }
 
-.contact-page-section .contact-container .input-area {
+.contact-container .contact-form-container .input-area {
   position: relative;
   padding: 0.5em;
+}
+
+.contact-page-section .contact-container .input-area .submit-button {
+  background-color: #2c4465;
+  width: 98%;
+  padding: 8px;
+  margin-bottom: 1em;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #213550;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-box-shadow: 0 8px 13px -4px lightblue;
+          box-shadow: 0 8px 13px -4px lightblue;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  font-weight: 600;
+}
+
+.contact-page-section .contact-container .input-area .submit-button:hover {
+  background: #618bc5;
+  -webkit-box-shadow: 0 8px 13px -4px #0d4252c4;
+          box-shadow: 0 8px 13px -4px #0d4252c4;
 }
 
 .contact-page-section .contact-container .input-area span {
@@ -894,32 +927,6 @@ label
   color: #000;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-  background: #3030db;
-  border: white 2px solid;
-  border-radius: 5px;
-  padding: 8px 16px;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  margin: 0 auto;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0.5em;
-  cursor: pointer;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button:hover {
-  background: #fff;
-  color: #3030db;
-  border-color: #3030db;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
 .contact-page-section .contact-container .contact-form .contact-form-container .w50 {
   width: 100%;
 }
@@ -950,14 +957,18 @@ a {
   border: 2px solid silver;
   border-radius: 5px;
   top: 25%;
-  left: 0;
+  left: 4%;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  max-width: 80%;
 }
 
 .show-modal .contact-modal-title {
-  font-size: 1.2em;
-  font-weight: 500;
+  color: #2c4465;
+  line-height: 26px;
+  letter-spacing: 4pt;
+  font-size: 1.5rem;
+  font-variant-caps: all-petite-caps;
 }
 
 .show-modal .close-modal .close-icon {
@@ -1012,7 +1023,7 @@ a {
   cursor: pointer;
 }
 
-.show-modal ul li span .modal-icon {
+.show-modal ul li .modal-icon {
   width: 30px;
   height: auto;
   margin-right: 5px;
@@ -1029,11 +1040,14 @@ a {
 .show-modal ul li a span {
   font-weight: 300;
   color: #252525;
-  text-decoration: none;
+  text-decoration: underline;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: -5px;
 }
 
 .show-modal ul li a span:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .blur {
