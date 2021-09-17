@@ -54,6 +54,7 @@ window.onload = function () {
   .txt-rotate > .wrap {
         border-right: 0.1em solid #2c4465;
         font-family: 'Poppins';
+        font-size: 1.5em;
         font-weight: 600;
         transform: none;
         color: #2c4465;
