@@ -56,9 +56,9 @@ html {
 }
 
 body {
+  font-family: Poppins;
   padding: 0;
   margin: 0;
-  font-family: Poppins;
 }
 
 section {
@@ -89,7 +89,6 @@ img {
 
 .brand,
 .footer-design,
-.hero-design,
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -102,10 +101,7 @@ header nav #click {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 10px;
   header {
-    display: flex;
-    justify-content: space-between;
     .logo {
       display: flex;
       flex-direction: row;
@@ -114,6 +110,7 @@ header nav #click {
       .logo-placeholder {
         width: 30px;
         height: auto;
+        margin-left: 10px;
         .company-logo {
           display: flex;
           align-items: center;
@@ -122,7 +119,6 @@ header nav #click {
       }
       .logo-container {
         display: flex;
-        flex-direction: column;
         margin-left: 10px;
         margin-bottom: 5px;
         .logo-name {
@@ -190,8 +186,8 @@ header #click:checked ~ ul li a {
     width: 25px;
     height: auto;
     position: absolute;
-    right: 0;
-    top: 2px;
+    right: 12px;
+    top: 6px;
     path {
       fill: $core-light;
     }
@@ -736,30 +732,30 @@ a {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-        .modal-icon {
-          width: 30px;
-          height: auto;
-          margin-right: 5px;
+      .modal-icon {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
+      }
+      a {
+        line-height: 10px;
+        &:hover {
+          text-decoration: underline;
         }
-        a {
-          line-height: 10px;
+        span {
+          font-weight: 300;
+          color: #252525;
+          text-decoration: underline;
+          transition: all 0.5s ease-in-out;
+          margin-bottom: -5px;
           &:hover {
-            text-decoration: underline;
-          }
-          span {
-            font-weight: 300;
-            color: #252525;
-            text-decoration: underline;
-            transition: all 0.5s ease-in-out;
-            margin-bottom: -5px; 
-            &:hover {
-              text-decoration: none;
-            }
+            text-decoration: none;
           }
         }
       }
     }
   }
+}
 
 .blur {
   filter: blur(5px);
@@ -1317,7 +1313,6 @@ section .case-study-inner-guitar {
     display: grid;
     padding: 0;
     .hero-text-content {
-      background: #fff8dc;
       padding: 2em;
     }
   }
@@ -1504,9 +1499,9 @@ section .case-study-inner-guitar {
     .hero-design {
       display: grid;
       position: relative;
-      left: -40%;
-      top: 40%;
-      width: 80%;
+      left: 8%;
+      top: 38%;
+      width: 70%;
       height: auto;
     }
     .mouse-scroller {
@@ -1923,12 +1918,9 @@ section .case-study-inner-guitar {
       }
     }
     .hero-design {
-      left: -40%;
-      #blockdesign .square-anim:hover,
-      #blockdesign circle:hover {
-        filter: brightness(5);
-        transition: linear 0.7s ease-in-out;
-      }
+      left: 6%;
+      top: 36%;
+      width: 70%;
     }
     .txt-rotate .wrap {
       font-size: 2.5rem;
