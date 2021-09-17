@@ -579,7 +579,7 @@ header #click:checked ~ ul li a {
     }
     p {
       span {
-        font-size:15px;
+        font-size: 15px;
         font-weight: 600;
         color: $tertiary;
         text-decoration: underline;
@@ -1124,34 +1124,31 @@ section .case-study-inner-guitar {
     background-image: url(/img/form-background-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-title {
-    font-size: 1.5rem;
-    padding: 0 0.7em;
-  }
-  .contact-page-section .contact-container .contact-form p {
-    font-size: 1.3em;
-    padding: 0 1em;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
-    margin: 10px 0;
-    width: 92%;
-    display: flex;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    border-radius: 8px;
-    margin-bottom: -10px;
-    width: 100%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
+    .contact-container .contact-form {
+      padding: 0 20px;
+      .contact-form-container .input-area {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        textarea {
+          margin: 10px auto;
+          width: 98%;
+        }
+        .text-field {
+          border-radius: 8px;
+          margin-bottom: -10px;
+          width: 100%;
+        }
+        .submit-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 20px;
+          margin: 0 12px;
+        }
+      }
+    }
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
@@ -1161,96 +1158,7 @@ section .case-study-inner-guitar {
     padding-left: 0.5em;
     padding-top: 0.5em;
   }
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .first-child::-webkit-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .second-child::-webkit-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .third-child::-webkit-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .text-field::-webkit-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .first-child:-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .second-child:-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .third-child:-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .text-field:-ms-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .first-child::-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .second-child::-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .third-child::-ms-input-placeholder,
-  .contact-page-section
-    > .contact-container
-    > .contact-form
-    > .contact-form-container
-    > .input-area
-    > label
-    > .text-field::-ms-input-placeholder {
-    font-size: 18px;
-  }
+
   .contact-page-section
     > .contact-container
     > .contact-form
@@ -1296,6 +1204,18 @@ section .case-study-inner-guitar {
   }
   .show-modal .close-modal:hover {
     color: #9c9c9c;
+  }
+
+  .contact-page-section
+    .contact-container
+    .contact-form
+    .contact-form-container
+    .right
+    .w-50
+    .logo-main
+    .logo-placeholder
+    .company-logo {
+    margin: 1em 0;
   }
 
   /*remind-project styles */
