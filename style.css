@@ -40,9 +40,9 @@ html {
 }
 
 body {
+  font-family: Poppins;
   padding: 0;
   margin: 0;
-  font-family: Poppins;
 }
 
 section {
@@ -75,7 +75,6 @@ img {
 
 .brand,
 .footer-design,
-.hero-design,
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -94,16 +93,6 @@ header nav #click {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 10px;
-}
-
-.nav-container header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .nav-container header .logo {
@@ -125,6 +114,7 @@ header nav #click {
 .nav-container header .logo .logo-placeholder {
   width: 30px;
   height: auto;
+  margin-left: 10px;
 }
 
 .nav-container header .logo .logo-placeholder .company-logo {
@@ -143,10 +133,6 @@ header nav #click {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-left: 10px;
   margin-bottom: 5px;
 }
@@ -235,8 +221,8 @@ header #click:checked ~ ul li a {
   width: 25px;
   height: auto;
   position: absolute;
-  right: 0;
-  top: 2px;
+  right: 12px;
+  top: 6px;
 }
 
 .menu-btn svg path {
@@ -1655,7 +1641,6 @@ section .case-study-inner-guitar {
     padding: 0;
   }
   .hero-container .hero-text-content {
-    background: #fff8dc;
     padding: 2em;
   }
   .hero-container .hero-title,
@@ -1840,9 +1825,9 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     position: relative;
-    left: -40%;
-    top: 40%;
-    width: 80%;
+    left: 8%;
+    top: 38%;
+    width: 70%;
     height: auto;
   }
   .hero-container .mouse-scroller {
@@ -2338,14 +2323,9 @@ section .case-study-inner-guitar {
     line-height: 3rem;
   }
   .hero-container .hero-design {
-    left: -40%;
-  }
-  .hero-container .hero-design #blockdesign .square-anim:hover,
-  .hero-container .hero-design #blockdesign circle:hover {
-    -webkit-filter: brightness(5);
-            filter: brightness(5);
-    -webkit-transition: linear 0.7s ease-in-out;
-    transition: linear 0.7s ease-in-out;
+    left: 6%;
+    top: 36%;
+    width: 70%;
   }
   .hero-container .txt-rotate .wrap {
     font-size: 2.5rem;

@@ -1,3 +1,4 @@
+// Hero text (index page) 
 var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -62,3 +63,32 @@ window.onload = function () {
     `;
   document.head.appendChild(style);
 };
+
+// contact page 
+//   Modal toggle 
+
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.open-modal');
+var span = document.querySelector('.close-modal');
+var element = document.querySelector('.contact-form');
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  element.classList.add('blur')
+};
+span.onclick = function() {
+  modal.style.display = "none";
+  element.classList.remove('blur');
+};
+
+// Debug Code to find elements causing horizontal scroll 
+var docWidth = document.documentElement.offsetWidth;
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+// end of debug code 
