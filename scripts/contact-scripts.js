@@ -13,3 +13,13 @@ span.onclick = function() {
   modal.style.display = "none";
   element.classList.remove('blur');
 };
+
+var docWidth = document.documentElement.offsetWidth;
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);

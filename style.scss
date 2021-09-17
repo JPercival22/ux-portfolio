@@ -51,7 +51,7 @@ $core-button-border: $brand-color;
 $button-border-settings: 1px solid $brand-color;
 
 html {
-  scroll-behavior: smooth;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
