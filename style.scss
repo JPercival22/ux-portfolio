@@ -87,7 +87,6 @@ img {
   height: auto;
 }
 
-.brand,
 .footer-design,
 .mouse-scroller,
 .top-social-icon,
@@ -579,10 +578,10 @@ header #click:checked ~ ul li a {
       letter-spacing: 5px;
     }
     p {
-      padding: 0 0.5em;
       span {
-        color: $tertiary;
+        font-size:15px;
         font-weight: 600;
+        color: $tertiary;
         text-decoration: underline;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
@@ -610,7 +609,7 @@ header #click:checked ~ ul li a {
 .contact-page-section .contact-container .input-area {
   .submit-button {
     background-color: $brand-color;
-    width: 98%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 1em;
     color: $core-light;
@@ -662,18 +661,34 @@ header #click:checked ~ ul li a {
   color: #000;
 }
 
-.contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field {
-  width: 80vw;
-  padding: 5px;
-  height: 14vh;
-  overflow: hidden;
-  font-family: "Poppins";
-  font-size: 18px;
-  color: #000;
-}
-
-.contact-page-section .contact-container .contact-form .contact-form-container .w50 {
-  width: 100%;
+.contact-page-section .contact-container .contact-form .contact-form-container {
+  .left {
+    .input-area label .text-field {
+      width: 80vw;
+      padding: 5px;
+      height: 14vh;
+      overflow: hidden;
+      font-family: "Poppins";
+      font-size: 18px;
+      color: #000;
+    }
+  }
+  .right {
+    .w-50 .logo-main {
+      .logo-placeholder {
+        .company-logo {
+          margin-top: 1em;
+          img {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+      }
+      .centered-title {
+        display: none;
+      }
+    }
+  }
 }
 
 a {
@@ -960,6 +975,13 @@ section .case-study-inner-guitar {
   color: #5252ff;
 }
 
+// Medium mobile Phone Viewport styles
+@media only screen and (min-width: 375px) {
+  .show-modal {
+    left: 5%;
+  }
+}
+
 // Large mobile Phone Viewport styles
 @media only screen and (min-width: 425px) {
   section {
@@ -967,6 +989,11 @@ section .case-study-inner-guitar {
   }
   .about .about-container ul li .icon-container {
     height: inherit;
+  }
+
+  .show-modal {
+    left: 4%;
+    max-width: 84%;
   }
 
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
