@@ -1331,10 +1331,10 @@ section .case-study-inner-guitar {
 
 @media only screen and (min-width: 610px) {
   .nav-container {
-    padding-left: 2em;
+    padding-left: 1em;
   }
-  .menu-btn svg {
-    padding-right: 1em;
+  .nav-container header .logo .logo-container .logo-name {
+    font-size: 2em;
   }
   .research-qoute {
     margin: 0 1em;

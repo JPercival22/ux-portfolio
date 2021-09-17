@@ -1005,11 +1005,10 @@ section .case-study-inner-guitar {
 // tablets to small laptops
 @media only screen and (min-width: 610px) {
   .nav-container {
-    padding-left: 2em;
-  }
-
-  .menu-btn svg {
-    padding-right: 1em;
+    padding-left: 1em;
+    header .logo .logo-container .logo-name {
+      font-size: 2em;
+    }
   }
 
   .research-qoute {
