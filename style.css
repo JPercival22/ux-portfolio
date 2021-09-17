@@ -1443,34 +1443,13 @@ section .case-study-inner-guitar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area textarea {
-    margin: 10px auto;
-    width: 98%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .input-area .text-field {
-    border-radius: 8px;
-    margin-bottom: -10px;
-    width: 100%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding: 10px 20px;
     margin: 0 12px;
+  }
+  .contact-page-section .contact-container .contact-form .right .w-50 .logo-main .logo-placeholder .company-logo {
+    margin: 1em 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
@@ -1480,152 +1459,11 @@ section .case-study-inner-guitar {
     padding-left: 0.5em;
     padding-top: 0.5em;
   }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::-webkit-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::-webkit-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child:-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field:-ms-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::-ms-input-placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::-ms-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .first-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .second-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .third-child::placeholder,
-  .contact-page-section
-> .contact-container
-> .contact-form
-> .contact-form-container
-> .input-area
-> label
-> .text-field::placeholder {
-    font-size: 18px;
-  }
   .show-modal {
     width: 50vw;
     height: 30vh;
     top: 35%;
     left: 20%;
-  }
-  .show-modal .close-modal {
-    padding: 5px 10px;
-  }
-  .show-modal .close-modal .close-icon {
-    width: 30px;
-    height: 30px;
-  }
-  .show-modal .close-modal:hover {
-    color: #9c9c9c;
-  }
-  .contact-page-section
-.contact-container
-.contact-form
-.contact-form-container
-.right
-.w-50
-.logo-main
-.logo-placeholder
-.company-logo {
-    margin: 1em 0;
   }
   /*remind-project styles */
   .nielson-qoute {
