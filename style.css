@@ -1127,6 +1127,7 @@ footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
 footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
   color: #ffffff;
   font-variant-caps: all-petite-caps;
+  letter-spacing: 1.6pt;
 }
 
 footer .footer-container .footer-details .logo-container {
@@ -1504,6 +1505,8 @@ section .case-study-inner-guitar {
             align-items: flex-end;
     color: #ffffff;
     font-size: 0.8rem;
+    letter-spacing: 4.5pt;
+    margin-left: 20px;
   }
   .nav-container .hero-container {
     display: -ms-grid;
@@ -1697,8 +1700,9 @@ section .case-study-inner-guitar {
     letter-spacing: 5.2pt;
     font-size: 1.8rem;
   }
-  footer .footer-container .footer-details .logo-title {
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
     font-size: 1.2rem;
+    letter-spacing: 2pt;
   }
 }
 
@@ -1719,7 +1723,8 @@ section .case-study-inner-guitar {
     letter-spacing: 11pt;
   }
   .nav-container header .logo .logo-container .logo-title {
-    letter-spacing: 2pt;
+    letter-spacing: 4.5pt;
+    margin-left: 0;
   }
   .nav-container header .logo .logo-placeholder {
     padding: 1.5em;

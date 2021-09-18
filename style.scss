@@ -817,6 +817,7 @@ footer {
           .logo-title {
             color: $core-light;
             font-variant-caps: all-petite-caps;
+            letter-spacing: 1.6pt;
           }
         }
       }
@@ -1194,6 +1195,8 @@ section .case-study-inner-guitar {
           align-items: flex-end;
           color: $core-light;
           font-size: 0.8rem;
+          letter-spacing: 4.5pt;
+          margin-left: 20px;
         }
       }
     }
@@ -1376,12 +1379,15 @@ section .case-study-inner-guitar {
 
   footer .footer-container .footer-details {
     padding: 2em 3em;
-    .footer-top-bar .logo .logo-container .logo-name {
-      letter-spacing: 5.2pt;
-      font-size: 1.8rem;
-    }
-    .logo-title {
-      font-size: 1.2rem;
+    .footer-top-bar .logo .logo-container {
+      .logo-name {
+        letter-spacing: 5.2pt;
+        font-size: 1.8rem;
+      }
+      .logo-title {
+        font-size: 1.2rem;
+        letter-spacing: 2pt;
+      }
     }
   }
 }
@@ -1401,7 +1407,8 @@ section .case-study-inner-guitar {
             letter-spacing: 11pt;
           }
           .logo-title {
-            letter-spacing: 2pt;
+            letter-spacing: 4.5pt;
+            margin-left: 0;
           }
         }
         .logo-placeholder {
