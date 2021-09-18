@@ -34,7 +34,8 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-html {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -59,8 +60,8 @@ ul {
   color: #213550;
   font-weight: 300;
   border-bottom: 1px solid #2c4465;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .tertiary-button:hover {
@@ -165,8 +166,8 @@ header nav #click {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background: #396baf;
   text-transform: uppercase;
   z-index: 1100;
@@ -289,8 +290,8 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .hero-container .hero-text-content .hero-button-container .primary-button:hover {
@@ -317,8 +318,8 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .hero-container .hero-text-content .hero-button-container .secondary-button:hover {
@@ -345,8 +346,8 @@ header #click:checked ~ ul li a {
   padding: 10px;
   padding-bottom: 0;
   margin: 0.7rem;
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .mobile-social-icon a:hover {
@@ -446,8 +447,8 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-box-shadow: 0 8px 13px -4px lightblue;
           box-shadow: 0 8px 13px -4px lightblue;
 }
@@ -603,8 +604,8 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-box-shadow: 0 8px 13px -4px lightblue;
           box-shadow: 0 8px 13px -4px lightblue;
 }
@@ -810,8 +811,8 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-box-shadow: 0 8px 13px -4px lightblue;
           box-shadow: 0 8px 13px -4px lightblue;
   font-size: 1em;
@@ -949,8 +950,8 @@ a {
   border-radius: 5px;
   top: 25%;
   left: 4%;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   max-width: 80%;
 }
 
@@ -1150,8 +1151,8 @@ footer .footer-container .footer-details .logo-container .mailto-link {
   text-decoration: underline;
   -webkit-text-decoration-color: #ffffff;
           text-decoration-color: #ffffff;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin-top: 20px;
 }
 
@@ -1665,7 +1666,15 @@ section .case-study-inner-guitar {
     line-height: 0;
     letter-spacing: 3.1pt;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo {
+  .contact-page-section
+.contact-container
+.contact-form
+.contact-form-container
+.right
+.w-50
+.logo-main
+.logo-placeholder
+.company-logo {
     margin-top: 0;
     margin-bottom: 1em;
   }
@@ -1697,6 +1706,7 @@ section .case-study-inner-guitar {
 @media only screen and (min-width: 1050px) {
   .nav-container {
     height: 60px;
+    width: 100%;
   }
   .nav-container header .logo .logo-container {
     -webkit-box-orient: vertical;
@@ -1712,7 +1722,7 @@ section .case-study-inner-guitar {
     letter-spacing: 2pt;
   }
   .nav-container header .logo .logo-placeholder {
-    padding: 1em;
+    padding: 1.5em;
   }
   .nav-container header .logo .logo-placeholder .company-logo img {
     height: 35px;
@@ -1720,27 +1730,18 @@ section .case-study-inner-guitar {
   }
   .menu-btn svg {
     top: 5px;
-    right: 1.4em;
+    right: 3.8em;
     width: 35px;
     height: auto;
   }
   .hero-container {
-    -ms-grid-columns: 70% auto;
-        grid-template-columns: 70% auto;
+    margin: 0;
+    padding: 0;
   }
   .hero-container .hero-text-content {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(#ffffff));
     background: linear-gradient(180deg, #ffee95 -65%, #ffffff 100%);
-    padding: 2.3rem;
-  }
-  .hero-container .hero-design {
-    display: -ms-grid;
-    display: grid;
-    position: relative;
-    left: 8%;
-    top: 38%;
-    width: 70%;
-    height: auto;
+    padding: 4.3rem;
   }
   .hero-container .mouse-scroller {
     display: -webkit-box;
@@ -1793,20 +1794,30 @@ section .case-study-inner-guitar {
       top: 25px;
     }
   }
-  .footer-social-icon a:hover,
-  .top-social-icon a:hover {
-    opacity: 0.5;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
   .mobile-social-icon {
     display: none;
   }
+  .research-qoute {
+    margin: 0 3em;
+  }
   .featured {
-    padding: 3em 2em;
+    padding: 3em 4em;
+  }
+  .featured .left .inner p .primary-button {
+    color: #2c4465;
+    font-weight: 500;
+    text-decoration: underline;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .featured .left .inner p .primary-button:hover {
+    text-decoration: none;
   }
   .featured .right button {
     width: 20vw;
+  }
+  .skills {
+    padding: 2em 3em;
   }
   .skills .skills-container ul {
     display: -webkit-box;
@@ -1865,7 +1876,7 @@ section .case-study-inner-guitar {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 0 2em;
+    margin: 0 3em;
   }
   .portfolio .portfolio-container .right {
     -webkit-box-pack: center;
@@ -1884,7 +1895,8 @@ section .case-study-inner-guitar {
     background-image: url(img/work-hard.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2.1em;
+    padding: 4em;
+    padding-right: 3em;
   }
   .about .about-container ul {
     display: -ms-grid;
@@ -2083,7 +2095,14 @@ section .case-study-inner-guitar {
     margin: 1em 0;
   }
   footer .footer-container .footer-details {
-    padding: 2.5em;
+    padding: 4em;
+    width: 100%;
+  }
+  .footer-social-icon a:hover,
+  .top-social-icon a:hover {
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }
 
@@ -2133,8 +2152,8 @@ section .case-study-inner-guitar {
   }
   .nav-container header nav ul li a {
     padding: 0 10px;
-    -webkit-transition: 1s all;
-    transition: 1s all;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     margin-right: 7px;
   }
   .nav-container header nav ul li a:hover {
@@ -2162,8 +2181,8 @@ section .case-study-inner-guitar {
   }
   .nav-container .top-social-icon a {
     margin: 0 1em;
-    -webkit-transition: 1s all;
-    transition: 1s all;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .menu-btn svg {
     display: none;
@@ -2681,8 +2700,8 @@ section .case-study-inner-guitar {
     height: 275px;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+    -webkit-transition: 1 all 0.5s ease-in-out;
+    transition: 1 all 0.5s ease-in-out;
   }
   .desk-research-image-main:hover {
     width: 65vw;
@@ -3099,8 +3118,8 @@ section .case-study-inner-guitar {
     text-decoration: underline;
     -webkit-filter: brightness(0.9);
             filter: brightness(0.9);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img {
     position: relative;
@@ -3156,7 +3175,8 @@ section .case-study-inner-guitar {
   .close-btn:hover {
     opacity: 0.7;
     -webkit-transition: linear 1s ease-in-out;
-    transition: linear 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .lr-margin {
     margin: 0 4em;
