@@ -1301,10 +1301,8 @@ section .case-study-inner-guitar {
       }
       .contact-form-container {
         display: grid;
-        // grid-template-columns: 49.3% auto;
         .left {
           display: flex;
-          justify-content: center;
           flex-direction: column;
           align-items: center;
           .input-area {
@@ -1317,20 +1315,16 @@ section .case-study-inner-guitar {
             .submit-button {
               width: 50%;
               padding: 7px 5px;
-              margin: 0 12px;
-              transition: all 0.5s ease-in-out;
             }
           }
         }
         .right {
-          display: grid;
           grid-column: 2;
           background: #feca64fa;
-          border-radius: 0 5px 5px 0;
+          border-bottom-right-radius: 5px;
           .w-50 .logo-main .centered-title {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             .brand-name {
               display: flex;
@@ -1338,13 +1332,10 @@ section .case-study-inner-guitar {
               font-weight: 500;
               font-size: 3em;
               letter-spacing: 4pt;
-              margin-bottom: 0;
             }
             .job-title {
-              display: flex;
               font-variant-caps: all-petite-caps;
               font-size: 1.5em;
-              margin-top: 0;
               line-height: 0;
               letter-spacing: 3.1pt;
             }

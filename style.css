@@ -1608,9 +1608,6 @@ section .case-study-inner-guitar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1634,17 +1631,12 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
     width: 50%;
     padding: 7px 5px;
-    margin: 0 12px;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-column: 2;
     grid-column: 2;
     background: #feca64fa;
-    border-radius: 0 5px 5px 0;
+    border-bottom-right-radius: 5px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title {
     display: -webkit-box;
@@ -1654,9 +1646,6 @@ section .case-study-inner-guitar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1669,15 +1658,10 @@ section .case-study-inner-guitar {
     font-weight: 500;
     font-size: 3em;
     letter-spacing: 4pt;
-    margin-bottom: 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .job-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-variant-caps: all-petite-caps;
     font-size: 1.5em;
-    margin-top: 0;
     line-height: 0;
     letter-spacing: 3.1pt;
   }
