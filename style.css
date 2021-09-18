@@ -959,6 +959,7 @@ a {
   line-height: 26px;
   letter-spacing: 4pt;
   font-size: 1.5rem;
+  font-weight: 500;
   font-variant-caps: all-petite-caps;
 }
 
@@ -1482,6 +1483,9 @@ section .case-study-inner-guitar {
 }
 
 @media only screen and (min-width: 895px) {
+  .nav-container {
+    padding-left: 2em;
+  }
   .nav-container header nav ul li {
     font-size: 2rem;
     font-variant-caps: all-petite-caps;
@@ -1494,19 +1498,22 @@ section .case-study-inner-guitar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     color: #ffffff;
     font-size: 0.8rem;
   }
-  .hero-container {
+  .nav-container .hero-container {
     display: -ms-grid;
     display: grid;
     padding: 0;
   }
-  .hero-container .hero-text-content {
+  .nav-container .hero-container .hero-text-content {
     padding: 2em;
+  }
+  .menu-btn svg {
+    right: 2em;
   }
   .hero-container .hero-title,
   .hero-container .txt-rotate .wrap {
@@ -1584,42 +1591,50 @@ section .case-study-inner-guitar {
     width: 50%;
     height: auto;
   }
+  .contact-page-section {
+    padding: 2.5em;
+  }
   .contact-page-section .contact-container .contact-form {
-    padding: 0;
+    padding: 1em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-title {
+    margin-top: 0;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 49.3% auto;
-        grid-template-columns: 49.3% auto;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    border-radius: 5px 0 0 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .first-child,
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .second-child,
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .third-child,
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
-    padding: 5px 20px;
-    width: 37vw;
-    height: 40px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
     height: 20vh;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    width: 50%;
+    padding: 7px 5px;
+    margin: 0 12px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
@@ -1628,10 +1643,58 @@ section .case-study-inner-guitar {
     display: grid;
     -ms-grid-column: 2;
     grid-column: 2;
+    background: #feca64fa;
     border-radius: 0 5px 5px 0;
   }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .brand-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-variant-caps: all-petite-caps;
+    font-weight: 500;
+    font-size: 3em;
+    letter-spacing: 4pt;
+    margin-bottom: 0;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .job-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-variant-caps: all-petite-caps;
+    font-size: 1.5em;
+    margin-top: 0;
+    line-height: 0;
+    letter-spacing: 3.1pt;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .first-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .second-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .third-child,
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
+    padding: 5px 10px;
+    width: 36vw;
+    height: auto;
+  }
   .show-modal {
-    top: 40%;
+    top: 30%;
     left: 20%;
   }
   footer .footer-container .footer-details {
