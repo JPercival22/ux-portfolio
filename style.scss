@@ -235,7 +235,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition:$button-hover-state;
+    transition: $button-hover-state;
     &:hover {
       background: $primary-core;
       color: $core-light;
@@ -254,7 +254,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition:$button-hover-state;
+    transition: $button-hover-state;
     &:hover {
       background-color: $brand-color;
       color: $core-button-border;
@@ -271,7 +271,7 @@ header #click:checked ~ ul li a {
     padding: 10px;
     padding-bottom: 0;
     margin: 0.7rem;
-    transition:$button-hover-state;
+    transition: $button-hover-state;
     &:hover {
       background-image: radial-gradient(#fff 0%, #2c446585 100%);
     }
@@ -459,7 +459,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition:$button-hover-state;
+    transition: $button-hover-state;
     box-shadow: 0 8px 13px -4px lightblue;
     &:hover {
       background: #618bc5;
@@ -764,7 +764,7 @@ a {
           font-weight: 300;
           color: #252525;
           text-decoration: underline;
-          transition:$button-hover-state;
+          transition: $button-hover-state;
           margin-bottom: -5px;
           &:hover {
             text-decoration: none;
@@ -830,7 +830,7 @@ footer {
           color: $core-light;
           text-decoration: underline;
           text-decoration-color: $core-light;
-          transition:$button-hover-state;
+          transition: $button-hover-state;
           margin-top: 20px;
           &:hover {
             text-decoration: none;
@@ -1595,15 +1595,15 @@ section .case-study-inner-guitar {
   }
 
   .contact-page-section {
-    padding: 2em;
-    width: 100%;
+    padding: 4em;
+    .contact-container .left .input-area .submit-button {
+      margin: 0 auto;
+      padding: 10px;
+      font-size: 22px;
+      width: 190px;
+    }
   }
-  .contact-page-section .contact-container .left .input-area .submit-button {
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 22px;
-    width: 190px;
-  }
+
   .hero-container-projects {
     height: 50vh;
   }
@@ -1793,7 +1793,7 @@ section .case-study-inner-guitar {
       margin: 0px 1.5em;
       a {
         margin: 0 1em;
-        transition:$button-hover-state;
+        transition: $button-hover-state;
       }
     }
   }
@@ -2571,7 +2571,7 @@ section .case-study-inner-guitar {
   .outcomes-gallery-container .row .col .small-img-row:hover {
     text-decoration: underline;
     filter: brightness(0.9);
-    transition:$button-hover-state;
+    transition: $button-hover-state;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img {
     position: relative;
