@@ -49,8 +49,10 @@ $secondary-core: $core-light;
 $tertiary-core: $tertiary;
 $core-button-border: $brand-color;
 $button-border-settings: 1px solid $brand-color;
+$button-hover-state: all 0.5s ease-in-out;
 
-html {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -75,7 +77,7 @@ ul {
   color: $tertiary;
   font-weight: 300;
   border-bottom: $button-border-settings;
-  transition: 1s ease-in-out;
+  transition: $button-hover-state;
   &:hover {
     color: #000000;
     border: none;
@@ -144,7 +146,7 @@ header nav #click {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  transition: all 0.5s ease;
+  transition: $button-hover-state;
   background: #396baf;
   text-transform: uppercase;
   z-index: 1100;
@@ -233,7 +235,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition:$button-hover-state;
     &:hover {
       background: $primary-core;
       color: $core-light;
@@ -252,7 +254,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition:$button-hover-state;
     &:hover {
       background-color: $brand-color;
       color: $core-button-border;
@@ -269,7 +271,7 @@ header #click:checked ~ ul li a {
     padding: 10px;
     padding-bottom: 0;
     margin: 0.7rem;
-    transition: all 2s ease;
+    transition:$button-hover-state;
     &:hover {
       background-image: radial-gradient(#fff 0%, #2c446585 100%);
     }
@@ -343,7 +345,7 @@ header #click:checked ~ ul li a {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 1s ease-in-out;
+      transition: $button-hover-state;
       box-shadow: 0 8px 13px -4px lightblue;
       &:hover {
         background: #618bc5;
@@ -457,7 +459,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition:$button-hover-state;
     box-shadow: 0 8px 13px -4px lightblue;
     &:hover {
       background: #618bc5;
@@ -584,7 +586,7 @@ header #click:checked ~ ul li a {
         color: $tertiary;
         text-decoration: underline;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: $button-hover-state;
         &:hover {
           text-decoration: none;
         }
@@ -618,7 +620,7 @@ header #click:checked ~ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s ease-in-out;
+    transition: $button-hover-state;
     box-shadow: 0 8px 13px -4px lightblue;
     font-size: 1em;
     text-transform: uppercase;
@@ -712,7 +714,7 @@ a {
   border-radius: 5px;
   top: 25%;
   left: 4%;
-  transition: 0.4s ease-in-out;
+  transition: $button-hover-state;
   max-width: 80%;
   .contact-modal-title {
     color: $brand-color;
@@ -732,7 +734,7 @@ a {
     height: auto;
     &:hover {
       filter: brightness(4.5);
-      transition: all 0.5s ease-in-out;
+      transition: $button-hover-state;
     }
   }
   ul {
@@ -762,7 +764,7 @@ a {
           font-weight: 300;
           color: #252525;
           text-decoration: underline;
-          transition: all 0.5s ease-in-out;
+          transition:$button-hover-state;
           margin-bottom: -5px;
           &:hover {
             text-decoration: none;
@@ -828,7 +830,7 @@ footer {
           color: $core-light;
           text-decoration: underline;
           text-decoration-color: $core-light;
-          transition: 0.2s all;
+          transition:$button-hover-state;
           margin-top: 20px;
           &:hover {
             text-decoration: none;
@@ -1345,7 +1347,15 @@ section .case-study-inner-guitar {
     }
   }
 
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo {
+  .contact-page-section
+    .contact-container
+    .contact-form
+    .contact-form-container
+    .right
+    .w-50
+    .logo-main
+    .logo-placeholder
+    .company-logo {
     margin-top: 0;
     margin-bottom: 1em;
   }
@@ -1378,8 +1388,10 @@ section .case-study-inner-guitar {
 
 /*Styles for Laptops*/
 @media only screen and (min-width: 1050px) {
+  // top bar
   .nav-container {
     height: 60px;
+    width: 100%;
     header {
       .logo {
         .logo-container {
@@ -1393,7 +1405,7 @@ section .case-study-inner-guitar {
           }
         }
         .logo-placeholder {
-          padding: 1em;
+          padding: 1.5em;
           .company-logo {
             img {
               height: 35px;
@@ -1407,24 +1419,18 @@ section .case-study-inner-guitar {
 
   .menu-btn svg {
     top: 5px;
-    right: 1.4em;
+    right: 3.8em;
     width: 35px;
     height: auto;
   }
 
+  // index page styles
   .hero-container {
-    grid-template-columns: 70% auto;
+    margin: 0;
+    padding: 0;
     .hero-text-content {
       background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
-      padding: 2.3rem;
-    }
-    .hero-design {
-      display: grid;
-      position: relative;
-      left: 8%;
-      top: 38%;
-      width: 70%;
-      height: auto;
+      padding: 4.3rem;
     }
     .mouse-scroller {
       display: flex;
@@ -1462,48 +1468,64 @@ section .case-study-inner-guitar {
     }
   }
 
-  .footer-social-icon a:hover,
-  .top-social-icon a:hover {
-    opacity: 0.5;
-    transition: all 0.5s ease-in-out;
-  }
-
   .mobile-social-icon {
     display: none;
   }
+
+  .research-qoute {
+    margin: 0 3em;
+  }
+
   .featured {
-    padding: 3em 2em;
+    .left {
+      .inner {
+        p .primary-button {
+          color: $primary-core;
+          font-weight: 500;
+          text-decoration: underline;
+          transition: $button-hover-state;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    padding: 3em 4em;
     .right button {
       width: 20vw;
     }
   }
-  .skills .skills-container ul {
-    display: flex;
-    flex-direction: row;
-    li {
-      justify-content: space-evenly;
-      margin-left: 1em;
-      .icon-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .two {
-          margin: 3em auto;
-          width: auto;
+
+  .skills {
+    padding: 2em 3em;
+    .skills-container ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        justify-content: space-evenly;
+        margin-left: 1em;
+        .icon-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .two {
+            margin: 3em auto;
+            width: auto;
+          }
+          .three {
+            margin: 2.2em auto;
+            width: auto;
+          }
+          img {
+            padding: 0;
+            width: 140%;
+            height: auto;
+          }
         }
-        .three {
-          margin: 2.2em auto;
-          width: auto;
+        .skill-title {
+          font-size: 2rem;
         }
-        img {
-          padding: 0;
-          width: 140%;
-          height: auto;
-        }
-      }
-      .skill-title {
-        font-size: 2rem;
       }
     }
   }
@@ -1513,7 +1535,7 @@ section .case-study-inner-guitar {
     .portfolio-container {
       display: flex;
       flex-direction: row;
-      margin: 0 2em;
+      margin: 0 3em;
       .right {
         justify-content: center;
         img {
@@ -1532,7 +1554,8 @@ section .case-study-inner-guitar {
     background-image: url(img/work-hard.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2.1em;
+    padding: 4em;
+    padding-right: 3em;
     .about-container {
       ul {
         display: grid;
@@ -1708,7 +1731,13 @@ section .case-study-inner-guitar {
     margin: 1em 0;
   }
   footer .footer-container .footer-details {
-    padding: 2.5em;
+    padding: 4em;
+    width: 100%;
+  }
+  .footer-social-icon a:hover,
+  .top-social-icon a:hover {
+    opacity: 0.5;
+    transition: $button-hover-state;
   }
 }
 
@@ -1737,7 +1766,7 @@ section .case-study-inner-guitar {
             width: 26%;
             a {
               padding: 0 10px;
-              transition: 1s all;
+              transition: $button-hover-state;
               margin-right: 7px;
               &:hover {
                 color: cyan;
@@ -1764,7 +1793,7 @@ section .case-study-inner-guitar {
       margin: 0px 1.5em;
       a {
         margin: 0 1em;
-        transition: 1s all;
+        transition:$button-hover-state;
       }
     }
   }
@@ -2200,7 +2229,7 @@ section .case-study-inner-guitar {
     height: 275px;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
-    transition: 1s ease-in-out;
+    transition: 1$button-hover-state;
   }
   .desk-research-image-main:hover {
     width: 65vw;
@@ -2542,7 +2571,7 @@ section .case-study-inner-guitar {
   .outcomes-gallery-container .row .col .small-img-row:hover {
     text-decoration: underline;
     filter: brightness(0.9);
-    transition: all 1s ease-in-out;
+    transition:$button-hover-state;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img {
     position: relative;
@@ -2597,7 +2626,7 @@ section .case-study-inner-guitar {
   .close-btn:hover {
     opacity: 0.7;
     -webkit-transition: linear 1s ease-in-out;
-    transition: linear 1s ease-in-out;
+    transition: $button-hover-state;
   }
   .lr-margin {
     margin: 0 4em;
