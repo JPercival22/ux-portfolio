@@ -1746,7 +1746,8 @@ section .case-study-inner-guitar {
   .hero-container .hero-text-content {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(#ffffff));
     background: linear-gradient(180deg, #ffee95 -65%, #ffffff 100%);
-    padding: 4.3rem;
+    padding: 4rem;
+    padding-bottom: 2em;
   }
   .hero-container .mouse-scroller {
     display: -webkit-box;
@@ -1804,6 +1805,12 @@ section .case-study-inner-guitar {
   }
   .research-qoute {
     margin: 0 3em;
+    padding-bottom: 2.5em;
+  }
+  .hero-design {
+    width: 100vw;
+    height: 65vh;
+    margin-top: 1em;
   }
   .featured {
     padding: 3em 4em;
@@ -2114,17 +2121,37 @@ section .case-study-inner-guitar {
   .nav-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 75% auto;
-        grid-template-columns: 75% auto;
+    -ms-grid-columns: 70% auto;
+    grid-template-columns: 70% auto;
     background: unset;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-left: 0;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
   }
   .nav-container header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background: #2c4465;
+  }
+  .nav-container header .logo {
+    padding-left: 2.5em;
+    letter-spacing: 8pt;
+  }
+  .nav-container header .logo .logo-container .logo-name {
+    line-height: 20px;
+    font-variant-caps: all-petite-caps;
+  }
+  .nav-container header .logo .logo-title {
+    font-size: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 2.9pt;
+    font-variant-caps: small-caps;
   }
   .nav-container header nav {
     display: -webkit-box;
@@ -2137,10 +2164,9 @@ section .case-study-inner-guitar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: -22px;
   }
   .nav-container header nav ul {
-    position: unset;
+    position: initial;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2148,52 +2174,53 @@ section .case-study-inner-guitar {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background: none;
+    background: 0 0;
   }
   .nav-container header nav ul li {
     font-size: 18px;
     width: 26%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .nav-container header nav ul li a {
+    font-size: 18px;
     padding: 0 10px;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    margin-right: 7px;
+    -webkit-transition: 1s all;
+    transition: 1s all;
   }
   .nav-container header nav ul li a:hover {
     color: cyan;
   }
-  .nav-container header .logo {
-    padding-left: 2em;
-    font-size: 0.8rem;
-  }
-  .nav-container header .logo-name {
-    font-size: 1.5rem;
-    letter-spacing: 10pt;
-  }
-  .nav-container header .logo-title {
-    letter-spacing: 1.5pt;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .nav-container .top-social-icon {
+  .top-social-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0px 1.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 1.5em;
   }
-  .nav-container .top-social-icon a {
+  .top-social-icon a {
     margin: 0 1em;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+  }
+  .hero-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
   }
   .menu-btn svg {
     display: none;
-  }
-  .hero-container {
-    -ms-grid-columns: 75% auto;
-        grid-template-columns: 75% auto;
   }
   .featured .right img {
     width: 70%;

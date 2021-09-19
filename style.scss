@@ -1435,9 +1435,11 @@ section .case-study-inner-guitar {
   .hero-container {
     margin: 0;
     padding: 0;
+
     .hero-text-content {
       background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
-      padding: 4.3rem;
+      padding: 4rem;
+      padding-bottom: 2em;
     }
     .mouse-scroller {
       display: flex;
@@ -1481,6 +1483,13 @@ section .case-study-inner-guitar {
 
   .research-qoute {
     margin: 0 3em;
+    padding-bottom: 2.5em;
+  }
+
+  .hero-design {
+    width: 100vw;
+    height: 65vh;
+    margin-top: 1em;
   }
 
   .featured {
@@ -1751,30 +1760,49 @@ section .case-study-inner-guitar {
 @media only screen and (min-width: 1250px) {
   .nav-container {
     display: grid;
-    grid-template-columns: 75% auto;
+    -ms-grid-columns: 70% auto;
+    grid-template-columns: 70% auto;
     background: unset;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    padding-left: 0;
+    padding: 0;
     header {
+      display: flex;
       height: 60px;
-      background: #2c4465;
+      justify-content: space-between;
+      background: $brand-color;
+      .logo {
+        padding-left: 2.5em;
+        .logo-container .logo-name {
+          line-height: 20px;
+          font-variant-caps: all-petite-caps;
+        }
+        letter-spacing: 8pt;
+        .logo-title {
+          font-size: 0.8rem;
+          color: $core-light;
+          letter-spacing: 2.9pt;
+          font-variant-caps: small-caps;
+        }
+      }
       nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: -22px;
         ul {
-          position: unset;
+          position: initial;
           display: flex;
           flex-direction: row;
-          background: none;
+          background: 0 0;
           li {
             font-size: 18px;
             width: 26%;
+            justify-content: flex-end;
             a {
+              font-size: 18px;
               padding: 0 10px;
-              transition: $button-hover-state;
-              margin-right: 7px;
+              transition: 1s all;
               &:hover {
                 color: cyan;
               }
@@ -1782,35 +1810,88 @@ section .case-study-inner-guitar {
           }
         }
       }
-      .logo {
-        padding-left: 2em;
-        font-size: 0.8rem;
-      }
-      .logo-name {
-        font-size: 1.5rem;
-        letter-spacing: 10pt;
-      }
-      .logo-title {
-        letter-spacing: 1.5pt;
-        justify-content: flex-start;
-      }
-    }
-    .top-social-icon {
-      display: flex;
-      margin: 0px 1.5em;
-      a {
-        margin: 0 1em;
-        transition: $button-hover-state;
-      }
     }
   }
+  .top-social-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5em;
+    a {
+      margin: 0 1em;
+      transition: 1s all;
+    }
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 70% auto;
+  }
+
+  //   header {
+  //     display: flex;
+  //     height: 60px;
+  //     background: #2c4465;
+  //     .logo {
+  //       padding-left: 4em;
+  //       font-size: 0.8rem;
+
+  //       nav {
+  //         display: flex;
+  //         justify-content: flex-end;
+  //         flex-direction: row;
+  //         ul {
+  //           position: relative;
+  //           display: flex;
+  //           flex-direction: row;
+  //           background: transparent;
+  //           left: 12.5em;
+  //           li {
+  //             font-size: 18px;
+  //             width: 26%;
+  //             a {
+  //               padding: 0 10px;
+  //               transition: $button-hover-state;
+  //               margin-right: 7px;
+  //               &:hover {
+  //                 color: cyan;
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .logo-container {
+  //         flex-direction: column;
+  //         .logo-name {
+  //           font-size: 1.5rem;
+  //           letter-spacing: 8pt;
+  //         }
+  //         .logo-title {
+  //           letter-spacing: 2.9pt;
+  //           margin-left: 0;
+  //         }
+  //       }
+  //       .top-social-icon {
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         flex-direction: row;
+  //         a {
+  //           margin: 0 1em;
+  //           transition: $button-hover-state;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   .menu-btn svg {
     display: none;
   }
-  .hero-container {
-    grid-template-columns: 75% auto;
-  }
+  // .hero-container {
+  //   grid-template-columns: 75% auto;
+  // }
   .featured .right img {
     width: 70%;
   }
