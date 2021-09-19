@@ -610,22 +610,23 @@ header #click:checked ~ ul li a {
 
 .contact-page-section .contact-container .input-area {
   .submit-button {
-    background-color: $brand-color;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 1em;
-    color: $core-light;
-    border-radius: 5px;
-    border: 1px solid $tertiary;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: $button-hover-state;
-    box-shadow: 0 8px 13px -4px lightblue;
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 2pt;
     font-weight: 600;
+    color: $core-light;
+    background-color: $brand-color;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid $tertiary;
+    transition: $button-hover-state;
+    box-shadow: 0 8px 13px -4px lightblue;
     &:hover {
       background: #618bc5;
       box-shadow: 0 8px 13px -4px #0d4252c4;
@@ -653,6 +654,7 @@ header #click:checked ~ ul li a {
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child {
+  cursor: pointer;
   width: 80vw;
   padding: 5px;
   border-bottom: 1px solid #000100;
@@ -673,6 +675,7 @@ header #click:checked ~ ul li a {
       font-family: "Poppins";
       font-size: 18px;
       color: #000;
+      cursor: pointer;
     }
   }
   .right {
