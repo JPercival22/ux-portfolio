@@ -1812,6 +1812,7 @@ section .case-study-inner-guitar {
       }
     }
   }
+
   .top-social-icon {
     display: flex;
     flex-direction: row;
@@ -1819,9 +1820,13 @@ section .case-study-inner-guitar {
     justify-content: center;
     margin: 0 1.5em;
     a {
-      margin: 0 1em;
+      margin: 0 1.8em 0 1em;
       transition: 1s all;
     }
+  }
+
+  .menu-btn svg {
+    display: none;
   }
 
   .hero-container {
@@ -1829,89 +1834,85 @@ section .case-study-inner-guitar {
     grid-template-columns: 70% auto;
   }
 
-  //   header {
-  //     display: flex;
-  //     height: 60px;
-  //     background: #2c4465;
-  //     .logo {
-  //       padding-left: 4em;
-  //       font-size: 0.8rem;
-
-  //       nav {
-  //         display: flex;
-  //         justify-content: flex-end;
-  //         flex-direction: row;
-  //         ul {
-  //           position: relative;
-  //           display: flex;
-  //           flex-direction: row;
-  //           background: transparent;
-  //           left: 12.5em;
-  //           li {
-  //             font-size: 18px;
-  //             width: 26%;
-  //             a {
-  //               padding: 0 10px;
-  //               transition: $button-hover-state;
-  //               margin-right: 7px;
-  //               &:hover {
-  //                 color: cyan;
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //       .logo-container {
-  //         flex-direction: column;
-  //         .logo-name {
-  //           font-size: 1.5rem;
-  //           letter-spacing: 8pt;
-  //         }
-  //         .logo-title {
-  //           letter-spacing: 2.9pt;
-  //           margin-left: 0;
-  //         }
-  //       }
-  //       .top-social-icon {
-  //         display: flex;
-  //         align-items: center;
-  //         justify-content: center;
-  //         flex-direction: row;
-  //         a {
-  //           margin: 0 1em;
-  //           transition: $button-hover-state;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
-  .menu-btn svg {
-    display: none;
-  }
-  // .hero-container {
-  //   grid-template-columns: 75% auto;
-  // }
   .featured .right img {
     width: 70%;
   }
+
   .about .about-container ul li {
     justify-content: space-evenly;
   }
+
   .about .about-container ul li .icon-container img,
   .about .about-container ul li .icon-container .degree-image {
     width: 94.39px;
     height: 96.67px;
   }
+
   .about .about-container ul .business-model .business-model-icon {
     padding: 0;
   }
+
   .portfolio .portfolio-container .right img {
     width: 26vw;
   }
+
   .portfolio .portfolio-container .right .case-study-button,
   .featured .right button {
     width: 17vw;
+  }
+
+  // contact-page styles
+
+  .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
+    width: 75%;
+  }
+
+  .contact-page-section .contact-container .contact-form .contact-form-container .left {
+    justify-content: space-evenly;
+  }
+
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    font-size: 17px;
+    font-weight: 500;
+    width: 40%;
+    padding: 7px 5px;
+  }
+
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .logo-main {
+    flex-direction: column;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo img {
+    border-radius: 0;
+  }
+  
+  .contact-page-section
+    .contact-container
+    .contact-form
+    .contact-form-container
+    .right
+    .w-50
+    .logo-main
+    .centered-title
+    .brand-name {
+    font-size: 3em;
+    letter-spacing: 4pt;
+    line-height: 1em;
+  }
+
+  .contact-page-section
+    .contact-container
+    .contact-form
+    .contact-form-container
+    .right
+    .w-50
+    .logo-main
+    .centered-title
+    .job-title {
+    font-variant-caps: all-petite-caps;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: 3.1pt;
+    padding-bottom: 1.5em;
   }
 }
 
@@ -2713,8 +2714,7 @@ section .case-study-inner-guitar {
   }
   .close-btn:hover {
     opacity: 0.7;
-    -webkit-transition: linear 1s ease-in-out;
-    transition: $button-hover-state;
+    transition: $button-hover-state; 
   }
   .lr-margin {
     margin: 0 4em;
@@ -2724,11 +2724,8 @@ section .case-study-inner-guitar {
     width: 80%;
     height: 30%;
     display: none;
-
     justify-content: center;
-
     align-items: center;
-
     flex-direction: column;
     position: relative;
     top: -545px;
