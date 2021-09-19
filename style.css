@@ -1964,6 +1964,12 @@ section .case-study-inner-guitar {
     font-size: 22px;
     width: 190px;
   }
+  .contact-page-section .show-modal {
+    top: 40%;
+    left: 30%;
+    width: 39vw;
+    height: auto;
+  }
   .hero-container-projects {
     height: 50vh;
   }
@@ -2305,6 +2311,12 @@ img {
     letter-spacing: 3.1pt;
     padding-bottom: 1.5em;
   }
+  .contact-page-section .show-modal {
+    top: 40%;
+    left: 35%;
+    width: 30vw;
+    height: auto;
+  }
 }
 
 /*Large Laptop/ Desktop viewport styles */
@@ -2317,7 +2329,7 @@ img {
     font-size: 1em;
   }
   .nav-container header .logo {
-    padding-left: 11em;
+    padding-left: 7.5em;
   }
   .nav-container header .logo .logo-container .logo-title {
     font-size: 13px;
@@ -2347,6 +2359,9 @@ img {
   .research-qoute {
     margin: 0 12em;
     padding-bottom: 6em;
+  }
+  .hero-design {
+    height: 80vh;
   }
   .featured {
     padding: 3em 6em;
@@ -2420,7 +2435,7 @@ img {
     padding: 1em;
   }
   footer .footer-container .footer-details {
-    padding: 2em 13em;
+    padding: 2em 9em;
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo {
     display: -webkit-box;
@@ -2439,91 +2454,45 @@ img {
     letter-spacing: 4.1pt;
     font-variant-caps: inherit;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
-    width: 12vw;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0.7em;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
-    width: 12vw;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0.7em;
+  .contact-page-section {
+    padding: 0em;
   }
   .contact-page-section .contact-container {
-    padding: 4em 12em;
+    padding: 4em 9em;
   }
   .contact-page-section .contact-container .contact-form {
-    padding: 0;
+    padding: 2em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-title {
+    text-align: left;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area {
+    width: 70%;
+    padding: 0 0.5em;
+    margin-top: 0;
+    margin-bottom: 1.9em;
+  }
+  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
+    font-size: 19px;
+    padding: 5px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .first-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .second-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .third-child,
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
-    width: 30vw;
+    width: 34vw;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #011f48d4;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .contact-page-section .show-modal {
+    width: 25vw;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main {
-    width: 30vw;
+  .contact-page-section .show-modal .close-modal {
+    top: 0;
+    left: 0;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title {
-    margin-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #ffffff;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .brand-name {
-    font-family: "Poppins";
-    font-variant-caps: small-caps;
-    font-size: 40px;
-    letter-spacing: 2pt;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .centered-title .job-title {
-    font-family: "Poppins";
-    font-variant-caps: small-caps;
-    font-size: 30px;
-    letter-spacing: 4pt;
-  }
-  .show-modal {
-    top: 40%;
-    left: 30%;
-    width: 30vw;
-    height: 30vh;
+  .contact-page-section .show-modal .close-modal .close-icon {
+    position: relative;
+    top: -40px;
+    left: 370px;
   }
   .case-study-container {
     display: -webkit-box;
@@ -3100,12 +3069,6 @@ img {
   }
   .idea-right-col {
     border: 2px solid green;
-  }
-  p,
-  .project-plan p {
-    font-size: 1.2em;
-    line-height: 1.5em;
-    padding-bottom: 1em;
   }
   .validation-image-container {
     display: -ms-grid;
