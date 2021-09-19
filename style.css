@@ -2361,7 +2361,8 @@ img {
     padding-bottom: 6em;
   }
   .hero-design {
-    height: 80vh;
+    height: 43.5vh;
+    margin-top: 3em;
   }
   .featured {
     padding: 3em 6em;
@@ -2435,7 +2436,11 @@ img {
     padding: 1em;
   }
   footer .footer-container .footer-details {
-    padding: 2em 9em;
+    padding: 2em 13em;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder {
+    margin-right: 16px;
+    margin-left: -3.2em;
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo {
     display: -webkit-box;
@@ -2445,11 +2450,11 @@ img {
   footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo img {
     width: 40px;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
+  footer .footer-container .footer-details .logo-container .logo-name {
     line-height: 23px;
     letter-spacing: 10pt;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
+  footer .footer-container .footer-details .logo-container .logo-title {
     font-size: 14px;
     letter-spacing: 4.1pt;
     font-variant-caps: inherit;

@@ -1995,7 +1995,8 @@ section .case-study-inner-guitar {
   }
 
   .hero-design {
-    height: 80vh;
+    height: 43.5vh;
+    margin-top: 3em;
   }
 
   .featured {
@@ -2084,15 +2085,19 @@ section .case-study-inner-guitar {
 
   footer .footer-container {
     .footer-details {
-      padding: 2em 9em;
+      padding: 2em 13em;
       .footer-top-bar .logo {
         .logo-placeholder {
+          margin-right: 16px;
+          margin-left: -3.2em;
           .company-logo {
             display: flex;
             img {
               width: 40px;
             }
           }
+        }
+
         }
         .logo-container {
           .logo-name {
@@ -2104,9 +2109,8 @@ section .case-study-inner-guitar {
             letter-spacing: 4.1pt;
             font-variant-caps: inherit;
           }
-        }
       }
-    }
+      }
   }
 
   // contact page styles
