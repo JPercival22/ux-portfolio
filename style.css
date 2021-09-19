@@ -795,13 +795,6 @@ header #click:checked ~ ul li a {
 }
 
 .contact-page-section .contact-container .input-area .submit-button {
-  background-color: #2c4465;
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 1em;
-  color: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #213550;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -811,14 +804,22 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-box-shadow: 0 8px 13px -4px lightblue;
-          box-shadow: 0 8px 13px -4px lightblue;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 2pt;
   font-weight: 600;
+  color: #ffffff;
+  background-color: #2c4465;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid #213550;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0 8px 13px -4px lightblue;
+          box-shadow: 0 8px 13px -4px lightblue;
 }
 
 .contact-page-section .contact-container .input-area .submit-button:hover {
@@ -890,6 +891,7 @@ label
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .first-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .second-child,
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .third-child {
+  cursor: pointer;
   width: 80vw;
   padding: 5px;
   border-bottom: 1px solid #000100;
@@ -908,6 +910,7 @@ label
   font-family: "Poppins";
   font-size: 18px;
   color: #000;
+  cursor: pointer;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo {
