@@ -1881,10 +1881,19 @@ section .case-study-inner-guitar {
   .contact-page-section .contact-container .contact-form .contact-form-container .right .logo-main {
     flex-direction: column;
   }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .w-50 .logo-main .logo-placeholder .company-logo img {
+  .contact-page-section
+    .contact-container
+    .contact-form
+    .contact-form-container
+    .right
+    .w-50
+    .logo-main
+    .logo-placeholder
+    .company-logo
+    img {
     border-radius: 0;
   }
-  
+
   .contact-page-section
     .contact-container
     .contact-form
@@ -1928,56 +1937,55 @@ section .case-study-inner-guitar {
 
   // top-nav styles
 
-  .nav-container header .logo {
-    padding-left: 16em;
-  }
-  .nav-container header .logo .logo-container .logo-name {
-    line-height: 23px;
-    letter-spacing: 7.6pt;
-    font-size: 30px;
-    font-variant-caps: all-petite-caps;
-  }
-  .nav-container header .logo .logo-container .logo-title {
-    font-size: 11px;
-    letter-spacing: 2pt;
-    justify-content: flex-start;
-  }
-  .nav-container header nav ul {
-    position: relative;
-    top: 0;
-    left: -11px;
+  .nav-container header {
+    .logo {
+      padding-left: 11em;
+      .logo-container {
+        .logo-title {
+          font-size: 13px;
+        }
+      }
+    }
+    nav ul {
+      position: relative;
+      top: 0;
+      left: -11px;
+    }
   }
 
   // index-page
+
   .hero-container {
+    height: 69vh;
     .hero-text-content {
       padding: 3em 8em 3em 13em;
       .hero-title {
         font-size: 2rem;
         line-height: 3rem;
       }
+      .txt-rotate .wrap {
+        font-size: 2.5rem;
+      }
     }
-    .hero-design {
-      left: 6%;
-      top: 36%;
-      width: 70%;
-    }
-    .txt-rotate .wrap {
-      font-size: 2.5rem;
-    }
+  }
+
+  .portfolio .portfolio-container .right .case-study-button,
+  .featured .right button {
+    width: 12vw;
   }
 
   .research-qoute {
-    margin: 0 11.5em;
+    margin: 0 12em;
+    padding-bottom: 6em;
   }
 
   .featured {
-    padding: 3em 4em;
+    padding: 3em 6em;
     &:before {
       left: 10em;
     }
     .left {
-      margin: 0 9em;
+      margin: 0 7em;
       .inner .subtitle {
         text-align: left;
       }
@@ -1988,10 +1996,16 @@ section .case-study-inner-guitar {
   }
 
   .skills {
-    padding: 3em 13em;
+    padding: 3em 12.2em;
     .skills-container ul {
       li {
         margin-bottom: 1em;
+        .one {
+          margin-top: 0;
+        }
+        .two {
+          margin-top: 2em;
+        }
       }
       p {
         font-size: 1em;
@@ -2000,8 +2014,9 @@ section .case-study-inner-guitar {
   }
 
   .portfolio {
-    padding: 2em 11em;
+    padding: 2em 12.2em;
     .portfolio-container {
+      margin: 0;
       .portfolio-left {
         .inner {
           .featured-title {
@@ -2013,8 +2028,6 @@ section .case-study-inner-guitar {
         }
       }
       .right img {
-        border-radius: 20px;
-        padding: 1em;
         height: 27vh;
         width: 20vw;
         margin-top: 1em;
@@ -2023,7 +2036,7 @@ section .case-study-inner-guitar {
   }
 
   .about {
-    padding: 4em 13em;
+    padding: 4em 12.2em 4em 13em;
     .about-container ul {
       .business-model .business-model-icon {
         height: 100px;
@@ -2032,17 +2045,20 @@ section .case-study-inner-guitar {
         padding: 3em;
         place-content: center;
         img {
-          width: 200px;
+          width: 260px;
           height: auto;
         }
       }
-    }
-    li {
-      .deliverables-title {
-        padding: 1em;
-      }
-      .about-title {
-        padding: 1em;
+      li {
+        padding-top: 3em;
+        .icon-container {
+          .deliverables-title {
+            padding: 1em;
+          }
+          .about-title {
+            padding: 1em;
+          }
+        }
       }
     }
   }
@@ -2050,21 +2066,30 @@ section .case-study-inner-guitar {
   footer .footer-container {
     .footer-details {
       padding: 2em 13em;
-      .footer-top-bar .logo .logo-container {
-        .logo-name {
-          line-height: 23px;
-          letter-spacing: 7.5pt;
-          font-size: 30px;
+      .footer-top-bar .logo {
+        .logo-placeholder {
+          .company-logo {
+            display: flex;
+            img {
+              width: 40px;
+            }
+          }
         }
-        .logo-title {
-          font-size: 11px;
-          letter-spacing: 2pt;
-          font-variant-caps: inherit;
+        .logo-container {
+          .logo-name {
+            line-height: 23px;
+            letter-spacing: 10pt;
+          }
+          .logo-title {
+            font-size: 14px;
+            letter-spacing: 4.1pt;
+            font-variant-caps: inherit;
+          }
         }
       }
     }
   }
-
+  
   // contact page styles
   .contact-page-section .contact-container .contact-form .contact-form-container .right .brand .logo-main {
     width: 12vw;
@@ -2714,7 +2739,7 @@ section .case-study-inner-guitar {
   }
   .close-btn:hover {
     opacity: 0.7;
-    transition: $button-hover-state; 
+    transition: $button-hover-state;
   }
   .lr-margin {
     margin: 0 4em;
