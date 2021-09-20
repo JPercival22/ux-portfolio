@@ -183,12 +183,11 @@ header #click:checked ~ ul li a {
 .menu-btn {
   svg {
     display: flex;
-    padding: 0.5em;
     width: 30px;
     height: auto;
     position: absolute;
-    right: -5px;
-    top: 5px;
+    right: 10px;
+    top: 12px;
     path {
       fill: $core-light;
     }
@@ -784,14 +783,19 @@ a {
 
 // thank you page styles
 .thank-you-section {
-  padding: 0;
-  margin: 10px;
+  padding: 10px;
+  background: url(img/thank-you-bkg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   .thank-you-container {
     display: flex;
+    animation: thank-you-animation 3s;
+    justify-content: center;
     .thank-you-message {
       border: 1px solid $brand-color;
       border-radius: 8px;
-      background-color: #fffdf2ed;
+      background-color: $core-light;
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -827,12 +831,11 @@ a {
         border-radius: 5px;
         margin: 1em;
         width: 100%;
-        padding: 8px;
+        height: 30px;
         transition: all 0.5s ease-in-out;
         box-shadow: 0 8px 13px -4px lightblue;
         .primary-button {
           background-color: $primary-core;
-          padding: 6px 12px;
           color: $core-light;
           font-size: 17px;
           border-radius: 5px;
@@ -853,6 +856,14 @@ a {
   }
 }
 
+@keyframes thank-you-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   position: relative;
   top: -1px;
@@ -1058,6 +1069,11 @@ section .case-study-inner-guitar {
   .show-modal {
     left: 5%;
   }
+
+  .thank-you-section .thank-you-container .thank-you-message {
+    max-width: 365px;
+    width: 100%;
+  }
 }
 
 // Large mobile Phone Viewport styles
@@ -1074,6 +1090,10 @@ section .case-study-inner-guitar {
     max-width: 84%;
   }
 
+  .thank-you-section .thank-you-container .thank-you-message {
+    max-width: 415px;
+  }
+
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
     letter-spacing: 5pt;
     margin-top: 0.5em;
@@ -1087,6 +1107,10 @@ section .case-study-inner-guitar {
     header .logo .logo-container .logo-name {
       font-size: 2em;
     }
+  }
+
+  .menu-btn svg {
+    right: 22px;
   }
 
   .research-qoute {
@@ -1233,6 +1257,24 @@ section .case-study-inner-guitar {
     left: 20%;
   }
 
+  // thank you page styles
+  .thank-you-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/thank-you-bkg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .thank-you-container {
+      padding: 0;
+      .thank-you-message {
+        max-width: 415px;
+        margin: 2em;
+      }
+    }
+  }
+
   /*remind-project styles */
   .nielson-qoute {
     background: linear-gradient(#9191e833, #00000080), url(img/Design-Wallpaper-4k.jpg);
@@ -1371,6 +1413,8 @@ section .case-study-inner-guitar {
     }
   }
 
+  // contact page styles
+
   .contact-page-section {
     padding: 2.5em;
     .contact-container .contact-form {
@@ -1448,6 +1492,16 @@ section .case-study-inner-guitar {
   .show-modal {
     top: 30%;
     left: 20%;
+  }
+
+  // Thank you styles
+
+  .thank-you-section {
+    padding: 0.5em;
+    .thank-you-container .thank-you-message button {
+      width: 40%;
+      margin-bottom: 1.5em;
+    }
   }
 
   footer .footer-container .footer-details {
@@ -1683,6 +1737,7 @@ section .case-study-inner-guitar {
     }
   }
 
+  // contact page styles
   .contact-page-section {
     padding: 4em;
     .show-modal {
@@ -1691,6 +1746,11 @@ section .case-study-inner-guitar {
       width: 39vw;
       height: auto;
     }
+  }
+
+  // thank you page styles
+  .thank-you-section {
+    padding: 0.5em;
   }
 
   .hero-container-projects {
@@ -2009,6 +2069,11 @@ section .case-study-inner-guitar {
       width: 30vw;
       height: auto;
     }
+  }
+
+  .thank-you-section .thank-you-container .thank-you-message {
+    margin: 2em;
+    padding: 1em;
   }
 }
 

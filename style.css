@@ -220,12 +220,11 @@ header #click:checked ~ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5em;
   width: 30px;
   height: auto;
   position: absolute;
-  right: -5px;
-  top: 5px;
+  right: 10px;
+  top: 12px;
 }
 
 .menu-btn svg path {
@@ -1072,20 +1071,28 @@ a {
 }
 
 .thank-you-section {
-  padding: 0;
-  margin: 10px;
+  padding: 10px;
+  background: url(img/thank-you-bkg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .thank-you-section .thank-you-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: thank-you-animation 3s;
+  animation: thank-you-animation 3s;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .thank-you-section .thank-you-container .thank-you-message {
   border: 1px solid #2c4465;
   border-radius: 8px;
-  background-color: #fffdf2ed;
+  background-color: #ffffff;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1140,7 +1147,7 @@ a {
   border-radius: 5px;
   margin: 1em;
   width: 100%;
-  padding: 8px;
+  height: 30px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-box-shadow: 0 8px 13px -4px lightblue;
@@ -1149,7 +1156,6 @@ a {
 
 .thank-you-section .thank-you-container .thank-you-message button .primary-button {
   background-color: #2c4465;
-  padding: 6px 12px;
   color: #ffffff;
   font-size: 17px;
   border-radius: 5px;
@@ -1172,6 +1178,24 @@ a {
   background: #2c4465;
   color: #ffffff;
   border-color: #2c4465;
+}
+
+@-webkit-keyframes thank-you-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes thank-you-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
@@ -1439,6 +1463,10 @@ section .case-study-inner-guitar {
   .show-modal {
     left: 5%;
   }
+  .thank-you-section .thank-you-container .thank-you-message {
+    max-width: 365px;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 425px) {
@@ -1452,6 +1480,9 @@ section .case-study-inner-guitar {
     left: 4%;
     max-width: 84%;
   }
+  .thank-you-section .thank-you-container .thank-you-message {
+    max-width: 415px;
+  }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
     letter-spacing: 5pt;
     margin-top: 0.5em;
@@ -1464,6 +1495,9 @@ section .case-study-inner-guitar {
   }
   .nav-container header .logo .logo-container .logo-name {
     font-size: 2em;
+  }
+  .menu-btn svg {
+    right: 22px;
   }
   .research-qoute {
     margin: 0 1em;
@@ -1593,6 +1627,28 @@ section .case-study-inner-guitar {
     height: 30vh;
     top: 35%;
     left: 20%;
+  }
+  .thank-you-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: url(img/thank-you-bkg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .thank-you-section .thank-you-container {
+    padding: 0;
+  }
+  .thank-you-section .thank-you-container .thank-you-message {
+    max-width: 415px;
+    margin: 2em;
   }
   /*remind-project styles */
   .nielson-qoute {
@@ -1841,6 +1897,13 @@ section .case-study-inner-guitar {
   .show-modal {
     top: 30%;
     left: 20%;
+  }
+  .thank-you-section {
+    padding: 0.5em;
+  }
+  .thank-you-section .thank-you-container .thank-you-message button {
+    width: 40%;
+    margin-bottom: 1.5em;
   }
   footer .footer-container .footer-details {
     padding: 2em 3em;
@@ -2111,6 +2174,9 @@ section .case-study-inner-guitar {
     left: 30%;
     width: 39vw;
     height: auto;
+  }
+  .thank-you-section {
+    padding: 0.5em;
   }
   .hero-container-projects {
     height: 50vh;
@@ -2472,6 +2538,10 @@ section .case-study-inner-guitar {
     left: 35%;
     width: 30vw;
     height: auto;
+  }
+  .thank-you-section .thank-you-container .thank-you-message {
+    margin: 2em;
+    padding: 1em;
   }
 }
 
