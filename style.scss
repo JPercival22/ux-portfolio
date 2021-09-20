@@ -184,11 +184,11 @@ header #click:checked ~ ul li a {
   svg {
     display: flex;
     padding: 0.5em;
-    width: 25px;
+    width: 30px;
     height: auto;
     position: absolute;
-    right: 12px;
-    top: 6px;
+    right: -5px;
+    top: 5px;
     path {
       fill: $core-light;
     }
@@ -661,7 +661,7 @@ header #click:checked ~ ul li a {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -780,6 +780,77 @@ a {
 
 .blur {
   filter: blur(5px);
+}
+
+// thank you page styles
+.thank-you-section {
+  padding: 0;
+  margin: 10px;
+  .thank-you-container {
+    display: flex;
+    .thank-you-message {
+      border: 1px solid $brand-color;
+      border-radius: 8px;
+      background-color: #fffdf2ed;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 280px;
+      width: 100%;
+      h1 {
+        line-height: 27pt;
+        color: $brand-color;
+        font-size: 1.7rem;
+        font-weight: 500;
+        font-variant-caps: all-petite-caps;
+        letter-spacing: 5px;
+        text-align: center;
+      }
+      p span {
+        color: dodgerblue;
+        font-style: italic;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $brand-color;
+        color: $core-light;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border: 1px solid $brand-color;
+        border-radius: 5px;
+        margin: 1em;
+        width: 100%;
+        padding: 8px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 8px 13px -4px lightblue;
+        .primary-button {
+          background-color: $primary-core;
+          padding: 6px 12px;
+          color: $core-light;
+          font-size: 17px;
+          border-radius: 5px;
+          border: $button-border-settings;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: $button-hover-state;
+          &:hover {
+            background: $primary-core;
+            color: $core-light;
+            border-color: $core-button-border;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -1316,7 +1387,6 @@ section .case-study-inner-guitar {
           .input-area {
             display: flex;
             justify-content: center;
-            width: 100%;
             label .text-field {
               height: 20vh;
             }
@@ -1615,12 +1685,6 @@ section .case-study-inner-guitar {
 
   .contact-page-section {
     padding: 4em;
-    .contact-container .left .input-area .submit-button {
-      margin: 0 auto;
-      padding: 10px;
-      font-size: 22px;
-      width: 190px;
-    }
     .show-modal {
       top: 40%;
       left: 30%;
@@ -1873,7 +1937,12 @@ section .case-study-inner-guitar {
   // contact-page styles
 
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
-    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1.9em;
   }
 
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
@@ -1881,9 +1950,9 @@ section .case-study-inner-guitar {
   }
 
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    font-size: 17px;
     font-weight: 500;
-    width: 40%;
+    font-size: 19px;
+    width: 150px;
     padding: 7px 5px;
   }
 
@@ -2100,20 +2169,19 @@ section .case-study-inner-guitar {
             }
           }
         }
-
+      }
+      .logo-container {
+        .logo-name {
+          line-height: 23px;
+          letter-spacing: 10pt;
         }
-        .logo-container {
-          .logo-name {
-            line-height: 23px;
-            letter-spacing: 10pt;
-          }
-          .logo-title {
-            font-size: 14px;
-            letter-spacing: 4.1pt;
-            font-variant-caps: inherit;
-          }
+        .logo-title {
+          font-size: 14px;
+          letter-spacing: 4.1pt;
+          font-variant-caps: inherit;
+        }
       }
-      }
+    }
   }
 
   // contact page styles
@@ -2121,7 +2189,8 @@ section .case-study-inner-guitar {
   .contact-page-section {
     padding: 0em;
     .contact-container {
-      padding: 4em 9em;
+      padding: 4em 14em;
+      width: 75vw;
       .contact-form {
         padding: 2em;
         .contact-form-title {
@@ -2129,10 +2198,6 @@ section .case-study-inner-guitar {
         }
         .contact-form-container {
           .left .input-area {
-            width: 70%;
-            padding: 0 0.5em;
-            margin-top: 0;
-            margin-bottom: 1.9em;
             .submit-button {
               font-size: 19px;
               padding: 5px;

@@ -221,11 +221,11 @@ header #click:checked ~ ul li a {
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
-  width: 25px;
+  width: 30px;
   height: auto;
   position: absolute;
-  right: 12px;
-  top: 6px;
+  right: -5px;
+  top: 5px;
 }
 
 .menu-btn svg path {
@@ -901,7 +901,7 @@ header #click:checked ~ ul li a {
   border-top: none;
   border-left: none;
   border-right: none;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -1069,6 +1069,109 @@ a {
 .blur {
   -webkit-filter: blur(5px);
   filter: blur(5px);
+}
+
+.thank-you-section {
+  padding: 0;
+  margin: 10px;
+}
+
+.thank-you-section .thank-you-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thank-you-section .thank-you-container .thank-you-message {
+  border: 1px solid #2c4465;
+  border-radius: 8px;
+  background-color: #fffdf2ed;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+}
+
+.thank-you-section .thank-you-container .thank-you-message h1 {
+  line-height: 27pt;
+  color: #2c4465;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.thank-you-section .thank-you-container .thank-you-message p span {
+  color: dodgerblue;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.thank-you-section .thank-you-container .thank-you-message button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #2c4465;
+  color: #ffffff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid #2c4465;
+  border-radius: 5px;
+  margin: 1em;
+  width: 100%;
+  padding: 8px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0 8px 13px -4px lightblue;
+  box-shadow: 0 8px 13px -4px lightblue;
+}
+
+.thank-you-section .thank-you-container .thank-you-message button .primary-button {
+  background-color: #2c4465;
+  padding: 6px 12px;
+  color: #ffffff;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid #2c4465;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.thank-you-section .thank-you-container .thank-you-message button .primary-button:hover {
+  background: #2c4465;
+  color: #ffffff;
+  border-color: #2c4465;
 }
 
 footer {
@@ -1651,7 +1754,6 @@ section .case-study-inner-guitar {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 100%;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area label .text-field {
     height: 20vh;
@@ -2004,12 +2106,6 @@ section .case-study-inner-guitar {
   .contact-page-section {
     padding: 4em;
   }
-  .contact-page-section .contact-container .left .input-area .submit-button {
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 22px;
-    width: 190px;
-  }
   .contact-page-section .show-modal {
     top: 40%;
     left: 30%;
@@ -2298,7 +2394,21 @@ section .case-study-inner-guitar {
     width: 17vw;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .input-area {
-    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1.9em;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left {
     -webkit-box-pack: space-evenly;
@@ -2306,9 +2416,9 @@ section .case-study-inner-guitar {
     justify-content: space-evenly;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
-    font-size: 17px;
     font-weight: 500;
-    width: 40%;
+    font-size: 19px;
+    width: 150px;
     padding: 7px 5px;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .right .logo-main {
@@ -2509,19 +2619,14 @@ section .case-study-inner-guitar {
     padding: 0em;
   }
   .contact-page-section .contact-container {
-    padding: 4em 9em;
+    padding: 4em 14em;
+    width: 75vw;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 2em;
   }
   .contact-page-section .contact-container .contact-form .contact-form-title {
     text-align: left;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area {
-    width: 70%;
-    padding: 0 0.5em;
-    margin-top: 0;
-    margin-bottom: 1.9em;
   }
   .contact-page-section .contact-container .contact-form .contact-form-container .left .input-area .submit-button {
     font-size: 19px;
