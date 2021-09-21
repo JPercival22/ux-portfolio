@@ -115,7 +115,7 @@ header nav #click {
 .nav-container header .logo .logo-placeholder {
   width: 30px;
   height: auto;
-  margin-left: 10px;
+  margin-left: 0.7em;
 }
 
 .nav-container header .logo .logo-placeholder .company-logo {
@@ -1316,128 +1316,113 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   padding: 1rem;
 }
 
-/*case study styles*/
 .guitar-project {
-  height: 20vh;
-  background-image: url(/img/ux-guitar-lessons-min.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(/img/guitar-lesson-header.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-}
-
-.hero-container-projects {
-  height: 700px;
-  background-image: url(/img/remind-me-multiple.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
   padding: 0;
+  width: auto;
+  height: 44vh;
 }
 
-.hero-content-grid-guitar {
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  top: 170px;
+.guitar-project .is-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar {
-  position: relative;
-  font-size: 18px;
-  color: #1e90ff;
-  line-height: 1.7rem;
-  padding: 10px;
-  background: #fff;
-  width: 43%;
-  border: 3px solid #1e90ff;
-  border-radius: 5px;
+.guitar-project .is-centered .hero-text-content {
+  margin-left: 10px;
+  color: #ffffff;
+  background: transparent;
 }
 
-.hero-content-grid .hero-text-content .hero-title-case-study {
-  position: absolute;
-  left: 6%;
-  top: 10%;
+.guitar-project .is-centered .hero-text-content .hero-title-case-study {
+  text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+}
+
+.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: 4pt;
+  font-style: normal;
+  font-variant-caps: small-caps;
+  line-height: 28pt;
+}
+
+.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
+  font-size: 20px;
+  letter-spacing: 3pt;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 2pt;
+}
+
+.case-study-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: -8px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.case-study-inner .section-title {
+  font-size: 1.8em;
+  font-variant-caps: all-petite-caps;
+  color: #2c4465;
+  line-height: 19pt;
+  letter-spacing: 4pt;
+}
+
+.case-study-inner .section-editorial {
   font-size: 16px;
-  color: #0465c3;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d2d94ec2), to(white));
-  background: linear-gradient(#d2d94ec2, white);
-  width: 100%;
-  max-width: 100%;
+  letter-spacing: 1pt;
+  line-height: 21pt;
 }
 
-.hero-content-grid .hero-text-content .hero-title-case-study h1 {
-  line-height: 1.5rem;
-  font-size: 1.5rem;
+.case-study-inner .section-editorial .link-text {
+  color: #2c4465;
+  font-weight: 600;
+  line-height: 40pt;
+  text-decoration: underline;
 }
 
-.hero-title-case-study-guitar h1 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+.case-study-inner .section-editorial .link-text:hover {
+  text-decoration: none;
 }
 
-.hero-content-grid .hero-text-content .hero-title-case-study h2 {
-  font-size: 16px;
-  line-height: 21px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #004671;
+.case-study-inner ul {
+  list-style: circle;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: 1em;
 }
 
-.hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-  font-size: 1rem;
-  line-height: 1rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  color: #3d3d3d;
+.case-study-inner ul li {
+  margin: 0 20px;
 }
 
-.case-study- {
-  position: absolute;
-  top: 30em;
-}
-
-section {
-  padding: 0.5em;
-}
-
-section .case-study-inner {
-  width: 100%;
-  text-align: left;
-  min-height: 200px;
-}
-
-section .case-study-inner-guitar {
-  width: 100%;
-  text-align: left;
-  min-height: 200px;
-  top: 50px;
-}
-
-.case-study-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: none;
-  grid-template-columns: none;
-}
-
-.case-study-container h2 {
-  font-size: 22px;
-}
-
-.case-study-container p {
-  font-size: 18px;
-}
-
-.case-study-container ul li {
-  font-size: 18px;
-}
-
-.case-study- section .case-study-inner h1 {
-  color: #3030db;
-}
-
-.case-study- section .case-study-container h2 {
-  color: #5252ff;
+.case-study-inner .emphasis-text {
+  font-weight: 600;
+  margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 375px) {
@@ -1464,6 +1449,9 @@ section .case-study-inner-guitar {
   .thank-you-section .thank-you-container .thank-you-message {
     max-width: 415px;
   }
+  .guitar-project {
+    height: 50vh;
+  }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
     letter-spacing: 5pt;
     margin-top: 0.5em;
@@ -1473,6 +1461,9 @@ section .case-study-inner-guitar {
 @media only screen and (min-width: 610px) {
   .nav-container {
     padding-left: 1em;
+  }
+  .nav-container header .logo .logo-placeholder {
+    margin-left: 0.5em;
   }
   .nav-container header .logo .logo-container .logo-name {
     font-size: 2em;
@@ -1631,6 +1622,10 @@ section .case-study-inner-guitar {
     max-width: 415px;
     margin: 2em;
   }
+  .case-study-inner {
+    margin: 1em;
+    margin-top: 0;
+  }
   /*remind-project styles */
   .nielson-qoute {
     background: -webkit-gradient(linear, left top, left bottom, from(#9191e833), to(#00000080)), url(img/Design-Wallpaper-4k.jpg);
@@ -1648,12 +1643,12 @@ section .case-study-inner-guitar {
 }
 
 @media only screen and (min-width: 895px) {
-  .nav-container {
-    padding-left: 2em;
-  }
   .nav-container header nav ul li {
     font-size: 2rem;
     font-variant-caps: all-petite-caps;
+  }
+  .nav-container header .logo .logo-placeholder {
+    margin-left: 1.3em;
   }
   .nav-container header .logo .logo-container .logo-name {
     font-size: 1.8rem;
@@ -1676,7 +1671,7 @@ section .case-study-inner-guitar {
     display: grid;
     padding: 0;
   }
-  .nav-container .hero-container .hero-text-content {
+  .nav-container .hero-container .is-centered .hero-text-content {
     padding: 2em;
   }
   .menu-btn svg {
@@ -1862,8 +1857,17 @@ section .case-study-inner-guitar {
     width: 40%;
     margin-bottom: 1.5em;
   }
+  .guitar-project {
+    height: 60vh;
+  }
+  .guitar-project .is-centered .hero-text-content {
+    margin-left: 1.3em;
+  }
+  .case-study-inner {
+    margin: 1.2em;
+  }
   footer .footer-container .footer-details {
-    padding: 2em 3em;
+    padding: 2.2em;
   }
   footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
     letter-spacing: 5.2pt;
@@ -1886,6 +1890,7 @@ section .case-study-inner-guitar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 0;
   }
   .nav-container header .logo .logo-container .logo-name {
     font-size: 1.5rem;
@@ -1896,15 +1901,15 @@ section .case-study-inner-guitar {
     margin-left: 0;
   }
   .nav-container header .logo .logo-placeholder {
-    padding: 1.5em;
+    padding: 1.5em 1em 1.5em 1.5em;
   }
   .nav-container header .logo .logo-placeholder .company-logo img {
     height: 35px;
     width: auto;
   }
   .menu-btn svg {
-    top: 5px;
-    right: 3.8em;
+    top: 0.7em;
+    right: 3.1em;
     width: 35px;
     height: auto;
   }
@@ -2140,80 +2145,14 @@ section .case-study-inner-guitar {
     height: 50vh;
   }
   .guitar-project {
-    height: 700px;
-    display: block;
-    background-image: url(/img/guitar-lesson-header.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 0;
+    height: 70vh;
   }
-  .hero-content-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-column-gap: 20px;
-    max-width: 1240px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+  .guitar-project .is-centered .hero-text-content {
+    margin-left: 0em;
+    padding: 3.3em;
   }
-  .hero-content-grid .hero-text-content {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    text-align: left;
-  }
-  .hero-content-grid .hero-text-content .hero-title-case-study {
-    position: absolute;
-    left: 27%;
-    bottom: 32%;
-    font-size: 18px;
-    color: #c738a1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff9c), to(#0000001f));
-    background: linear-gradient(#ffffff9c, #0000001f);
-    width: 38%;
-    max-width: 100%;
-    letter-spacing: 4px;
-    line-height: 3rem;
-    padding-left: 3rem;
-  }
-  .hero-content-grid .hero-text-content .hero-title-case-study {
-    position: absolute;
-    left: 18%;
-    bottom: 38%;
-    font-size: 18px;
-    color: dodgerblue;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffffff8c));
-    background: linear-gradient(white, #ffffff8c);
-    width: 63%;
-    max-width: 100%;
-    letter-spacing: 4px;
-    line-height: 2rem;
-  }
-  .case-study- {
-    position: absolute;
-    top: 40em;
-  }
-  section .case-study-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    text-align: left;
-    min-height: 200px;
+  .case-study-inner {
+    margin: 2.3em;
   }
   section .case-study-inner h1 {
     font-size: 20px;
@@ -2278,8 +2217,7 @@ section .case-study-inner-guitar {
     margin: 1em 0;
   }
   footer .footer-container .footer-details {
-    padding: 4em;
-    width: 100%;
+    padding: 3em;
   }
   .footer-social-icon a:hover,
   .top-social-icon a:hover {
@@ -2294,11 +2232,8 @@ section .case-study-inner-guitar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 70% auto;
-    grid-template-columns: 70% auto;
+        grid-template-columns: 70% auto;
     background: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     padding: 0;
   }
   .nav-container header {
@@ -2378,7 +2313,7 @@ section .case-study-inner-guitar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 1.5em;
+    margin: 0 1em;
   }
   .top-social-icon a {
     margin: 0 1.8em 0 1em;
@@ -2501,6 +2436,18 @@ img {
     margin: 2em;
     padding: 1em;
   }
+  .guitar-project .is-centered {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 1.6em;
+  }
+  .case-study-inner {
+    margin: 3.9em;
+  }
+  footer .footer-container .footer-details {
+    padding: 5em;
+  }
 }
 
 /*Large Laptop/ Desktop viewport styles */
@@ -2522,6 +2469,9 @@ img {
     position: relative;
     top: 0;
     left: -11px;
+  }
+  .top-social-icon {
+    margin: 0 1.5em;
   }
   .hero-container {
     height: 69vh;
@@ -2682,6 +2632,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 80vh;
   }
   .guitar-project .is-centered {
     display: -webkit-box;
@@ -2700,7 +2651,7 @@ img {
     background: transparent;
   }
   .guitar-project .is-centered .hero-text-content .hero-title-case-study {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     letter-spacing: 5px;
     text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
   }
@@ -2710,10 +2661,11 @@ img {
   .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
     font-size: 22px;
   }
-  .hero-content-grid-guitar {
-    position: relative;
-    top: 50%;
-    left: 33%;
+  .guitar-project .is-centered .hero-text-content {
+    margin-left: 5em;
+  }
+  .case-study-inner {
+    margin: 4em 8.6em;
   }
   .intro-container {
     display: -webkit-box;
