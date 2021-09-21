@@ -2678,7 +2678,12 @@ img {
     top: -40px;
     left: 370px;
   }
-  .case-study-container {
+  .guitar-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .guitar-project .is-centered {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2688,73 +2693,22 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .guitar-project .is-centered .hero-text-content {
+    margin-left: 10px;
+    color: #ffffff;
+    background: transparent;
   }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-    color: #252525;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  .guitar-project .is-centered .hero-text-content .hero-title-case-study {
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 5px;
+    text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
   }
-  .hero-container-projects {
-    display: -ms-grid;
-    display: grid;
-    background-size: cover;
-    height: 76.5vh;
+  .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+    font-size: 45px;
   }
-  .guitar-project {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .guitar-project .hero-content-grid {
-    position: static;
-  }
-  .guitar-project .hero-content-grid .hero-text-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: left;
-    padding: 3em 8em 3em 13em;
-  }
-  .guitar-project .hero-content-grid .hero-text-content .hero-title-case-study {
-    font-size: 18px;
-    color: #2c4465;
-    font-variant-caps: petite-caps;
-    padding: 15px;
-    background: white;
-    border: 3px solid dodgerblue;
-    border-radius: 5px;
-    letter-spacing: 5pt;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 24vw;
-    position: relative;
-    left: 640px;
+  .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
+    font-size: 22px;
   }
   .hero-content-grid-guitar {
     position: relative;

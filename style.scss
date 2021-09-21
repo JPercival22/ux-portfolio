@@ -814,7 +814,7 @@ a {
         text-align: center;
       }
       p span {
-        color:#007bb6;
+        color: #007bb6;
         font-style: italic;
         font-size: 14px;
         font-weight: 500;
@@ -2292,56 +2292,48 @@ section .case-study-inner-guitar {
     }
   }
 
-  // End of Home and Contact Page Styles
   // guitar-project
-  .case-study-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+  // .case-study-container {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-direction: column;
+  // }
 
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    order: 1;
-  }
-  .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-    color: #252525;
-    order: 2;
-  }
-  .hero-container-projects {
-    display: grid;
-    background-size: cover;
-    height: 76.5vh;
-  }
+  // .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar .hero-title-case-study-guitar {
+  //   font-size: 1.5rem;
+  //   line-height: 1.5rem;
+  //   order: 1;
+  // }
+  // .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
+  //   color: #252525;
+  //   order: 2;
+  // }
+  // .hero-container-projects {
+  //   display: grid;
+  //   background-size: cover;
+  //   height: 76.5vh;
+  // }
   .guitar-project {
     display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .hero-content-grid {
-      position: static;
+    .is-centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .hero-text-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-        padding: 3em 8em 3em 13em;
+        margin-left: 10px;
+        color: $core-light;
+        background: transparent;
         .hero-title-case-study {
-          font-size: 18px;
-          color: #2c4465;
-          font-variant-caps: petite-caps;
-          padding: 15px;
-          background: white;
-          border: 3px solid dodgerblue;
-          border-radius: 5px;
-          letter-spacing: 5pt;
-          display: flex;
-          flex-direction: column;
-          width: 24vw;
-          position: relative;
-          left: 640px;
+          font-family: 'Ubuntu', sans-serif;
+          letter-spacing: 5px;
+          text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+          .hero-title {
+            font-size: 45px;
+          }
+          .hero-sub-title {
+            font-size: 22px;
+          }
         }
       }
     }
