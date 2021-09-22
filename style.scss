@@ -1732,12 +1732,6 @@ footer {
     padding-bottom: 2.5em;
   }
 
-  .hero-design {
-    width: 100vw;
-    height: 65vh;
-    margin-top: 1em;
-  }
-
   .featured {
     .left {
       .inner {
@@ -1754,6 +1748,7 @@ footer {
     }
     padding: 3em 4em;
     .right button {
+      cursor: pointer;
       width: 20vw;
     }
   }
@@ -2273,9 +2268,6 @@ footer {
       .inner .subtitle {
         text-align: left;
       }
-    }
-    .right {
-      cursor: pointer;
     }
   }
 
