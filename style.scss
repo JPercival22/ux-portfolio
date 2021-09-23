@@ -51,6 +51,31 @@ $core-button-border: $brand-color;
 $button-border-settings: 1px solid $brand-color;
 $button-hover-state: all 0.5s ease-in-out;
 
+//
+// Gradient system
+//
+$gradients: () !default;
+$gradients: map-merge(
+  (
+    chill: linear-gradient(135deg, #278388 0%, #0291e3 100%),
+    warm: linear-gradient(135deg, #f2cd48 0%, #fd803f 100%),
+    hot: linear-gradient(135deg, #f9445a 0%, #fd803f 100%),
+    cold: linear-gradient(135deg, #8019c6 0%, #2f93cc 100%),
+  ),
+  $gradients
+);
+
+// Gradient backgrounds
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+// gradient class
+@each $gradient, $value in $gradients {
+  @include bg-gradient(".bg-gradient-#{$gradient}", $value);
+}
+
 html,
 body {
   max-width: 100%;
@@ -865,6 +890,348 @@ a {
     opacity: 1;
   }
 }
+
+// Case Study Styles
+
+// Guitar Project
+.hero-container {
+  .guitar-project {
+    display: flex;
+    background-image: url(/img/guitar-lesson-header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    width: auto;
+    height: 44vh;
+    .is-centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .hero-text-content {
+        margin-left: 10px;
+        color: $core-light;
+        background: transparent;
+        .hero-title-case-study {
+          text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+          .hero-title {
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: 4pt;
+            font-style: normal;
+            font-variant-caps: small-caps;
+            line-height: 28pt;
+          }
+          .hero-sub-title {
+            font-size: 20px;
+            letter-spacing: 3pt;
+            font-variant-caps: all-petite-caps;
+            letter-spacing: 2pt;
+          }
+        }
+      }
+    }
+  }
+  &.remind-me-project {
+    display: flex;
+    background-image: url(/img/remind-me-multiple.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    width: auto;
+    height: 44vh;
+    .is-centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .hero-text-content {
+        margin-left: 10px;
+        color: $core-light;
+        background: transparent;
+        .hero-title-case-study {
+          text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+          .hero-title {
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: 4pt;
+            font-style: normal;
+            font-variant-caps: small-caps;
+            line-height: 28pt;
+          }
+          .hero-sub-title {
+            font-size: 20px;
+            letter-spacing: 3pt;
+            font-variant-caps: all-petite-caps;
+            letter-spacing: 2pt;
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.summary {
+  color: $core-light;
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+  }
+}
+
+.process-highlights {
+  color: $core-light;
+  .process-highlights-container {
+    flex-direction: column;
+    margin-top: 2em;
+    .process-activity-container {
+      .process-placeholder {
+        display: flex;
+        justify-content: center;
+        padding: 2em 0;
+        img {
+          width: 80px;
+        }
+      }
+      .process-editorial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.swot-analysis-section {
+  display: none;
+}
+.ideation-and-discovery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .idea-container .discovery-card-inner {
+    .card-image {
+      display: none;
+    }
+  }
+}
+
+.nielson-quote {
+  background-image: url(/img/user-behaviour-min.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.prototyping-section {
+  color: $core-light;
+  .summary-container .discovery-cards {
+    display: flex;
+    flex-direction: column;
+    .discovery-card-inner {
+      .card-image {
+        .desk-research-image-standard {
+          border-radius: 5px;
+        }
+        .secondary-button {
+          width: 100%;
+          height: 40px;
+          color: $primary-core;
+          font-size: 20px;
+          text-decoration: none;
+          font-variant-caps: all-petite-caps;
+          border: $button-border-settings;
+          border-radius: 5px;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: $button-hover-state;
+          &:hover {
+            background-color: $brand-color;
+            color: $core-button-border;
+          }
+        }
+      }
+    }
+  }
+}
+
+.outcomes-section {
+  color: $core-light;
+}
+
+.validation-section {
+  display: flex;
+  flex-direction: column;
+  .validation-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 70%;
+      height: 400px;
+      margin-bottom: 1em;
+      border: 2px solid black;
+      border-radius: 20px;
+    }
+    figcaption {
+      margin-bottom: 2em;
+    }
+    .column-stretch {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.outcomes-gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .row {
+    .col .feature-img .secondary-button {
+      width: 100%;
+      height: 40px;
+      color: $primary-core;
+      font-size: 20px;
+      text-decoration: none;
+      font-variant-caps: all-petite-caps;
+      border: $button-border-settings;
+      border-radius: 5px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $button-hover-state;
+      &:hover {
+        background-color: $brand-color;
+        color: $core-button-border;
+      }
+    }
+    .col {
+      .small-img-row {
+        .small-img {
+          display: none;
+        }
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+  .video-player .close-btn {
+    display: none;
+  }
+}
+
+.final-editorial {
+  color: $core-light;
+  p span a {
+    color: $brand-color;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// guitar project styles
+
+.case-study-inner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  margin-left: -8px;
+  margin-top: 0;
+  margin-bottom: 1em;
+  .section-title {
+    font-size: 1.8em;
+    font-variant-caps: all-petite-caps;
+    color: $brand-color;
+    line-height: 19pt;
+    letter-spacing: 4pt;
+  }
+  .section-editorial {
+    font-size: 16px;
+    letter-spacing: 1pt;
+    line-height: 21pt;
+    .link-text {
+      color: $brand-color;
+      font-weight: 600;
+      line-height: 40pt;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  ul {
+    list-style: circle;
+    margin-top: 0;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    li {
+      margin: 0 20px;
+    }
+  }
+
+  .emphasis-text {
+    font-weight: 600;
+    margin-bottom: 2em;
+  }
+}
+
+// .case-study-container {
+//   display: grid;
+//   -ms-grid-columns: none;
+//   grid-template-columns: none;
+// }
+
+// .case-study-container h2 {
+//   font-size: 22px;
+// }
+
+// .case-study-container p {
+//   font-size: 18px;
+// }
+
+// .case-study-container ul li {
+//   font-size: 18px;
+// }
+
+// .case-study- section .case-study-inner h1 {
+//   color: #3030db;
+// }
+
+// .case-study- section .case-study-container h2 {
+//   color: #5252ff;
+// }
+
+// Global Footer styles
+
 footer {
   position: relative;
   top: -1px;
@@ -942,214 +1309,6 @@ footer {
 .footer-container small a {
   padding: 1rem;
 }
-
-// Case Study Styles
-
-// Guitar Project
-
-.guitar-project {
-  display: flex;
-  background-image: url(/img/guitar-lesson-header.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 0;
-  width: auto;
-  height: 44vh;
-  .is-centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .hero-text-content {
-      margin-left: 10px;
-      color: $core-light;
-      background: transparent;
-      .hero-title-case-study {
-        text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
-        .hero-title {
-          font-size: 27px;
-          font-weight: 600;
-          letter-spacing: 4pt;
-          font-style: normal;
-          font-variant-caps: small-caps;
-          line-height: 28pt;
-        }
-        .hero-sub-title {
-          font-size: 20px;
-          letter-spacing: 3pt;
-          font-variant-caps: all-petite-caps;
-          letter-spacing: 2pt;
-        }
-      }
-    }
-  }
-}
-
-.case-study-inner {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: flex-start;
-  margin-left: -8px;
-  margin-top: 0;
-  margin-bottom: 1em;
-  .section-title {
-    font-size: 1.8em;
-    font-variant-caps: all-petite-caps;
-    color: $brand-color;
-    line-height: 19pt;
-    letter-spacing: 4pt;
-  }
-  .section-editorial {
-    font-size: 16px;
-    letter-spacing: 1pt;
-    line-height: 21pt;
-    .link-text {
-      color: $brand-color;
-      font-weight: 600;
-      line-height: 40pt;
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-  ul {
-    list-style: circle;
-    margin-top: 0;
-    margin-bottom: 2em;
-    margin-left: 1em;
-    li {
-      margin: 0 20px;
-    }
-  }
-
-  .emphasis-text {
-    font-weight: 600;
-    margin-bottom: 2em;
-  }
-}
-
-// .guitar-project {
-//   height: 20vh;
-//   background-image: url(/img/ux-guitar-lessons-min.png);
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   position: relative;
-// }
-
-// .hero-container-projects {
-//   height: 700px;
-//   background-image: url(/img/remind-me-multiple.png);
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   position: relative;
-//   padding: 0;
-// }
-
-// .hero-content-grid-guitar {
-//   display: grid;
-//   position: relative;
-//   top: 170px;
-// }
-
-// .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar {
-//   position: relative;
-//   font-size: 18px;
-//   color: #1e90ff;
-//   line-height: 1.7rem;
-//   padding: 10px;
-//   background: #fff;
-//   width: 43%;
-//   border: 3px solid #1e90ff;
-//   border-radius: 5px;
-// }
-
-// .hero-content-grid .hero-text-content .hero-title-case-study {
-//   position: absolute;
-//   left: 6%;
-//   top: 10%;
-//   font-size: 16px;
-//   color: #0465c3;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#d2d94ec2), to(white));
-//   background: linear-gradient(#d2d94ec2, white);
-//   width: 100%;
-//   max-width: 100%;
-// }
-
-// .hero-content-grid .hero-text-content .hero-title-case-study h1 {
-//   line-height: 1.5rem;
-//   font-size: 1.5rem;
-// }
-
-// .hero-title-case-study-guitar h1 {
-//   font-size: 1.5rem;
-//   line-height: 1.5rem;
-// }
-
-// .hero-content-grid .hero-text-content .hero-title-case-study h2 {
-//   font-size: 16px;
-//   line-height: 21px;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-//   color: #004671;
-// }
-
-// .hero-content-grid-guitar .hero-text-content .hero-title-case-study-guitar h2 {
-//   font-size: 1rem;
-//   line-height: 1rem;
-//   letter-spacing: 0.1rem;
-//   text-transform: uppercase;
-//   color: #3d3d3d;
-// }
-
-// .case-study- {
-//   position: absolute;
-//   top: 30em;
-// }
-
-// section {
-//   padding: 0.5em;
-// }
-
-// section .case-study-inner {
-//   width: 100%;
-//   text-align: left;
-//   min-height: 200px;
-// }
-
-// section .case-study-inner-guitar {
-//   width: 100%;
-//   text-align: left;
-//   min-height: 200px;
-//   top: 50px;
-// }
-
-// .case-study-container {
-//   display: grid;
-//   -ms-grid-columns: none;
-//   grid-template-columns: none;
-// }
-
-// .case-study-container h2 {
-//   font-size: 22px;
-// }
-
-// .case-study-container p {
-//   font-size: 18px;
-// }
-
-// .case-study-container ul li {
-//   font-size: 18px;
-// }
-
-// .case-study- section .case-study-inner h1 {
-//   color: #3030db;
-// }
-
-// .case-study- section .case-study-container h2 {
-//   color: #5252ff;
-// }
-
 // Medium mobile Phone Viewport styles
 @media only screen and (min-width: 375px) {
   .show-modal {
@@ -1159,6 +1318,10 @@ footer {
   .thank-you-section .thank-you-container .thank-you-message {
     max-width: 365px;
     width: 100%;
+  }
+
+  .validation-section .validation-image-container img {
+    width: 60%;
   }
 }
 
@@ -1182,6 +1345,10 @@ footer {
 
   .guitar-project {
     height: 50vh;
+  }
+
+  .validation-section .validation-image-container img {
+    width: 50%;
   }
 
   footer .footer-container .footer-details .footer-top-bar .logo .logo-name {
@@ -1376,15 +1543,13 @@ footer {
   }
 
   /*remind-project styles */
-  .nielson-qoute {
-    background: linear-gradient(#9191e833, #00000080), url(img/Design-Wallpaper-4k.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .validation-section .validation-image-container img {
+    width: 40%;
   }
 
-  sub {
-    font-weight: 500;
-    font-size: 16px;
+  .outcomes-gallery-container .video-player,   .outcomes-gallery-container .video-player2 {
+    width: 65%;
   }
 
   footer .footer-container .footer-details {
@@ -1867,9 +2032,9 @@ footer {
     padding: 0.5em;
   }
 
-  .hero-container-projects {
-    height: 50vh;
-  }
+  // .hero-container-projects {
+  //   height: 50vh;
+  // }
   .guitar-project {
     height: 70vh;
     .is-centered .hero-text-content {
