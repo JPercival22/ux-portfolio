@@ -115,7 +115,6 @@ img {
   height: auto;
 }
 
-.footer-design,
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -131,17 +130,16 @@ header nav #click {
   header {
     .logo {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      max-height: 37px;
       .logo-placeholder {
-        width: 30px;
-        height: auto;
+        display: flex;
         margin-left: 0.7em;
         .company-logo {
           display: flex;
-          align-items: center;
-          justify-content: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
       .logo-container {
@@ -251,9 +249,12 @@ header #click:checked ~ ul li a {
   max-height: 50px;
   .primary-button {
     background-color: $primary-core;
-    padding: 6px 12px;
+    width: 100%;
+    height: 40px;
     color: $core-light;
-    font-size: 17px;
+    font-size: 20px;
+    font-variant-caps: all-petite-caps;
+    letter-spacing: 1pt;
     border-radius: 5px;
     border: $button-border-settings;
     margin-right: 10px;
@@ -893,7 +894,7 @@ a {
 
 // Case Study Styles
 
-// Guitar Project
+// Hero for all projects
 .hero-container {
   .guitar-project {
     display: flex;
@@ -969,6 +970,7 @@ a {
   }
 }
 
+// Remind Me Project styles
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -1091,7 +1093,7 @@ a {
       height: 400px;
       margin-bottom: 1em;
       border: 2px solid black;
-      border-radius: 20px;
+      border-radius: 5px;
     }
     figcaption {
       margin-bottom: 2em;
@@ -1101,6 +1103,10 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      img {
+        width: 95%;
+        height: 300px;
+      }
     }
   }
 }
@@ -1111,40 +1117,84 @@ a {
   align-items: center;
   justify-content: center;
   .row {
-    .col .feature-img .secondary-button {
-      width: 100%;
-      height: 40px;
-      color: $primary-core;
-      font-size: 20px;
-      text-decoration: none;
-      font-variant-caps: all-petite-caps;
-      border: $button-border-settings;
-      border-radius: 5px;
-      margin: 0;
+    .col .feature-img img {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: $button-hover-state;
-      &:hover {
-        background-color: $brand-color;
-        color: $core-button-border;
-      }
     }
     .col {
+      display: flex;
+      flex-direction: column;
       .small-img-row {
+        display: flex;
+        flex-direction: column;
         .small-img {
-          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 1em;
+          img {
+            display: flex;
+            border: 2px solid black;
+            border-radius: 2px;
+          }
+          .play-btn {
+            display: none;
+          }
+          .open-modal {
+            display: none;
+          }
         }
-        h2 {
-          display: none;
+        .primary-button {
+          background-color: $primary-core;
+          width: 100%;
+          height: 40px;
+          color: $core-light;
+          font-size: 20px;
+          font-variant-caps: all-petite-caps;
+          letter-spacing: 1pt;
+          border-radius: 5px;
+          border: $button-border-settings;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: $button-hover-state;
+          &:hover {
+            background: $primary-core;
+            border-color: $core-button-border;
+          }
         }
       }
     }
   }
-  .video-player .close-btn {
+
+  // #################Debug the styles for the second video to be full length here#######################
+
+  .video-player-web-design {
+    .designVideos {
+      width: 100%;
+      height: auto;
+      border: 2px solid black;
+      border-radius: 2px;
+      .close-btn {
+        display: none;
+      }
+    }
+  }
+  //  {
+  //   .designVideos {
+  //     width: 100%;
+  //     height: auto;
+  //     .close-btn {
+  //       display: none;
+  //     }
+  //   }
+  .modal {
+    display: none;
+  }
+  img {
     display: none;
   }
 }
+// #######################################################################################################
 
 .final-editorial {
   color: $core-light;
@@ -1203,32 +1253,6 @@ a {
     margin-bottom: 2em;
   }
 }
-
-// .case-study-container {
-//   display: grid;
-//   -ms-grid-columns: none;
-//   grid-template-columns: none;
-// }
-
-// .case-study-container h2 {
-//   font-size: 22px;
-// }
-
-// .case-study-container p {
-//   font-size: 18px;
-// }
-
-// .case-study-container ul li {
-//   font-size: 18px;
-// }
-
-// .case-study- section .case-study-inner h1 {
-//   color: #3030db;
-// }
-
-// .case-study- section .case-study-container h2 {
-//   color: #5252ff;
-// }
 
 // Global Footer styles
 
@@ -1546,10 +1570,6 @@ footer {
 
   .validation-section .validation-image-container img {
     width: 40%;
-  }
-
-  .outcomes-gallery-container .video-player,   .outcomes-gallery-container .video-player2 {
-    width: 65%;
   }
 
   footer .footer-container .footer-details {
