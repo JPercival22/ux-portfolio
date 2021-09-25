@@ -57,8 +57,8 @@ $button-hover-state: all 0.5s ease-in-out;
 $gradients: () !default;
 $gradients: map-merge(
   (
-    chill: linear-gradient(135deg, #278388 0%, #0291e3 100%),
-    warm: linear-gradient(135deg, #f2cd48 0%, #fd803f 100%),
+    chill: linear-gradient(135deg, #94aaab 0%, #0291e3 100%),
+    warm: linear-gradient(135deg, #fff774 0%, #fd803f 100%),
     hot: linear-gradient(135deg, #f9445a 0%, #fd803f 100%),
     cold: linear-gradient(135deg, #8019c6 0%, #2f93cc 100%),
   ),
@@ -81,6 +81,32 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+h1 {
+  line-height: 27pt;
+  color: $brand-color;
+  font-size: 2rem;
+  font-weight: 500;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  line-height: 27pt;
+  color: $brand-color;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 0.3rem;
+}
+
+.light-text {
+  color: $core-light;
+}
+
+.dark-text {
+  color: #000;
 }
 
 body {
@@ -115,7 +141,6 @@ img {
   height: auto;
 }
 
-.footer-design,
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -131,17 +156,16 @@ header nav #click {
   header {
     .logo {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      max-height: 37px;
       .logo-placeholder {
-        width: 30px;
-        height: auto;
+        display: flex;
         margin-left: 0.7em;
         .company-logo {
           display: flex;
-          align-items: center;
-          justify-content: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
       .logo-container {
@@ -251,9 +275,12 @@ header #click:checked ~ ul li a {
   max-height: 50px;
   .primary-button {
     background-color: $primary-core;
-    padding: 6px 12px;
+    width: 100%;
+    height: 40px;
     color: $core-light;
-    font-size: 17px;
+    font-size: 20px;
+    font-variant-caps: all-petite-caps;
+    letter-spacing: 1pt;
     border-radius: 5px;
     border: $button-border-settings;
     margin-right: 10px;
@@ -893,7 +920,7 @@ a {
 
 // Case Study Styles
 
-// Guitar Project
+// Hero for all projects
 .hero-container {
   .guitar-project {
     display: flex;
@@ -945,23 +972,23 @@ a {
       justify-content: center;
       .hero-text-content {
         margin-left: 10px;
-        color: $core-light;
         background: transparent;
         .hero-title-case-study {
-          text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+          text-shadow: 3px 6px 6px white, 4px -4px 8px white, -5px 1px 7px white, -3px -7px 6px white;
           .hero-title {
-            font-size: 27px;
+            font-size: 2.3em;
             font-weight: 600;
-            letter-spacing: 4pt;
+            letter-spacing: 10pt;
             font-style: normal;
-            font-variant-caps: small-caps;
-            line-height: 28pt;
+            font-variant-caps: all-petite-caps;
+            line-height: 33pt;
           }
           .hero-sub-title {
-            font-size: 20px;
+            font-size: 27px;
             letter-spacing: 3pt;
             font-variant-caps: all-petite-caps;
-            letter-spacing: 2pt;
+            letter-spacing: 5pt;
+            font-weight: 600;
           }
         }
       }
@@ -969,6 +996,7 @@ a {
   }
 }
 
+// Remind Me Project styles
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -985,13 +1013,17 @@ a {
   }
 }
 
-.summary {
-  color: $core-light;
-  .summary-container {
-    display: flex;
-    flex-direction: column;
-    align-items: space-evenly;
-    justify-content: center;
+.summary .summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: center;
+  ul {
+    list-style-type: circle;
+    margin: 1em;
+    li {
+      margin-bottom: 1em;
+    }
   }
 }
 
@@ -1006,7 +1038,8 @@ a {
         justify-content: center;
         padding: 2em 0;
         img {
-          width: 80px;
+          width: 150px;
+          height: auto;
         }
       }
       .process-editorial {
@@ -1040,8 +1073,8 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .prototyping-section {
-  color: $core-light;
   .summary-container .discovery-cards {
     display: flex;
     flex-direction: column;
@@ -1053,20 +1086,23 @@ a {
         .secondary-button {
           width: 100%;
           height: 40px;
-          color: $primary-core;
           font-size: 20px;
           text-decoration: none;
           font-variant-caps: all-petite-caps;
-          border: $button-border-settings;
+          border: 1px solid #2c4465;
           border-radius: 5px;
+          background-color: #2c4465;
+          color: white;
           margin: 0;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.5s ease-in-out;
+          box-shadow: 9px 10px 6px 0px #00000047;
           transition: $button-hover-state;
           &:hover {
-            background-color: $brand-color;
-            color: $core-button-border;
+            background-color: $core-light;
+            color: $brand-color;
           }
         }
       }
@@ -1091,7 +1127,7 @@ a {
       height: 400px;
       margin-bottom: 1em;
       border: 2px solid black;
-      border-radius: 20px;
+      border-radius: 5px;
     }
     figcaption {
       margin-bottom: 2em;
@@ -1101,6 +1137,10 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      img {
+        width: 95%;
+        height: 300px;
+      }
     }
   }
 }
@@ -1111,37 +1151,74 @@ a {
   align-items: center;
   justify-content: center;
   .row {
-    .col .feature-img .secondary-button {
-      width: 100%;
-      height: 40px;
-      color: $primary-core;
-      font-size: 20px;
-      text-decoration: none;
-      font-variant-caps: all-petite-caps;
-      border: $button-border-settings;
-      border-radius: 5px;
-      margin: 0;
+    .col .feature-img img {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: $button-hover-state;
-      &:hover {
-        background-color: $brand-color;
-        color: $core-button-border;
-      }
     }
     .col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .small-img-row {
+        display: flex;
+        flex-direction: column;
         .small-img {
-          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 1em;
+          img {
+            display: flex;
+            border: 2px solid black;
+            border-radius: 2px;
+          }
+          .play-btn {
+            display: none;
+          }
+          .open-modal {
+            display: none;
+          }
         }
-        h2 {
-          display: none;
+        .primary-button {
+          width: 100%;
+          height: 40px;
+          font-size: 20px;
+          text-decoration: none;
+          font-variant-caps: all-petite-caps;
+          border: 1px solid #2c4465;
+          border-radius: 5px;
+          background-color: #2c4465;
+          color: white;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.5s ease-in-out;
+          box-shadow: 9px 10px 6px 0px #00000047;
+          transition: $button-hover-state;
+          &:hover {
+            background: $core-light;
+            color: $brand-color;
+          }
         }
       }
     }
   }
-  .video-player .close-btn {
+  .video-player-web-design {
+    .designVideos {
+      width: 100%;
+      height: auto;
+      border: 2px solid black;
+      border-radius: 2px;
+      .close-btn {
+        display: none;
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+  }
+  img {
     display: none;
   }
 }
@@ -1203,32 +1280,6 @@ a {
     margin-bottom: 2em;
   }
 }
-
-// .case-study-container {
-//   display: grid;
-//   -ms-grid-columns: none;
-//   grid-template-columns: none;
-// }
-
-// .case-study-container h2 {
-//   font-size: 22px;
-// }
-
-// .case-study-container p {
-//   font-size: 18px;
-// }
-
-// .case-study-container ul li {
-//   font-size: 18px;
-// }
-
-// .case-study- section .case-study-inner h1 {
-//   color: #3030db;
-// }
-
-// .case-study- section .case-study-container h2 {
-//   color: #5252ff;
-// }
 
 // Global Footer styles
 
@@ -1309,6 +1360,7 @@ footer {
 .footer-container small a {
   padding: 1rem;
 }
+
 // Medium mobile Phone Viewport styles
 @media only screen and (min-width: 375px) {
   .show-modal {
@@ -1544,12 +1596,95 @@ footer {
 
   /*remind-project styles */
 
-  .validation-section .validation-image-container img {
-    width: 40%;
+  section {
+    padding: 1em 1.7em;
+  }
+  .intro-container .right img {
+    width: 70%;
   }
 
-  .outcomes-gallery-container .video-player,   .outcomes-gallery-container .video-player2 {
-    width: 65%;
+  .prototyping-section .summary-container .discovery-cards .discovery-card-inner {
+    .card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2em;
+      img {
+        width: 60%;
+      }
+    }
+    .wireframes-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .desk-research-image-standard {
+        margin-bottom: 2em;
+      }
+      .secondary-button {
+        width: 54vw;
+      }
+    }
+  }
+
+  .validation-section {
+    .idea-left-col {
+      ul {
+        list-style: circle;
+        li {
+          margin: 1em;
+        }
+      }
+    }
+    .validation-image-container {
+      img {
+        width: 45%;
+        margin: 1em;
+      }
+      figcaption {
+        margin: 2em;
+      }
+      .column-stretch {
+        img {
+          width: 80%;
+          height: 300px;
+        }
+        figcaption {
+          margin: 2em;
+        }
+      }
+    }
+  }
+
+  .outcomes-gallery-container .row .col {
+    .small-img-row {
+      align-items: center;
+    }
+    .feature-img img {
+      display: flex;
+      width: 54vw;
+    }
+
+    .small-img-row {
+      .primary-button {
+        margin-bottom: 2em;
+        padding: 10px;
+        width: 62%;
+      }
+      .mobile-button {
+        width: 55vw;
+      }
+      .video-player-web-design {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .half-width {
+          width: 50%;
+        }
+        .full-width {
+          width: 100%;
+        }
+      }
+    }
   }
 
   footer .footer-container .footer-details {
@@ -1785,6 +1920,39 @@ footer {
 
   .case-study-inner {
     margin: 1.2em;
+  }
+
+  // remind me
+  .hero-container.remind-me-project .is-centered .hero-text-content {
+    margin-left: 1.3em;
+  }
+
+  section {
+    padding: 1em 2.5em;
+  }
+
+  .intro-container .right img {
+    width: 60%;
+  }
+
+  .validation-section .validation-image-container {
+    img {
+      width: 30%;
+      margin: 1em;
+    }
+    .column-stretch {
+      img {
+        width: 75%;
+        height: 400px;
+      }
+    }
+  }
+
+  .outcomes-gallery-container .row .col .feature-img img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 38vw;
   }
 
   footer .footer-container .footer-details {
@@ -2032,9 +2200,9 @@ footer {
     padding: 0.5em;
   }
 
-  // .hero-container-projects {
-  //   height: 50vh;
-  // }
+  // Case Studies
+
+  // guitar-project
   .guitar-project {
     height: 70vh;
     .is-centered .hero-text-content {
@@ -2042,115 +2210,93 @@ footer {
       padding: 3.3em;
     }
   }
-  // .hero-content-grid {
-  //   display: grid;
-  //   grid-template-columns: 1fr;
-  //   grid-column-gap: 20px;
-  //   max-width: 1240px;
-  //   height: 100%;
-  //   margin: 0 auto;
-  //   position: relative;
-  //   z-index: 1;
-  // }
-  // .hero-content-grid .hero-text-content {
-  //   align-self: center;
-  //   text-align: left;
-  // }
-  // .hero-content-grid .hero-text-content .hero-title-case-study {
-  //   position: absolute;
-  //   left: 27%;
-  //   bottom: 32%;
-  //   font-size: 18px;
-  //   color: #c738a1;
-  //   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff9c), to(#0000001f));
-  //   background: linear-gradient(#ffffff9c, #0000001f);
-  //   width: 38%;
-  //   max-width: 100%;
-  //   letter-spacing: 4px;
-  //   line-height: 3rem;
-  //   padding-left: 3rem;
-  // }
-  // .hero-content-grid .hero-text-content .hero-title-case-study {
-  //   position: absolute;
-  //   left: 18%;
-  //   bottom: 38%;
-  //   font-size: 18px;
-  //   color: dodgerblue;
-  //   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffffff8c));
-  //   background: linear-gradient(white, #ffffff8c);
-  //   width: 63%;
-  //   max-width: 100%;
-  //   letter-spacing: 4px;
-  //   line-height: 2rem;
-  // }
-  // .case-study- {
-  //   position: absolute;
-  //   top: 40em;
-  // }
 
   .case-study-inner {
     margin: 2.3em;
   }
 
-  section .case-study-inner h1 {
-    font-size: 20px;
-    text-align: left;
-  }
-  section .case-study-inner p {
-    font-size: 17px;
-    text-align: left;
-  }
-  section .case-study-inner .case-study-list {
-    list-style: disc;
-    margin: 1em;
-    font-size: 1.1em;
-  }
-  section .case-study-inner .case-study-list li {
-    margin-bottom: 1em;
-  }
-  section .case-study-inner .case-study-list ::marker {
-    margin-left: 1em;
-    font-size: 18px;
-  }
-  .case-study-container {
-    display: grid;
-    grid-template-columns: none;
-  }
-  .case-study-container h2 {
-    font-size: 22px;
-  }
-  .case-study-container p {
-    font-size: 1.3em;
-  }
-  .case-study-container img {
-    max-width: 40vw;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .case-study-container ul li {
-    font-size: 1.3em;
-  }
-  .full-width-banner {
-    width: 100vw;
-    height: 10vh;
-    background-color: #1da1f2;
-    margin: 3em 0 0 0;
-  }
-  .full-width-banner h1 {
-    font-size: 1.7em;
-    color: #fff;
-  }
-  .full-width-section img {
-    max-width: 40vw;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .secondary-button {
-    font-family: Poppins;
-    font-size: 22px;
-    color: black;
-    text-decoration: underline;
-    margin: 1em 0;
+  // section .case-study-inner h1 {
+  //   font-size: 20px;
+  //   text-align: left;
+  // }
+  // section .case-study-inner p {
+  //   font-size: 17px;
+  //   text-align: left;
+  // }
+  // section .case-study-inner .case-study-list {
+  //   list-style: disc;
+  //   margin: 1em;
+  //   font-size: 1.1em;
+  // }
+  // section .case-study-inner .case-study-list li {
+  //   margin-bottom: 1em;
+  // }
+  // section .case-study-inner .case-study-list ::marker {
+  //   margin-left: 1em;
+  //   font-size: 18px;
+  // }
+  // .case-study-container {
+  //   display: grid;
+  //   grid-template-columns: none;
+  // }
+  // .case-study-container h2 {
+  //   font-size: 22px;
+  // }
+  // .case-study-container p {
+  //   font-size: 1.3em;
+  // }
+  // .case-study-container img {
+  //   max-width: 40vw;
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
+  // .case-study-container ul li {
+  //   font-size: 1.3em;
+  // }
+  // .full-width-banner {
+  //   width: 100vw;
+  //   height: 10vh;
+  //   background-color: #1da1f2;
+  //   margin: 3em 0 0 0;
+  // }
+  // .full-width-banner h1 {
+  //   font-size: 1.7em;
+  //   color: #fff;
+  // }
+  // .full-width-section img {
+  //   max-width: 40vw;
+  //   width: 100%;
+  //   margin: 0 auto;
+  // }
+  // .secondary-button {
+  //   font-family: Poppins;
+  //   font-size: 22px;
+  //   color: black;
+  //   text-decoration: underline;
+  //   margin: 1em 0;
+  // }
+
+  // remind-me
+  .process-highlights {
+    display: flex;
+    flex-direction: column;
+    .process-highlights-container .process-activity-container {
+      display: flex;
+      align-items: center;
+      .process-placeholder {
+        padding: 2em;
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+      .process-editorial {
+        align-items: flex-start;
+        .process-title {
+          line-height: 0;
+        }
+      }
+    }
   }
 
   footer .footer-container .footer-details {
