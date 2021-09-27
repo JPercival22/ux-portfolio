@@ -322,23 +322,23 @@ function goToIndexSlide(index) {
 slideInitial();
 
 // Video Button actions (Remind Me Project) 
-var videoPlayer = document.getElementById("videoPlayer");
-var videoPlayer2 = document.getElementById("videoPlayer2");
-var designVideo = document.getElementById("designVideo");
-var designVideo2 = document.getElementById("designVideo2");
+// var videoPlayer = document.getElementById("videoPlayer");
+// var videoPlayer2 = document.getElementById("videoPlayer2");
+// var designVideo = document.getElementById("designVideo");
+// var designVideo2 = document.getElementById("designVideo2");
 
-function stopVideo() {
-    videoPlayer.style.display = "none";
-    videoPlayer2.style.display = "none";
-}
-function playVideo(file) {
-    designVideo.src = file;
-    videoPlayer.style.display = "block"
-}
-function playVideo2(file) {
-    designVideo2.src = file;
-    videoPlayer2.style.display = "block"
-}
+// function stopVideo() {
+//     videoPlayer.style.display = "none";
+//     videoPlayer2.style.display = "none";
+// }
+// function playVideo(file) {
+//     designVideo.src = file;
+//     videoPlayer.style.display = "block"
+// }
+// function playVideo2(file) {
+//     designVideo2.src = file;
+//     videoPlayer2.style.display = "block"
+// }
 
 var modal = document.querySelector('.modal');
 var btn = document.querySelector('.open-modal');
