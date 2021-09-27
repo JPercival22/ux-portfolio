@@ -923,16 +923,17 @@ a {
 
 // Hero for all projects
 .hero-container {
-  &.guitar-project {
+  &.boiler-project {
     display: flex;
-    flex-direction: column;
     background-image: url(/img/guitar-lesson-header.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    height: 55vh;
+    height: 70vh;
     .is-centered {
       display: flex;
       align-items: center;
@@ -940,23 +941,21 @@ a {
       .hero-text-content {
         .hero-title-case-study {
           .hero-title {
-            font-size: 2em;
+            font-size: 1.6em;
             font-weight: 600;
-            color: white;
-            letter-spacing: 11pt;
+            letter-spacing: 14pt;
             font-style: normal;
             font-variant-caps: all-petite-caps;
             line-height: 33pt;
+            background-color: #ffffff01;
+            color: white;
           }
           h2 {
-            font-size: 24px;
-            color: cyan;
-            letter-spacing: 3pt;
-            font-variant-caps: all-petite-caps;
-            letter-spacing: 7pt;
-            font-weight: 600;
-            background-color: #f0f8ff0a;
-            line-height: 20pt;
+            background-color: #ffffff01;
+            color: burlywood;
+            line-height: 2rem;
+            font-size: 23px;
+            letter-spacing: 5pt;
           }
         }
       }
@@ -1014,8 +1013,29 @@ a {
   }
   .right {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    .primary-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $brand-color;
+      color:$core-light;
+      width: 250px;
+      height: 40px;
+      border: $button-border-settings;
+      border-radius: 5px;
+      transition: $button-hover-state;
+      box-shadow: 0 8px 13px -4px lightblue;
+      margin-top: 2em;
+      &:hover {
+        background-color: $secondary-core;
+        color: $brand-color;
+        border: 1px solid $brand-color;
+      }
+    }
   }
 }
 
