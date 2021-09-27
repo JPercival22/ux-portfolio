@@ -1215,24 +1215,22 @@ a {
   }
 }
 
-.hero-container.guitar-project {
+.hero-container.boiler-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-image: url(/img/guitar-lesson-header.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  height: 55vh;
+  height: 70vh;
 }
 
-.hero-container.guitar-project .is-centered {
+.hero-container.boiler-project .is-centered {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1244,25 +1242,23 @@ a {
           justify-content: center;
 }
 
-.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-  font-size: 2em;
+.hero-container.boiler-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+  font-size: 1.6em;
   font-weight: 600;
-  color: white;
-  letter-spacing: 11pt;
+  letter-spacing: 14pt;
   font-style: normal;
   font-variant-caps: all-petite-caps;
   line-height: 33pt;
+  background-color: #ffffff01;
+  color: white;
 }
 
-.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study h2 {
-  font-size: 24px;
-  color: cyan;
-  letter-spacing: 3pt;
-  font-variant-caps: all-petite-caps;
-  letter-spacing: 7pt;
-  font-weight: 600;
-  background-color: #f0f8ff0a;
-  line-height: 20pt;
+.hero-container.boiler-project .is-centered .hero-text-content .hero-title-case-study h2 {
+  background-color: #ffffff01;
+  color: burlywood;
+  line-height: 2rem;
+  font-size: 23px;
+  letter-spacing: 5pt;
 }
 
 .hero-container.remind-me-project {
@@ -1345,12 +1341,49 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.intro-container .right .primary-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2c4465;
+  color: #ffffff;
+  width: 250px;
+  height: 40px;
+  border: 1px solid #2c4465;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0 8px 13px -4px lightblue;
+          box-shadow: 0 8px 13px -4px lightblue;
+  margin-top: 2em;
+}
+
+.intro-container .right .primary-button:hover {
+  background-color: #ffffff;
+  color: #2c4465;
+  border: 1px solid #2c4465;
 }
 
 .summary {
