@@ -381,6 +381,7 @@ header #click:checked ~ ul li a {
     justify-content: space-evenly;
     width: 100%;
     img {
+      border: 1px solid black;
       border-radius: 5px;
       margin-top: 0;
       margin-bottom: 10px;
@@ -927,9 +928,10 @@ a {
     background-image: url(/img/guitar-lesson-header.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0;
-    width: auto;
+    background-position: center;
+    background-attachment: fixed;
     height: 44vh;
+    position: relative;
     .is-centered {
       display: flex;
       align-items: center;
@@ -963,9 +965,12 @@ a {
     background-image: url(/img/remind-me-multiple.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0;
-    width: auto;
-    height: 44vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
     .is-centered {
       display: flex;
       align-items: center;
@@ -1091,6 +1096,7 @@ a {
       display: flex;
       img {
         border: 1px solid black;
+        border-radius: 5px;
       }
     }
   }
@@ -1110,8 +1116,11 @@ a {
     flex-direction: column;
     .discovery-card-inner {
       .card-image {
-        .desk-research-image-standard {
+        .desk-research-image-standard,
+        .desk-research-image {
+          border: 1px solid black;
           border-radius: 5px;
+          padding: 20px;
         }
         .secondary-button {
           width: 100%;
@@ -2369,25 +2378,171 @@ footer {
     margin-left: 0;
     padding-left: 4em;
   }
+
   section {
     padding: 1em 4em;
   }
+
   .intro-container .right img {
     width: 40%;
   }
+
+  .summary-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    grid-gap: 30px;
+    .start {
+      display: flex;
+      flex-direction: column;
+      width: 33.33%;
+      order: 0;
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      width: 33.33%;
+      order: 1;
+    }
+    .end {
+      display: flex;
+      flex-direction: column;
+      width: 33.33%;
+      order: 2;
+    }
+  }
+
+  .process-highlights .process-highlights-container {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    margin-bottom: 2em;
+    .process-activity-container {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      align-content: center;
+      justify-content: flex-start;
+
+      .one {
+        order: 0;
+      }
+      .two {
+        order: 1;
+      }
+      .three {
+        order: 2;
+      }
+      .four {
+        order: 3;
+      }
+      .process-editorial {
+        align-items: center;
+      }
+    }
+  }
+
+  .Discovery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .ideation-and-discovery-section {
+    .idea-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em;
+      .idea-left-col h1 {
+        align-self: center;
+      }
+      .discovery-card-inner {
+        .desk-research {
+          display: flex;
+          flex-direction: column;
+          .card-title {
+            display: flex;
+            align-self: center;
+          }
+          .card-image {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            cursor: zoom-in;
+            transition: transform 0.2s;
+            margin-bottom: 2em;
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nielson-quote {
+    padding: 4em;
+  }
+
+  .prototyping-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .summary-container .discovery-cards .discovery-card-inner .desk-research .card-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .validation-section {
+    .idea-left-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ul h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  .validation-section .validation-image-container .validated-test-b img {
+    height: 450px;
+    width: auto;
+  }
+
+  .outcomes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4em;
+  }
+
+  .outcomes-gallery-container {
+    .row .col {
+      grid-gap: 4em;
+      .small-img-row {
+        grid-gap: 3em;
+        .small-img video {
+          height: 467px;
+        }
+      }
+    }
+    .desktop-design-row {
+      margin-bottom: 2em;
+    }
+  }
+
   footer .footer-container .footer-details {
-    padding: 3em;
+    padding: 4em;
   }
   .footer-social-icon a:hover,
   .top-social-icon a:hover {
     opacity: 0.5;
     transition: $button-hover-state;
-  }
-  .outcomes-gallery-container .row .col .small-img-row {
-    grid-gap: 3em;
-    .small-img video {
-      height: 467px;
-    }
   }
 }
 
@@ -2889,6 +3044,7 @@ footer {
     padding-left: 7em;
     .hero-title-case-study .hero-sub-title {
       font-size: 32px;
+      background-color: #f0f8ff33;
     }
   }
   section {
