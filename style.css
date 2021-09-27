@@ -1215,20 +1215,24 @@ a {
   }
 }
 
-.hero-container .guitar-project {
+.hero-container.guitar-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-image: url(/img/guitar-lesson-header.png);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 44vh;
   position: relative;
+  height: 55vh;
 }
 
-.hero-container .guitar-project .is-centered {
+.hero-container.guitar-project .is-centered {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1240,30 +1244,25 @@ a {
           justify-content: center;
 }
 
-.hero-container .guitar-project .is-centered .hero-text-content {
-  margin-left: 10px;
-  color: #ffffff;
-  background: transparent;
-}
-
-.hero-container .guitar-project .is-centered .hero-text-content .hero-title-case-study {
-  text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
-}
-
-.hero-container .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-  font-size: 27px;
+.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+  font-size: 2em;
   font-weight: 600;
-  letter-spacing: 4pt;
+  color: white;
+  letter-spacing: 11pt;
   font-style: normal;
-  font-variant-caps: small-caps;
-  line-height: 28pt;
+  font-variant-caps: all-petite-caps;
+  line-height: 33pt;
 }
 
-.hero-container .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
-  font-size: 20px;
+.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study h2 {
+  font-size: 24px;
+  color: cyan;
   letter-spacing: 3pt;
   font-variant-caps: all-petite-caps;
-  letter-spacing: 2pt;
+  letter-spacing: 7pt;
+  font-weight: 600;
+  background-color: #f0f8ff0a;
+  line-height: 20pt;
 }
 
 .hero-container.remind-me-project {

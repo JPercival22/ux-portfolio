@@ -923,38 +923,40 @@ a {
 
 // Hero for all projects
 .hero-container {
-  .guitar-project {
+  &.guitar-project {
     display: flex;
+    flex-direction: column;
     background-image: url(/img/guitar-lesson-header.png);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 44vh;
     position: relative;
+    height: 55vh;
     .is-centered {
       display: flex;
       align-items: center;
       justify-content: center;
       .hero-text-content {
-        margin-left: 10px;
-        color: $core-light;
-        background: transparent;
         .hero-title-case-study {
-          text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
           .hero-title {
-            font-size: 27px;
+            font-size: 2em;
             font-weight: 600;
-            letter-spacing: 4pt;
+            color: white;
+            letter-spacing: 11pt;
             font-style: normal;
-            font-variant-caps: small-caps;
-            line-height: 28pt;
+            font-variant-caps: all-petite-caps;
+            line-height: 33pt;
           }
-          .hero-sub-title {
-            font-size: 20px;
+          h2 {
+            font-size: 24px;
+            color: cyan;
             letter-spacing: 3pt;
             font-variant-caps: all-petite-caps;
-            letter-spacing: 2pt;
+            letter-spacing: 7pt;
+            font-weight: 600;
+            background-color: #f0f8ff0a;
+            line-height: 20pt;
           }
         }
       }
@@ -970,7 +972,6 @@ a {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-
     .is-centered {
       display: flex;
       align-items: center;
