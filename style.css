@@ -1,36 +1,6 @@
 @font-face {
   font-family: Poppins;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format("woff2");
-  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -73,14 +43,6 @@ h2 {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
-}
-
-.light-text {
-  color: #ffffff;
-}
-
-.dark-text {
-  color: #000;
 }
 
 body {
@@ -1215,7 +1177,7 @@ a {
   }
 }
 
-.hero-container.boiler-project {
+.hero-container.guitar-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1230,7 +1192,7 @@ a {
   height: 70vh;
 }
 
-.hero-container.boiler-project .is-centered {
+.hero-container.guitar-project .is-centered {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1242,20 +1204,23 @@ a {
           justify-content: center;
 }
 
-.hero-container.boiler-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-  font-size: 1.6em;
-  font-weight: 600;
-  letter-spacing: 14pt;
+.hero-container.guitar-project .is-centered .hero-text-content {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
+}
+
+.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+  font-size: 1.8em;
+  font-weight: 700;
   font-style: normal;
-  font-variant-caps: all-petite-caps;
-  line-height: 33pt;
-  background-color: #ffffff01;
+  letter-spacing: 12pt;
+  line-height: 30pt;
   color: white;
 }
 
-.hero-container.boiler-project .is-centered .hero-text-content .hero-title-case-study h2 {
-  background-color: #ffffff01;
-  color: burlywood;
+.hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study h2 {
+  color: #fb9a6c;
   line-height: 2rem;
   font-size: 23px;
   letter-spacing: 5pt;
@@ -1841,65 +1806,6 @@ a {
   text-decoration: underline;
 }
 
-.case-study-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-left: -8px;
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.case-study-inner .section-title {
-  font-size: 1.8em;
-  font-variant-caps: all-petite-caps;
-  color: #2c4465;
-  line-height: 19pt;
-  letter-spacing: 4pt;
-}
-
-.case-study-inner .section-editorial {
-  font-size: 16px;
-  letter-spacing: 1pt;
-  line-height: 21pt;
-}
-
-.case-study-inner .section-editorial .link-text {
-  color: #2c4465;
-  font-weight: 600;
-  line-height: 40pt;
-  text-decoration: underline;
-}
-
-.case-study-inner .section-editorial .link-text:hover {
-  text-decoration: none;
-}
-
-.case-study-inner ul {
-  list-style: circle;
-  margin-top: 0;
-  margin-bottom: 2em;
-  margin-left: 1em;
-}
-
-.case-study-inner ul li {
-  margin: 0 20px;
-}
-
-.case-study-inner .emphasis-text {
-  font-weight: 600;
-  margin-bottom: 2em;
-}
-
 footer {
   position: relative;
   top: -1px;
@@ -2277,7 +2183,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     margin: 1em;
     margin-top: 0;
   }
-  /*remind-project styles */
   section {
     padding: 1em 1.7em;
   }
@@ -2575,14 +2480,21 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 40%;
     margin-bottom: 1.5em;
   }
-  .guitar-project {
-    height: 60vh;
+  .hero-container.guitar-project .is-centered .hero-text-content {
+    margin-left: 0.3em;
+    background: none;
   }
-  .guitar-project .is-centered .hero-text-content {
-    margin-left: 1.3em;
+  .hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+    font-size: 2.8em;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 12pt;
+    line-height: 30pt;
   }
-  .case-study-inner {
-    margin: 1.2em;
+  .hero-container.guitar-project .is-centered .hero-text-content h2 {
+    color: #f97d95;
+    font-size: 2em;
+    letter-spacing: 6pt;
   }
   .hero-container.remind-me-project .is-centered .hero-text-content {
     margin-left: 1.3em;
@@ -2799,7 +2711,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
 }
 
-/*Styles for Laptops*/
 @media only screen and (min-width: 1050px) {
   .nav-container {
     height: 60px;
@@ -3057,15 +2968,21 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .thank-you-section {
     padding: 0.5em;
   }
-  .guitar-project {
-    height: 70vh;
+  .hero-container.guitar-project .is-centered {
+    padding-left: 0;
   }
-  .guitar-project .is-centered .hero-text-content {
-    margin-left: 0em;
-    padding: 3.3em;
+  .hero-container.guitar-project .is-centered .hero-text-content {
+    padding: 4rem;
   }
-  .case-study-inner {
-    margin: 2.3em;
+  .hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+    font-size: 3em;
+    letter-spacing: 17pt;
+    line-height: 37pt;
+  }
+  .hero-container.guitar-project .is-centered .hero-text-content .hero-title-case-study h2 {
+    font-size: 1.8em;
+    letter-spacing: 8.2pt;
+    line-height: 13pt;
   }
   .nav-container header .logo {
     display: -webkit-box;
@@ -3558,9 +3475,6 @@ img {
             justify-content: space-between;
     padding-left: 1.6em;
   }
-  .case-study-inner {
-    margin: 3.9em;
-  }
   .hero-container.remind-me-project {
     height: 93vh;
   }
@@ -3710,30 +3624,6 @@ img {
   .about .about-container ul li .icon-container .about-title {
     padding: 1em;
   }
-  footer .footer-container .footer-details {
-    padding: 2em 13em;
-  }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder {
-    margin-right: 16px;
-    margin-left: -3.2em;
-  }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo img {
-    width: 40px;
-  }
-  footer .footer-container .footer-details .logo-container .logo-name {
-    line-height: 23px;
-    letter-spacing: 10pt;
-  }
-  footer .footer-container .footer-details .logo-container .logo-title {
-    font-size: 14px;
-    letter-spacing: 4.1pt;
-    font-variant-caps: inherit;
-  }
   .contact-page-section {
     padding: 0em;
   }
@@ -3769,44 +3659,8 @@ img {
     top: -40px;
     left: 370px;
   }
-  .guitar-project {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 80vh;
-  }
-  .guitar-project .is-centered {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .guitar-project .is-centered .hero-text-content {
-    margin-left: 10px;
-    color: #ffffff;
-    background: transparent;
-  }
-  .guitar-project .is-centered .hero-text-content .hero-title-case-study {
-    font-family: "Ubuntu", sans-serif;
-    letter-spacing: 5px;
-    text-shadow: 3px 6px 6px black, 4px -4px 8px black, -5px 1px 7px black, -3px -7px 6px black;
-  }
-  .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
-    font-size: 45px;
-  }
-  .guitar-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
-    font-size: 22px;
-  }
-  .guitar-project .is-centered .hero-text-content {
+  .hero-container.guitar-project .is-centered .hero-text-content {
     margin-left: 5em;
-  }
-  .case-study-inner {
-    margin: 4em 8.6em;
   }
   .hero-container.remind-me-project {
     display: -ms-grid;
@@ -3816,6 +3670,30 @@ img {
   }
   section {
     padding: 1em 10em;
+  }
+  footer .footer-container .footer-details {
+    padding: 2em 13em;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder {
+    margin-right: 16px;
+    margin-left: -3.2em;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder .company-logo img {
+    width: 40px;
+  }
+  footer .footer-container .footer-details .logo-container .logo-name {
+    line-height: 23px;
+    letter-spacing: 10pt;
+  }
+  footer .footer-container .footer-details .logo-container .logo-title {
+    font-size: 14px;
+    letter-spacing: 4.1pt;
+    font-variant-caps: inherit;
   }
 }
 
@@ -3830,6 +3708,9 @@ img {
   .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
     font-size: 32px;
     background-color: #f0f8ff33;
+  }
+  .hero-container.guitar-project .is-centered .hero-text-content {
+    margin-left: 13.5em;
   }
   section {
     padding: 1em 17em;
