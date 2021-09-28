@@ -59,6 +59,7 @@ window.onload = function () {
         font-weight: 600;
         transform: none;
         color: #2c4465;
+        margin: 0;
       }
     `;
   document.head.appendChild(style);
