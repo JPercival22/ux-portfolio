@@ -61,19 +61,6 @@ ul {
   padding: 0;
 }
 
-.tertiary-button {
-  color: #213550;
-  font-weight: 300;
-  border-bottom: 1px solid #2c4465;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.tertiary-button:hover {
-  color: #000000;
-  border: none;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -224,7 +211,8 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container {
-  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(white));
+  background: linear-gradient(180deg, #ffee95 -65%, white 100%);
   padding: 1em;
 }
 
@@ -236,23 +224,9 @@ header #click:checked ~ ul li a {
   line-height: 2rem;
 }
 
-.hero-container .wrap {
-  font-family: "Poppins";
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.hero-content-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.hero-container .hero-text-content {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(white));
+  background: linear-gradient(180deg, #ffee95 -65%, white 100%);
 }
 
 .hero-container .hero-text-content .hero-button-container {
@@ -260,10 +234,16 @@ header #click:checked ~ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-height: 50px;
 }
 
@@ -277,7 +257,6 @@ header #click:checked ~ ul li a {
   letter-spacing: 1pt;
   border-radius: 5px;
   border: 1px solid #2c4465;
-  margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,14 +277,16 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container .hero-text-content .hero-button-container .secondary-button {
-  background: #ffffff;
-  padding: 6px 12px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 40px;
   color: #2c4465;
-  font-size: 16px;
-  text-decoration: none;
+  font-size: 20px;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 1pt;
+  border-radius: 5px;
   border: 1px solid #2c4465;
   border-radius: 5px;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,13 +296,31 @@ header #click:checked ~ ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  margin-top: 1em;
 }
 
 .hero-container .hero-text-content .hero-button-container .secondary-button:hover {
   background-color: #2c4465;
-  color: #2c4465;
+  color: #ffffff;
+  border-color: #2c4465;
+}
+
+.hero-content-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mobile-social-icon {
@@ -564,11 +563,11 @@ header #click:checked ~ ul li a {
   font-size: 1.15rem;
   font-weight: 300;
   font-variant-caps: petite-caps;
-  letter-spacing: 2pt;
-  line-height: 16.3pt;
+  letter-spacing: 3pt;
+  line-height: 24.3pt;
 }
 
-.portfolio .portfolio-container .right {
+.portfolio .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +583,12 @@ header #click:checked ~ ul li a {
           justify-content: space-evenly;
 }
 
-.portfolio .portfolio-container .right .case-study-button {
+.portfolio .right img {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.portfolio .right .case-study-button {
   background-color: #2c4465;
   width: 100%;
   padding: 8px;
@@ -608,7 +612,7 @@ header #click:checked ~ ul li a {
           box-shadow: 0 8px 13px -4px lightblue;
 }
 
-.portfolio .portfolio-container .right .case-study-button:hover {
+.portfolio .right .case-study-button:hover {
   background: #618bc5;
   color: #ffffff;
   border-color: #2c4465;
@@ -616,7 +620,7 @@ header #click:checked ~ ul li a {
           box-shadow: 0 8px 13px -4px #0d4252c4;
 }
 
-.portfolio .portfolio-container .right .case-study-button .primary-button {
+.portfolio .right .case-study-button .primary-button {
   color: #ffffff;
   font-size: 1em;
   text-transform: uppercase;
@@ -2076,7 +2080,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .portfolio .portfolio-container .right img {
     width: 65%;
     height: auto;
-    padding-bottom: 1em;
   }
   .portfolio .portfolio-container .right .case-study-button {
     width: 65%;
@@ -2303,6 +2306,23 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .hero-container .hero-title,
   .hero-container .txt-rotate .wrap {
     font-size: 1.5rem;
+  }
+  .hero-container .hero-text-content .hero-button-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hero-container .hero-text-content .hero-button-container .primary-button {
+    width: 20%;
+    margin-right: 1em;
+  }
+  .hero-container .hero-text-content .hero-button-container .secondary-button {
+    width: 20%;
+    margin-top: 0;
   }
   .mobile-social-icon a {
     padding: 1em;
@@ -2899,7 +2919,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .portfolio .portfolio-container .right img {
     width: 36vw;
     height: 30vh;
-    padding-top: 2em;
+    margin-top: 2em;
   }
   .portfolio .portfolio-container .right .case-study-button {
     width: 20vw;
@@ -3629,7 +3649,6 @@ img {
   }
   .contact-page-section .contact-container {
     padding: 4em 14em;
-    width: 75vw;
   }
   .contact-page-section .contact-container .contact-form {
     padding: 2em;
@@ -3711,6 +3730,9 @@ img {
   }
   .hero-container.guitar-project .is-centered .hero-text-content {
     margin-left: 13.5em;
+  }
+  .contact-page-section {
+    padding: 2em 2em 2em 4em;
   }
   section {
     padding: 1em 17em;
