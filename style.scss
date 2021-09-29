@@ -1940,38 +1940,59 @@ footer {
     width: 200px;
   }
 
-  .validation-section .validation-image-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
-    .validated-test-a {
-      width: 25%;
-      margin: 10px;
+  .validation-section {
+    .validation-image-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      img {
-        height: 435px;
-        width: 95%;
-        margin: 1em;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: row;
+      .validated-test-a {
+        width: 25%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          height: 435px;
+          width: 95%;
+          margin: 1em;
+        }
+        figcaption {
+          margin: 0;
+        }
       }
-      figcaption {
-        margin: 0;
+      .validated-test-b {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 570px;
+          width: 95%;
+        }
+      }
+      &.guitar-validation {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        .validated-test-a {
+          width: 98%;
+          img {
+            width: 100%;
+            height: 495px;
+            margin-bottom: 1em;
+            border: 1px solid black;
+            border-radius: 5px;
+          }
+        }
+        .validated-test-b {
+          width: 98%;
+        }
       }
     }
-    .validated-test-b {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 2;
-      align-items: center;
-      justify-content: center;
-      img {
-        height: 570px;
-        width: 95%;
-      }
-    }
+
   }
 
   .outcomes-gallery-container {
@@ -2400,8 +2421,12 @@ footer {
   .Discovery-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2em;
+    ul {
+      margin-left: 2em;
+      list-style: circle;
+    }
   }
 
   .ideation-and-discovery-section {
@@ -2437,7 +2462,10 @@ footer {
   }
 
   .nielson-quote {
-    padding: 4em;
+    padding: 4em 18em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .prototyping-section {
@@ -2959,7 +2987,7 @@ footer {
 
 @media only screen and (min-width: 1880px) {
   .nav-container header .logo {
-    padding-left: 16em;
+    padding-left: 12em;
   }
 
   .hero-container.remind-me-project .is-centered .hero-text-content {
