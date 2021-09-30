@@ -1461,19 +1461,6 @@ a {
           align-items: center;
 }
 
-.discovery-section .swot-analysis-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .ideation-and-discovery-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2625,7 +2612,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 370px;
+    width: 810px;
     height: auto;
   }
   .outcomes-gallery-container .row .col .full-width-image-container {
@@ -2737,6 +2724,64 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     border: 1px solid black;
     border-radius: 5px;
     width: 100%;
+  }
+  .swot-analysis-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .swot-analysis-section .carousel-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    margin: 10px auto;
+  }
+  .swot-analysis-section .carousel-container .carousel {
+    background: #ffffff29;
+    border: 1px solid #2c4465;
+    height: 465px;
+    width: auto;
+  }
+  .swot-analysis-section .carousel-container .slider {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    border: 1px solid red;
+    width: 400%;
+  }
+  .swot-analysis-section .carousel-container .slider section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 1em;
+  }
+  .swot-analysis-section .carousel-container .slider section img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   footer .footer-container .footer-details {
     padding: 2.2em;

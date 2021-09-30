@@ -1048,11 +1048,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .swot-analysis-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 .ideation-and-discovery-section {
   display: flex;
@@ -1992,7 +1987,6 @@ footer {
         }
       }
     }
-
   }
 
   .outcomes-gallery-container {
@@ -2003,7 +1997,7 @@ footer {
       .col {
         .feature-img img {
           display: flex;
-          width: 370px;
+          width: 810px;
           height: auto;
         }
         .full-width-image-container {
@@ -2069,6 +2063,45 @@ footer {
           border: 1px solid black;
           border-radius: 5px;
           width: 100%;
+        }
+      }
+    }
+  }
+
+  // carousel styles
+  .swot-analysis-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .carousel-container {
+      display: flex;
+      width: 40%;
+      margin: 10px auto;
+      .carousel {
+        background: #ffffff29;;
+        border: 1px solid $brand-color;
+        height: 465px;
+        width: auto;
+        //  overflow: hidden;
+      }
+      .slider {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        // border: 1px solid $brand-color;
+        transform: translate(0%);
+        border: 1px solid red;
+        width: 400%;
+        section {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          margin: 1em;
+          img {
+            display: flex;
+          }
         }
       }
     }
