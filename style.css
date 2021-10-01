@@ -2793,6 +2793,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     display: none;
   }
   .swot-analysis-section .carousel-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 59%;
     margin: auto;
     border: 1px solid #2c4465;

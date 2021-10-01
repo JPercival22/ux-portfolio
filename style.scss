@@ -2113,6 +2113,7 @@ footer {
       display: none;
     }
     .carousel-container {
+      display: flex;
       width: 59%;
       margin: auto;
       border: 1px solid $brand-color;
