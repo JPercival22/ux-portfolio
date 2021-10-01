@@ -1360,6 +1360,27 @@ footer {
     width: 70%;
     height: auto;
   }
+
+  // carousel styles
+  .swot-analysis-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .image-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-container {
+      display: none;
+    }
+    .controls {
+      display: none;
+    }
+  }
 }
 
 // Large mobile Phone Viewport styles
@@ -2068,45 +2089,6 @@ footer {
     }
   }
 
-  // carousel styles
-  .swot-analysis-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    .carousel-container {
-      display: flex;
-      width: 40%;
-      margin: 10px auto;
-      .carousel {
-        background: #ffffff29;;
-        border: 1px solid $brand-color;
-        height: 465px;
-        width: auto;
-        //  overflow: hidden;
-      }
-      .slider {
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        // border: 1px solid $brand-color;
-        transform: translate(0%);
-        border: 1px solid red;
-        width: 400%;
-        section {
-          display: flex;
-          align-items: center;
-          padding: 0;
-          margin: 1em;
-          img {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-
   footer .footer-container .footer-details {
     padding: 2.2em;
     .footer-top-bar .logo .logo-container {
@@ -2117,6 +2099,56 @@ footer {
       .logo-title {
         font-size: 1.2rem;
         letter-spacing: 2pt;
+      }
+    }
+  }
+  // carousel styles
+  .swot-analysis-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .image-col {
+      display: none;
+    }
+    .carousel-container {
+      width: 59%;
+      margin: auto;
+      border: 1px solid $brand-color;
+      overflow: hidden;
+      .carousel-slide {
+        display: flex;
+        width: 100%;
+        height: 500px;
+      }
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 1em;
+      height: 40px;
+      .prev-btn,
+      .next-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        border-radius: 50%;
+        width: 60%;
+        margin: 2em;
+        border: 1px solid $brand-color;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          background: white;
+        }
+        img {
+          height: 30px;
+          width: 17px;
+          display: flex;
+          padding: 10px;
+        }
       }
     }
   }

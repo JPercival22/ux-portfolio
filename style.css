@@ -1946,6 +1946,43 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 70%;
     height: auto;
   }
+  .swot-analysis-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .swot-analysis-section .image-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .swot-analysis-section .carousel-container {
+    display: none;
+  }
+  .swot-analysis-section .controls {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 425px) {
@@ -2725,6 +2762,17 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     border-radius: 5px;
     width: 100%;
   }
+  footer .footer-container .footer-details {
+    padding: 2.2em;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
+    letter-spacing: 5.2pt;
+    font-size: 1.8rem;
+  }
+  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
+    font-size: 1.2rem;
+    letter-spacing: 2pt;
+  }
   .swot-analysis-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2741,58 +2789,66 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
             justify-content: center;
     width: 100%;
   }
+  .swot-analysis-section .image-col {
+    display: none;
+  }
   .swot-analysis-section .carousel-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 40%;
-    margin: 10px auto;
-  }
-  .swot-analysis-section .carousel-container .carousel {
-    background: #ffffff29;
+    width: 59%;
+    margin: auto;
     border: 1px solid #2c4465;
-    height: 465px;
-    width: auto;
+    overflow: hidden;
   }
-  .swot-analysis-section .carousel-container .slider {
-    height: 100%;
+  .swot-analysis-section .carousel-container .carousel-slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-transform: translate(0%);
-            transform: translate(0%);
-    border: 1px solid red;
-    width: 400%;
+    width: 100%;
+    height: 500px;
   }
-  .swot-analysis-section .carousel-container .slider section {
+  .swot-analysis-section .controls {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0;
-    margin: 1em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 1em;
+    height: 40px;
   }
-  .swot-analysis-section .carousel-container .slider section img {
+  .swot-analysis-section .controls .prev-btn,
+  .swot-analysis-section .controls .next-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 60px;
+    border-radius: 50%;
+    width: 60%;
+    margin: 2em;
+    border: 1px solid #2c4465;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
-  footer .footer-container .footer-details {
-    padding: 2.2em;
+  .swot-analysis-section .controls .prev-btn:hover,
+  .swot-analysis-section .controls .next-btn:hover {
+    background: white;
   }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-name {
-    letter-spacing: 5.2pt;
-    font-size: 1.8rem;
-  }
-  footer .footer-container .footer-details .footer-top-bar .logo .logo-container .logo-title {
-    font-size: 1.2rem;
-    letter-spacing: 2pt;
+  .swot-analysis-section .controls .prev-btn img,
+  .swot-analysis-section .controls .next-btn img {
+    height: 30px;
+    width: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
   }
 }
 
