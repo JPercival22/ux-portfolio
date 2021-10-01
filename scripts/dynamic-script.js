@@ -67,46 +67,73 @@ window.onload = function () {
 
 //   Modal toggle 
 // generic modal 
-var modal = document.querySelector('.modal');
-var btn = document.querySelector('.open-modal');
-var span = document.querySelector('.close-modal');
+// var modal = document.querySelector('.modal');
+// var btn = document.querySelector('.open-modal');
+// var span = document.querySelector('.close-modal');
 
-btn.onclick = function () {
-    modal.style.display = "flex";
-};
-span.onclick = function () {
-    modal.style.display = "none";
-};
+// btn.onclick = function () {
+//     modal.style.display = "flex";
+// };
+// span.onclick = function () {
+//     modal.style.display = "none";
+// };
 
 // contact form modal 
-var modal = document.querySelector('.modal');
-var btn = document.querySelector('.open-modal');
-var span = document.querySelector('.close-modal');
-var element = document.querySelector('.contact-form');
+// var modal = document.querySelector('.modal');
+// var btn = document.querySelector('.open-modal');
+// var span = document.querySelector('.close-modal');
+// var element = document.querySelector('.contact-form');
 
-btn.onclick = function() {
-  modal.style.display = "block";
-  element.classList.add('blur')
-};
-span.onclick = function() {
-  modal.style.display = "none";
-  element.classList.remove('blur');
-};
+// btn.onclick = function() {
+//   modal.style.display = "block";
+//   element.classList.add('blur')
+// };
+// span.onclick = function() {
+//   modal.style.display = "none";
+//   element.classList.remove('blur');
+// };
 
 
 // projects carousel 
+window.onload
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
+// buttons 
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+// counter 
+let counter = 1;
+const size = carouselImages[0].clientWidth;
 
+carouselSlide.style.transform = 'translateX('+ (-size * counter) +'px)';
 
+// button Listeners 
+nextBtn.addEventListener('click', ()=>{
+if(counter >= carouselImages.length -1) return;
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    carouselSlide.style.transform = 'translateX('+ (-size * counter) +'px)';
+});
+prevBtn.addEventListener('click', ()=>{
+    if(counter <= 0) return;
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    carouselSlide.style.transform = 'translateX('+ (-size * counter) +'px)';
+});
 
-
-
-
-
-
-
-
-
-
+// transition end function (goes back to beginning of slide show) 
+carouselSlide.addEventListener('transitionend', ()=> {
+    if (carouselImages[counter].id === 'lastClone') {
+        carouselSlide.style.transform = 'none';
+        counter = carouselImages.length - 5;
+        carouselSlide.style.transform = 'translateX('+ (-size * counter) +'px)';
+    }
+    if (carouselImages[counter].id === 'firstClone') {
+        carouselSlide.style.transform = 'none';
+        counter = carouselImages.length - 0;
+        carouselSlide.style.transform = 'translateX('+ (-size * counter) +'px)';
+    }
+});
 
 
 
