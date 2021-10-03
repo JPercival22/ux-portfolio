@@ -135,35 +135,17 @@ carouselSlide.addEventListener('transitionend', ()=> {
     }
 });
 
+// Video Button actions
+const video = document.getElementById('designVideos');
+const playBtn = document.getElementById('playBtn');
 
+playBtn.addEventListener('click', vidAction);
 
-
-
-
-
-
-
-// Video Button actions (Remind Me Project) 
-// var videoPlayer = document.getElementById("videoPlayer");
-// var videoPlayer2 = document.getElementById("videoPlayer2");
-// var designVideo = document.getElementById("designVideo");
-// var designVideo2 = document.getElementById("designVideo2");
-
-// function stopVideo() {
-//     videoPlayer.style.display = "none";
-//     videoPlayer2.style.display = "none";
-// }
-// function playVideo(file) {
-//     designVideo.src = file;
-//     videoPlayer.style.display = "block"
-// }
-// function playVideo2(file) {
-//     designVideo2.src = file;
-//     videoPlayer2.style.display = "block"
-// }
-
-
-
+function vidAction(event) {
+  video.play();
+  playBtn.style = "display:none;"
+  video.style = "opacity: 1;"
+}
 
 // debugging section 
 // Debug Code to find elements causing horizontal scroll 
