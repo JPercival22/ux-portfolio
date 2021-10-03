@@ -3474,6 +3474,53 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .outcomes-gallery-container .row .col .small-img-row {
     grid-gap: 3em;
   }
+  .outcomes-gallery-container .row .col .small-img-row .small-img .play-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .outcomes-gallery-container .row .col .small-img-row .small-img .play-btn:before {
+    content: "";
+    position: absolute;
+    border: 2px solid #2c4465;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: playBtn-animation 1s linear infinite;
+            animation: playBtn-animation 1s linear infinite;
+    opacity: 0;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+  }
+  .outcomes-gallery-container .row .col .small-img-row .small-img .play-btn:after {
+    content: "";
+    position: absolute;
+    border: 2px solid #2c4465;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: playBtn-animation 1.5s linear infinite;
+            animation: playBtn-animation 1.5s linear infinite;
+    opacity: 0;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .outcomes-gallery-container .row .col .small-img-row .small-img .play-btn img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+  }
   .outcomes-gallery-container .row .col .small-img-row .small-img video {
     height: 540px;
   }
@@ -3488,6 +3535,32 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
   .outcomes-gallery-container .row.desktop-design-row .col .small-img-row .small-img video {
     width: 700px;
+  }
+  @-webkit-keyframes playBtn-animation {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes playBtn-animation {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
   }
   footer .footer-container .footer-details {
     padding: 4em;
