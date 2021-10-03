@@ -27,6 +27,12 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   line-height: 27pt;
   color: #2c4465;
@@ -34,6 +40,7 @@ h1 {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 h2 {
@@ -43,12 +50,11 @@ h2 {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
-body {
-  font-family: Poppins;
-  padding: 0;
-  margin: 0;
+.text-center {
+  text-align: center;
 }
 
 section {
@@ -2208,7 +2214,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     padding: 1em 1.7em;
   }
   .intro-container .right img {
-    width: 70%;
+    width: 50%;
   }
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .card-image {
     display: -webkit-box;
@@ -2854,9 +2860,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-  }
-  .swot-analysis-section .image-col {
-    display: none;
+    height: auto;
   }
   .swot-analysis-section .carousel-container {
     display: -webkit-box;
@@ -2865,6 +2869,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 59%;
     margin: auto;
     border: 1px solid #2c4465;
+    border-radius: 5px;
     overflow: hidden;
   }
   .swot-analysis-section .carousel-container .carousel-slide {
@@ -2881,14 +2886,10 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     margin-top: 1em;
-    height: 40px;
+    grid-gap: 3em;
   }
-  .swot-analysis-section .controls .prev-btn,
-  .swot-analysis-section .controls .next-btn {
+  .swot-analysis-section .controls button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2900,24 +2901,20 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
             justify-content: center;
     height: 60px;
     border-radius: 50%;
-    width: 60%;
-    margin: 2em;
+    width: 60px;
     border: 1px solid #2c4465;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  .swot-analysis-section .controls .prev-btn:hover,
-  .swot-analysis-section .controls .next-btn:hover {
+  .swot-analysis-section .controls button:hover {
     background: white;
   }
-  .swot-analysis-section .controls .prev-btn img,
-  .swot-analysis-section .controls .next-btn img {
-    height: 30px;
-    width: 17px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 10px;
+  .swot-analysis-section .controls button img {
+    height: 25px;
+    width: auto;
+  }
+  .swot-analysis-section .image-col {
+    display: none;
   }
 }
 
@@ -3326,9 +3323,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 2em;
   }
   .Discovery-section ul {
@@ -3481,10 +3478,16 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     height: 540px;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img img {
-    width: 100%;
+    width: 355px;
   }
-  .outcomes-gallery-container .row .col .desktop-design-row {
+  .outcomes-gallery-container .row.desktop-design-row {
     margin-bottom: 2em;
+  }
+  .outcomes-gallery-container .row.desktop-design-row .col .small-img-row img {
+    width: 700px;
+  }
+  .outcomes-gallery-container .row.desktop-design-row .col .small-img-row .small-img video {
+    width: 700px;
   }
   footer .footer-container .footer-details {
     padding: 4em;

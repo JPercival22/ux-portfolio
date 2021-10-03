@@ -51,6 +51,12 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
   line-height: 27pt;
   color: $brand-color;
@@ -58,6 +64,7 @@ h1 {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 h2 {
@@ -67,14 +74,12 @@ h2 {
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 
-body {
-  font-family: Poppins;
-  padding: 0;
-  margin: 0;
+.text-center {
+  text-align: center;
 }
-
 section {
   padding: 17px;
 }
@@ -1623,7 +1628,7 @@ footer {
     padding: 1em 1.7em;
   }
   .intro-container .right img {
-    width: 70%;
+    width: 50%;
   }
 
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner {
@@ -2101,19 +2106,6 @@ footer {
         }
       }
     }
-    // .desktop-design-row {
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    //   .col .small-img-row .small-img {
-    //     img {
-    //       display: flex;
-    //       border: 1px solid black;
-    //       border-radius: 5px;
-    //       width: 100%;
-    //     }
-    //   }
-    // }
   }
 
   footer .footer-container .footer-details {
@@ -2136,14 +2128,13 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    .image-col {
-      display: none;
-    }
+    height: auto;
     .carousel-container {
       display: flex;
       width: 59%;
       margin: auto;
       border: 1px solid $brand-color;
+      border-radius: 5px;
       overflow: hidden;
       .carousel-slide {
         display: flex;
@@ -2154,30 +2145,28 @@ footer {
     .controls {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
       margin-top: 1em;
-      height: 40px;
-      .prev-btn,
-      .next-btn {
+      grid-gap: 3em;
+      button {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 60px;
         border-radius: 50%;
-        width: 60%;
-        margin: 2em;
+        width: 60px;
         border: 1px solid $brand-color;
         transition: all 0.4s ease-in-out;
         &:hover {
           background: white;
         }
         img {
-          height: 30px;
-          width: 17px;
-          display: flex;
-          padding: 10px;
+          height: 25px;
+          width: auto;
         }
       }
+    }
+    .image-col {
+      display: none;
     }
   }
 }
@@ -2510,7 +2499,7 @@ footer {
   .Discovery-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 2em;
     ul {
       margin-left: 2em;
@@ -2596,21 +2585,31 @@ footer {
   }
 
   .outcomes-gallery-container {
-    .row .col {
-      grid-gap: 4em;
-      .small-img-row {
-        grid-gap: 3em;
-        .small-img {
-          video {
-            height: 540px;
-          }
-          img {
-            width: 100%;
+    .row {
+      .col {
+        grid-gap: 4em;
+        .small-img-row {
+          grid-gap: 3em;
+          .small-img {
+            video {
+              height: 540px;
+            }
+            img {
+              width: 355px;
+            }
           }
         }
       }
-      .desktop-design-row {
-        margin-bottom: 2em;
+    }
+    .row.desktop-design-row {
+      margin-bottom: 2em;
+      .col .small-img-row {
+        img {
+          width: 700px;
+        }
+        .small-img video {
+          width: 700px;
+        }
       }
     }
   }
