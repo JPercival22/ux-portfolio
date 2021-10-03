@@ -194,7 +194,6 @@ header #click:checked ~ ul li a {
 }
 
 .hero-container {
-  background: linear-gradient(180deg, #ffee95 -65%, white 100%);
   padding: 1em;
   .hero-title {
     font-family: "Poppins";
@@ -202,9 +201,6 @@ header #click:checked ~ ul li a {
     font-weight: 300;
     font-size: 1.3rem;
     line-height: 2rem;
-  }
-  .hero-text-content {
-    background: linear-gradient(180deg, #ffee95 -65%, white 100%);
     .hero-button-container {
       margin: 2em 0;
       display: flex;
@@ -877,8 +873,8 @@ a {
 }
 
 // Case Study Styles
-
-// Hero for all projects
+// Global Styles
+// Hero
 .hero-container {
   &.guitar-project {
     display: flex;
@@ -956,6 +952,12 @@ a {
       }
     }
   }
+}
+
+.carousel-container,
+.controls,
+.discovery-card-inner {
+  display: none;
 }
 
 // Remind Me Project styles
@@ -1149,8 +1151,8 @@ a {
       justify-content: center;
       align-items: center;
       img {
-        width: 93%;
-        height: 495px;
+        width: auto;
+        height: 170px;
         margin-bottom: 1em;
         border: 1px solid black;
         border-radius: 5px;
@@ -1190,6 +1192,9 @@ a {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      .full-width-image-container {
+        display: none;
+      }
       .small-img-row {
         display: flex;
         flex-direction: column;
@@ -1199,11 +1204,13 @@ a {
           margin-bottom: 1em;
           img {
             display: flex;
+            margin-bottom: 1em;
             border: 1px solid black;
             border-radius: 5px;
           }
-          .play-btn {
-            display: none;
+          video {
+            width: 100%;
+            height: auto;
           }
           .open-modal {
             display: none;
@@ -1231,17 +1238,6 @@ a {
             color: $brand-color;
           }
         }
-      }
-    }
-  }
-  .video-player-web-design {
-    .designVideos {
-      width: 100%;
-      height: auto;
-      border: 1px solid black;
-      border-radius: 5px;
-      .close-btn {
-        display: none;
       }
     }
   }
@@ -1653,34 +1649,50 @@ footer {
     }
   }
 
-  .outcomes-gallery-container .row .col {
-    .small-img-row {
-      align-items: center;
-    }
-    .feature-img img {
+  .outcomes-gallery-container {
+    text-align: center;
+    .row {
       display: flex;
-      width: 54vw;
-      height: auto;
-    }
-
-    .small-img-row {
-      .primary-button {
-        margin-bottom: 2em;
-        padding: 10px;
-        width: 62%;
-      }
-      .mobile-button {
-        width: 55vw;
-      }
-      .video-player-web-design {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .col {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .half-width {
-          width: 50%;
+        justify-content: center;
+        .small-img-row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 70%;
+          .small-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            height: auto;
+            .primary-button {
+              margin-bottom: 2em;
+              padding: 10px;
+              width: 62%;
+            }
+            video {
+              width: 90%;
+              height: auto;
+              border: 1px solid $brand-color;
+              border-radius: 5px;
+            }
+            .design-video_full-width {
+              width: 500px;
+              height: auto;
+            }
+          }
         }
-        .full-width {
-          width: 100%;
+        .feature-img img {
+          display: flex;
         }
       }
     }
@@ -1949,14 +1961,15 @@ footer {
     padding: 1em 2.5em;
   }
 
-  .intro-container .right img {
-    width: 60%;
-  }
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .wireframes-link .secondary-button {
     width: 200px;
   }
 
   .validation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .validation-image-container {
       display: flex;
       justify-content: space-evenly;
@@ -1989,22 +2002,24 @@ footer {
           width: 95%;
         }
       }
-      &.guitar-validation {
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(2, 1fr);
-        .validated-test-a {
-          width: 98%;
-          img {
-            width: 100%;
-            height: 495px;
-            margin-bottom: 1em;
-            border: 1px solid black;
-            border-radius: 5px;
-          }
-        }
-        .validated-test-b {
-          width: 98%;
+    }
+  }
+
+  .validation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .guitar-validation {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      .validated-test-a {
+        width: 100%;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }
@@ -2018,11 +2033,11 @@ footer {
       .col {
         .feature-img img {
           display: flex;
-          width: 810px;
-          height: auto;
+          flex-direction: column;
         }
         .full-width-image-container {
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
           .small-img {
@@ -2032,8 +2047,16 @@ footer {
             justify-content: center;
             img {
               display: flex;
-              border: 1px solid black;
+              width: 500px;
+              height: auto;
+              border: 1px solid $brand-color;
               border-radius: 5px;
+              cursor: zoom-in;
+              transition: all 0.4s ease-in-out;
+              &:hover {
+                width: 100%;
+                height: auto;
+              }
             }
           }
         }
@@ -2050,7 +2073,11 @@ footer {
             text-align: center;
             margin-bottom: 0;
             img {
-              width: 70%;
+              display: flex;
+              border: 1px solid $brand-color;
+              border-radius: 5px;
+              width: 96%;
+              height: auto;
             }
             a {
               display: flex;
@@ -2074,19 +2101,19 @@ footer {
         }
       }
     }
-    .desktop-design-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      .col .small-img-row .small-img {
-        img {
-          display: flex;
-          border: 1px solid black;
-          border-radius: 5px;
-          width: 100%;
-        }
-      }
-    }
+    // .desktop-design-row {
+    //   display: flex;
+    //   flex-direction: row;
+    //   align-items: center;
+    //   .col .small-img-row .small-img {
+    //     img {
+    //       display: flex;
+    //       border: 1px solid black;
+    //       border-radius: 5px;
+    //       width: 100%;
+    //     }
+    //   }
+    // }
   }
 
   footer .footer-container .footer-details {
@@ -2425,10 +2452,6 @@ footer {
     padding: 1em 4em;
   }
 
-  .intro-container .right img {
-    width: 40%;
-  }
-
   .summary-container {
     display: flex;
     flex-direction: row;
@@ -2507,6 +2530,7 @@ footer {
         .desk-research {
           display: flex;
           flex-direction: column;
+          align-items: center;
           .card-title {
             display: flex;
             align-self: center;
@@ -2518,6 +2542,7 @@ footer {
             cursor: zoom-in;
             transition: transform 0.2s;
             margin-bottom: 2em;
+            transition: all 1s ease-in-out;
             &:hover {
               transform: scale(1.5);
             }
@@ -2575,13 +2600,18 @@ footer {
       grid-gap: 4em;
       .small-img-row {
         grid-gap: 3em;
-        .small-img video {
-          height: 467px;
+        .small-img {
+          video {
+            height: 540px;
+          }
+          img {
+            width: 100%;
+          }
         }
       }
-    }
-    .desktop-design-row {
-      margin-bottom: 2em;
+      .desktop-design-row {
+        margin-bottom: 2em;
+      }
     }
   }
 
@@ -2782,6 +2812,17 @@ footer {
     padding-left: 1.6em;
   }
 
+  .outcomes-gallery-container .row .col .full-width-image-container .small-img img {
+    width: 500px;
+    height: auto;
+    cursor: zoom-in;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      width: 1000px;
+      height: auto;
+    }
+  }
+
   // remindMe project
 
   .hero-container.remind-me-project {
@@ -2806,14 +2847,18 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
   .validation-section .validation-image-container {
-    .validated-test-a img {
-      height: 435px;
-      width: auto;
-    }
-    .validated-test-b img {
-      height: 450px;
-      width: auto;
+    .validated-test-a {
+      img {
+        .ta1,
+        .ta2,
+        .ta3,
+        img {
+          height: 200px;
+          width: auto;
+        }
+      }
     }
   }
 
