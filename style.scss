@@ -202,59 +202,62 @@ header #click:checked ~ ul li a {
   padding: 1em;
   .hero-title {
     font-family: "Poppins";
-    font-style: italic;
     font-weight: 300;
     font-size: 1.3rem;
+    color: black;
     line-height: 2rem;
-    .hero-button-container {
-      margin: 2em 0;
+  }
+  .hero-subtitle {
+    color: black;
+  }
+  .hero-button-container {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 50px;
+    .primary-button {
+      background-color: $primary-core;
+      width: 100%;
+      height: 40px;
+      color: $core-light;
+      font-size: 20px;
+      font-variant-caps: all-petite-caps;
+      letter-spacing: 1pt;
+      border-radius: 5px;
+      border: $button-border-settings;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      max-height: 50px;
-      .primary-button {
-        background-color: $primary-core;
-        width: 100%;
-        height: 40px;
+      transition: $button-hover-state;
+      &:hover {
+        background: $primary-core;
         color: $core-light;
-        font-size: 20px;
-        font-variant-caps: all-petite-caps;
-        letter-spacing: 1pt;
-        border-radius: 5px;
-        border: $button-border-settings;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: $button-hover-state;
-        &:hover {
-          background: $primary-core;
-          color: $core-light;
-          border-color: $core-button-border;
-        }
+        border-color: $core-button-border;
       }
-      .secondary-button {
-        background-color: $core-light;
-        width: 100%;
-        height: 40px;
-        color: $brand-color;
-        font-size: 20px;
-        font-variant-caps: all-petite-caps;
-        letter-spacing: 1pt;
-        border-radius: 5px;
-        border: $button-border-settings;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        transition: $button-hover-state;
-        margin-top: 1em;
-        &:hover {
-          background-color: $brand-color;
-          color: $core-light;
-          border-color: $brand-color;
-        }
+    }
+    .secondary-button {
+      background-color: $core-light;
+      width: 100%;
+      height: 40px;
+      color: $brand-color;
+      font-size: 20px;
+      font-variant-caps: all-petite-caps;
+      letter-spacing: 1pt;
+      border-radius: 5px;
+      border: $button-border-settings;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: $button-hover-state;
+      margin-top: 1em;
+      &:hover {
+        background-color: $brand-color;
+        color: $core-light;
+        border-color: $brand-color;
       }
     }
   }
@@ -1091,6 +1094,10 @@ a {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  .quote-text {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .prototyping-section {
@@ -1285,6 +1292,11 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      .ta1,
+      .ta2,
+      .ta3 {
+        width: 100%;
+      }
       img {
         width: auto;
         height: 100%;
@@ -1714,6 +1726,21 @@ footer {
     }
   }
 
+  .validation-section .validation-image-container {
+    .validated-test-a {
+      .ta1,
+      .ta2,
+      .ta3 {
+        width: 60%;
+        margin-top: 1em;
+      }
+    }
+    .validated-test-b img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
   .outcomes-gallery-container .row .col {
     .feature-img {
       display: flex;
@@ -1734,7 +1761,7 @@ footer {
           width: 50%;
         }
         video {
-          width: 60%;
+          width: 40%;
         }
         .design-video_full-width {
           width: 100%;
@@ -2003,8 +2030,24 @@ footer {
   }
 
   // remind me
-  .hero-container.remind-me-project .is-centered .hero-text-content {
-    margin-left: 1.3em;
+  .hero-container.remind-me-project {
+    .is-centered {
+      .hero-text-content {
+        display: flex;
+        align-items: center;
+        margin-left: 1.3em;
+        .hero-title-case-study {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .hero-title {
+            align-self: flex-start;
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 
   section {
@@ -2032,6 +2075,12 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        .ta1,
+        .ta2,
+        .ta3 {
+          width: 100%;
+          margin: 1em;
+        }
         img {
           height: 435px;
           width: 95%;
@@ -2055,6 +2104,7 @@ footer {
     }
   }
 
+  // guitar validation
   .validation-section {
     display: flex;
     flex-direction: column;
@@ -3122,9 +3172,15 @@ footer {
   .hero-container.remind-me-project .is-centered .hero-text-content {
     margin-left: 0;
     padding-left: 7em;
-    .hero-title-case-study .hero-sub-title {
-      font-size: 32px;
-      background-color: #f0f8ff33;
+    .hero-title-case-study {
+      .hero-title {
+        font-weight: 900;
+      }
+      .hero-subtitle {
+        font-size: 32px;
+        font-weight: 900;
+        background-color: #f0f8ff33;
+      }
     }
   }
 
@@ -3145,8 +3201,22 @@ footer {
     }
   }
 
-  .intro-container .right .primary-button {width: 240px;}
-  .outcomes-gallery-container .row .col .small-img-row .small-img .primary-button {width: 200px;}
+  .intro-container .right .primary-button {
+    width: 240px;
+  }
+
+  .validation-section .validation-image-container .validated-test-a {
+    .ta1,
+    .ta2,
+    .ta3 {
+      width: 75%;
+      margin: 1em;
+    }
+  }
+
+  .outcomes-gallery-container .row .col .small-img-row .small-img .primary-button {
+    width: 200px;
+  }
 
   section {
     padding: 1em 17em;
