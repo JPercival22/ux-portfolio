@@ -1697,6 +1697,17 @@ footer {
     margin-top: 0;
   }
 
+  .intro-container .right {
+    img {
+      width: 50%;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    .primary-button {
+      width: 30%;
+    }
+  }
+
   // remind-project styles
 
   section {
@@ -2316,7 +2327,7 @@ footer {
     padding: 0;
 
     .hero-text-content {
-      background: linear-gradient(148deg, #0000000d -65%, white 100%);
+      background: linear-gradient(148deg, #0000000d -65%, #ffffff00 100%);
       padding: 4rem;
       padding-bottom: 2em;
     }
@@ -2441,9 +2452,6 @@ footer {
   }
 
   .about {
-    background-image: url(img/work-hard.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 4em;
     padding-right: 3em;
     .about-container {
@@ -2537,13 +2545,6 @@ footer {
           text-align: left;
         }
       }
-    }
-  }
-
-  .intro-container .right {
-    img,
-    .primary-button {
-      width: 50%;
     }
   }
 
@@ -2759,9 +2760,23 @@ footer {
     display: none;
   }
 
+  // index hero
   .hero-container {
+    height: 88vh;
     display: grid;
     grid-template-columns: 70% auto;
+    .hero-text-content {
+      padding: 7em 5em 0em 4em;
+      display: grid;
+      grid-gap: 1em;
+      .hero-index-vector {
+        position: relative;
+        width: 470px;
+        height: auto;
+        top: -490px;
+        left: 680px;
+      }
+    }
   }
 
   .featured .right img {
@@ -2946,7 +2961,11 @@ footer {
   .nav-container header {
     .logo {
       padding-left: 7.5em;
+      .logo-placeholder {
+        margin-left: 1.5em;
+      }
       .logo-container {
+        margin-left: 10px;
         .logo-title {
           font-size: 13px;
         }
@@ -2964,16 +2983,16 @@ footer {
   }
   // index-page
 
+  // index hero
   .hero-container {
-    height: 69vh;
     .hero-text-content {
-      padding: 3em 8em 3em 13em;
-      .hero-title {
-        font-size: 2rem;
-        line-height: 3rem;
-      }
-      .txt-rotate .wrap {
-        font-size: 2.5rem;
+      padding: 8em 2em 0em 9em;
+      .hero-index-vector {
+        position: relative;
+        width: 500px;
+        height: auto;
+        top: -500px;
+        left: 820px;
       }
     }
   }
@@ -2984,19 +3003,14 @@ footer {
   }
 
   .research-qoute {
-    margin: 0 12em;
+    padding: 0 6em;
     padding-bottom: 6em;
   }
 
-  .hero-design {
-    height: 43.5vh;
-    margin-top: 3em;
-  }
-
   .featured {
-    padding: 3em 6em;
+    padding: 3em 2em;
     &:before {
-      left: 10em;
+      left: 7em;
     }
     .left {
       margin: 0 7em;
@@ -3007,7 +3021,7 @@ footer {
   }
 
   .skills {
-    padding: 3em 12.2em;
+    padding: 13em 8em;
     .skills-container ul {
       li {
         margin-bottom: 1em;
@@ -3025,7 +3039,7 @@ footer {
   }
 
   .portfolio {
-    padding: 2em 12.2em;
+    padding: 8em;
     .portfolio-container {
       margin: 0;
       .portfolio-left {
@@ -3047,7 +3061,7 @@ footer {
   }
 
   .about {
-    padding: 4em 12.2em 4em 13em;
+    padding: 9em;
     .about-container ul {
       .business-model .business-model-icon {
         height: 100px;
@@ -3123,6 +3137,11 @@ footer {
     margin-left: 5em;
   }
 
+  .intro-container .right {
+    .primary-button {
+      width: 20%;
+    }
+  }
   // remindMe styles
 
   .hero-container.remind-me-project {
@@ -3131,7 +3150,7 @@ footer {
   }
 
   section {
-    padding: 1em 10em;
+    padding: 1em 9em;
   }
 
   footer .footer-container {
@@ -3166,31 +3185,43 @@ footer {
 
 @media only screen and (min-width: 1880px) {
   .nav-container header .logo {
-    padding-left: 12em;
+    padding-left: 13em;
   }
 
-  // index hero
+  // index
   .hero-container {
-    height: 100%;
+    height: 90vh;
     .hero-text-content {
       padding: 8em 6em 0em 14em;
-      display: grid;
-      grid-gap: 1em;
       .hero-index-vector {
-        position: relative;
         width: 540px;
-        height: auto;
         top: -515px;
         left: 940px;
       }
     }
   }
 
-  .hero-design {
-    position: relative;
-    top: -185px;
+  .research-qoute {
+    padding: 4em 11em;
+  }
+  .featured {
+    padding: 7em;
+    &::before {
+      left: 10em;
+      top: 3em;
+    }
+    .right img {
+      width: 50%;
+    }
   }
 
+  .skills,
+  .portfolio {
+    padding: 13em;
+  }
+  .about {
+    padding: 14em;
+  }
   .hero-container.remind-me-project .is-centered .hero-text-content {
     margin-left: 0;
     padding-left: 7em;
@@ -3244,6 +3275,6 @@ footer {
     padding: 1em 17em;
   }
   footer .footer-container .footer-details {
-    padding: 2em 20em;
+    padding: 5em 18em;
   }
 }
