@@ -2316,7 +2316,7 @@ footer {
     padding: 0;
 
     .hero-text-content {
-      background: linear-gradient(180deg, #ffee95 -65%, $core-light 100%);
+      background: linear-gradient(148deg, #0000000d -65%, white 100%);
       padding: 4rem;
       padding-bottom: 2em;
     }
@@ -3167,6 +3167,28 @@ footer {
 @media only screen and (min-width: 1880px) {
   .nav-container header .logo {
     padding-left: 12em;
+  }
+
+  // index hero
+  .hero-container {
+    height: 100%;
+    .hero-text-content {
+      padding: 8em 6em 0em 14em;
+      display: grid;
+      grid-gap: 1em;
+      .hero-index-vector {
+        position: relative;
+        width: 540px;
+        height: auto;
+        top: -515px;
+        left: 940px;
+      }
+    }
+  }
+
+  .hero-design {
+    position: relative;
+    top: -185px;
   }
 
   .hero-container.remind-me-project .is-centered .hero-text-content {

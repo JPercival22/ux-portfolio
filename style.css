@@ -3077,8 +3077,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     padding: 0;
   }
   .hero-container .hero-text-content {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(-65%, #ffee95), to(#ffffff));
-    background: linear-gradient(180deg, #ffee95 -65%, #ffffff 100%);
+    background: linear-gradient(148deg, #0000000d -65%, white 100%);
     padding: 4rem;
     padding-bottom: 2em;
   }
@@ -4035,6 +4034,26 @@ img {
 @media only screen and (min-width: 1880px) {
   .nav-container header .logo {
     padding-left: 12em;
+  }
+  .hero-container {
+    height: 100%;
+  }
+  .hero-container .hero-text-content {
+    padding: 8em 6em 0em 14em;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1em;
+  }
+  .hero-container .hero-text-content .hero-index-vector {
+    position: relative;
+    width: 540px;
+    height: auto;
+    top: -515px;
+    left: 940px;
+  }
+  .hero-design {
+    position: relative;
+    top: -185px;
   }
   .hero-container.remind-me-project .is-centered .hero-text-content {
     margin-left: 0;
