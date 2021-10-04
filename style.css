@@ -222,13 +222,17 @@ header #click:checked ~ ul li a {
 
 .hero-container .hero-title {
   font-family: "Poppins";
-  font-style: italic;
   font-weight: 300;
   font-size: 1.3rem;
+  color: black;
   line-height: 2rem;
 }
 
-.hero-container .hero-title .hero-button-container {
+.hero-container .hero-subtitle {
+  color: black;
+}
+
+.hero-container .hero-button-container {
   margin: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,7 +250,7 @@ header #click:checked ~ ul li a {
   max-height: 50px;
 }
 
-.hero-container .hero-title .hero-button-container .primary-button {
+.hero-container .hero-button-container .primary-button {
   background-color: #2c4465;
   width: 100%;
   height: 40px;
@@ -269,13 +273,13 @@ header #click:checked ~ ul li a {
   transition: all 0.5s ease-in-out;
 }
 
-.hero-container .hero-title .hero-button-container .primary-button:hover {
+.hero-container .hero-button-container .primary-button:hover {
   background: #2c4465;
   color: #ffffff;
   border-color: #2c4465;
 }
 
-.hero-container .hero-title .hero-button-container .secondary-button {
+.hero-container .hero-button-container .secondary-button {
   background-color: #ffffff;
   width: 100%;
   height: 40px;
@@ -304,7 +308,7 @@ header #click:checked ~ ul li a {
   margin-top: 1em;
 }
 
-.hero-container .hero-title .hero-button-container .secondary-button:hover {
+.hero-container .hero-button-container .secondary-button:hover {
   background-color: #2c4465;
   color: #ffffff;
   border-color: #2c4465;
@@ -1525,6 +1529,16 @@ a {
           flex-direction: column;
 }
 
+.nielson-quote .quote-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .prototyping-section .summary-container .discovery-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1849,6 +1863,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.validation-section .validation-image-container .validated-test-a .ta1,
+.validation-section .validation-image-container .validated-test-a .ta2,
+.validation-section .validation-image-container .validated-test-a .ta3 {
+  width: 100%;
 }
 
 .validation-section .validation-image-container .validated-test-a img {
@@ -2356,6 +2376,16 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .prototyping-section .summary-container .discovery-cards .discovery-card-inner .wireframes-link .secondary-button {
     width: 54vw;
   }
+  .validation-section .validation-image-container .validated-test-a .ta1,
+  .validation-section .validation-image-container .validated-test-a .ta2,
+  .validation-section .validation-image-container .validated-test-a .ta3 {
+    width: 60%;
+    margin-top: 1em;
+  }
+  .validation-section .validation-image-container .validated-test-b img {
+    height: auto;
+    width: 100%;
+  }
   .outcomes-gallery-container .row .col .feature-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2382,7 +2412,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 50%;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img video {
-    width: 60%;
+    width: 40%;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img .design-video_full-width {
     width: 100%;
@@ -2644,7 +2674,33 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     letter-spacing: 6pt;
   }
   .hero-container.remind-me-project .is-centered .hero-text-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 1.3em;
+  }
+  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    text-align: left;
   }
   section {
     padding: 1em 2.5em;
@@ -2697,6 +2753,12 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .validation-section .validation-image-container .validated-test-a .ta1,
+  .validation-section .validation-image-container .validated-test-a .ta2,
+  .validation-section .validation-image-container .validated-test-a .ta3 {
+    width: 100%;
+    margin: 1em;
   }
   .validation-section .validation-image-container .validated-test-a img {
     height: 435px;
@@ -3978,8 +4040,12 @@ img {
     margin-left: 0;
     padding-left: 7em;
   }
-  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-sub-title {
+  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+    font-weight: 900;
+  }
+  .hero-container.remind-me-project .is-centered .hero-text-content .hero-title-case-study .hero-subtitle {
     font-size: 32px;
+    font-weight: 900;
     background-color: #f0f8ff33;
   }
   .hero-container.guitar-project .is-centered .hero-text-content {
@@ -4007,6 +4073,12 @@ img {
   }
   .intro-container .right .primary-button {
     width: 240px;
+  }
+  .validation-section .validation-image-container .validated-test-a .ta1,
+  .validation-section .validation-image-container .validated-test-a .ta2,
+  .validation-section .validation-image-container .validated-test-a .ta3 {
+    width: 75%;
+    margin: 1em;
   }
   .outcomes-gallery-container .row .col .small-img-row .small-img .primary-button {
     width: 200px;
