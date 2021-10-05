@@ -64,35 +64,33 @@ style.innerHTML = `
     `;
 document.head.appendChild(style);
 
-
 //   Modal toggle 
 // generic modal 
-// var modal = document.querySelector('.modal');
-// var btn = document.querySelector('.open-modal');
-// var span = document.querySelector('.close-modal');
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.open-modal');
+var span = document.querySelector('.close-modal');
 
-// btn.onclick = function () {
-//     modal.style.display = "flex";
-// };
-// span.onclick = function () {
-//     modal.style.display = "none";
-// };
+btn.onclick = function () {
+    modal.style.display = "flex";
+};
+span.onclick = function () {
+    modal.style.display = "none";
+};
 
 // contact form modal 
-// var modal = document.querySelector('.modal');
-// var btn = document.querySelector('.open-modal');
-// var span = document.querySelector('.close-modal');
-// var element = document.querySelector('.contact-form');
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.open-modal');
+var span = document.querySelector('.close-modal');
+var element = document.querySelector('.contact-form');
 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-//   element.classList.add('blur')
-// };
-// span.onclick = function() {
-//   modal.style.display = "none";
-//   element.classList.remove('blur');
-// };
-
+btn.onclick = function() {
+  modal.style.display = "block";
+  element.classList.add('blur')
+};
+span.onclick = function() {
+  modal.style.display = "none";
+  element.classList.remove('blur');
+};
 
 // projects carousel 
 window.onload
