@@ -1,12 +1,1 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-	<title>New Project</title>
-	<defs>
-		<image  width="200" height="200" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQMAAACXljzdAAAAAXNSR0IB2cksfwAAAANQTFRFLERlP+CdiAAAABxJREFUeJztwYEAAAAAw6D5U1/hAFUBAAAAAHwGFFAAAdqgEPkAAAAASUVORK5CYII="/>
-	</defs>
-	<style>
-		tspan { white-space:pre }
-		.shp0 { fill: #ffffff } 
-	</style>
-	<use id="Background" href="#img1" x="0" y="0" />
-	<path id="Shape 1" class="shp0" d="M62.3 50.85L137.5 100L62.3 149.15L62.3 50.85Z" />
-</svg>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><defs><image width="200" height="200" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQMAAACXljzdAAAAAXNSR0IB2cksfwAAAANQTFRFLERlP+CdiAAAABxJREFUeJztwYEAAAAAw6D5U1/hAFUBAAAAAHwGFFAAAdqgEPkAAAAASUVORK5CYII="/></defs><style></style><use id="Background" href="#img1" x="0" y="0"/><path id="Shape 1" d="M62.3 50.85 137.5 100l-75.2 49.15v-98.3z" style="fill:#fff"/></svg>
