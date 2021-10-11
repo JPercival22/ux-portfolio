@@ -1,5 +1,9 @@
+// window.addEventListener("load", function(){
+
 // Hero text (index page) 
+
 var TxtRotate = function (el, toRotate, period) {
+  "use strict";
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -10,90 +14,73 @@ var TxtRotate = function (el, toRotate, period) {
 };
 
 TxtRotate.prototype.tick = function () {
+  "use strict";
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 150 - Math.random() * 100;
-
   if (this.isDeleting) { delta /= 2; }
-
   if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
+      delta = this.period;
+      this.isDeleting = true;
   } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
+      this.isDeleting = false;
+      // this.loopNum++;
+      delta = 500;
   }
 
   setTimeout(function () {
-    that.tick();
+      that.tick();
   }, delta);
 };
 
 
 var elements = document.getElementsByClassName('txt-rotate');
 for (var i = 0; i < elements.length; i++) {
-  var toRotate = elements[i].getAttribute('data-rotate');
-  var period = elements[i].getAttribute('data-period');
-  if (toRotate) {
-    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-  }
+var toRotate = elements[i].getAttribute('data-rotate');
+var period = elements[i].getAttribute('data-period');
+if (toRotate) {
+  TxtRotate(elements[i], JSON.parse(toRotate), period);
+}
 }
 // INJECT CSS
 const style = document.createElement('style');
 style.innerHTML = `
-  .txt-rotate > .wrap {
-        border-right: 0.1em solid #2c4465;
-        font-family: 'Poppins';
-        font-size: 1.5em;
-        font-weight: 600;
-        transform: none;
-        color: #2c4465;
-        margin: 0;
-      }
-    `;
+.txt-rotate > .wrap {
+      border-right: 0.1em solid #2c4465;
+      font-family: 'Poppins';
+      font-size: 1.5em;
+      font-weight: 600;
+      transform: none;
+      color: #2c4465;
+      margin: 0;
+    }
+  `;
 document.head.appendChild(style);
 
 //   Modal toggle 
-// generic modal 
+
 var modal = document.querySelector('.modal');
-var btn = document.querySelector('.open-modal');
-var span = document.querySelector('.close-modal');
 
-btn.onclick = function () {
-    modal.style.display = "flex";
-};
-span.onclick = function () {
-    modal.style.display = "none";
+function openModal () {
+  modal.style = "display:flex;";
 };
 
-// contact form modal 
-var modal = document.querySelector('.modal');
-var btn = document.querySelector('.open-modal');
-var span = document.querySelector('.close-modal');
-var element = document.querySelector('.contact-form');
-
-btn.onclick = function() {
-  modal.style.display = "block";
-  element.classList.add('blur')
-};
-span.onclick = function() {
-  modal.style.display = "none";
-  element.classList.remove('blur');
+function closeModal () {
+  modal.style = "display:none;";
 };
 
 // projects carousel 
-window.onload
+
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide img');
 // buttons 
@@ -107,30 +94,31 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 // button Listeners 
 nextBtn.addEventListener('click', () => {
-  if (counter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+if (counter >= carouselImages.length - 1) return;
+carouselSlide.style.transition = "transform 0.4s ease-in-out";
+counter++;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 prevBtn.addEventListener('click', () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+if (counter <= 0) return;
+carouselSlide.style.transition = "transform 0.4s ease-in-out";
+counter--;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
+
 
 // transition end function (goes back to beginning of slide show) 
 carouselSlide.addEventListener('transitionend', () => {
-  if (carouselImages[counter].id === 'lastClone') {
-    carouselSlide.style.transform = 'none';
-    counter = carouselImages.length - 5;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  }
-  if (carouselImages[counter].id === 'firstClone') {
-    carouselSlide.style.transform = 'none';
-    counter = carouselImages.length - 0;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  }
+if (carouselImages[counter].id === 'lastClone') {
+  carouselSlide.style.transform = 'none';
+  counter = carouselImages.length - 5;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+}
+if (carouselImages[counter].id === 'firstClone') {
+  carouselSlide.style.transform = 'none';
+  counter = carouselImages.length - 0;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+}
 });
 
 // Video Button actions
@@ -152,36 +140,35 @@ playBtn.addEventListener('click', vidAction);
 playBtnLarge.addEventListener('click', playBigVideo);
 
 function vidAction(event) {
-  video.play();
-  video.style = "z-index: 1;position: relative;";
+video.play();
+video.style = "z-index: 1;position: relative;";
 }
 
 function playBigVideo(event) {
-  videoLarge.play();
-  videoLarge.style = "z-index: 1;position: relative;";
+videoLarge.play();
+videoLarge.style = "z-index: 1;position: relative;";
 }
 
 function vidActionMob(event) {
-  videoSmall.play();
-  videoSmall.style = "z-index: 1;position: relative;";
+videoSmall.play();
+videoSmall.style = "z-index: 1;position: relative;";
 }
 
 function playVideoBig(event) {
-  videoBig.play();
-  videoBig.style = "z-index: 1;position: relative;";
+videoBig.play();
+videoBig.style = "z-index: 1;position: relative;";
 }
-
-
 
 // debugging section 
 // Debug Code to find elements causing horizontal scroll 
 var docWidth = document.documentElement.offsetWidth;
 [].forEach.call(
-  document.querySelectorAll('*'),
-  function (el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
+document.querySelectorAll('*'),
+function (el) {
+  if (el.offsetWidth > docWidth) {
+    console.log(el);
   }
+}
 );
-  // end of debug code
+// end of debug code
+// });
