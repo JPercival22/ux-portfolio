@@ -294,6 +294,22 @@ header #click:checked ~ ul li a {
   }
 }
 
+.tools {
+  background-color: $brand-color;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2em;
+    .col{
+      display: flex;
+      .tools-image {
+        height: 100px;
+        width: auto;
+      }
+    }
+}
+
 .featured {
   position: relative;
   margin-top: 2em;
@@ -3053,7 +3069,7 @@ footer {
 
   // index
   .hero-container {
-    height: 90vh;
+    height: 95vh;
     .hero-text-content {
       padding: 14em 6em 0em 14em;
       .hero-index-vector {
