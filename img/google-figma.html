@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+    <meta name="description" content="UX Portfolio for Joseph Percival" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Joseph Percival" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPercival-UX</title>
+    <link rel="icon" href="img/favicon.ico" type="image/jpeg" />
+    <script defer="" src="scripts/dynamic-script.js"></script>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+</head>
+
+<body>
+
+    <div class="nav-container">
+        <header>
+            <a class="logo" href="/index.html">
+                <div class="logo-placeholder">
+                    <div class="company-logo" alt="company logo">
+                        <img src="/img/brand-logo.svg" alt="company logo" width="100" height="100">
+                    </div>
+                </div>
+                <div class="logo-container">
+                    <div class="logo-name">Joseph Percival</div>
+                    <div class="logo-title">UX DESIGNER & WEB DEVELOPER</div>
+                </div>
+            </a>
+            <nav>
+                <input type="checkbox" id="click" />
+                <label for="click" class="menu-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="#fff" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    </svg>
+                </label>
+                <ul>
+                    <li><a href="index.html#work">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#about">About </a></li>
+                    <li><a href="/contact-form.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="top-social-icon">
+            <a href="https://www.linkedin.com/in/joseph-percival" title="link to my Linked in Profile">
+                <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                    <path fill="#007bb6"
+                        d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                </svg>
+            </a>
+
+            <a href="https://mobile.twitter.com/percival_joseph" title="link to my Twitter Handle">
+                <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                    <path fill="#1da1f2"
+                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                </svg>
+            </a>
+
+            <a href="https://github.com/JPercival22" title="link to my Git Hub Profile">
+                <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                    <path fill="#000000"
+                        d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
+            </a>
+
+            <a href="assets/JPercival-CV2021.pdf" download="assets/JPercival-CV2021.pdf"
+                title="Click this link to download my CV">
+                <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                    <path fill="#15a2e3" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-container remind-me-project">
+        <div class="hero-content is-centered">
+            <div class="hero-text-content">
+                <div class="hero-title-case-study">
+                    <h1 class="hero-title">Remind Me <br>Case Study</h1>
+                    <h2 class="hero-subtitle">UX Research, UX & UI Design, User Testing</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="intro-container">
+            <div class="left">
+                <h1>Remind ME</h1>
+                <p>
+                    Remind Me was originally a Mobile Application work tool concept, an editable task schedular for
+                    busy
+                    professionals. <br>I was approached by a company - because their application is
+                    in development, their product and their name will remain anonymous for this case study at their
+                    request.
+                    <br>Tasked with designing a data driven advertising website for them, I was asked, "whether or
+                    not
+                    their application could be so much more than just another work tool?"
+                    <br> Using a wide array of User interaction, testing and application on their prototype,
+                    answered -
+                    yes it could and should be so much more!
+                    <br>This case study discovered that the target audience could be enhanced, further development
+                    opportunities arose that would help the Application succeed with the potential to become a worthy
+                    competitor for this market
+                    and a data driven designed website too to enhance their marketing campaign on release.
+                </p>
+            </div>
+            <div class="right">
+                <img src="/img/remind-me-project.png" width="150" height="150"
+                    alt="A caption of the Application in a real world environment">
+            </div>
+        </div>
+    </section>
+    <section class="summary bg-gradient-warm">
+        <h1>Case Summary</h1>
+        <div class="summary-container">
+
+            <div class="start">
+                <h2>Product Vision</h2>
+                <p> The company's vision was to ascertain whether there was any demand from the general public to
+                    enhance their target audience, focusing on:
+                <ul>
+                    <li>How their product stacked up against the three main competitors currently on the market, who
+                        also had a To-Do
+                        type application released already.</li>
+                    <li>To answer this I had to discover any possible development opportunities to make the application
+                        appeal to the general
+                        public, rather tha the original plan as solely a professional task manager tool.</li>
+                    <li>Lastly, collect the data from this research and design a website around this data.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="middle">
+                <h2>Discovered User Problem</h2>
+                <p>
+                    It appeared that some aspects of their original plan were biased, in the sense that they did not
+                    include, or report, any user input
+                    throughout and so it was fair to infer that at this stage, was still in its infancy.
+                    <br>
+                    I highlighted my intentions to obtain some User input through public surveys and interviews
+                    ensuring
+                    total anonymity for
+                    the company, the product and the user was ethically upheld.
+                    This was to identify if there was any demand for their product from the general public, capture
+                    the
+                    user needs and
+                    emotions then design around the user and the business in a data driven method.
+                    <br>
+                </p>
+            </div>
+            <div class="end">
+                <h2>Outcomes</h2>
+                <p>
+                    Tasked with designing the website to advertise the product depending on whether there was any
+                    demand
+                    for
+                    their product from the general public or more business orientated. <br>
+                    This was answered using public surveys and interviews, comparing the prototype against three
+                    similar
+                    market leading
+                    products available on the market.
+                    I was also able to create a data-driven SWOT analysis and user Personas from this data.
+                    Using the data I was carried out the Ideation Prioritisation on what was
+                    most important to show the Users that visited the website.
+                    Rapid Prototyping, Wireframes and Hi-Def designs were drafted and user tested for the website so
+                    that they were in the
+                    best possible position for the developers, the user and for the business.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="process-highlights bg-gradient-hot">
+        <h1 class="text-center">Process Highlights</h1>
+        <h2 class="subtitle text-center">Project plan and responsibilities overview</h2>
+        <div class="process-highlights-container">
+            <div class="process-activity-container one">
+                <div class="process-placeholder">
+                    <img src="/img/team.svg" width="100" height=100 alt="">
+                </div>
+                <div class="process-editorial">
+                    <h2 class="process-title text-center">Product Team</h2>
+                    <p>Hands on UX Researcher of the company's prototype/existing similar products and Designer of the
+                        Website as part of their Marketing Campaign.</p>
+                </div>
+            </div>
+
+            <div class="process-activity-container two">
+                <div class="process-placeholder">
+                    <img src="/img/profile.svg" width="100" height="100" alt="image representing my responsibilities" />
+                </div>
+                <div class="process-editorial">
+                    <h2 class="process-title text-center">Responsibilities</h2>
+                    <p>Hands on UX Researcher, Designer, UX Analyst and User Tester Facilitator for the Website
+                        Design.</p>
+                </div>
+            </div>
+
+            <div class="process-activity-container three">
+                <div class="process-placeholder">
+                    <img src="/img/method-icon.svg" class="method-icon" width="40" height="40"
+                        alt="image representing my methodologies" />
+                </div>
+                <div class="process-editorial">
+                    <h2 class="process-title text-center">Methodology</h2>
+                    <p>Focus Groups, Design Thinking, Think Aloud Protocol, Data Driven Design and Future
+                        Improvement Development.</p>
+                </div>
+            </div>
+
+            <div class="process-activity-container four">
+                <div class="process-placeholder">
+                    <img src="/img/case-icon.svg" width="70" height="50" alt="image representing project planning" />
+                </div>
+                <div class="process-editorial">
+                    <h2 class="process-title text-center">Project Plan</h2>
+                    <p>Two week's discovery and ideation, followed by one week of rapid prototyping,
+                        one week of User Testing and one week final product design.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="discovery-section bg-gradient-warm">
+        <h1>Discovery and Ideation</h1>
+        <p>
+            I began by researching the existing market on tailored Applications for task scheduling. After multiple
+            forum reviews and questionnaires, 72 responses were gathered and 15 moderated interviews
+            that were captured primarily via Social Media Networks and an online Survey.
+            The data allowed me to paint a clearer picture of what the User's wanted from the product, what they
+            expected and more importantly an accurate representation on who wanted the application.
+            This information provided me with enough information to build a SWOT Analysis and User personas for
+            further
+            research.
+        </p>
+        <p>
+            What followed were efforts to map the existing user experiences to identify other opportunity
+            developments:
+        </p>
+    </section>
+    <section>
+        <div class="swot-analysis-section">
+            <h1>SWOT Analysis and User Persona's</h1>
+
+            <div class="carousel-container">
+
+                <div class="carousel-slider">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slides first-image">
+                        <img src="/img/RemindME-SWOT.png"">
+                    </div>
+                    <div class="slides second-image">
+                        <img src="/img/JaneBailey.png">
+                    </div>
+                    <div class="slides third-image">
+                        <img src="/img/IanBradbury.png">
+                    </div>
+                    <div class="slides fourth-image">
+                        <img src="/img/DianeTickle.png">
+                    </div>
+                    <!-- auto nav  -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    
+                    <!-- manual-navigation  -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end of swot analysis  -->
+        </div>
+    </section>
+    <section>
+        <div class="Discovery-section">
+            <h2>Discovery Analysis</h2>
+            <p>
+                Whilst interviewing the user's I ascertained that most of the applications available on the market were
+                too
+                complicated for the everyday user. This answered why the company had such a narrow
+                target audience and aimed purely at professionals as a work tool. A suggestion that was accepted by the
+                company was to make the HCI simpler and less 'cumbersome or business-like,' this would make
+                it more appealable to the everyday user - thus expanding the target audience. I wasn't part of the
+                design
+                team for Application design, so defining it would have meant leveraging away from the scope of
+                this case study, nevertheless, the SWOT Analysis findings highlighted areas for further product
+                development
+                opportunities, so that the application could appeal to the every day user too.
+            </p>
+            <p>
+                During the survey, I asked whether any of the participants had a similar application, which brand did
+                they
+                prefer and also which they did not like and why? Interviews were arranged
+                through the survey, pain points were identified with our prototype and what the user would expect from
+                the
+                proposed website, this was so that I could paint a picture on a natural User flow for the site.
+            </p>
+        </div>
+    </section>
+    <section class="ideation-and-discovery-section">
+        <div class="idea-container">
+            <div class="idea-left-col">
+                <h1>Idea Prioritisation</h1>
+                <p>
+                    Based on discovery research findings I came up with three hypothesis to ensure successful
+                    product
+                    adoption. These covered: <br>
+                <ul>
+                    <li>Essential Security for the checkout areas.</li>
+                    <li>Visual hierarchy for the product.</li>
+                    <li>Simple and easily identifiable price section for the different versions of the product to
+                        enhance transparency and the trust from the user.</li>
+                    <li>A visually pleasing and interactive review section.</li>
+                    <li>A user friendly, safe and secure checkout section.</li>
+                    <li> A user friendly contact section.</li>
+                </ul>
+                </p>
+                <p>
+                    The features were listed and mapped based in technical complexity, potential Business and User
+                    efficiency values. The highest
+                    impact features were expected to be included in the developed product.
+                </p>
+            </div>
+
+            <div class="discovery-card-inner">
+                <div class="desk-research">
+                    <div class="card-title">
+                        <h2>Hypothesis & Ideation</h2>
+                    </div>
+                    <div class="card-image">
+                        <img class="desk-research-image-main" src="img/Hypothesis.png"
+                            alt="to do app desk research images">
+                    </div>
+                    <figure>Scroll over the image to zoom in</figure>
+                    <div class="desk-research-editorial">
+                        <p>Data collected from the User Research and Discovery phase produced User expectations and
+                            Future Development Opportunities
+                            for further development of the application, which also gave more information on what to
+                            include for the website.
+                            This data along with expectations for the website design advanced Ideation into
+                            Hypothesis
+                            and Idea Prioritisation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nielson-quote">
+        <div class="quote-text">
+            <h2>
+                "Users spend most of their time on other sites. This means that users prefer your site to work the
+                same
+                way as all the other sites they already know." </h2>
+            <br><sub>Jakobs Law Of Internet User Experience - Jacob Nielson</sub>
+        </div>
+    </section>
+    <section class="prototyping-section">
+        <h1>Prototyping</h1>
+        <p>
+            Concentrating on high impact feature sets allowed me to create a story that could be split into a few
+            major
+            user scenarios: Product Identity, simple HCI and familiarity inspired by the product
+            itself and intrigue from the competitive research.
+            Focusing on the natural user flow, the usability and accessibility of the website, whilst keeping the
+            focus
+            on branding and the business advertisement requirements, the following steps in designing
+            the website followed.
+        </p>
+        <div class="summary-container">
+            <div class="discovery-cards">
+                <div class="discovery-card-inner">
+                    <div class="desk-research">
+                        <div class="card-title">
+                            <h2>Competitive Research</h2>
+                        </div>
+                        <div class="card-image">
+                            <img class="desk-research-image-standard" src="img/remind-me-desk-research.png"
+                                alt="to do app desk research images" width="100" height="100">
+                        </div>
+                        <div class="desk-research-editorial">
+                            <p>
+                                Using UX tools to gain some insights on what the competition's SEO keywords were,
+                                how they ranked with other competitors, spot new opportunities, show the exact
+                                content
+                                needed and
+                                revealed design patterns that are collectively successful for the user, product and
+                                business.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="discovery-card-inner">
+                    <div class="desk-research">
+                        <div class="card-title">
+                            <h2>Natural User Flow</h2>
+                        </div>
+                        <div class="card-image">
+                            <img class="desk-research-image" src="/img/user-flow.png" width="100" height="100"
+                                alt="Pre-Determined User Flow Diagram" />
+                        </div>
+                        <div class="desk-research-editorial">
+                            <p>Data recorded during User Interviews and the public Surveys enabled me to capture and
+                                encapsulate the users feelings towards the products tested
+                                and through the data recorded during the interviews, now in Persona's, I was able to
+                                produce a Naturel User Flow for the website.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="discovery-card-inner">
+                    <div class="desk-research">
+                        <div class="card-title">
+                            <h2>Rapid Prototyping</h2>
+                        </div>
+                        <div class="card-image">
+                            <img class="desk-research-image-standard" src="/img/sketches.png" width="100" height="100"
+                                alt="initial designs">
+                        </div>
+                        <div class="desk-research-editorial">
+                            <p>During Rapid Prototyping, several iterations generated during a short period of time,
+                                the
+                                features were created and tested in an attempt
+                                to optimize characteristics like shape, size, and overall usability based on user
+                                feedback and analysis. Final tests produced the final prototype
+                                and the Natural User Flow had been established.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="discovery-card-inner">
+                    <div class="desk-research">
+                        <div class="card-title">
+                            <h2>Hi-Def Designs</h2>
+                        </div>
+                        <div class="card-image wireframes-link">
+                            <img class="desk-research-image-standard" src="/img/wireframes.png" width="100" height="100"
+                                alt="to do app desk research images">
+                            <button class="secondary-button">
+                                <a href="https://xd.adobe.com/view/ba09d262-dc92-430c-84de-841e638dce99-ef5a/">
+                                </a> Design Sheets
+                            </button>
+                        </div>
+                        <div class="desk-research-editorial">
+                            <p>Once the final iteration of the wireframes were acknowledged after User testing, all
+                                features and functionality was transferred
+                                to Hi-Def Designs using Adobe XD and Illustrator for the icons. These were tested
+                                using
+                                Think Aloud Protocol, pain points were corrected
+                                and final designs were completed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="validation-section">
+        <div class="idea-left-col">
+            <h1>Validation</h1>
+            <p>
+                The prototype has been tested on 15 users (5 for each of the created persona's), in order to to
+                validate my
+                Hypothesis. Using the previously determined User Flow to guide the User through the prototype.
+                User's paralinguistic features were recorded using a web-cam and video recording software at the
+                agreement of the participant, they were tested ethically a new set of participants were brought
+                in for the second wave of testing. The identity of the participants shall remain anonymised as agreed.
+            </p>
+            <p>
+                From the previously conducted survey, willing participants tested the prototype created
+                for mobile and desktop viewport's using the Think Aloud Protocol. Asking a series of open ended
+                questions
+                the test administrator
+                was able to understand how the user's felt about the product whilst also testing the age ranges
+                specified
+                earlier to expand the customer base.
+            <ul>
+                <h2>Earlier Tested Designs.</h2>
+                <li>The early prototypes proved that the pre-determined User flow was correct.</li>
+                <li>Primary and Secondary buttons were required for some of the features, such as the
+                    video sections for example. First wave of testing proved that having one button for all was
+                    confusing.</li>
+                <li>Early designs were shown to have too much text content which delayed the user from efficiently
+                    moving through to complete tasks.</li>
+                <li>The initial checkout design proved my hypothesis to be correct by adding different payment methods
+                    for the user.</li>
+                <li>Color Psychology, Emphasis on SEO keywords such as, "Risk Free" and offering Credit Card Security
+                    increased efficiency and a positive emotion.</li>
+                <li>The majority of User's found a scrollable review section cumbersome and preferred a more modern
+                    "swipeable" section instead. Designing the new carousel became priority.</li>
+                <li> A/B testing on the review section followed, one was scrollable and the other was
+                    swipeable.</li>
+            </ul>
+
+            <ul>
+                <h2>Final Tested Designs.</h2>
+                <p> All Feedback was analysed, errors were caught and designs improved greatly thanks to this.
+                    I observed almost entirely positive feedback from the final designs.</p>
+                <li> User's found the new
+                    buttons easier to use and determined the importance of each swiftly.</li>
+                <li>Analysis shown that the majority of the users interacted and spent more time using
+                    the swipeable version of the review section.</li>
+                <li>All participants were able to complete the checkout section with ease and return back
+                    to the home screen.</li>
+                <li>99% of the users were not showing signs of confusion or stress whilst completing the test for the
+                    final version.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="validation-image-container">
+            <div class="validated-test-a">
+                <img class="ta1" src="/img/thinkaloud.png" alt="think aloud testing - 18y/o" width="50" height="50">
+                <figcaption>Think Aloud Screen shot - 18yr old participant</figcaption>
+            </div>
+            <div class="validated-test-a"> <img class="ta2" src="/img/thinkaloud2.png" alt="think aloud testing - 45y/o"
+                    width="50" height="50">
+                <figcaption>Think Aloud Screen shot - 45yr old participant</figcaption>
+            </div>
+            <div class="validated-test-a"> <img class="ta3" src="/img/thinkaloud3.png" alt="think aloud testing - 55y/o"
+                    width="50" height="50">
+                <figcaption>Think Aloud Screen shot - 55yr old participant</figcaption>
+            </div>
+            <div class="validated-test-b"> <img src="/img/remindMe-ABTest.png" alt="">
+                <figcaption>A/B Testing concluding which carousel was preferred by the majority of users
+                </figcaption>
+            </div>
+        </div>
+    </section>
+    <section class="outcomes-section bg-gradient-chill">
+        <h1>Outcomes</h1>
+        <p>
+            Based on the findings from both the UX research and the Design validation sessions I was able to produce
+            a list of changes that were addressed and updated in the prototype along with any potential future
+            alterations for the Application passed onto the company.<br>
+            It was realised during the Validation stage that all of the user's became concerned when they clicked on
+            the video section of the design and wondered why the video didn't play. It was mentioned prior to
+            testing that there was no promotional video provided as the
+            company wanted their application to appeal to the general public and at that moment in time was
+            developed as businesses tool.
+            They did
+            not want to confuse the participants by advertising something that it wasn't going to be, so a decision
+            on their part was to not include the video. Another thing was because of the potential improvements
+            found was
+            significantly different to the application that they had, some of the details in the designs such as
+            descriptive text will
+            change once those improvements are developed.
+            Below you will find links to the Mobile, Desktop and the Design Specifications for the website. Please
+            enjoy and thank you.
+        </p>
+    </section>
+
+    <section class="outcomes-gallery-container">
+        <!-- Mobile Viewport Outcome  -->
+        <div class="row">
+            <h1 class="text-center">Final Design and Specifications</h1>
+            <div class="col">
+                <div class="feature-img">
+                    <img src="/img/remind-me-project.png" width="100" height="100">
+                </div>
+                <div class="full-width-image-container">
+                    <div class="small-img">
+                        <h2 class="text-center">Final Style Guide & Typography</h2>
+                        <img src="/img/Style-Guide-and-Typogrophy.PNG" alt="" height="100" width="100" />
+                    </div>
+                    <figure class="text-center">Hover over the image to zoom in</figure>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <h2 class="text-center">Hi-Fidelity Mobile Design</h2>
+                        <img src="/img/mobile-RM.PNG" alt="">
+                        <a href="https://xd.adobe.com/view/99a16821-570f-414d-a915-e8680ff99e6a-ccf2/"
+                            aria-hidden="true" role="none" tabindex='-1'
+                            title="Click this link to see this Projects Case Study" class="primary-button">Interactive
+                            Design</a>
+                    </div>
+                    <div class="small-img">
+                        <h2 class="text-center">Hi-Fidelity Design Video</h2>
+                        <div id="playBtnMob" class="play-btn">
+                            <img src="/img/play-btn.svg" width="50" height="50" alt="video play button">
+                            <video id="designVideosMob" class="half-width" width="100" height="100" controls>
+                                <source src="/videos/Mobile-Designs.mp4" type="video/mp4">
+                        </div>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Designs  -->
+        <div class="row desktop-design-row">
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <h2 class="text-center">High-Fidelity Desktop Design Specs</h2>
+                        <img src="/img/remind-Me-website.png" class="remindMe-content" height="100" width="100" alt="">
+                        <a href="https://xd.adobe.com/view/99a16821-570f-414d-a915-e8680ff99e6a-ccf2/"
+                            aria-hidden="true" role="none" tabindex='-1'
+                            title="Click this link to see this Projects Case Study" class="primary-button">Interactive
+                            Design</a>
+                        <div class="small-img">
+                            <h2 class="text-center">High-Fidelity Mobile Design Video</h2>
+                            <div id="playLargeBtn" class="play-btn">
+                                <img src="/img/play-btn.svg" width="50" height="50" alt="video play button">
+                                <video id="designVideosBig" class="half-width" width="100" height="100" controls>
+                                    <source src="/videos/Website-Designs.mp4" type="video/mp4">
+                            </div>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-editorial bg-gradient-hot">
+        <h1>Like What you see?</h1>
+        <p>Hopefully you liked what you seen, how the story unfolded and more importantly why the user experience
+            was so important for potential development opportunities for the actual application and for the website
+            design too.</p>
+        <p>You can click any of the links in the footer to contact myself through the social media platforms or by
+            clicking <span><a href="/contact-form.html">clicking here</a></span> and sending me a message. I usually
+            call or message back within 8 hours.</p>
+        <p>Thank you for your time.</p>
+
+    </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-details">
+                <div class="footer-top-bar">
+                    <a class="logo" href="/index.html">
+                        <div class="logo-placeholder">
+                            <div class="company-logo" alt="company logo">
+                                <img src="/img/brand-logo.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="logo-container">
+                            <div class="logo-name">Joseph Percival</div>
+                            <div class="logo-title">UX DESIGNER & WEB DEVELOPER</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="logo-container">
+                    <a class="mailto-link" href="/contact-form.html"
+                        title="Click here to send an email">joseph.m.percival@gmail.com</a>
+                    <a class="mailto-link" href="tel:07709718757" title="This will call my mobile device">Click here to
+                        call me
+                        now</a>
+                </div>
+            </div>
+            <!-- start of the social links in the sub footer  -->
+            <div class="footer-social-icon">
+                <a href="https://www.linkedin.com/in/joseph-percival"
+                    title="Click this link to see my Linked In my account">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#007bb6"
+                            d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                </a>
+                <a href="https://mobile.twitter.com/percival_joseph"
+                    title="Click this link to see my Twitter my account">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#1da1f2"
+                            d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/JPercival22" title="Click this link to see my Version Control">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#000000"
+                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </a>
+                <a href="assets/JPercival-CV2021.pdf" download="assets/JPercival-CV2021.pdf"
+                    title="Click this link to download my CV">
+                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                        <path fill="#15a2e3" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                    </svg>
+                </a>
+            </div>
+            <small>
+                &copy; Copyright 2021 Joseph M Percival
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>
