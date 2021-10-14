@@ -250,29 +250,41 @@
 
             <div class="carousel-container">
 
-                <div class="carousel-slide">
-                    <img src="/img/RemindME-SWOT.png" id="firstClone" alt="1" />
-                    <img src="/img/RemindME-SWOT.png" alt="1" />
-                    <img src="/img/JaneBailey.png" alt="2" />
-                    <img src="/img/IanBradbury.png" alt="3" />
-                    <img src="/img/DianeTickle.png" alt="4" />
-                    <img src="/img/RemindME-SWOT.png" id="lastClone" alt="1" />
+                <div class="carousel-slider">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slides first-image">
+                        <img src="/img/RemindME-SWOT.png"">
+                    </div>
+                    <div class="slides second-image">
+                        <img src="/img/JaneBailey.png">
+                    </div>
+                    <div class="slides third-image">
+                        <img src="/img/IanBradbury.png">
+                    </div>
+                    <div class="slides fourth-image">
+                        <img src="/img/DianeTickle.png">
+                    </div>
+                    <!-- auto nav  -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    
+                    <!-- manual-navigation  -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
                 </div>
-            </div>
-            <div class="controls">
-                <button class="prev-btn" id="prevBtn">
-                    <img src="/img/left-chev-small.svg" alt="">
-                </button>
-                <button id="nextBtn" class="next-btn">
-                    <img src="/img/right-chev-small.svg" alt="">
-                </button>
-            </div>
-            <!-- end of carousel  -->
-            <div class="image-col">
-                <img src="/img/RemindME-SWOT.png" alt="1" />
-                <img src="/img/JaneBailey.png" alt="2" />
-                <img src="/img/IanBradbury.png" alt="3" />
-                <img src="/img/DianeTickle.png" alt="4" />
+
             </div>
             <!-- end of swot analysis  -->
         </div>
