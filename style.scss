@@ -979,7 +979,6 @@ header #click:checked ~ ul li a {
 }
 
 .carousel-container,
-.controls,
 .discovery-card-inner {
   display: none;
 }
@@ -1471,9 +1470,6 @@ footer {
       justify-content: center;
     }
     .carousel-container {
-      display: none;
-    }
-    .controls {
       display: none;
     }
   }

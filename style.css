@@ -1341,7 +1341,6 @@ label
 }
 
 .carousel-container,
-.controls,
 .discovery-card-inner {
   display: none;
 }
@@ -2169,9 +2168,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
             justify-content: center;
   }
   .swot-analysis-section .carousel-container {
-    display: none;
-  }
-  .swot-analysis-section .controls {
     display: none;
   }
 }
