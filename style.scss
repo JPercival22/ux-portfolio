@@ -1439,9 +1439,9 @@ footer {
 
 // Medium mobile Phone Viewport styles
 @media only screen and (min-width: 375px) {
-.tools {
-  flex-direction: row;
-}
+  .tools {
+    flex-direction: row;
+  }
 
   .show-modal {
     left: 5%;
@@ -2225,43 +2225,92 @@ footer {
     height: auto;
     .carousel-container {
       display: flex;
-      width: 59%;
-      margin: auto;
+      width: 800px;
+      height: 500px;
       border: 1px solid $brand-color;
-      border-radius: 5px;
+      border-radius: 10px;
       overflow: hidden;
-      .carousel-slide {
+      .carousel-slider {
         display: flex;
-        width: 100%;
+        width: 500%;
         height: 500px;
+        input {
+          display: none;
+        }
+        .slides {
+          // width: 20%;;
+          transition: 2s;
+          img {
+            width: 800px;
+            height: 500px;
+          }
+        }
+        // manual navigation styles for carousel
+        .navigation-manual {
+          position: absolute;
+          margin-top: 520px;
+          width: 800px;
+          display: flex;
+          justify-content: center;
+          .manual-btn {
+            border: $button-border-settings;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 1s;
+            &:hover {
+              background: $brand-color;
+            }
+
+            &:not(:last-child) {
+              margin-right: 40px;
+            }
+          }
+        }
+        .navigation-auto {
+          position: absolute;
+          margin-top: 520px;
+          width: 800px;
+          display: flex;
+          justify-content: center;
+          div {
+            border: $button-border-settings;
+            padding: 5px;
+            border-radius: 5px;
+            transition: 1s;
+            &:not(:last-child) {
+              margin-right: 40px;
+            }
+          }
+        }
       }
     }
-    .controls {
-      display: flex;
-      align-items: center;
-      margin-top: 1em;
-      grid-gap: 3em;
-      button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 60px;
-        border-radius: 50%;
-        width: 60px;
-        border: 1px solid $brand-color;
-        transition: all 0.4s ease-in-out;
-        &:hover {
-          background: white;
-        }
-        img {
-          height: 25px;
-          width: auto;
-        }
-      }
-    }
-    .image-col {
-      display: none;
-    }
+  }
+  // auto carousel button settings
+  #radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: $brand-color;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: $brand-color;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: $brand-color;
+  }
+  #radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: $brand-color;
+  }
+  // manual carousel button settings
+  #radio1:checked ~ .first-image {
+    margin-left: 0;
+  }
+  #radio2:checked ~ .second-image {
+    margin-left: -25%;
+  }
+  #radio3:checked ~ .third-image {
+    margin-left: -50%;
+  }
+  #radio4:checked ~ .fourth-image {
+    margin-left: -75%;
   }
 }
 

@@ -3010,55 +3010,99 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 59%;
-    margin: auto;
+    width: 800px;
+    height: 500px;
     border: 1px solid #2c4465;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
   }
-  .swot-analysis-section .carousel-container .carousel-slide {
+  .swot-analysis-section .carousel-container .carousel-slider {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 500%;
     height: 500px;
   }
-  .swot-analysis-section .controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 1em;
-    grid-gap: 3em;
+  .swot-analysis-section .carousel-container .carousel-slider input {
+    display: none;
   }
-  .swot-analysis-section .controls button {
+  .swot-analysis-section .carousel-container .carousel-slider .slides {
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .swot-analysis-section .carousel-container .carousel-slider .slides img {
+    width: 800px;
+    height: 500px;
+  }
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual {
+    position: absolute;
+    margin-top: 520px;
+    width: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 60px;
-    border-radius: 50%;
-    width: 60px;
+  }
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual .manual-btn {
     border: 1px solid #2c4465;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
-  .swot-analysis-section .controls button:hover {
-    background: white;
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual .manual-btn:hover {
+    background: #2c4465;
   }
-  .swot-analysis-section .controls button img {
-    height: 25px;
-    width: auto;
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual .manual-btn:not(:last-child) {
+    margin-right: 40px;
   }
-  .swot-analysis-section .image-col {
-    display: none;
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-auto {
+    position: absolute;
+    margin-top: 520px;
+    width: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-auto div {
+    border: 1px solid #2c4465;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+  }
+  #radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #2c4465;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #2c4465;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #2c4465;
+  }
+  #radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #2c4465;
+  }
+  #radio1:checked ~ .first-image {
+    margin-left: 0;
+  }
+  #radio2:checked ~ .second-image {
+    margin-left: -25%;
+  }
+  #radio3:checked ~ .third-image {
+    margin-left: -50%;
+  }
+  #radio4:checked ~ .fourth-image {
+    margin-left: -75%;
   }
 }
 
