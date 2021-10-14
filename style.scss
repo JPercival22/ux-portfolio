@@ -2221,15 +2221,15 @@ footer {
     height: auto;
     .carousel-container {
       display: flex;
-      width: 800px;
-      height: 500px;
+      width: 1000px;
+      height: 700px;
       border: 1px solid $brand-color;
       border-radius: 10px;
       overflow: hidden;
       .carousel-slider {
         display: flex;
-        width: 500%;
-        height: 500px;
+        width: 100%;
+        height: 700px;
         input {
           display: none;
         }
@@ -2237,14 +2237,15 @@ footer {
           // width: 20%;;
           transition: 2s;
           img {
-            width: 800px;
-            height: 500px;
+            width: 1000px;
+            height: 700px;
           }
         }
         // manual navigation styles for carousel
         .navigation-manual {
           position: absolute;
-          margin-top: 520px;
+          margin-top: 725px;
+          left: 200px;
           width: 800px;
           display: flex;
           justify-content: center;
@@ -2265,7 +2266,8 @@ footer {
         }
         .navigation-auto {
           position: absolute;
-          margin-top: 520px;
+          margin-top: 725px;
+          left: 200px;
           width: 800px;
           display: flex;
           justify-content: center;
@@ -2297,16 +2299,16 @@ footer {
   }
   // manual carousel button settings
   #radio1:checked ~ .first-image {
-    margin-left: 0;
+    margin-left: 0%;
   }
   #radio2:checked ~ .second-image {
-    margin-left: -25%;
+    margin-left: -100%;
   }
   #radio3:checked ~ .third-image {
-    margin-left: -50%;
+    margin-left: -200%;
   }
   #radio4:checked ~ .fourth-image {
-    margin-left: -75%;
+    margin-left: -300%;
   }
 }
 
@@ -3067,6 +3069,12 @@ footer {
 
   // Case Study Styles
 
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual,
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-auto {
+    position: absolute;
+    margin-top: 725px;
+    left: 370px;
+  }
   // Guitar Project
 
   .hero-container.guitar-project .is-centered .hero-text-content {
@@ -3194,6 +3202,7 @@ footer {
       }
     }
   }
+
   .hero-container.guitar-project .is-centered .hero-text-content {
     margin-left: 10em;
   }
@@ -3276,5 +3285,12 @@ footer {
   }
   footer .footer-container .footer-details {
     padding: 5em 18em;
+  }
+  
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-manual,
+  .swot-analysis-section .carousel-container .carousel-slider .navigation-auto {
+    position: absolute;
+    margin-top: 725px;
+    left: 540px;
   }
 }
