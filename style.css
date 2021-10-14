@@ -79,6 +79,16 @@ img {
   height: auto;
 }
 
+.success {
+  color: #006500;
+  text-decoration: underline;
+}
+
+.failure {
+  color: #ad0021;
+  text-decoration: underline;
+}
+
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -1340,6 +1350,59 @@ label
   font-weight: 600;
 }
 
+.hero-container.figma-google-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(/img/background--figma_chrome.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero-container.figma-google-project .is-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-container.figma-google-project .is-centered .hero-text-content {
+  margin-left: 10px;
+  background: transparent;
+}
+
+.hero-container.figma-google-project .is-centered .hero-text-content .hero-title-case-study {
+  text-shadow: 3px 6px 6px white, 4px -4px 8px white, -5px 1px 7px white, -3px -7px 6px white;
+}
+
+.hero-container.figma-google-project .is-centered .hero-text-content .hero-title-case-study .hero-title {
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: 10pt;
+  font-style: normal;
+  font-variant-caps: all-petite-caps;
+  line-height: 33pt;
+  text-align: left;
+}
+
+.hero-container.figma-google-project .is-centered .hero-text-content .hero-title-case-study .hero-subtitle {
+  font-size: 2rem;
+  letter-spacing: 3pt;
+  font-variant-caps: all-petite-caps;
+  letter-spacing: 5pt;
+  font-weight: 600;
+}
+
 .carousel-container,
 .discovery-card-inner {
   display: none;
@@ -2428,6 +2491,29 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
   .intro-container .right .primary-button {
     width: 30%;
+  }
+  .intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .intro-container .right-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    height: auto;
+    border: 1px solid #2c4465;
+    border-radius: 10px;
+  }
+  .intro-container .right-col img {
+    border-radius: 10px;
   }
   section {
     padding: 1em 1.7em;

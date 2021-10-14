@@ -10,6 +10,8 @@ $core-light: #ffffff;
 $core-disabled: lightgrey;
 $brand-color: #2c4465;
 $tertiary: #213550;
+$success: #006500;
+$fail: #ad0021;
 
 // buttons
 $primary-core: $brand-color;
@@ -103,6 +105,8 @@ img {
   height: auto;
 }
 
+.success {color:$success;text-decoration: underline;}
+.failure {color:$fail;text-decoration: underline;}
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
@@ -976,6 +980,45 @@ header #click:checked ~ ul li a {
       }
     }
   }
+  &.figma-google-project {
+    display: flex;
+    background-image: url(/img/background--figma_chrome.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    .is-centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .hero-text-content {
+        margin-left: 10px;
+        background: transparent;
+        .hero-title-case-study {
+          text-shadow: 3px 6px 6px white, 4px -4px 8px white, -5px 1px 7px white, -3px -7px 6px white;
+          .hero-title {
+            font-size: 4em;
+            font-weight: 600;
+            letter-spacing: 10pt;
+            font-style: normal;
+            font-variant-caps: all-petite-caps;
+            line-height: 33pt;
+            text-align: left;
+          }
+          .hero-subtitle {
+            font-size: 2rem;
+            letter-spacing: 3pt;
+            font-variant-caps: all-petite-caps;
+            letter-spacing: 5pt;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
 
 .carousel-container,
@@ -1733,7 +1776,21 @@ footer {
       width: 30%;
     }
   }
-
+  .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .right-col {
+      display: flex;
+      width: 40%;
+      height: auto;
+      border: $button-border-settings;
+      border-radius: 10px;
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
   // remind-project styles
 
   section {
@@ -3286,7 +3343,7 @@ footer {
   footer .footer-container .footer-details {
     padding: 5em 18em;
   }
-  
+
   .swot-analysis-section .carousel-container .carousel-slider .navigation-manual,
   .swot-analysis-section .carousel-container .carousel-slider .navigation-auto {
     position: absolute;
