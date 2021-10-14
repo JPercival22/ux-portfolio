@@ -309,10 +309,12 @@ header #click:checked ~ ul li a {
 .tools {
   background-color: $brand-color;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   grid-gap: 2em;
+  padding: 3em;
   .col {
     display: flex;
     .tools-image {
@@ -1437,6 +1439,10 @@ footer {
 
 // Medium mobile Phone Viewport styles
 @media only screen and (min-width: 375px) {
+.tools {
+  flex-direction: row;
+}
+
   .show-modal {
     left: 5%;
   }

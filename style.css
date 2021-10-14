@@ -388,6 +388,10 @@ header #click:checked ~ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -397,6 +401,7 @@ header #click:checked ~ ul li a {
       -ms-flex-pack: center;
           justify-content: center;
   grid-gap: 2em;
+  padding: 3em;
 }
 
 .tools .col {
@@ -2115,6 +2120,12 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
 }
 
 @media only screen and (min-width: 375px) {
+  .tools {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .show-modal {
     left: 5%;
   }
