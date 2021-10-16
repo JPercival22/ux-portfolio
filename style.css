@@ -1,9 +1,4 @@
-@font-face {
-  font-family: Poppins;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .bg-gradient-chill {
   background: linear-gradient(135deg, #94aaab 0%, #0291e3 100%);
 }
@@ -93,6 +88,56 @@ img {
 .top-social-icon,
 header nav #click {
   display: none;
+}
+
+.editorial-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editorial-card .editorial-title_centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.editorial-card .editorial-description_left-aligned {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.editorial-card .editorial-description_center-aligned {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.editorial-card .editorial-description_center-aligned ul {
+  margin-bottom: 1em;
 }
 
 .nav-container {
@@ -3593,14 +3638,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-bottom: 2em;
-  }
-  .Discovery-section ul {
-    margin-left: 2em;
-    list-style: circle;
   }
   .ideation-and-discovery-section .idea-container {
     display: -webkit-box;
