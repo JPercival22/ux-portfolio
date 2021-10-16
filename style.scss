@@ -1,9 +1,4 @@
-@font-face {
-  font-family: Poppins;
-  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 // color variables
 $core-light: #ffffff;
@@ -105,12 +100,43 @@ img {
   height: auto;
 }
 
-.success {color:$success;text-decoration: underline;}
-.failure {color:$fail;text-decoration: underline;}
+.success {
+  color: $success;
+  text-decoration: underline;
+}
+.failure {
+  color: $fail;
+  text-decoration: underline;
+}
 .mouse-scroller,
 .top-social-icon,
 header nav #click {
   display: none;
+}
+
+// General component styles
+.editorial-card {
+  display: flex;
+  flex-direction: column;
+  .editorial-title_centered {
+    display: flex;
+    align-self: center;
+  }
+  .editorial-description_left-aligned {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .editorial-description_center-aligned {
+    ul {
+      margin-bottom: 1em;
+    }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1em;
+      margin-top: 0;
+  }
 }
 
 .nav-container {
@@ -2693,12 +2719,7 @@ footer {
   .Discovery-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 2em;
-    ul {
-      margin-left: 2em;
-      list-style: circle;
-    }
   }
 
   .ideation-and-discovery-section {
