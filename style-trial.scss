@@ -23,8 +23,8 @@ $gradients: () !default;
 $gradients: map-merge(
   (
     chill: linear-gradient(135deg, #94aaab 0%, #0291e3 100%),
-    warm: linear-gradient(135deg, #fff774 0%, #fd803f 100%),
-    hot: linear-gradient(135deg, #f9445a 0%, #fd803f 100%),
+    warm: linear-gradient(135deg, #fff774 50%, #fd803f 100%),
+    hot: linear-gradient(135deg, #f9445a -70%, #fd803f 100%),
     cold: linear-gradient(135deg, #8019c6 0%, #2f93cc 100%),
   ),
   $gradients
@@ -228,6 +228,10 @@ header nav #click {
   flex-direction: column;
   align-items: flex-start;
   grid-gap: 30px;
+  ul{
+    list-style: disc;
+    margin-left: 1em;
+  }
 }
 .nav-container {
   background: $brand-color;
