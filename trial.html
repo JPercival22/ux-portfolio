@@ -187,16 +187,6 @@
                     This does add a further dimension to designing, when this is also added to the parent container,
                     this cohesively make the responsive design possible.
                 </p>
-                It does have a major issue though. At the time of writing (2021), it was discovered that it's not
-                completely the answer. As you will you see
-                from this case study, the "Auto Layer," feature will only work up to a certain point, whereby the
-                content inside is no longer responding effectively
-                and a new breakpoint is required.
-                Concluding that although having just one single interactive and responsive design was not possible yet.
-                That being said it will make for more
-                efficient designing and development having only needing two breakpoint designs which are also responsive
-                and interactive.
-                </p>
             </div>
         </div>
     </section>
@@ -494,8 +484,8 @@
                         surpasses every other browser available today.
                     </p>
                 </div>
-                <div class="center-aligned scrollable-image_large">
-                    <img src="/img/popular-browser_2021.svg" alt="">
+                <div class="center-aligned">
+                    <img src="/img/popular-browser_2021.svg" alt="" class="scrollable-image_large">
                 </div>
                 <figure class="center-aligned">Scroll over the image to zoom in</figure>
             </div>
@@ -565,8 +555,9 @@
                         <img src="https://miro.medium.com/max/698/1*rKbC_8ChZK4q2z7syZfOsg.gif"
                             alt="Davi Costa's Auto Layer gif available from https://uxplanet.org/unlock-time-with-figma-auto-layout-b35f0f87d080">
                     </div>
+                    <figure>The Auto Layer adapting the frame as contents change.</figure>
                 </div>
-                <figure>The Auto Layer adapting the frame as contents change.</figure>
+
             </div>
         </div>
         <div class="editorial-card">
@@ -603,9 +594,24 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="bg-gradient-warm">
         <div class="editorial-card">
             <div class="editorial-description_col">
+                <div class="center-aligned">
+                    <h1>Design</h1>
+                </div>
+                <p>With research complete, it was time to design. The strategy I implicated was in a three phased
+                    project plan.
+                <p>Phase 1 consisted of
+                    analysing the actual Google Home Page in developer mode. Then scrolling the various screen sizes
+                    responsively. Scrutinising any changes in layout and confines between objects on the page and and
+                    the containers constraints.</p>
+                <p>
+                    Phase 2 was implicated the recorded data into sketches or wireframes, including any breakpoints were
+                    shifts in layouts and positioning occurred.</p>
+                <p>Phase 3 was implicating the research found during the discovery stages with Figma and Auto Layer,
+                    adding this functionality into the designs to produce responsive interactive breakpoint designs, of
+                    which, replicated the Google home screen.</p>
                 <div class="center-aligned">
                     <h1>Wireframes</h1>
                 </div>
@@ -613,13 +619,14 @@
                     <p>In order to replicate the re-design of the selected Google Home page, wireframes were
                         produced, of which recorded the dimensions
                         of the actual <span><a href="https://www.google.com">Google Home page</a></span> at three main
-                        break points. Large Desktop (1800px), Tablet (780px) and Mobile
-                        Device (400px). The aim here was to record
+                        break points. Mobile
+                        Device (648px), Tablet (808px) and Desktop (1440px). The aim here was to record
                         margins, padding and position of all the elements as the page was resized. This was to
                         demonstrate, once the redesign was complete, whether
-                        using this technique would (a) resize and position elements within a reasonably accurate amount
+                        using this responsive design handle would (a) resize and position elements within a reasonably
+                        amount of accuracy
                         (within 10px) from the original specifications recorded and thus (b) answer the overarching aim
-                        of accurately make a responsive and interactive and responsive break point design.
+                        of accurately make a responsive and interactive break point design.
                     </p>
                 </div>
             </div>
@@ -627,114 +634,128 @@
         <div class="editorial-card with-image">
             <div class="editorial-description_col">
                 <div class="center-aligned">
-                    <h2 class="process-title text-center">Mobile Viewport (400px width)</h2>
+                    <h2 class="process-title text-center">Mobile Viewport (648px width)</h2>
                 </div>
-                <div class="center-aligned scrollable-image_small">
-                    <img src="/img/google-mobile-sketch.svg" width="100" height=100 alt="">
+                <div class="center-aligned">
+                    <img src="/img/google-mobile-sketch.svg" width="100" height=100 alt=""
+                        class="scrollable-image_small">
                 </div>
                 <figure class="center-aligned">Scroll over the image to zoom in</figure>
             </div>
             <div class="editorial-description_col">
                 <div class="center-aligned">
-                    <h2 class="process-title text-center">Tablet Viewport (700px width)</h2>
+                    <h2 class="process-title text-center">Tablet Viewport (808px width)</h2>
                 </div>
-                <div class="center-aligned scrollable-image_small">
-                    <img src="/img/google-tablet-sketch.svg" width="100" height=100 alt="">
+                <div class="center-aligned">
+                    <img src="/img/google-tablet-sketch.svg" width="100" height=100 alt=""
+                        class="scrollable-image_small">
                 </div>
                 <figure class="center-aligned">Scroll over the image to zoom in</figure>
             </div>
             <div class="editorial-description_col">
                 <div class="center-aligned">
-                    <h2 class="process-title text-center">Desktop Viewport (1800px width)</h2>
+                    <h2 class="process-title text-center">Desktop Viewport (1440px width)</h2>
                 </div>
-                <div class="center-aligned scrollable-image_small">
-                    <img src="/img/google-desktop-sketch.svg" width="100" height=100 alt="">
+                <div class="center-aligned">
+                    <img src="/img/google-desktop-sketch.svg" width="100" height=100 alt=""
+                        class="scrollable-image_small">
                 </div>
                 <figure class="center-aligned">Scroll over the image to zoom in</figure>
             </div>
         </div>
         <div class="editorial-card">
             <div class="left-aligned">
-                <p>
-                    After studying the Home page closely, examining each component's constraints (margin, padding,
-                    height and width) for any alterations and the only major difference when resizing, apart from
-                    obviously the width and height constraints
-                    of the viewport, was the empty container size (see wireframes above). Everything else remained
-                    consistent throughout. That being said, this change from lengthy vertical shift to a short
-                    horizontal space, could prove too difficult for this new feature.
-                    Of course at this point, this was just a presumption and nevertheless the test continued.
-                </p>
-                <p>Another detail was discovered through the research, Auto Later can only be applied to objects that
+                <p>A detail was discovered through the research, Auto Layer can only be applied to objects that
                     have an equal amount of distance between one and other. It may look as though all of the navigation
-                    and search elements are equidistance
-                    but they are not when scrutinised on closer inspection. That being said, a work around could be
-                    possible.
+                    and search elements are equidistance from each other
+                    but when scrutinised on closer inspection they are not. This was noted so that either a work around
+                    or
+                    education could be enhanced in preparation for this eventuality when implicated this in the designs
+                    late
                 </p>
+            </div>
+        </div>
+        <div class="editorial-card with-image">
+            <div class="editorial-description_col">
+                <div class="center-aligned">
+                    <h1>Figma Design</h1>
+                </div>
+                <div class="left-aligned">
+                    <p>
+                        The main discoveries behind the Auto Layer feature is retaining that it can only be adapted if
+                        the elements you are wanting
+                        to apply it to have an equidistance between each other. For example, the top navigation in this
+                        case hasa left side which has two navigational
+                        links of the same font and constraints, so therefore this side can have an auto layer added onto
+                        it.
+                    </p>
+                </div>
+                <div class="center-aligned">
+                    <img src="/img/figma-design-1.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="editorial-card with-image">
+            <div class="editorial-description_col">
+                <div class="center-aligned">
+                    <h1>Figma Design</h1>
+                </div>
+                <div class="left-aligned">
+                    <p>
+                        On the right hand side of the top navigation, there are the text links, which were designed
+                        just like the left hand side of the navigation. However, if you notice
+                        we also have a hamburger menu and the user profile too. Both of these have a different
+                        distance between each other, which as we know cant have the auto layer applied.
+                        To work around this, by uniforming the user profile
+                        and the menu option keeping them separate from the text links and setting constraints to the
+                        right and the top,
+                        resulted in this side now being sticky.
+                    </p>
+                    <div class="center-aligned">
+                        <img src="/img/figma2.svg" alt="">
+                    </div>
+                    <p>
+                        Wrapping both the left and the right hand sides in a frame, which constraints were set set to
+                        the
+                        left and right axis, resulted in a responsive navigation area. Basing the
+                        rest of the design around this responsive framework resulted in the design becoming responsive
+                        on interaction - a complete success!
+                    </p>
+                </div>
+                <div class="center-aligned">
+                    <img src="/img/figma-top-nav-frame.svg" alt="">
+                </div>
             </div>
         </div>
     </section>
-    <!-- <div class="row">
-        <h1 class="text-center">Final Design and Specifications</h1>
-        <div class="col">
-            <div class="feature-img">
-                <img src="/img/remind-me-project.png" width="100" height="100">
-            </div>
-            <div class="full-width-image-container">
-                <div class="small-img">
-                    <h2 class="text-center">Final Style Guide & Typography</h2>
-                    <img src="/img/Style-Guide-and-Typogrophy.PNG" alt="" height="100" width="100" />
+    <section>
+        <div class="editorial-card with-image">
+            <div class="editorial-description_col">
+                <div class="center-aligned">
+                    <h1>Final Design</h1>
                 </div>
-                <figure class="text-center">Hover over the image to zoom in</figure>
-            </div>
-            <div class="small-img-row">
-                <div class="small-img">
-                    <h2 class="text-center">Hi-Fidelity Mobile Design</h2>
-                    <img src="/img/mobile-RM.PNG" alt="">
-                    <a href="https://xd.adobe.com/view/99a16821-570f-414d-a915-e8680ff99e6a-ccf2/" aria-hidden="true"
-                        role="none" tabindex='-1' title="Click this link to see this Projects Case Study"
-                        class="primary-button">Interactive
-                        Design</a>
+                <div class="left-aligned">
+                    <p>
+                        Below is a link to the completed interactive a responsive break point design for this project.
+                        Clicking this link will take you to a secure page away from this website, were you can fully
+                        interact
+                        and test the responsive design for every breakpoint that Google use.
+                        Please note that this was not to redesign Goggles Home page and this holds no affiliation to
+                        Google in the slightest and was just to try and test Figma as a software and Auto Layer as a
+                        tool for responsive design.
+                    </p>
                 </div>
-                <div class="small-img">
-                    <h2 class="text-center">Hi-Fidelity Design Video</h2>
-                    <div id="playBtnMob" class="play-btn">
-                        <img src="/img/play-btn.svg" width="50" height="50" alt="video play button">
-                        <video id="designVideosMob" class="half-width" width="100" height="100" controls>
-                            <source src="/videos/Mobile-Designs.mp4" type="video/mp4">
-                    </div>
-                    </video>
+                <div class="center-aligned with-video">
+                    <video src="/videos/Google Project.mp4" controls autoplay></video>
                 </div>
-            </div>
-        </div> -->
-    <!-- </div> -->
-
-    <!-- Desktop Designs  -->
-    <!-- <div class="row desktop-design-row">
-        <div class="col">
-            <div class="small-img-row">
-                <div class="small-img">
-                    <h2 class="text-center">High-Fidelity Desktop Design Specs</h2>
-                    <img src="/img/remind-Me-website.png" class="remindMe-content" height="100" width="100" alt="">
-                    <a href="https://xd.adobe.com/view/99a16821-570f-414d-a915-e8680ff99e6a-ccf2/" aria-hidden="true"
-                        role="none" tabindex='-1' title="Click this link to see this Projects Case Study"
-                        class="primary-button">Interactive
-                        Design</a>
-                    <div class="small-img">
-                        <h2 class="text-center">High-Fidelity Mobile Design Video</h2>
-                        <div id="playLargeBtn" class="play-btn">
-                            <img src="/img/play-btn.svg" width="50" height="50" alt="video play button">
-                            <video id="designVideosBig" class="half-width" width="100" height="100" controls>
-                                <source src="/videos/Website-Designs.mp4" type="video/mp4">
-                        </div>
-                        </video>
-                    </div>
+                <div class="center-aligned with-image">
+                    <a class="primary-button"
+                        href="https://www.figma.com/file/7USPl1pMiAQJsxQbO0W7xr/Google-Project?node-id=1%3A4">See Designs</a>
                 </div>
             </div>
         </div>
-    </div>
-    </section> -->
-
-    <!-- <section class="final-editorial bg-gradient-hot">
+    </section>
+    <section class="final-editorial bg-gradient-hot">
         <h1>Like What you see?</h1>
         <p>Hopefully you liked what you seen, how the story unfolded and more importantly why the user experience
             was so important for potential development opportunities for the actual application and for the website
@@ -744,8 +765,7 @@
             call or message back within 8 hours.</p>
         <p>Thank you for your time.</p>
 
-    </section> -->
-    <!-- </main> -->
+    </section>
     <footer>
         <div class="footer-container">
             <div class="footer-details">

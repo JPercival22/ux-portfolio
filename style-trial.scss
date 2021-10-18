@@ -22,10 +22,10 @@ $button-hover-state: all 0.5s ease-in-out;
 $gradients: () !default;
 $gradients: map-merge(
   (
-    chill: linear-gradient(135deg, #94aaab 0%, #0291e3 100%),
-    warm: linear-gradient(135deg, #fff774 50%, #fd803f 100%),
-    hot: linear-gradient(135deg, #f9445a -70%, #fd803f 100%),
     cold: linear-gradient(135deg, #8019c6 0%, #2f93cc 100%),
+    chill: linear-gradient(135deg, #94aaab 0%, #0291e3 100%),
+    warm: linear-gradient(135deg, #fff774 20%, #fd803f 100%),
+    hot: linear-gradient(135deg, #f9445a -70%, #fd803f 100%),
   ),
   $gradients
 );
@@ -115,7 +115,32 @@ img {
 header nav #click {
   display: none;
 }
-
+.process-title {
+  font-size: 22px;
+  font-weight: 800;
+}
+.primary-button {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  font-variant-caps: all-petite-caps;
+  border: 1px solid #2c4465;
+  border-radius: 5px;
+  background-color: #2c4465;
+  color: white;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 9px 10px 6px 0px #00000047;
+  transition: $button-hover-state;
+  &:hover {
+    background: $core-light;
+    color: $brand-color;
+  }
+}
 // General component styles
 .editorial-card {
   display: flex;
@@ -141,21 +166,20 @@ header nav #click {
           border: 1px solid $brand-color;
           border-radius: 5px;
           margin: 1em;
-        }
-        &.scrollable-image_small {
-          cursor: zoom-in;
-          transition: all 1s ease-in-out;
-          &:hover {
-            transform: scale(3.6);
-            margin: 8em;
+
+          &.scrollable-image_small {
+            cursor: zoom-in;
+            transition: all 1s ease-in-out;
+            &:hover {
+              transform: scale(3);
+            }
           }
-        }
-        &.scrollable-image_large {
-          cursor: zoom-in;
-          transition: all 1s ease-in-out;
-          &:hover {
-            transform: scale(1.6);
-            margin: 8em;
+          &.scrollable-image_large {
+            cursor: zoom-in;
+            transition: all 1s ease-in-out;
+            &:hover {
+              transform: scale(2);
+            }
           }
         }
         figure {
@@ -210,25 +234,32 @@ header nav #click {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .animated-gif img {
+        .animated-gif {
           display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 400px;
+          height: auto;
+          img {
+            display: flex;
+          }
+
+          figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         }
-      }
-      figure {
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
     }
   }
 }
-
 .three-column-editorial {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   grid-gap: 30px;
-  ul{
+  ul {
     list-style: disc;
     margin-left: 1em;
   }
@@ -454,6 +485,11 @@ footer {
     padding: 5em 8em;
   }
 
+  .primary-button {
+    width: 150px;
+    height: auto;
+    margin: 1em;
+  }
   .nav-container {
     display: grid;
     grid-template-columns: 70% auto;
@@ -616,7 +652,7 @@ footer {
       }
     }
   }
-  
+
   .editorial-card {
     display: flex;
     flex-direction: column;
@@ -625,6 +661,18 @@ footer {
     &.with-image {
       display: flex;
       flex-direction: row;
+      .center-aligned {
+        display: flex;
+        &.with-video {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          video {
+            width: 800px;
+            height: auto;
+          }
+        }
+      }
     }
     &.with-list {
       display: flex;
@@ -756,6 +804,7 @@ footer {
       }
     }
   }
+  
   // auto carousel button settings
   #radio1:checked ~ .navigation-auto .auto-btn1 {
     background: $brand-color;
@@ -782,34 +831,17 @@ footer {
   #radio4:checked ~ .fourth-image {
     margin-left: -300%;
   }
-  // .discovery-section {
-  //   align-items: center;
-  //   justify-content: center;
-  // }
 
-  .validation-section .validation-image-container {
-    .validated-test-a {
-      img {
-        .ta1,
-        .ta2,
-        .ta3,
-        img {
-          height: 200px;
-          width: auto;
-        }
-      }
-    }
-  }
 
   .outcomes-gallery-container .row .col .full-width-image-container .small-img img {
     cursor: zoom-in;
   }
 
   footer .footer-container .footer-details {
-    padding: 5em;
-  }
-  .top-social-icon {
-    margin: 0 1.5em;
+    padding: 8em;
+}
+  .top-social-icon a{
+    margin: 0 2.3em;
   }
   // index-page
 
